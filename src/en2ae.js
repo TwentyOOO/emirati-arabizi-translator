@@ -34,7 +34,9 @@
     road: "6areeg 6urug m|طريق طرق", street: "shaari3 shawaari3 m|شارع شوارع", place: "makaan amaakin m|مكان أماكن",
     city: "madeena mudun f|مدينة مدن", country: "balad buldaan m|بلد بلدان", world: "dinya dinya f|دنيا دنيا",
     life: "7ayaa 7ayaa f|حياة حياة", love: "7ubb 7ubb m|حب حب", language: "lu3'a lu3'aat f|لغة لغات",
-    word: "kilma kilmaat f|كلمة كلمات", translation: "tarjama tarjamaat f|ترجمة ترجمات", skill: "mahaara mahaaraat f|مهارة مهارات",
+    word: "kilma kilmaat f|كلمة كلمات", translation: "tarjama tarjamaat f|ترجمة ترجمات", synonym: "muraadif muraadifaat m|مرادف مرادفات",
+    translator: "mutarjim mutarjimeen m|مترجم مترجمين", abbreviation: "i5ti9aar i5ti9aaraat m|اختصار اختصارات", meaning: "ma3na ma3aani m|معنى معاني",
+    sentence: "jumla jumal f|جملة جمل", grammar: "grammar grammar m|قرامر قرامر", spelling: "spelling spelling m|سبيلنق سبيلنق", dialect: "lahja lahjaat f|لهجة لهجات", skill: "mahaara mahaaraat f|مهارة مهارات",
     project: "mashroo3 mashaaree3 m|مشروع مشاريع", program: "barnaamij baraamij m|برنامج برامج", app: "ta6beeg ta6beegaat m|تطبيق تطبيقات",
     file: "malaff malaffaat m|ملف ملفات", picture: "9oora 9iwar f|صورة صور", message: "risaala rasaayil f|رسالة رسايل",
     email: "email emailaat m|إيميل إيميلات", website: "mawgi3 mawaagi3 m|موقع مواقع", internet: "internet internet m|إنترنت إنترنت",
@@ -211,6 +213,7 @@
     biggest: "^achbar|أچبر", whole: "^+kil|كل", better: "a7san|أحسن", worse: "ashyan|أشين", bigger: "achbar|أچبر",
     smaller: "a93'ar|أصغر", easier: "as-hal|أسهل", harder: "a93ab|أصعب", faster: "asra3|أسرع", longer: "a6wal|أطول",
     cheaper: "ar5a9|أرخص", nicer: "a7la|أحلى", stronger: "agwa|أقوى", next: "!il-yay il-yaaya il-yaayeen|الياي الياية اليايين",
+    previous: "!is-saabig is-saabga is-saabgeen|السابق السابقة السابقين", former: "!is-saabig is-saabga is-saabgeen|السابق السابقة السابقين",
     low: "wa6i wa6ya wa6yeen|واطي واطية واطيين", high: "3aali 3aalya 3aalyeen|عالي عالية عاليين",
     delicious: "ladheedh ladheedha ladheedheen|لذيذ لذيذة لذيذين", tasty: "ladheedh ladheedha ladheedheen|لذيذ لذيذة لذيذين",
     laggy: "ylaggig tlaggig ylaggigoon|يلقق تلقق يلققون", afk: "afk|afk", op: "op|op",
@@ -1344,6 +1347,8 @@
           items.push({ t: 'num', az: b[0] + add[0], ar: b[1] + add[1], n: x }); i += 2; continue;
         }
       }
+      // simply put, ... → bi5ti9aar
+      if (t.w === 'simply' && plain(t1) && t1.w === 'put') { items.push({ t: 'adv', az: 'bi5ti9aar', ar: 'باختصار' }); i += 2; continue; }
       // click save / press start → i9'3'a6 3ala save
       if (CLICK_FORMS[t.w] && plain(t1) && (isVerbBase(t1.w) || NOUN_FORM.has(t1.w) || t1.w === 'ok') && (!t2 || t2.punct || ['then', 'and', 'to', 'after', 'before'].includes(t2.w))) {
         items.push({ t: 'verb', key: 'click', form: CLICK_FORMS[t.w], o: t.o }, { t: 'fixed', az: t1.o, ar: t1.o, user: true, single: true, keep: true }); i += 2; continue;
@@ -1484,7 +1489,11 @@
   function isFixedAlone(key, toks, i) {
     const next = toks[i + 1];
     if (key === 'please') return true;
-    if (key === 'no') return !next || next.punct || !(NOUN_FORM.has(next.w) || ADJS[next.w]);
+    if (key === 'no') {
+      const pv = toks[i - 1];
+      if (next && !next.punct && pv && !pv.punct && ['is', 'are', 'was', 'were', 'have', 'has', 'had', 'with', 'got', 'want', 'need', 'see', 'find', 'found', 'there'].includes(pv.w)) return false;
+      return !next || next.punct || !(NOUN_FORM.has(next.w) || ADJS[next.w]);
+    }
     if (key === 'sure') return (!next || !!next.punct) && startish(toks, i);
     const prevT = toks[i - 1], alone = (!prevT || prevT.punct || STARTERS.has(prevT.w)) && (!next || next.punct || ENDERS.has(next.w));
     if (key === 'same' || key === 'back' || key === 'facts' || key === 'true') return alone;
@@ -1607,6 +1616,7 @@
   }
   function tagWord0(w, o, prev, nw, nextRaw, nn, ahead, idx, rawPrev) {
     ahead = ahead || [];
+    if (w === 'simply' && nw !== 'put') { const v = verbInfo(nw); return { t: 'adv', az: 'bas', ar: 'بس', mid: !!(v || AUX.has(nw) || MODAL[nw]) }; }
     if (w === 'just') {
       const v = verbInfo(nw);
       if (v && v.some((r) => r.form === 'past' || r.form === 'pp') && !v.some((r) => r.form === 'base')) return { t: 'adv', az: 'taww', ar: 'تو', mid: true, k: 'just' };
@@ -1828,6 +1838,11 @@
       if (it.t === 'unk' && items[i + 1] && items[i + 1].t === 'posss' && isNPStart(items, i + 2)) {
         const r = readNP(items, i + 2);
         if (r.chunk.k === 'NP') { r.chunk.owner = { k: 'UNK', it }; C.push(r.chunk); i = r.end; continue; }
+      }
+      // a stranded "not" in front of a noun, adjective, pronoun or time: "a word, not a name" → mob isim
+      if (it.t === 'neg' && it.w === 'not' && items[i + 1] && !['verb', 'aux', 'modal', 'neg', 'to', 'punct', 'conj'].includes(items[i + 1].t) &&
+          (i === 0 || ['punct', 'conj', 'noun', 'unk', 'adj', 'num', 'dem', 'fixed'].includes(items[i - 1].t) || (items[i - 1].t === 'pron' && items[i - 1].role !== 'subj'))) {
+        C.push({ k: 'ADV', it: { t: 'adv', az: 'mob', ar: 'مب', bareNeg: true } }); i++; continue;
       }
       if (isNPStart(items, i)) { const r = readNP(items, i); C.push(r.chunk); i = r.end; continue; }
       if (it.t === 'verb' && it.form === 'ing' && (i === 0 || ['punct', 'conj'].includes(items[i - 1].t)) && VERBS[it.key] && VERBS[it.key].ms) {
@@ -2671,6 +2686,7 @@
           else if (V.obj && V.tail) { const q = prepPron(V.obj, op); const pc = out[objIdx]; pc.az = pc.az.replace(' ' + V.tail[0], ' ' + q[0] + ' ' + V.tail[0]); pc.ar = pc.ar.replace(' ' + V.tail[1], ' ' + q[1] + ' ' + V.tail[1]); }
           else if (V.obj) { const q = prepPron(V.obj, op); out.push(piece(q[0], q[1])); }
           else if (V.io && nextC && (nextC.k === 'NP' || nextC.k === 'DEM')) { const q = prepPron(V.io, op); out.push(piece(q[0], q[1])); }
+          else if ((V.io || V.to === 'li') && gapP && !gapUsed && !['it', 'them'].includes(c.w) && (!nextC || nextC.k === 'PP' || nextC.k === 'ADV')) { const q = prepPron(V.io || 'li', op); out.push(piece(q[0], q[1])); objP = op; continue; }   // the link you sent me → 6arrashta li
           else { const pc = out[objIdx]; const q = attachObj(pc.az, pc.ar, op); pc.az = q[0]; pc.ar = q[1]; attached = true; }
           objP = op; objFilled = true;
           continue;
@@ -2795,7 +2811,10 @@
     while (lead < chunks.length && isLeadWord(chunks[lead])) lead++;
     const addressWord = (c) => (c.k === 'FIXED' && ['bro', 'brother', 'dude', 'buddy', 'guys'].includes(c.it.key)) || (c.k === 'NP' && isBare(c) && headKey(c) === 'man' && !c.nouns[0].pl && c.nouns.length === 1 && !c.adjs.length);
     while (lead < chunks.length && (lead > 0 ? isVocative(chunks[lead]) : addressWord(chunks[lead]) && chunks.length > lead + 1)) { chunks[lead] = asBro(chunks[lead]); lead++; }
-    if (lead > 0 && chunks[lead] && chunks[lead].k !== 'PUNCT') chunks.splice(lead, 0, { k: 'PUNCT', it: { s: ',' }, auto: true });
+    const afterLead = chunks[lead];
+    const knowLead = lead > 0 && chunks[lead - 1].k === 'FIXED' && FIX_KNOW.has(chunks[lead - 1].it.key) && afterLead &&
+      (afterLead.k === 'WH' || (afterLead.k === 'CONJ' && ['when', 'if', 'whether', 'why', 'where', 'how'].includes(afterLead.it.w)) || (afterLead.k === 'NP' && afterLead.det === 'which'));   // i know what you mean → adri shu tig9id
+    if (lead > 0 && afterLead && afterLead.k !== 'PUNCT' && !knowLead) chunks.splice(lead, 0, { k: 'PUNCT', it: { s: ',' }, auto: true });
     const plural = chunks.some((c) => (c.k === 'FIXED' && ['guys', 'everyone', 'everybody', 'hello everyone', 'hi everyone', 'hi all', 'hello guys', 'hi guys', 'hey guys', 'yo guys', 'hey everyone'].includes(c.it.key)) || (c.k === 'NP' && isBare(c) && headKey(c) === 'guy' && c.nouns[0].pl));
     const savedAddr = ctx.addr;
     if (plural && ctx.addr !== 'pl') ctx.addr = 'pl';
@@ -2885,11 +2904,15 @@
         while (j >= 0 && chunks[j].k !== 'PUNCT' && chunks[j].k !== 'CONJ') j--;
         if (j >= 0 && chunks[j].k === 'CONJ' && chunks[j].it.w !== 'and' && chunks[j].it.w !== 'but' && chunks[j].it.w !== 'or') continue;
       }
-      const objAfter = D && (D.k === 'NP' || D.k === 'IND' || D.k === 'DEM' || D.k === 'OWN' || (D.k === 'PRON' && D.role !== 'subj' && D.role !== 'poss'));
+      let objAfter = D && (D.k === 'NP' || D.k === 'IND' || D.k === 'DEM' || D.k === 'OWN' || (D.k === 'PRON' && D.role !== 'subj' && D.role !== 'poss'));
+      const E = chunks[i + 4];
+      const recipient = D && D.k === 'PRON' && D.role !== 'subj' && D.role !== 'poss' && !['it', 'them'].includes(D.w) && (VERBS[a.main.key].io || VERBS[a.main.key].to === 'li') &&
+        !(E && (E.k === 'NP' || E.k === 'IND' || E.k === 'DEM' || E.k === 'OWN' || (E.k === 'PRON' && E.role !== 'subj' && E.role !== 'poss')));
+      if (recipient) objAfter = false;   // the link you sent me → il-link illi 6arrashta li
       if (objAfter && !TIME_NOUNS.has(headKey(A))) continue;
       if (atStart) {
         // "the model i could run from my pc | weren't strong": the clause's own verb must follow
-        let k = i + 3;
+        let k = recipient ? i + 4 : i + 3;
         while (chunks[k] && (chunks[k].k === 'PP' || chunks[k].k === 'ADV')) k++;
         if (!(chunks[k] && chunks[k].k === 'VG' && !chunks[k].toInf)) continue;
       }

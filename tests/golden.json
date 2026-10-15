@@ -5566,5 +5566,125 @@
   "addr": "m",
   "az": "tamaam, 3ajjil",
   "ar": "تمام، عجل"
+ },
+ {
+  "en": "hi, how are you today my friend, I'm simply trying the link you sent me.",
+  "addr": "m",
+  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrashta li.",
+  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشته لي."
+ },
+ {
+  "en": "hi, how are you today my friend, im simply testing the link you sent me",
+  "addr": "m",
+  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrashta li.",
+  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشته لي."
+ },
+ {
+  "en": "hi, simply is actually an English word, not my friend's name.",
+  "addr": "m",
+  "az": "hala, bas bil-7ageega kilma ingleeziyya, mob isim rabee3i.",
+  "ar": "هلا، بس بالحقيقة كلمة انجليزية، مب اسم ربيعي."
+ },
+ {
+  "en": "simply is actually an english word not my friends name",
+  "addr": "m",
+  "az": "bas bil-7ageega kilma ingleeziyya mob isim ir-rab3 maali.",
+  "ar": "بس بالحقيقة كلمة انجليزية مب اسم الربع مالي."
+ },
+ {
+  "en": "synonym for simply is simple and the translator is translating simple",
+  "addr": "m",
+  "az": "muraadif 7ag bas basee6 wil-mutarjim gaa3id ytarjim basee6.",
+  "ar": "مرادف حق بس بسيط والمترجم قاعد يترجم بسيط."
+ },
+ {
+  "en": "the synonym of simply is simple",
+  "addr": "m",
+  "az": "il-muraadif bas basee6.",
+  "ar": "المرادف بس بسيط."
+ },
+ {
+  "en": "there are no abbreviations in my previous messages.",
+  "addr": "m",
+  "az": "ma fi i5ti9aaraat fi rasaayili is-saabga.",
+  "ar": "ما في اختصارات في رسايلي السابقة."
+ },
+ {
+  "en": "there are no abbreviations in my previous messages",
+  "addr": "m",
+  "az": "ma fi i5ti9aaraat fi rasaayili is-saabga.",
+  "ar": "ما في اختصارات في رسايلي السابقة."
+ },
+ {
+  "en": "there is no problem",
+  "addr": "m",
+  "az": "ma fi mushkila.",
+  "ar": "ما في مشكلة."
+ },
+ {
+  "en": "there are no players online",
+  "addr": "m",
+  "az": "ma fi laa3ibeen online.",
+  "ar": "ما في لاعبين أونلاين."
+ },
+ {
+  "en": "i have no idea what you mean",
+  "addr": "m",
+  "az": "ma adri shu tig9id.",
+  "ar": "ما أدري شو تقصد."
+ },
+ {
+  "en": "the link you sent me is not working",
+  "addr": "m",
+  "az": "il-link illi 6arrashta li mob gaa3id yishti3'il.",
+  "ar": "اللينك اللي طرشته لي مب قاعد يشتغل."
+ },
+ {
+  "en": "send me the link again",
+  "addr": "m",
+  "az": "6arrish li il-link marra thaanya.",
+  "ar": "طرش لي اللينك مرة ثانية."
+ },
+ {
+  "en": "can you send me the file",
+  "addr": "m",
+  "az": "tigdar t6arrish li il-malaff?",
+  "ar": "تقدر تطرش لي الملف؟"
+ },
+ {
+  "en": "this is not my account",
+  "addr": "m",
+  "az": "hadha mob 7saabi.",
+  "ar": "هذا مب حسابي."
+ },
+ {
+  "en": "it is not a game, it is a translator",
+  "addr": "m",
+  "az": "hadhi mob lu3ba, hadha mutarjim.",
+  "ar": "هذي مب لعبة، هذا مترجم."
+ },
+ {
+  "en": "the previous version was better",
+  "addr": "m",
+  "az": "in-nus5a is-saabga kaanat a7san.",
+  "ar": "النسخة السابقة كانت أحسن."
+ },
+ {
+  "en": "whats the previous quest",
+  "addr": "m",
+  "az": "shu il-quest is-saabig?",
+  "ar": "شو الكويست السابق؟"
+ },
+ {
+  "en": "i simply dont understand",
+  "addr": "m",
+  "az": "bas ma afham.",
+  "ar": "بس ما أفهم."
+ },
+ {
+  "en": "simply put, the bot is broken",
+  "addr": "m",
+  "az": "bi5ti9aar, il-bot 5arbaan.",
+  "ar": "باختصار، البوت خربان."
  }
 ]
