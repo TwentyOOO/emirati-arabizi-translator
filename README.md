@@ -54,7 +54,7 @@ Chat spelling is understood too: `u`, `ur`, `im`, `ill`, `cant`, `gtg`, `smh`, `
 
 ```
 python3 build.py        # writes index.html
-node tests/test.js      # 948 reviewed sentences
+node tests/test.js      # 1106 reviewed sentences
 ```
 
 ## License

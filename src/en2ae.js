@@ -19,7 +19,7 @@
     brother: "a5 5waan mh|أخ خوان", sister: "u5t 5awaat fh|أخت خوات", father: "ubu aabaa2 mh|أبو آباء",
     mother: "umm ummahaat fh|أم أمهات", family: "ahal ahal m|أهل أهل", son: "walad 3iyaal mh|ولد عيال",
     daughter: "bint banaat fh|بنت بنات", home: "bait byoot m|بيت بيوت", house: "bait byoot m|بيت بيوت",
-    room: "3'urfa 3'uraf f|غرفة غرف", school: "madrasa madaaris f|مدرسة مدارس", university: "jaam3a jaam3aat f|جامعة جامعات",
+    room: "room roomaat m|روم رومات", bedroom: "3'urfa 3'uraf f|غرفة غرف", school: "madrasa madaaris f|مدرسة مدارس", university: "jaam3a jaam3aat f|جامعة جامعات",
     work: "shu3'ul ash3'aal m|شغل أشغال", job: "wa6'eefa wa6'aayif f|وظيفة وظايف", office: "maktab makaatib m|مكتب مكاتب",
     car: "sayyara sayyaraat f|سيارة سيارات", phone: "tilifoon tilifoonaat m|تيلفون تيلفونات",
     computer: "computer computeraat m|كمبيوتر كمبيوترات", laptop: "laptop laptopaat m|لابتوب لابتوبات",
@@ -44,7 +44,7 @@
     sword: "saif syoof m|سيف سيوف", monster: "wa7sh w7oosh m|وحش وحوش", enemy: "3adu a3daa2 mh|عدو أعداء",
     team: "fareeg firag m|فريق فرق", player: "laa3ib laa3ibeen mh|لاعب لاعبين", server: "server serveraat m|سيرفر سيرفرات",
     account: "7saab 7saabaat m|حساب حسابات", password: "password passwordaat m|باسورد باسوردات", key: "miftaa7 mafaatee7 m|مفتاح مفاتيح",
-    door: "baab abwaab m|باب أبواب", window: "dareesha dareesh f|دريشة دريش", book: "kitaab kutub m|كتاب كتب",
+    door: "baab abwaab m|باب أبواب", window: "window windows m|ويندو ويندوز", book: "kitaab kutub m|كتاب كتب",
     pen: "galam aglaam m|قلم أقلام", table: "6aawla 6aawlaat f|طاولة طاولات", chair: "kirsi karaasi m|كرسي كراسي",
     bed: "sireer saraayir m|سرير سراير", tv: "tilifizyoon tilifizyoonaat m|تلفزيون تلفزيونات", movie: "film aflaam m|فيلم أفلام",
     music: "museega museega f|موسيقى موسيقى", song: "a3'niya a3'aani f|أغنية أغاني", voice: "9oot a9waat m|صوت أصوات",
@@ -67,7 +67,7 @@
     soldier: "3askari 3askar mh|عسكري عسكر", dubbing: "dablaja dablajaat f|دبلجة دبلجات", keyboard: "keyboard keyboardaat m|كيبورد كيبوردات",
     screen: "shaasha shaashaat f|شاشة شاشات", battery: "baytri baytriyyaat m|بيتري بيتريات", charger: "shaa7in shawaa7in m|شاحن شواحن",
     update: "ta7deeth ta7deethaat m|تحديث تحديثات", version: "nus5a nusa5 f|نسخة نسخ", mistake: "3'al6a 3'ala6aat f|غلطة غلطات",
-    error: "5a6a2 a56aa2 m|خطأ أخطاء", bug: "5alal a5laal m|خلل أخلال", result: "nateeja nataayij f|نتيجة نتايج",
+    error: "error erroraat m|ايرور ايرورات", bug: "bug bugaat m|بق بقات", result: "nateeja nataayij f|نتيجة نتايج",
     test: "imti7aan imti7aanaat m|امتحان امتحانات", lesson: "dars duroos m|درس دروس", class: "class classaat m|كلاس كلاسات",
     homework: "waajib waajibaat m|واجب واجبات", channel: "ganaa ganawaat f|قناة قنوات", group: "group groupaat m|قروب قروبات",
     clan: "clan clanaat m|كلان كلانات", item: "item itemaat m|آيتم آيتمات", quest: "quest questaat m|كويست كويستات",
@@ -93,7 +93,7 @@
     pet: "pet petaat m|بت بتات", armor: "armor armoraat m|آرمر آرمرات", armour: "armor armoraat m|آرمر آرمرات",
     helm: "helm helmaat m|هلم هلمات", cape: "cape capeaat m|كيب كيبات", boost: "boost boostaat m|بوست بوستات",
     farm: "farm farm m|فارم فارم", bot: "bot botaat m|بوت بوتات", plugin: "plugin pluginaat m|بلقن بلقنات",
-    reward: "reward rewardaat m|ريوارد ريواردات", event: "event eventaat m|ايفنت ايفنتات", merge: "merge merge m|ميرج ميرج", sound: "9oot a9waat m|صوت أصوات", art: "fann funoon m|فن فنون", script: "script scriptaat m|سكربت سكربتات",
+    reward: "jaa2iza jawaa2iz f|جائزة جوائز", event: "event eventaat m|ايفنت ايفنتات", merge: "merge merge m|ميرج ميرج", sound: "9oot a9waat m|صوت أصوات", art: "fann funoon m|فن فنون", script: "script scriptaat m|سكربت سكربتات",
     feature: "maizza maizzaat f|ميزة ميزات", control: "ta7akkum ta7akkum m|تحكم تحكم", mode: "mode modaat m|مود مودات",
     trailer: "trailer trailaraat m|تريلر تريلرات", demo: "demo demoyaat m|ديمو ديموهات", prize: "jaayza jawaayiz f|جايزة جوايز",
     hobby: "haawya hawaayaat f|هواية هوايات", future: "mustagbal mustagbal m|مستقبل مستقبل", dream: "7ilm a7laam m|حلم أحلام",
@@ -135,7 +135,19 @@
     requirement: "muta6allab muta6allabaat m|متطلب متطلبات", option: "5iyaar 5iyaaraat m|خيار خيارات", admin: "admin admins mh|أدمن أدمنز", button: "zirr azraar m|زر أزرار", math: "riyaa9'iyyaat riyaa9'iyyaat f|رياضيات رياضيات",
     maths: "riyaa9'iyyaat riyaa9'iyyaat f|رياضيات رياضيات", science: "3uloom 3uloom f|علوم علوم", history: "taaree5 taaree5 m|تاريخ تاريخ",
     physics: "feezyaa2 feezyaa2 f|فيزياء فيزياء", chemistry: "keemyaa2 keemyaa2 f|كيمياء كيمياء",
-    'drop rate': "drop_rate drop_rates m|دروب_ريت دروب_ريتات", 'friend request': "6alab_9adaaga 6alabaat_9adaaga m|طلب_صداقة طلبات_صداقة"
+    'drop rate': "drop_rate drop_rates m|دروب_ريت دروب_ريتات", 'friend request': "6alab_9adaaga 6alabaat_9adaaga m|طلب_صداقة طلبات_صداقة",
+    'free time': "wagt_faraa3' wagt_faraa3' m|وقت_فراغ وقت_فراغ", train: "gi6aar gi6aaraat m|قطار قطارات", station: "ma7a66a ma7a66aat f|محطة محطات",
+    'train station': "ma7a66at_il-gi6aar ma7a66aat_il-gi6aar f|محطة_القطار محطات_القطار", 'bus station': "ma7a66at_il-baa9 ma7a66aat_il-baa9 f|محطة_الباص محطات_الباص",
+    'bus stop': "mawgaf_il-baa9 mawaagif_il-baa9 m|موقف_الباص مواقف_الباص", 'metro station': "ma7a66at_il-metro ma7a66aat_il-metro f|محطة_المترو محطات_المترو",
+    supermarket: "soobarmaarkit soobarmaarkitaat m|سوبرماركت سوبرماركتات", direction: "ittijaah ittijaahaat m|اتجاه اتجاهات", darb: "darb duroob m|درب دروب",
+    country_: "balad bildaan m|بلد بلدان", nationality: "jinsiyya jinsiyyaat f|جنسية جنسيات", cousin: "wild_3amm 3yaal_3amm mh|ولد_عم عيال_عم",
+    traffic: "za7ma za7ma f|زحمة زحمة", airport: "ma6aar ma6aaraat m|مطار مطارات", wallet: "book bookaat m|بوك بوكات", cutscene: "cutscene cutscenes m|كت_سين كت_سينات",
+    loader: "loader loaders m|لودر لودرز", ign: "ign ign m|ign ign", shawarma: "shawarma shawarma f|شاورما شاورما", trash_n: "zibaala zibaala f|زبالة زبالة",
+    point_: "nug6a nuga6 f|نقطة نقط", pvp: "pvp pvp m|pvp pvp", username: "username usernames m|يوزرنيم يوزرنيمات", folder: "folder folderaat m|فولدر فولدرات", desktop: "desktop desktops m|ديسكتوب ديسكتوبات", page: "9af7a 9af7aat f|صفحة صفحات",
+    cache: "cache cache m|كاش كاش", driver: "driver driveraat m|درايفر درايفرات", router: "router routers m|راوتر راوترات", antivirus: "antivirus antivirus m|أنتي_فايروس أنتي_فايروس",
+    installer: "installer installers m|انستولر انستولرز", maintenance: "9iyaana 9iyaana f|صيانة صيانة", restaurant: "ma63am ma6aa3im m|مطعم مطاعم", scam: "na9b na9b m|نصب نصب",
+    healer: "healer healers mh|هيلر هيلرز", party_: "party partyaat m|بارتي بارتيات", monitor: "shaasha shaashaat f|شاشة شاشات", weapon_: "silaa7 asli7a m|سلاح أسلحة",
+    command: "command commands m|كوماند كوماندز", popup: "popup popups m|بوب_أب بوب_أبات", warning: "ta7dheer ta7dheeraat m|تحذير تحذيرات", notification: "ish3aar ish3aaraat m|إشعار إشعارات"
   };
   const NOUN_ALIAS = {
     dad: 'father', mom: 'mother', mum: 'mother', kid: 'child', photo: 'picture', image: 'picture', film: 'movie',
@@ -154,7 +166,7 @@
     good: "zain zaina zaineen|زين زينة زينين", fine: "zain zaina zaineen|زين زينة زينين", bad: "shain shaina shaineen|شين شينة شينين",
     ugly: "shain shaina shaineen|شين شينة شينين", nice: "7ilu 7ilwa 7ilween|حلو حلوة حلوين", beautiful: "7ilu 7ilwa 7ilween|حلو حلوة حلوين",
     pretty: "7ilu 7ilwa 7ilween|حلو حلوة حلوين", sweet: "7ilu 7ilwa 7ilween|حلو حلوة حلوين", cute: "7ilu 7ilwa 7ilween|حلو حلوة حلوين",
-    cool: "5a6eer 5a6eera 5a6eereen|خطير خطيرة خطيرين", great: "5a6eer 5a6eera 5a6eereen|خطير خطيرة خطيرين",
+    cool: "5a6eer 5a6eera 5a6eereen|خطير خطيرة خطيرين", great: "mumtaaz mumtaaza mumtaazeen|ممتاز ممتازة ممتازين",
     awesome: "raw3a|روعة", amazing: "raw3a|روعة", wonderful: "raw3a|روعة", perfect: "mumtaaz mumtaaza mumtaazeen|ممتاز ممتازة ممتازين",
     excellent: "mumtaaz mumtaaza mumtaazeen|ممتاز ممتازة ممتازين", big: "chibeer chibeera chbaar|چبير چبيرة چبار",
     huge: "chibeer chibeera chbaar|چبير چبيرة چبار", small: "9i3'eer 9i3'eera 9i3'aar|صغير صغيرة صغار",
@@ -169,7 +181,12 @@
     ill: "maree9' maree9'a mar9'a|مريض مريضة مرضى", hungry: "yoo3aan yoo3aana yoo3aaneen|يوعان يوعانة يوعانين",
     thirsty: "3a6shaan 3a6shaana 3a6shaaneen|عطشان عطشانة عطشانين", sleepy: "na3saan na3saana na3saaneen|نعسان نعسانة نعسانين",
     bored: "mallaan mallaana mallaaneen|ملان ملانة ملانين", busy: "mash3'ool mash3'oola mash3'ooleen|مشغول مشغولة مشغولين",
-    free: "faa9'i faa9'ya faa9'yeen|فاضي فاضية فاضيين", ready: "zaahib zaahba zaahbeen|زاهب زاهبة زاهبين",
+    free: "faa9'i faa9'ya faa9'yeen|فاضي فاضية فاضيين", ready: "zaahib zaahba zaahbeen|زاهب زاهبة زاهبين", majjaani: "majjaani majjaaniyya majjaaniyyeen|مجاني مجانية مجانيين",
+    terrible: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين", trash: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين", horrible: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين", awful: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين",
+    active: "sha3'3'aal sha3'3'aala sha3'3'aaleen|شغال شغالة شغالين", clear: "waa9'i7 waa9'7a waa9'7een|واضح واضحة واضحين", corrupted: "5arbaan 5arbaana 5arbaaneen|خربان خربانة خربانين", corrupt: "5arbaan 5arbaana 5arbaaneen|خربان خربانة خربانين",
+    spicy: "7aarr 7aarra 7aarreen|حار حارة حارين", cracked: "fannaan fannaana fannaaneen|فنان فنانة فنانين", goated: "us6oora us6oora asaa6eer|أسطورة أسطورة أساطير",
+    broke: "mfallis mfallisa mfalliseen|مفلس مفلسة مفلسين", mid_: "3aadi 3aadiyya 3aadiyyeen|عادي عادية عاديين", public: "3aamm 3aamma 3aammeen|عام عامة عامين",
+    impossible_: "musta7eel musta7eela musta7eeleen|مستحيل مستحيلة مستحيلين",
     sure: "mit2akkid mit2akkida mit2akkideen|متأكد متأكدة متأكدين", important: "muhimm muhimma muhimmeen|مهم مهمة مهمين",
     fast: "saree3 saree3a saree3een|سريع سريعة سريعين", quick: "saree3 saree3a saree3een|سريع سريعة سريعين",
     slow: "ba6ee2 ba6ee2a ba6ee2een|بطيء بطيئة بطيئين", strong: "gawi gawiyya gawiyyeen|قوي قوية قويين",
@@ -213,7 +230,7 @@
     biggest: "^achbar|أچبر", whole: "^+kil|كل", better: "a7san|أحسن", worse: "ashyan|أشين", bigger: "achbar|أچبر",
     smaller: "a93'ar|أصغر", easier: "as-hal|أسهل", harder: "a93ab|أصعب", faster: "asra3|أسرع", longer: "a6wal|أطول",
     cheaper: "ar5a9|أرخص", nicer: "a7la|أحلى", stronger: "agwa|أقوى", next: "!il-yay il-yaaya il-yaayeen|الياي الياية اليايين",
-    previous: "!is-saabig is-saabga is-saabgeen|السابق السابقة السابقين", former: "!is-saabig is-saabga is-saabgeen|السابق السابقة السابقين",
+    previous: "!illi gabil|اللي قبل", former: "!illi gabil|اللي قبل",
     low: "wa6i wa6ya wa6yeen|واطي واطية واطيين", high: "3aali 3aalya 3aalyeen|عالي عالية عاليين",
     delicious: "ladheedh ladheedha ladheedheen|لذيذ لذيذة لذيذين", tasty: "ladheedh ladheedha ladheedheen|لذيذ لذيذة لذيذين",
     laggy: "ylaggig tlaggig ylaggigoon|يلقق تلقق يلققون", afk: "afk|afk", op: "op|op",
@@ -295,7 +312,7 @@
     take: ["5adht 5adh aa5idh 5idh|خذت خذ اخذ خذ", { past: 'took', pp: 'taken' }],
     bring: ["yibt yaab yeeb yeeb|يبت ياب ييب ييب", { past: 'brought', to: 'li', io: 'li' }],
     buy: ["shareet shara shtiri shtiri|شريت شرى شتري شتري", { past: 'bought', lv: 'i', io: 'li', ms: 'shira|شرا' }],
-    sell: ["bi3t baa3 bee3 bee3|بعت باع بيع بيع", { past: 'sold', ms: 'bee3|بيع' }],
+    sell: ["bi3t baa3 bee3 bee3|بعت باع بيع بيع", { past: 'sold', ms: 'bee3|بيع', io: 'li' }],
     pay: ["dafa3t dafa3 dfa3 idfa3|دفعت دفع دفع ادفع", { past: 'paid', lv: 'i' }],
     get: ["7a99alt 7a99al 7a99il 7a99il|حصلت حصل حصل حصل", { past: 'got', pp: ['gotten', 'got'], io: 'li' }],
     receive: ["stilamt stilam stilim istilim|استلمت استلم ستلم استلم", { lv: 'i' }],
@@ -418,6 +435,7 @@
     'give up': ["staslamt staslam staslim istaslim|استسلمت استسلم ستسلم استسلم", { past: 'gave', pp: 'given', lv: 'i' }],
     farm: ["farramt farram farrim farrim|فرمت فرم فرم فرم", { ms: 'farm|فارم' }],
     practice: ["tmarrant tmarran tmarran tmarran|تمرنت تمرن تمرن تمرن", { lv: 'i', ms: 'tamreen|تمرين' }],
+    practise: ["tmarrant tmarran tmarran tmarran|تمرنت تمرن تمرن تمرن", { lv: 'i', ms: 'tamreen|تمرين' }],
     improve: ["6awwart 6awwar 6awwir 6awwir|طورت طور طور طور", { ms: 'ta6weer|تطوير' }],
     publish: ["nashart nashar nshir inshir|نشرت نشر نشر انشر", { lv: 'i', ms: 'nashr|نشر' }],
     grind: ["farramt farram farrim farrim|فرمت فرم فرم فرم", { past: 'ground' }],
@@ -445,7 +463,7 @@
     remind: ["dhakkart dhakkar dhakkir dhakkir|ذكرت ذكر ذكر ذكر", { of: 'b' }],
     drop: ["6ayya7t 6ayya7 6ayyi7 6ayyi7|طيحت طيح طيح طيح", {}],
     hack: ["hakkart hakkar hakkir hakkir|هكرت هكر هكر هكر", {}],
-    'calm down': ["rawwagt rawwag rawwig rawwig|روقت روق روق روق", {}],
+    'calm down': ["haddait hadda haddi haddi|هديت هدى هدي هدي", {}],
     relax: ["rawwagt rawwag rawwig rawwig|روقت روق روق روق", {}],
     stream: ["=do", { tail: 'stream|ستريم' }],
     click: ["9'3'a6t 9'3'a6 9'3'a6 i9'3'a6|ضغطت ضغط ضغط اضغط", { lv: 'i', on: '3ala' }],
@@ -462,7 +480,46 @@
     sound: ["- - - -|- - - -", { special: 'seem', to: 'li' }],
     seem: ["- - - -|- - - -", { special: 'seem', to: 'li' }],
     'ask for': ["6alabt 6alab 6lub i6lub|طلبت طلب طلب اطلب", { lv: 'i' }],
-    chill: ["rawwagt rawwag rawwig rawwig|روقت روق روق روق", {}],
+    chill: ["haddait hadda haddi haddi|هديت هدى هدي هدي", {}],
+    'get stuck': ["3allagt 3allag 3allig 3allig|علقت علق علق علق", { past: 'got', pp: 'gotten' }],
+    'get banned': ["inbannadt inbannad inbannid -|انبندت انبند انبند -", { past: 'got', pp: 'gotten' }],
+    'head to': ["ri7t raa7 roo7 roo7|رحت راح روح روح", { to: 'drop', ap: 'raayi7 raay7a raay7een|رايح رايحة رايحين' }],
+    'head home': ["ri7t_il-bait raa7_il-bait roo7_il-bait roo7_il-bait|رحت_البيت راح_البيت روح_البيت روح_البيت", { ap: 'raayi7_il-bait raay7a_il-bait raay7een_il-bait|رايح_البيت رايحة_البيت رايحين_البيت' }],
+    'head back': ["rija3t rija3 rja3 irja3|رجعت رجع رجع ارجع", { lv: 'i' }],
+    drop_g: ["nazzalt nazzal nazzil nazzil|نزلت نزل نزل نزل", {}],
+    freeze: ["3allagt 3allag 3allig 3allig|علقت علق علق علق", { past: 'froze', pp: 'frozen' }],
+    'get hacked': ["ithakkart ithakkar ithakkar -|اتهكرت اتهكر اتهكر -", { past: 'got', pp: 'gotten' }],
+    'get kicked': ["in6aradt in6arad in6irid -|انطردت انطرد انطرد -", { past: 'got', pp: 'gotten' }],
+    'get lost': ["9'i3t 9'aa3 9'ee3 -|ضعت ضاع ضيع -", { past: 'got', pp: 'gotten' }],
+    'get tired': ["ti3abt ti3ab t3ab -|تعبت تعب تعب -", { past: 'got', pp: 'gotten' }],
+    'get bored': ["mallait mall mall -|مليت مل مل -", { past: 'got', pp: 'gotten' }],
+    'get angry': ["3a9abt 3a9ab 3a9ib -|عصبت عصب عصب -", { past: 'got', pp: 'gotten' }],
+    'get mad': ["3a9abt 3a9ab 3a9ib -|عصبت عصب عصب -", { past: 'got', pp: 'gotten' }],
+    'get sick': ["mari9't mira9' mra9' -|مرضت مرض مرض -", { past: 'got', pp: 'gotten' }],
+    'get scared': ["5ift 5aaf 5aaf -|خفت خاف خاف -", { past: 'got', pp: 'gotten' }],
+    'get married': ["tzawwajt tzawwaj tzawwaj -|تزوجت تزوج تزوج -", { past: 'got', pp: 'gotten' }],
+    'get late': ["t2a55art t2a55ar t2a55ar -|تأخرت تأخر تأخر -", { past: 'got', pp: 'gotten' }],
+    'get better': ["9irt_a7san 9aar_a7san 9eer_a7san -|صرت_أحسن صار_أحسن صير_أحسن -", { past: 'got', pp: 'gotten' }],
+    'get worse': ["9irt_aswa 9aar_aswa 9eer_aswa -|صرت_أسوأ صار_أسوأ صير_أسوأ -", { past: 'got', pp: 'gotten' }],
+    'get ready': ["jahhazt jahhaz jahhiz jahhiz|جهزت جهز جهز جهز", { past: 'got', pp: 'gotten' }],
+    'set up': ["9'abba6t 9'abba6 9'abbi6 9'abbi6|ضبطت ضبط ضبط ضبط", { past: 'set', pp: 'set' }],
+    'pick up': ["liga6t liga6 lgi6 ilgi6|لقطت لقط لقط القط", {}],
+    'pick up_p': ["marrait marr murr murr|مريت مر مر مر", { obj: '3ala' }],
+    'plug in': ["rakkabt rakkab rakkib rakkib|ركبت ركب ركب ركب", {}],
+    unplug: ["fa9alt fa9al f9il if9il|فصلت فصل فصل افصل", { lv: 'i' }],
+    disconnect: ["fa9alt fa9al f9il if9il|فصلت فصل فصل افصل", { lv: 'i' }],
+    'stay up': ["sihart sihar shar ishar|سهرت سهر سهر اسهر", { lv: 'i' }],
+    verify: ["akkadt akkad 2akkid akkid|أكدت أكد أكد أكد", {}],
+    confirm: ["akkadt akkad 2akkid akkid|أكدت أكد أكد أكد", {}],
+    copy: ["nasa5t nasa5 nsa5 insa5|نسخت نسخ نسخ انسخ", { past: 'copied', lv: 'i' }],
+    clear: ["masa7t masa7 msa7 imsa7|مسحت مسح مسح امسح", { lv: 'i' }],
+    expect: ["twagga3t twagga3 twagga3 twagga3|توقعت توقع توقع توقع", {}],
+    disappear: ["i5tafait i5tafa 5tafi i5tafi|اختفيت اختفى يختفي اختف", {}],
+    skip: ["=do", { tail: 'skip|سكب', objNP: 'li' }],
+    'rank up': ["=do", { tail: 'rank_up|رانك_أب', objNP: 'li' }],
+    unlock: ["fita7t fita7 fta7 ifta7|فتحت فتح فتح افتح", { lv: 'i' }],
+    steal: ["boogt baag boog boog|بوقت باق بوق بوق", { past: 'stole', pp: 'stolen' }],
+    'hop on': ["dishait dash dish dish|دشيت دش دش دش", { lv: 'i' }],
     extract: ["fakkeet fakk fikk fikk|فكيت فك فك فك", {}],
     unzip: ["fakkeet fakk fikk fikk|فكيت فك فك فك", {}],
     'go down': ["6i7t 6aa7 6ee7 6ee7|طحت طاح طيح طيح", { past: 'went', pp: 'gone', s: 'goes' }],
@@ -531,13 +588,14 @@
     too: "ba3ad|بعد", only: "*bas|بس", just: "*taww|تو", here: "hni|هني", there: "hnaak|هناك", already: "*5alaa9|خلاص",
     still: "*lain il7een|لين الحين", yet: "lain il7een|لين الحين", probably: "*yimkin|يمكن", really: "*9idj|صدج",
     very: "~wayed|وايد", so: "~wayed|وايد", quite: "~wayed|وايد", extremely: "~wayed|وايد", super: "~wayed|وايد",
-    totally: "~wayed|وايد", quickly: "bsir3a|بسرعة", slowly: "shway shway|شوي شوي", well: "zain|زين", together: "sawa|سوا",
+    totally: "~wayed|وايد", quickly: "bsir3a|بسرعة", slowly: "shway shway|شوي شوي", well: "zain|زين", together: "sawa|سوا", nearby: "greeb|قريب",
+    automatically: "b-roo7a|بروحه", accidentally: "bil-3'ala6|بالغلط",
     almost: "*tagreeban|تقريباً", everywhere: "fi kil makaan|في كل مكان", actually: "bil-7ageega|بالحقيقة",
     honestly: "bi9raa7a|بصراحة", anyway: "ma 3alaina|ما علينا", outside: "barra|برا", inside: "daa5il|داخل",
     away: "ba3eed|بعيد", even: "*7atta|حتى", maybe: "yimkin|يمكن", perhaps: "yimkin|يمكن", first: "awwal|أول",
     instead: "badalha|بدالها", once: "marra|مرة", twice: "marratain|مرتين", fast: "bsir3a|بسرعة", hard: "wayed|وايد",
     please: "@law sama7t law sama7ti law sama7tu|لو سمحت لو سمحتي لو سمحتوا", ago: "gabil|قبل", online: "online|أونلاين",
-    most: "akthar|أكثر", more: "akthar|أكثر", finally: "*a5eeran|أخيراً", ever: "*|", long: "wayed|وايد", below: "ta7t|تحت",
+    most: "a3'lab|أغلب", more: "akthar|أكثر", finally: "*a5eeran|أخيراً", ever: "*|", long: "wayed|وايد", below: "ta7t|تحت",
     anymore: "5alaa9|خلاص", kinda: "~shway|شوي", slightly: "~shway|شوي", somewhat: "~shway|شوي", approximately: "tagreeban|تقريباً",
     earlier: "min gabil|من قبل", lately: "hal ayyaam|هالأيام", recently: "min fatra greeba|من فترة قريبة", nowadays: "hal ayyaam|هالأيام", louder: "b9oot a3la|بصوت أعلى", forever: "lil-abad|للأبد"
   };
@@ -629,12 +687,72 @@
     'how much is this': "bcham hadha|بچم هذا", 'how much does it cost': "bcham|بچم", 'i agree': "mitfig|متفق",
     'me too': "wana ba3ad|وأنا بعد", 'me neither': "wana ba3ad|وأنا بعد",
     'what about you': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"), 'and you': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"),
+    'how about you': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"), 'what is yours': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"),
+    'what about yours': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"), 'how about yours': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"),
+    'and yours': A3("winta|وإنت", "winti|وإنتي", "wintu|وإنتو"), 'you too': A3("winta ba3ad|وإنت بعد", "winti ba3ad|وإنتي بعد", "wintu ba3ad|وإنتو بعد"),
+    'peace be upon you': "is-salaam 3alaikum|السلام عليكم", 'peace be upon you all': "is-salaam 3alaikum|السلام عليكم", 'salam': "is-salaam 3alaikum|السلام عليكم",
+    'salaam': "is-salaam 3alaikum|السلام عليكم", 'salam alaikum': "is-salaam 3alaikum|السلام عليكم", 'salaam alaikum': "is-salaam 3alaikum|السلام عليكم",
+    'salam alaykum': "is-salaam 3alaikum|السلام عليكم", 'salam aleikum': "is-salaam 3alaikum|السلام عليكم", 'assalamu alaikum': "is-salaam 3alaikum|السلام عليكم",
+    'assalam alaikum': "is-salaam 3alaikum|السلام عليكم", 'assalamu alaykum': "is-salaam 3alaikum|السلام عليكم", 'as salamu alaykum': "is-salaam 3alaikum|السلام عليكم",
+    'salamu alaikum': "is-salaam 3alaikum|السلام عليكم", 'salam 3alaikum': "is-salaam 3alaikum|السلام عليكم", 'salam 3alaykum': "is-salaam 3alaikum|السلام عليكم",
+    'and peace be upon you': "w3alaikum is-salaam|وعليكم السلام", 'and peace be upon you too': "w3alaikum is-salaam|وعليكم السلام", 'peace be upon you too': "w3alaikum is-salaam|وعليكم السلام",
+    'walaikum salam': "w3alaikum is-salaam|وعليكم السلام", 'walaikum assalam': "w3alaikum is-salaam|وعليكم السلام", 'wa alaikum salam': "w3alaikum is-salaam|وعليكم السلام",
+    'wa alaikum assalam': "w3alaikum is-salaam|وعليكم السلام", 'walaykum salam': "w3alaikum is-salaam|وعليكم السلام", 'wa alaykum salam': "w3alaikum is-salaam|وعليكم السلام",
+    'i am doing well': "ana zain|أنا زين", 'i am doing good': "ana zain|أنا زين", 'i am doing fine': "ana zain|أنا زين", 'i am doing ok': "ana zain|أنا زين",
+    'i am doing okay': "ana zain|أنا زين", 'i am doing great': "ana zain wayed|أنا زين وايد", 'doing well': "ana zain|أنا زين", 'doing good': "ana zain|أنا زين",
+    'doing fine': "ana zain|أنا زين", 'doing great': "ana zain wayed|أنا زين وايد", 'i am well': "ana zain|أنا زين", 'i am great': "ana zain wayed|أنا زين وايد",
+    'i am alright': "ana zain|أنا زين", 'i am all right': "ana zain|أنا زين", 'all good': "kil shay tamaam|كل شي تمام", 'all good here': "kil shay tamaam hni|كل شي تمام هني",
+    'nice to meet you too': "ish-sharaf li|الشرف لي", 'nice meeting you too': "ish-sharaf li|الشرف لي", 'glad to meet you too': "ish-sharaf li|الشرف لي",
+    'nice meeting you': "tsharrafna|تشرفنا", 'it was nice meeting you': "tsharrafna|تشرفنا", 'glad to meet you': "tsharrafna|تشرفنا", 'pleased to meet you': "tsharrafna|تشرفنا",
+    'good to meet you': "tsharrafna|تشرفنا", 'it was nice to meet you': "tsharrafna|تشرفنا",
+    'that would be great': "bykoon 7ilu wayed|بيكون حلو وايد", 'that would be nice': "bykoon 7ilu|بيكون حلو", 'that would be awesome': "bykoon 7ilu wayed|بيكون حلو وايد",
+    'that would be perfect': "bykoon mumtaaz|بيكون ممتاز", 'that would be amazing': "bykoon 7ilu wayed|بيكون حلو وايد", 'that would be cool': "bykoon 7ilu|بيكون حلو",
+    'that will be great': "bykoon 7ilu wayed|بيكون حلو وايد", 'it would be great': "bykoon 7ilu wayed|بيكون حلو وايد", 'would be great': "bykoon 7ilu wayed|بيكون حلو وايد",
+    'would be nice': "bykoon 7ilu|بيكون حلو", 'that would be good': "bykoon zain|بيكون زين", 'that would be fine': "bykoon zain|بيكون زين",
+    'that is very kind of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'that is so kind of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'that is kind of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'very kind of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'so kind of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'you are too kind': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'you are so kind': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'you are very kind': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'that is very nice of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'that is nice of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'so nice of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"), 'very nice of you': A3("ma tga99ir|ما تقصر", "ma tga99reen|ما تقصرين", "ma tga99roon|ما تقصرون"),
+    'i am glad i met you': A3("mistaanis inni t3arraft 3alaik|مستانس إني تعرفت عليك", "mistaanis inni t3arraft 3alaich|مستانس إني تعرفت عليج", "mistaanis inni t3arraft 3alaikum|مستانس إني تعرفت عليكم"),
+    'glad i met you': A3("mistaanis inni t3arraft 3alaik|مستانس إني تعرفت عليك", "mistaanis inni t3arraft 3alaich|مستانس إني تعرفت عليج", "mistaanis inni t3arraft 3alaikum|مستانس إني تعرفت عليكم"),
+    'i am happy i met you': A3("mistaanis inni t3arraft 3alaik|مستانس إني تعرفت عليك", "mistaanis inni t3arraft 3alaich|مستانس إني تعرفت عليج", "mistaanis inni t3arraft 3alaikum|مستانس إني تعرفت عليكم"),
+    'happy i met you': A3("mistaanis inni t3arraft 3alaik|مستانس إني تعرفت عليك", "mistaanis inni t3arraft 3alaich|مستانس إني تعرفت عليج", "mistaanis inni t3arraft 3alaikum|مستانس إني تعرفت عليكم"),
+    'i am glad i met you too': A3("wana ba3ad mistaanis inni t3arraft 3alaik|وأنا بعد مستانس إني تعرفت عليك", "wana ba3ad mistaanis inni t3arraft 3alaich|وأنا بعد مستانس إني تعرفت عليج", "wana ba3ad mistaanis inni t3arraft 3alaikum|وأنا بعد مستانس إني تعرفت عليكم"),
+    'glad i met you too': A3("wana ba3ad mistaanis inni t3arraft 3alaik|وأنا بعد مستانس إني تعرفت عليك", "wana ba3ad mistaanis inni t3arraft 3alaich|وأنا بعد مستانس إني تعرفت عليج", "wana ba3ad mistaanis inni t3arraft 3alaikum|وأنا بعد مستانس إني تعرفت عليكم"),
+    'thanks again': A3("mashkoor marra thaanya|مشكور مرة ثانية", "mashkoora marra thaanya|مشكورة مرة ثانية", "mashkooreen marra thaanya|مشكورين مرة ثانية"),
+    'thank you again': A3("mashkoor marra thaanya|مشكور مرة ثانية", "mashkoora marra thaanya|مشكورة مرة ثانية", "mashkooreen marra thaanya|مشكورين مرة ثانية"),
+    'in that direction': "dhaak i9-9oob|ذاك الصوب", 'in this direction': "ha9-9oob|هالصوب", 'which direction': "ay 9oob|أي صوب", 'in the other direction': "i9-9oob ith-thaani|الصوب الثاني",
+    'the other direction': "i9-9oob ith-thaani|الصوب الثاني",
     'nothing': "wala shay|ولا شي", 'everything': "kil shay|كل شي", 'everyone': "il-kil|الكل", 'everybody': "il-kil|الكل", 'guys': "shabaab|شباب",
     'someone': "a7ad|أحد", 'somebody': "a7ad|أحد", 'something': "shay|شي", 'anything': "ay shay|أي شي", 'nobody': "ma7ad|محد",
     'no one': "ma7ad|محد", 'anyone': "a7ad|أحد", 'anybody': "a7ad|أحد",
     'here you go': A3("tfa9'9'al|تفضل", "tfa9'9'ali|تفضلي", "tfa9'9'alu|تفضلوا"), 'go ahead': A3("tfa9'9'al|تفضل", "tfa9'9'ali|تفضلي", "tfa9'9'alu|تفضلوا"),
     'be right back': "dageega wraaj3|دقيقة وراجع", 'brb': "dageega wraaj3|دقيقة وراجع", 'i will be right back': "dageega wraaj3|دقيقة وراجع",
-    'let me know': A3("3allimni|علمني", "3allmeeni|علميني", "3allmooni|علموني"),
+    'let me know': A3("5abbirni|خبرني", "5abbreeni|خبريني", "5abbrooni|خبروني"),
+    'by mistake': "bil-3'ala6|بالغلط", 'by accident': "bil-3'ala6|بالغلط", 'for a bit': "shway|شوي", 'for a little bit': "shway|شوي", 'for a little while': "shway|شوي",
+    'i do not care': "ma yhimni|ما يهمني", 'i do not care anymore': "ma yhimni 5alaa9|ما يهمني خلاص", 'i could not care less': "ma yhimni abadan|ما يهمني أبداً",
+    'who cares': "min yhimma|من يهمه", 'i do not mind': "ma 3indi maani3|ما عندي مانع", 'do not mind': "ma 3indi maani3|ما عندي مانع",
+    'i hope you feel better soon': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'hope you feel better soon': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'i hope you feel better': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'hope you feel better': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'feel better soon': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'feel better': A3("ma tshoof sharr|ما تشوف شر", "ma tshoofeen sharr|ما تشوفين شر", "ma tshoofoon sharr|ما تشوفون شر"),
+    'since school': "min ayyaam il-madrasa|من أيام المدرسة", 'since high school': "min ayyaam il-madrasa|من أيام المدرسة", 'since college': "min ayyaam il-jaam3a|من أيام الجامعة",
+    'since university': "min ayyaam il-jaam3a|من أيام الجامعة", 'tomorrow morning': "bacher i9-9ub7|باجر الصبح", 'yesterday morning': "ams i9-9ub7|أمس الصبح", 'in the morning': "i9-9ub7|الصبح",
+    'bet': "tamm|تم", 'say less': "abshir|أبشر", 'skill issue': "skill issue|سكل إشو", 'touch grass': "i6la3 shoof id-dinya|اطلع شوف الدنيا", 'no shot': "musta7eel|مستحيل",
+    'my guy': "5ooy|خوي", 'my man': "5ooy|خوي", 'my boy': "5ooy|خوي", 'it is giving': "shakla|شكله", 'cope': "it7ammal|اتحمل", 'cope harder': "it7ammal akthar|اتحمل أكثر",
+    'i am cooked': "ri7t feeha|رحت فيها", 'we are cooked': "ri7na feeha|رحنا فيها", 'you are cooked': A3("ri7t feeha|رحت فيها", "ri7ti feeha|رحتي فيها", "ri7tu feeha|رحتوا فيها"),
+    'he is cooked': "raa7 feeha|راح فيها", 'she is cooked': "raa7at feeha|راحت فيها", 'they are cooked': "raa7aw feeha|راحوا فيها", 'cooked': "ri7t feeha|رحت فيها",
+    'do not be late': A3("la tit2a55ar|لا تتأخر", "la tit2a55areen|لا تتأخرين", "la tit2a55aroon|لا تتأخرون"), 'do not be sad': A3("la tiz3al|لا تزعل", "la tiz3aleen|لا تزعلين", "la tiz3aloon|لا تزعلون"),
+    'do not be scared': A3("la t5aaf|لا تخاف", "la t5aafeen|لا تخافين", "la t5aafoon|لا تخافون"), 'do not be afraid': A3("la t5aaf|لا تخاف", "la t5aafeen|لا تخافين", "la t5aafoon|لا تخافون"),
+    'do not be shy': A3("la tisti7i|لا تستحي", "la tisti7een|لا تستحين", "la tisti7oon|لا تستحون"), 'do not be stupid': A3("la tkoon 3'abi|لا تكون غبي", "la tkooneen 3'abiyya|لا تكونين غبية", "la tkoonoon a3'biya|لا تكونون أغبية"),
+    'do not be mad': A3("la ti3a99ib|لا تعصب", "la ti3a99been|لا تعصبين", "la ti3a99boon|لا تعصبون"), 'do not be angry': A3("la ti3a99ib|لا تعصب", "la ti3a99been|لا تعصبين", "la ti3a99boon|لا تعصبون"),
+    'do not be lazy': A3("la tkoon kaslaan|لا تكون كسلان", "la tkooneen kaslaana|لا تكونين كسلانة", "la tkoonoon kaslaaneen|لا تكونون كسلانين"),
+    'wait': A3("in6ir|انطر", "in6iri|انطري", "in6iroo|انطروا"), 'hope so': "atmanna|أتمنى", 'i hope so': "atmanna|أتمنى", 'i hope not': "atmanna la|أتمنى لا", 'hope not': "atmanna la|أتمنى لا",
+    'i hope': "atmanna|أتمنى", 'find out': "a3arf|أعرف", 'whoever': "illi|اللي", 'whatever you want': "illi tabeeh|اللي تبيه",
     'tell me': A3("gool li|قول لي", "goolee li|قولي لي", "goolu li|قولوا لي"),
     'help me': A3("saa3idni|ساعدني", "saa3deeni|ساعديني", "saa3dooni|ساعدوني"),
     'good game': "gg|gg", 'gg': "gg|gg", 'well done': "3aash|عاش", 'good job': "3aash|عاش", 'nice one': "3aash|عاش", 'great job': "3aash|عاش",
@@ -774,7 +892,7 @@
   const DET = { the: 'def', a: 'indef', an: 'indef', this: 'this', these: 'this', that: 'that', those: 'that', some: 'some', any: 'any',
     every: 'every', each: 'every', all: 'all', no: 'no', another: 'another', both: 'both', which: 'which', what: 'which', more: 'more', enough: 'enough' };
   const WH = { what: ['shu', 'شو'], where: ['wain', 'وين'], when: ['mita', 'متى'], why: ['laish', 'ليش'], how: ['shlon', 'شلون'],
-    who: ['minu', 'منو'], whom: ['minu', 'منو'], which: ['ay', 'أي'], whose: ['maal minu', 'مال منو'], 'how long': ['cham', 'چم'] };
+    who: ['minu', 'منو'], whom: ['minu', 'منو'], which: ['ay', 'أي'], whose: ['maal minu', 'مال منو'], 'how long': ['cham', 'چم'], 'how much': ['cham', 'چم'] };
   const CONJ = { and: ['w', 'و'], but: ['bas', 'بس'], or: ['walla', 'ولا'], because: ['3ashaan', 'عشان'], if: ['law', 'لو'],
     then: ['ba3dain', 'بعدين'], while: ['w', 'و'], until: ['lain', 'لين'], although: ['ma3a inn', 'مع إن'], though: ['ma3a inn', 'مع إن'],
     unless: ['illa idha', 'إلا إذا'], so: ['3ashaan chidhi', 'عشان چذي'], that: ['', ''] };
@@ -972,13 +1090,29 @@
     'gg', 'coming', 'do not know', 'good luck with', 'welcome to', 'welcome back to', 'thank you', 'thanks', 'thank you very much', 'thank you so much', 'thanks a lot', 'thank you for', 'thanks for',
     'take care of yourself', 'take care of yourselves', 'wish me luck', 'make sure to', 'peace', 'peace out', 'stop it', 'have fun', 'will do', 'you got this',
     'same', 'same here', 'my bad', 'back', 'i am back', 'help', 'rip', 'lets go', 'let us go', 'here we go', 'one sec', 'one second', 'one min', 'one minute', 'brb food',
-    'appreciate it', 'i appreciate it', 'much appreciated', 'appreciated', 'talk tomorrow', 'talk later', 'talk soon', 'one more thing', 'join my room', 'see you all', 'see you all tomorrow', 'see you all later', 'get well soon', 'good luck everyone', 'good luck guys',
+    'appreciate it', 'i appreciate it', 'much appreciated', 'appreciated', 'talk tomorrow', 'talk later', 'talk soon', 'one more thing', 'join my room', 'see you all',
+    'wait',
+    'i hope you feel better soon', 'hope you feel better soon', 'i hope you feel better', 'hope you feel better', 'touch grass', 'say less',
+    'peace be upon you', 'peace be upon you all', 'salam', 'salaam', 'salam alaikum', 'salaam alaikum', 'salam alaykum', 'salam aleikum', 'assalamu alaikum', 'assalam alaikum',
+    'assalamu alaykum', 'as salamu alaykum', 'salamu alaikum', 'salam 3alaikum', 'salam 3alaykum', 'and peace be upon you', 'and peace be upon you too', 'peace be upon you too',
+    'walaikum salam', 'walaikum assalam', 'wa alaikum salam', 'wa alaikum assalam', 'walaykum salam', 'wa alaykum salam',
+    'nice to meet you too', 'nice meeting you too', 'glad to meet you too', 'nice meeting you', 'it was nice meeting you', 'glad to meet you', 'pleased to meet you', 'good to meet you',
+    'it was nice to meet you', 'that would be great', 'that would be nice', 'that would be awesome', 'that would be perfect', 'that would be amazing', 'that would be cool',
+    'that will be great', 'it would be great', 'that would be good', 'that would be fine', 'that is very kind of you', 'that is so kind of you', 'that is kind of you', 'very kind of you',
+    'so kind of you', 'you are too kind', 'you are so kind', 'you are very kind', 'that is very nice of you', 'that is nice of you', 'so nice of you', 'very nice of you',
+    'i am glad i met you', 'glad i met you', 'i am happy i met you', 'happy i met you', 'i am glad i met you too', 'glad i met you too', 'thanks again', 'thank you again', 'see you all tomorrow', 'see you all later', 'get well soon', 'good luck everyone', 'good luck guys',
     'thanks everyone', 'thank you everyone', 'thanks guys', 'thank you guys', 'thanks everyone for', 'thank you everyone for', 'thanks guys for', 'thank you guys for', 'good morning everyone', 'good morning guys', 'good evening everyone', 'good evening guys', 'good night everyone', 'good night guys']);
   const FIX_END = new Set(['where are you', 'how are you', 'what are you doing', 'what is your name', 'where are you from', 'i see', 'i understand', 'got it', 'i agree', 'i think so', 'i do not think so', 'i am fine', 'i am good',
     'i am ok', 'i am okay', 'i am coming', 'whatever', 'and you', 'what about you', 'me too', 'me neither', 'how much', 'exactly',
+    'how about you', 'what is yours', 'what about yours', 'how about yours', 'and yours', 'you too', 'i am doing well', 'i am doing good', 'i am doing fine', 'i am doing ok',
+    'i am doing okay', 'i am doing great', 'doing well', 'doing good', 'doing fine', 'doing great', 'i am well', 'i am great', 'i am alright', 'i am all right', 'all good',
+    'would be great', 'would be nice',
     'seriously', 'for real', 'no way', 'let us go', 'it is ok', 'it is okay', 'it is fine', 'like this', 'like that', 'this way', 'what happened',
     'i would love to', 'sounds good to me', 'why not', 'whatever you want', 'it is up to you', 'up to you', 'worth it', 'it is worth it', 'it was worth it',
-    'is it worth it', 'was it worth it', 'you up', 'you there', 'are you there', 'probably not', 'same', 'same here', 'my bad', 'facts', 'can not wait', 'i can not wait']);
+    'is it worth it', 'was it worth it', 'you up', 'you there', 'are you there', 'probably not', 'same', 'same here', 'my bad', 'facts', 'can not wait', 'i can not wait',
+    'by mistake', 'by accident', 'for a bit', 'for a little bit', 'for a little while', 'i do not care', 'i do not care anymore', 'bet', 'say less', 'skill issue', 'touch grass',
+    'no shot', 'my guy', 'my man', 'my boy', 'cope', 'cope harder', 'i am cooked', 'we are cooked', 'you are cooked', 'he is cooked', 'she is cooked', 'they are cooked', 'cooked',
+    'hope so', 'i hope so', 'i hope not', 'hope not', 'since school', 'since high school', 'since college', 'since university', 'feel better', 'feel better soon', 'whatever you want']);
   const FIX_KNOW = new Set(['i do not know', 'do not know', 'i have no idea', 'no idea', 'i know']);
   const STARTERS = new Set(['and', 'but', 'so', 'then', 'ok', 'okay', 'yes', 'yeah', 'no', 'oh', 'wow', 'haha', 'lol', 'hi', 'hello', 'hey',
     'well', 'bro', 'dude', 'guys', 'now', 'alright', 'also', 'man', 'please', 'everyone']);
@@ -1002,6 +1136,7 @@
     if (FIX_START.has(key) && !startish(toks, i) && !samePhraseBefore(toks, i, n)) return false;
     if (FIX_END.has(key) && !endish(toks, i + n)) return false;
     if (FIX_KNOW.has(key) && !(endish(toks, i + n) || (next && (WH[next.w] || ['if', 'that', 'about', 'anything', 'whether'].includes(next.w))))) return false;
+    if (FIX_KNOW.has(key) && next && next.w === 'that' && toks[i + n + 1] && !toks[i + n + 1].punct && (NOUN_FORM.has(toks[i + n + 1].w) || ADJS[toks[i + n + 1].w] || toks[i + n + 1].w === 'one')) return false;   // i know that guy
     if (FIX_KNOW.has(key) && next && WH[next.w] && toks[i + n + 1] && toks[i + n + 1].w === 'to') return false;
     const lastW = key.split(' ').pop();
     if (DEM[lastW] && next && !next.punct && (NOUN_FORM.has(next.w) || ADJS[next.w])) return false;
@@ -1123,11 +1258,12 @@
       if (!t || t.punct || t.arabic || t.keep) continue;
       const nw = next && !next.punct ? next.w : null;
       const set = (to) => { fixes.push({ from: t.o, to }); toks.splice(i, 1, ...expandTokens(tokenize(to))); };
-      if (t.w === 'you' && /^ya$/i.test(t.o) && (!prev || prev.punct) && nw && (PRON_SUBJ[nw] || nw === 'you' || AUX.has(nw) || ['bro', 'lol', 'ok', 'okay', 'true', 'right', 'sure', 'man', 'but', 'and', 'same'].includes(nw))) set('yeah');
+      if (t.w === 'hope' && (!prev || prev.punct || STARTERS.has(prev.w)) && nw && ['you', 'it', 'he', 'she', 'they', 'we', 'everything', 'everyone', 'this', 'that', 'all', 'your', 'the', 'ur', 'u', 'to', 'so', 'not'].includes(nw)) set('i hope');
+      else if (t.w === 'you' && /^ya$/i.test(t.o) && (!prev || prev.punct) && nw && (PRON_SUBJ[nw] || nw === 'you' || AUX.has(nw) || ['bro', 'lol', 'ok', 'okay', 'true', 'right', 'sure', 'man', 'but', 'and', 'same'].includes(nw))) set('yeah');
       else if (t.w === 'no' && prev && (prev.w === 'not' || PRON_SUBJ[prev.w] || prev.w === 'you') && nw && (WH[nw] || ['that', 'it', 'him', 'her', 'them', 'this', 'about', 'if', 'a', 'the', 'one', 'everything', 'nothing', 'anything', 'something'].includes(nw))) set('know');
       else if (t.w === 'their' && nw && ['going', 'gonna', 'not', 'all', 'here', 'there', 'so', 'very', 'just', 'still', 'the', 'a', 'coming', 'doing', 'playing', 'online', 'back'].includes(nw)) set('they are');
-      else if (t.w === 'its' && nw && /^\d/.test(nw)) set('it is');
-      else if (t.w === 'ill' && nw && (isVerbBase(nw) || nw === 'be' || nw === 'not')) set('i will');
+      else if (t.w === 'its' && nw && (/^\d/.test(nw) || ['about', 'around', 'almost', 'nearly', 'only', 'basically', 'literally', 'getting', 'raining', 'hot', 'cold', 'late', 'early', 'here', 'there', 'mine', 'yours'].includes(nw))) set('it is');
+      else if (t.w === 'ill' && nw && (isVerbBase(nw) || nw === 'be' || nw === 'not' || PHRASAL.get(nw))) set('i will');
       else if (t.w === 'id' && nw && (isVerbBase(nw) || nw === 'be' || nw === 'love' || nw === 'like')) set('i would');
       else if (t.w === 'by' && prev && prev.w === 'to' && nw && (DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw) || ADJS[nw] || nw === 'it' || nw === 'them')) set('buy');
       else if (t.w === 'then' && prev && (/^(more|less|better|worse)$/.test(prev.w) || (ADJS[prev.w] && /er$/.test(prev.w)))) set('than');
@@ -1185,7 +1321,7 @@
     if (v.pr && v.pr[p]) return v.pr[p];
     const st = v.az[2];
     let f;
-    if (p === '1s') f = /^a/.test(st) ? st : 'a' + st;
+    if (p === '1s') f = /^a/.test(st) ? st : /^i[^aeiou]/.test(st) && st.length > 3 ? 'a' + st.slice(1) : 'a' + st;
     else f = PFX[p] + (/^[aeiou]/.test(st) ? '' : v.lv || '') + st;
     if (p === '2f' || p === '2p' || p === '3p') {
       f = /[aiu]$/.test(f) ? f.slice(0, -1) : elide(f, 'i');
@@ -1337,6 +1473,21 @@
       if (t.posss) { items.push({ t: 'posss' }); i++; continue; }
       const t1 = toks[i + 1], t2 = toks[i + 2];
       const plain = (x) => !!x && !x.punct && !x.keep && !x.arabic;
+      // a ten minute walk / a 2 hour drive → 10 dagaayig mashi / saa3tain bis-sayyara
+      {
+        const numTok = (x) => x && !x.punct && (/^\d+$/.test(x.w) || NUMS[x.w]);
+        const t2 = toks[i + 2], t3 = toks[i + 3];
+        const unit = (x) => x && !x.punct && /^(minute|minutes|hour|hours|day|days|week|weeks|month|months)$/.test(x.w);
+        const trav = { walk: ['mashi', 'مشي'], drive: ['bis-sayyara', 'بالسيارة'], ride: ['bis-sayyara', 'بالسيارة'], flight: ['bi6-6ayyaara', 'بالطيارة'], trip: ['safar', 'سفر'], journey: ['safar', 'سفر'] };
+        const mk = (a, b, c) => {
+          const n = /^\d+$/.test(a.w) ? +a.w : NUM_VAL[a.w];
+          const head = { minute: 'minute', hour: 'hour', day: 'day', week: 'week', month: 'month' }[b.w.replace(/s$/, '')];
+          const noun = { t: 'noun', key: head, pl: n !== 1, o: b.o, dual: n === 2 };
+          items.push({ t: 'num', az: String(n), ar: String(n), n }, noun, { t: 'fixed', az: trav[c.w][0], ar: trav[c.w][1], key: c.w });
+        };
+        if (t.w === 'a' && numTok(t1) && unit(t2) && t3 && !t3.punct && trav[t3.w]) { mk(t1, t2, t3); i += 4; continue; }
+        if (numTok(t) && unit(t1) && t2 && !t2.punct && trav[t2.w]) { mk(t, t1, t2); i += 3; continue; }
+      }
       // twenty five → 25; at seven thirty → is-saa3a sab3 w nu9
       if (NUMS[t.w] && plain(t1) && NUMS[t1.w]) {
         const x = NUM_VAL[t.w], y = NUM_VAL[t1.w];
@@ -1346,6 +1497,94 @@
           const add = t1.w === 'thirty' ? [' w nu9', ' ونص'] : [' w rub3', ' وربع'];
           items.push({ t: 'num', az: b[0] + add[0], ar: b[1] + add[1], n: x }); i += 2; continue;
         }
+      }
+      // i'm trying to find the station → gaa3id adawwir 3ala il-ma7a66a
+      if (t.w === 'trying' && plain(t1) && t1.w === 'to' && plain(t2) && t2.w === 'find' && toks[i + 3] && !toks[i + 3].punct && toks[i + 3].w !== 'out') {
+        items.push({ t: 'verb', key: 'look for', form: 'ing', o: t.o }); i += 3; continue;
+      }
+      // got stuck / got hacked / getting kicked → 3allagt / ithakkar / gaa3id an6irid
+      if (GET_FORMS[t.w] && plain(t1) && VERBS['get ' + t1.w] && !(plain(t2) && t2.w === 'of')) {
+        items.push({ t: 'verb', key: 'get ' + t1.w, form: GET_FORMS[t.w], o: t.o }); i += 2; continue;
+      }
+      // W update / L take → ta7deeth W; a big L → L chibeer
+      if (/^[WL]$/.test(t.o) && plain(t1) && NOUN_FORM.has(t1.w) && (i === 0 || toks[i - 1].punct || ['a', 'an', 'the', 'big', 'huge', 'massive', 'another', 'such', 'what', 'that', 'this'].includes(toks[i - 1].w))) {
+        const nf = NOUN_FORM.get(t1.w);
+        items.push({ t: 'noun', key: nf.key, pl: nf.pl, o: t1.o }, { t: 'fixed', az: t.o, ar: t.o, user: true, single: true, keep: true }); i += 2; continue;
+      }
+      if (/^[WL]$/.test(t.o) && (!t1 || t1.punct || !plain(t1) || ADJS[t1.w] || ['for', 'bro', 'lol', 'fr', 'tbh', 'ngl'].includes(t1.w))) { items.push({ t: 'fixed', az: t.o, ar: t.o, user: true, single: true, keep: true }); i += 1; continue; }
+      // plug it in / pick him up / set it up → the phrasal verb, then the pronoun
+      if (plain(t1) && PRON_OBJ[t1.w] && plain(t2) && PHRASAL.get(t.w) && PHRASAL.get(t.w).some((r) => r.particle === t2.w)) {
+        const hit = PHRASAL.get(t.w).find((r) => r.particle === t2.w);
+        const key = hit.key === 'pick up' && t1.w !== 'it' && t1.w !== 'them' ? 'pick up_p' : hit.key;
+        items.push({ t: 'verb', key, form: hit.form, o: t.o }, { t: 'pron', w: t1.w, role: 'obj' }); i += 3; continue;
+      }
+      // harder than i expected → a93ab min ma twagga3t
+      if (t.w === 'than' && plain(t1) && (PRON_SUBJ[t1.w] || t1.w === 'you') && plain(t2) && (verbInfo(t2.w) || AUX.has(t2.w) || MODAL[t2.w])) {
+        items.push({ t: 'conj', w: 'than', az: 'min ma', ar: 'من ما' }); i += 1; continue;
+      }
+      // hope you have a great day → atmanna lak yoom 7ilu
+      {
+        const off = t.w === 'i' && plain(t1) && t1.w === 'hope' ? 1 : 0;
+        const h = toks[i + off], h1 = toks[i + off + 1], h2 = toks[i + off + 2], h3 = toks[i + off + 3];
+        if (h && h.w === 'hope' && plain(h1) && (h1.w === 'you' || h1.w === 'u') && plain(h2) && h2.w === 'have' && h3 && /^(a|an)$/.test(h3.w)) {
+          const q = prepPron('li', resolveP('2', ctx.addr));
+          items.push({ t: 'fixed', az: 'atmanna ' + q[0], ar: 'أتمنى ' + q[1], key: 'i hope' }); i += off + 4; continue;
+        }
+      }
+      // i get an error / he got a message → yi6la3 li error / 6ila3 lah message
+      if (ERR_GET[t.w] && plain(t1) && (/^(a|an|the|this|that|some|another)$/.test(t1.w) ? plain(t2) && ERR_NOUNS.has(t2.w) : ERR_NOUNS.has(t1.w))) {
+        const sp = i > 0 && !toks[i - 1].punct ? (PRON_SUBJ[toks[i - 1].w] || (toks[i - 1].w === 'you' ? '2' : null)) : null;
+        const subjI = sp ? i - 1 : -1;
+        const form = ERR_GET[t.w];
+        const nounAt = /^(a|an|the|this|that|some|another)$/.test(t1.w) ? i + 2 : i + 1;
+        const nounW = toks[nounAt].w;
+        const pr = sp ? resolveP(sp, ctx.addr) : '1s';
+        const li = prepPron('li', pr);
+        if (subjI >= 0) items.pop();   // drop the subject pronoun already pushed
+        const vb = form === 'past' ? ['6ila3', 'طلع'] : form === 'ing' ? ['gaa3id yi6la3', 'قاعد يطلع'] : ['yi6la3', 'يطلع'];
+        items.push({ t: 'fixed', az: vb[0] + ' ' + li[0], ar: vb[1] + ' ' + li[1], key: 'get error' }, { t: 'word', w: nounW, o: toks[nounAt].o });
+        i = nounAt + 1; continue;
+      }
+      // do what you want / say what you want → sawwi illi tabeeh
+      if (t.w === 'what' && i > 0 && plain(toks[i - 1]) && WHAT_REL_VERBS.has(toks[i - 1].w) && plain(t1) && (PRON_SUBJ[t1.w] || t1.w === 'you') && plain(t2) && (verbInfo(t2.w) || MODAL[t2.w] || AUX.has(t2.w))) {
+        items.push({ t: 'rel', w: 'what', illi: true }); i += 1; continue;
+      }
+      // every time you log in → kil ma tdish
+      if (t.w === 'every' && plain(t1) && t1.w === 'time' && plain(t2) && (PRON_SUBJ[t2.w] || t2.w === 'you' || t2.w === 'it' || DET[t2.w] || PRON_POSS[t2.w] || NOUN_FORM.has(t2.w))) {
+        items.push({ t: 'conj', w: 'when', az: 'kil ma', ar: 'كل ما' }); i += 2; continue;
+      }
+      // about to + verb → going to
+      if (t.w === 'about' && plain(t1) && t1.w === 'to' && plain(t2) && (isVerbBase(t2.w) || PHRASAL.get(t2.w))) { items.push({ t: 'modal', m: 'will', w: 'will', about: true }); i += 2; continue; }
+      // show me the way / i know the way → id-darb
+      if (t.w === 'the' && plain(t1) && t1.w === 'way' && (!t2 || t2.punct || ['to', 'home', 'back', 'there', 'here'].includes(t2.w)) && !(t2 && t2.w === 'to' && toks[i + 3] && isVerbBase(toks[i + 3].w))) {
+        const vb = toks.slice(Math.max(0, i - 3), i).map((x) => x.w);
+        if (vb.some((x) => ['show', 'shows', 'showed', 'know', 'knows', 'knew', 'find', 'found', 'lost', 'lose', 'forgot', 'forget', 'remember', 'tell', 'ask', 'on', 'all'].includes(x))) {
+          items.push({ t: 'det', w: 'def' }, { t: 'noun', key: 'darb', o: 'way' }); i += 2; continue;
+        }
+      }
+      // stop afk farming → waggif tfarrim afk
+      if (/^(stop|stops|stopped|quit|start|started|keep|keeps|kept)$/.test(t.w) && plain(t1) && t1.w === 'afk' && plain(t2) && (verbInfo(t2.w) || []).some((r) => r.form === 'ing')) {
+        toks.splice(i + 1, 2, t2, t1); 
+      }
+      // how much did you pay → cham dafa3t
+      if (t.w === 'how' && plain(t1) && t1.w === 'much' && plain(t2) && (AUX.has(t2.w) || MODAL[t2.w]) && !(toks[i + 3] && ['it', 'this', 'that'].includes(toks[i + 3].w) && toks[i + 4] && toks[i + 4].punct)) {
+        items.push({ t: 'wh', w: 'how much' }); i += 2; continue;
+      }
+      // how long does it take to X → cham yaa5idh wagt 3ashaan t-X
+      if (t.w === 'how' && plain(t1) && t1.w === 'long' && plain(t2) && /^(does|will|would|did|is|can)$/.test(t2.w) && toks[i + 3] && toks[i + 3].w === 'it' && toks[i + 4] && /^(take|takes|took|taking|gonna)$/.test(toks[i + 4].w)) {
+        const past = t2.w === 'did';
+        let k = i + 5;
+        if (toks[k] && toks[k].w === 'take') k++;
+        let who = '';
+        if (toks[k] && plain(toks[k]) && (PRON_OBJ[toks[k].w] || toks[k].w === 'you')) { const q = prepPron('min', resolveP(PRON_OBJ[toks[k].w] || '2', ctx.addr)); who = ' ' + q[0]; k++; }
+        const toX = toks[k] && toks[k].w === 'to' && toks[k + 1] && !toks[k + 1].punct;
+        items.push({ t: 'fixed', az: (past ? 'cham a5adh wagt' : 'cham yaa5idh wagt') + who + (toX ? ' 3ashaan' : ''), ar: (past ? 'چم أخذ وقت' : 'چم ياخذ وقت') + (toX ? ' عشان' : ''), key: 'how long' });
+        if (toX) { items.push({ t: 'pron', w: 'you', role: 'subj' }); i = k + 1; } else i = k;
+        continue;
+      }
+      // ur + adjective / -ing verb → you are
+      if (t.o.toLowerCase() === 'ur' && plain(t1) && (ADJS[t1.w] || ['so', 'the', 'a', 'an', 'not', 'gonna', 'going', 'in', 'on', 'at', 'here', 'there', 'right', 'wrong', 'very', 'too', 'really', 'still', 'just', 'always', 'never', 'also', 'welcome', 'done', 'online', 'offline', 'afk', 'back', 'late', 'early', 'all', 'kinda', 'pretty', 'dead', 'lucky', 'trash', 'cracked', 'cooked', 'mid', 'goated', 'good', 'bad', 'fine', 'ok', 'okay', 'sure', 'free', 'busy', 'crazy', 'insane', 'wrong', 'such'].includes(t1.w) || (verbInfo(t1.w) || []).some((r) => r.form === 'ing')) && !(t2 && plain(t2) && NOUN_FORM.has(t2.w) && ADJS[t1.w])) {
+        items.push({ t: 'word', w: 'you', o: 'you' }, { t: 'aux', w: 'are' }); i += 1; continue;
       }
       // simply put, ... → bi5ti9aar
       if (t.w === 'simply' && plain(t1) && t1.w === 'put') { items.push({ t: 'adv', az: 'bi5ti9aar', ar: 'باختصار' }); i += 2; continue; }
@@ -1428,7 +1667,7 @@
           items.push({ t: 'quant', q: 'shwayya' }); i += n; matched = true; break;
         }
         const fx = FIXED.get(key);
-        if (fx && (n >= 2 || !['please', 'sure', 'no', 'brother', 'like', 'same', 'back', 'help', 'rip', 'facts', 'true'].includes(key) || isFixedAlone(key, toks, i)) && fixedFits(key, toks, i, n)) {
+        if (fx && (n >= 2 || !['please', 'sure', 'no', 'brother', 'like', 'same', 'back', 'help', 'rip', 'facts', 'true', 'wait', 'bet', 'cope', 'cooked', 'whoever'].includes(key) || isFixedAlone(key, toks, i)) && fixedFits(key, toks, i, n)) {
           const v = fx[ctx.addr] || fx.m;
           const prevIt = items[items.length - 1];
           if (n >= 2 && prevIt && prevIt.t === 'fixed' && prevIt.key === key) { i += n; matched = true; break; }   // "np np" → once
@@ -1451,6 +1690,10 @@
   const DO_FORMS = { do: 'base', does: 's', did: 'past', doing: 'ing', done: 'pp' };
   const DO_LIKE_MAKE = { make: 'is', makes: 'is', made: 'was', making: 'is' };
   const CLICK_FORMS = { click: 'base', clicks: 's', clicked: 'past', press: 'base', pressed: 'past', tap: 'base', tapped: 'past', hit: 'base' };
+  const GET_FORMS = { get: 'base', gets: 's', got: 'past', getting: 'ing', gotten: 'pp' };
+  const ERR_GET = { get: 'base', gets: 's', got: 'past', getting: 'ing', keep_getting: 'ing' };
+  const ERR_NOUNS = new Set(['error', 'errors', 'message', 'popup', 'warning', 'notification', 'bug', 'glitch', 'crash']);
+  const WHAT_REL_VERBS = new Set(['do', 'say', 'take', 'get', 'eat', 'buy', 'use', 'choose', 'pick', 'bring', 'send', 'give', 'play', 'wear', 'write', 'order', 'sell', 'build', 'make', 'watch', 'read']);
   const TRY_FORMS = { try: 'base', tries: 's', tried: 'past', trying: 'ing' };
   const KEEP_FORMS = { keep: 'base', keeps: 's', kept: 'past', keeping: 'ing' };
   const GOOD_JOB = new Set(['great', 'good', 'nice', 'amazing', 'awesome', 'fantastic', 'excellent', 'wonderful', 'perfect']);
@@ -1496,7 +1739,9 @@
     }
     if (key === 'sure') return (!next || !!next.punct) && startish(toks, i);
     const prevT = toks[i - 1], alone = (!prevT || prevT.punct || STARTERS.has(prevT.w)) && (!next || next.punct || ENDERS.has(next.w));
-    if (key === 'same' || key === 'back' || key === 'facts' || key === 'true') return alone;
+    if (key === 'same' || key === 'back' || key === 'facts' || key === 'true' || key === 'bet' || key === 'cope' || key === 'cooked') return alone;
+    if (key === 'wait') return (!prevT || prevT.punct || STARTERS.has(prevT.w)) && (!next || next.punct);
+    if (key === 'whoever') return (!prevT || prevT.punct) && !!next && !next.punct;
     if (key === 'help') return (!prevT || prevT.punct) && (!next || next.punct);
     if (key === 'rip') return !next || next.punct;
     if (key === 'brother') {
@@ -1570,7 +1815,9 @@
     if ((w === 'that' || w === 'who' || w === 'which') && isRel(w, rawPrev, nw, nextRaw, hist)) return { t: 'rel', w };
     const h2 = hist[hist.length - 2];
     if (w === 'that' && rawPrev && rawPrev.t === 'pron' && rawPrev.role !== 'poss' && h2 && h2.t === 'verb' && THAT_VERBS.has(h2.key) && nw &&
-      (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw))) return { t: 'conj', w: 'that', az: '', ar: '' };
+      (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw))) return { t: 'conj', w: 'that', az: '', ar: '', inn: true };
+    if (w === 'that' && rawPrev && rawPrev.t === 'fixed' && THAT_FIXED.has(rawPrev.key) && nw && (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw)) &&
+      !(nn && (NOUN_FORM.has(nn) || ADJS[nn]) && (DET[nw] || NOUN_FORM.has(nw)) === false)) return { t: 'conj', w: 'that', az: '', ar: '', inn: !/hope|wish/.test(rawPrev.key) };
     if (w === 'cause' && nw && (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || DEM[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw) || INDEF.has(nw)) &&
         !(rawPrev && (rawPrev.t === 'det' || rawPrev.t === 'adj' || rawPrev.t === 'prep' || rawPrev.t === 'num' || (rawPrev.t === 'pron' && rawPrev.role === 'poss')))) return { t: 'conj', w: 'because', az: '3ashaan', ar: 'عشان' };
     // "ill be back" = i'll; "id like" = i'd; "then" at the end = in that case; "like 3 months" = about
@@ -1586,7 +1833,7 @@
       if (h1 && (h1.t === 'neg' || (h1.t === 'aux' && h0 && !['punct', 'conj', 'wh'].includes(h0.t)))) return { t: 'adv', az: 'wayed', ar: 'وايد', int: true };
     }
     // it keeps crashing → ya6'all y6ee7
-    if (KEEP_FORMS[w] && nextRaw && nextRaw.t === 'word' && (verbInfo(nextRaw.w) || []).some((r) => r.form === 'ing')) return { t: 'modal', m: 'keep', w, past: w === 'kept' };
+    if (KEEP_FORMS[w] && nextRaw && (nextRaw.t === 'word' ? (verbInfo(nextRaw.w) || []).some((r) => r.form === 'ing') : nextRaw.t === 'verb' && nextRaw.form === 'ing')) return { t: 'modal', m: 'keep', w, past: w === 'kept' };
     let r = null;
     const vb = verbInfo(w);
     if (vb && vb.some((x) => x.form === 'base') && rawPrev && (['noun', 'unk'].includes(rawPrev.t) || (rawPrev.t === 'pron' && rawPrev.role !== 'poss') || (rawPrev.t === 'fixed' && (rawPrev.user || INDEF.has(rawPrev.key))))) {
@@ -1616,6 +1863,8 @@
   }
   function tagWord0(w, o, prev, nw, nextRaw, nn, ahead, idx, rawPrev) {
     ahead = ahead || [];
+    if ((w === 'about' || w === 'around' || w === 'roughly' || w === 'approximately') && ((nw && (/^\d/.test(nw) || NUMS[nw] || (nw === 'a' && nn && (/^(minute|hour|day|week|month|year|hundred|thousand|million)/.test(nn) || NUMS[nn] || /^\d/.test(nn))))) || (nextRaw && nextRaw.t === 'num'))) return { t: 'adv', az: 'tagreeban', ar: 'تقريباً' };
+    if (w === 'mid' && (!nw || (nextRaw && nextRaw.t === 'punct') || prevIs(prev, 'aux', 'adv') || ['so', 'kinda', 'pretty', 'very', 'really', 'bit', 'little'].includes(prev && prev.w))) return { t: 'adj', key: 'mid' };
     if (w === 'simply' && nw !== 'put') { const v = verbInfo(nw); return { t: 'adv', az: 'bas', ar: 'بس', mid: !!(v || AUX.has(nw) || MODAL[nw]) }; }
     if (w === 'just') {
       const v = verbInfo(nw);
@@ -1647,13 +1896,18 @@
       const objNext = !!nn && (!!PRON_OBJ[nn] || nn === 'it' || nn === 'you' || !!DET[nn] || !!PRON_POSS[nn] || !!DEM[nn]);
       const nextVerbish = !!nw && !!(verbInfo(nw) || AUX.has(nw) || MODAL[nw] || nw === 'not') && (!NOUN_FORM.has(nw) || (objNext && !!verbInfo(nw)));
       if (prev && prev.t === 'verb' && THAT_VERBS.has(prev.key) && nextVerbish) return { t: 'pron', w, role: 'subj' };
+      if (prev && prev.t === 'verb' && INTRANS.has(prev.key) && nextVerbish) return { t: 'pron', w, role: 'subj' };   // every time i log in it crashes
       if (prev && prev.t === 'verb' && nw && (MODAL[nw] || (AUX.has(nw) && !['be', 'been', 'being'].includes(nw)))) return { t: 'pron', w, role: 'subj' };
       return { t: 'pron', w, role: prevIs(prev, 'verb', 'prep', 'pron') && !(prev.t === 'pron') ? 'obj' : 'any' };
     }
     if (PRON_OWN[w]) return { t: 'own', w };
-    if (w === 'that' && prev && prev.t === 'verb' && THAT_VERBS.has(prev.key) && nw && (PRON_SUBJ[nw] || DET[nw] || NOUN_FORM.has(nw))) return { t: 'conj', w: 'that', az: '', ar: '' };
+    if (w === 'that' && ((prev && prev.t === 'verb' && THAT_VERBS.has(prev.key)) || (rawPrev && rawPrev.t === 'fixed' && FIX_KNOW.has(rawPrev.key))) && nw && (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw))) return { t: 'conj', w: 'that', az: '', ar: '', inn: true };
+    if (w === 'that' && prev && prev.t === 'aux' && ['is', 'was'].includes(prev.w) && rawPrev && nw && (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw)) && nn && (verbInfo(nn) || AUX.has(nn) || MODAL[nn] || NOUN_FORM.has(nn) || nn === 'not')) return { t: 'conj', w: 'that', az: 'inn', ar: 'إن', inn: true };
+    if (w === 'that' && prev && prev.t === 'adj' && ['sure', 'glad', 'happy', 'sorry', 'afraid', 'surprised', 'sad'].includes(prev.key) && nw && (PRON_SUBJ[nw] || nw === 'you' || nw === 'it' || DET[nw] || PRON_POSS[nw] || NOUN_FORM.has(nw))) return { t: 'conj', w: 'that', az: '', ar: '', inn: true };
     if (DEM[w]) return nw && (isNounish(nw) || (nextIsNounish && nextRaw && nextRaw.t === 'word' && !(nn && (verbInfo(nn) || AUX.has(nn))))) && !(prevIs(prev, 'aux') && !NOUN_FORM.has(nw) && ADJS[nw]) ? { t: 'det', w: DET[w] } : { t: 'dem', w };
     if (w === 'there' && nw && ['is', 'are', 'was', 'were', 'will', 'has', 'have'].includes(nw)) return { t: 'there' };
+    if (w === 'there' && prev && prev.t === 'aux' && ['is', 'are', 'was', 'were'].includes(prev.w) && ((nw && (DET[nw] || ['a', 'an', 'any', 'no', 'some', 'anyone', 'anybody', 'someone', 'something', 'anything', 'nothing', 'nobody'].includes(nw) || NOUN_FORM.has(nw) || QUANT_W[nw] || /^\d/.test(nw) || NUMS[nw])) ||
+      (nextRaw && nextRaw.t === 'fixed' && /^(anyone|anybody|someone|somebody|something|anything|nothing|nobody|no one)$/.test(nextRaw.key)))) return { t: 'there', q: true };
     if (w === 'have' || w === 'has' || w === 'had') {
       if (perfectAhead(ahead, clauseStart(prev) || (prev && prev.t === 'wh'))) return { t: 'aux', w };
       return { t: 'verb', key: 'have', form: w === 'had' ? 'past' : w === 'has' ? 's' : 'base', o };
@@ -1774,6 +2028,9 @@
       if (it.t === 'num' && empty && !np.num) { np.num = it; continue; }
       if (it.t === 'adv' && it.int && empty) { np.ints++; if (it.az !== 'wayed') np.intWord = [it.az, it.ar]; continue; }
       if (it.t === 'adj' && empty) { np.adjs.push(it); continue; }
+      if (it.t === 'noun' && ['rank', 'level', 'tier', 'lvl', 'grade', 'stage', 'phase', 'season', 'chapter', 'episode', 'part', 'page', 'room', 'floor', 'number'].includes(it.key) && items[j + 1] && items[j + 1].t === 'num' && items[j + 2] && items[j + 2].t === 'noun' && !np.nouns.length) {
+        np.tag = [it, items[j + 1]]; j += 1; continue;   // rank 10 class → il-class rank 10
+      }
       if (it.t === 'noun') { np.nouns.push(it); continue; }
       if (it.t === 'fixed' && it.user && it.single && empty) { np.nouns.push({ user: it }); j++; break; }
       if (it.t === 'unk' && empty && (np.det || np.poss || np.adjs.length || np.quant || np.num)) {
@@ -1851,7 +2108,7 @@
         const nx = items[j];
         if (nx && (nx.t === 'aux' || nx.t === 'modal' || (nx.t === 'verb' && nx.form !== 'ing'))) { C.push({ k: 'GER', ing: pp.ing }); i = j; continue; }
       }
-      if (it.t === 'rel') { C.push({ k: 'REL', w: it.w }); i++; continue; }
+      if (it.t === 'rel') { C.push({ k: 'REL', w: it.w, illi: !!it.illi }); i++; continue; }
       if (it.t === 'fixed' && !it.user && INDEF.has(it.key)) { C.push({ k: 'IND', it }); i++; continue; }
       if (it.t === 'pron') { C.push({ k: 'PRON', w: it.w, role: it.role }); i++; continue; }
       if (it.t === 'dem') { C.push({ k: 'DEM', w: it.w }); i++; continue; }
@@ -1866,7 +2123,7 @@
         const pp = { k: 'PP', key: it.key, eng: it.eng, obj: null };
         const nx = items[i + 1];
         if (nx && isNPStart(items, i + 1)) { const r = readNP(items, i + 1); pp.obj = r.chunk; C.push(pp); i = r.end; continue; }
-        if (nx && (nx.t === 'pron' || nx.t === 'dem')) { pp.obj = nx.t === 'pron' ? { k: 'PRON', w: nx.w, role: 'obj' } : { k: 'DEM', w: nx.w }; C.push(pp); i += 2; continue; }
+        if (nx && ((nx.t === 'pron' && nx.role !== 'subj' && nx.role !== 'poss') || nx.t === 'dem')) { pp.obj = nx.t === 'pron' ? { k: 'PRON', w: nx.w, role: 'obj' } : { k: 'DEM', w: nx.w }; C.push(pp); i += 2; continue; }
         if (nx && nx.t === 'unk') { pp.obj = { k: 'UNK', it: nx }; C.push(pp); i += 2; continue; }
         if (nx && nx.t === 'verb' && nx.form === 'ing') { i = readIng(items, i + 1, pp); C.push(pp); continue; }
         if (nx && nx.t === 'fixed') { pp.obj = { k: 'FIXED', it: nx }; C.push(pp); i += 2; continue; }
@@ -1889,6 +2146,7 @@
   function resolveP(p, addr) { return p === '2' ? (addr === 'f' ? '2f' : addr === 'pl' ? '2p' : '2m') : p; }
   function pronP(c, ctx) {
     if (c.k === 'DEM') return c.w === 'these' || c.w === 'those' ? '3p' : '3m';
+    if ((c.w === 'it' || c.w === 'its') && ctx.ante && ctx.ante.p === '3f') return '3f';   // the room ... it → hiya
     const p = PRON_SUBJ[c.w] || PRON_OBJ[c.w] || PRON_POSS[c.w];
     return resolveP(p, ctx.addr);
   }
@@ -1914,7 +2172,7 @@
     const def = ['def', 'this', 'that', 'all'].includes(np.det) || !!np.poss || !!np.owner || !!opts.generic || somePl;
     const q = np.quant || (np.det === 'some' ? (somePl ? "ba3'9'" : info.pl ? 'kam' : 'shwayya') : np.det === 'more' ? (np.num ? 'ba3ad' : 'akthar') : np.det === 'enough' ? 'kifaaya' : null);
     const n = np.num ? np.num.n : 0;
-    const forceSg = q === 'kam' || q === 'cham' || np.det === 'every' || n === 1 || n >= 11;
+    const forceSg = q === 'kam' || q === 'cham' || (np.det === 'every' && !(n >= 3 && n <= 10)) || n === 1 || n >= 11;
     const pre = np.adjs.filter((a) => ADJS[a.key].pre);
     const post = np.adjs.filter((a) => !ADJS[a.key].pre);
     if (q === 'wayed') out.push(piece('wayed', 'وايد'));
@@ -1926,20 +2184,24 @@
     else if (np.det === 'any') out.push(piece('ay', 'أي'));
     else if (np.det === 'which') out.push(piece('ay', 'أي'));
     else if (np.det === 'no') out.push(piece('wala', 'ولا'));
-    else if (np.det === 'another') out.push(piece('thaani', 'ثاني'));
     const known = !head.unk && !head.user;
     const useDual = known && n === 2 && !np.poss;
     if (np.num && !useDual && n !== 1) {
       const cons = np.num.cons && known;
-      out.push(piece(cons ? np.num.cons[0] : np.num.az, cons ? np.num.cons[1] : np.num.ar, { num: true }));
+      let nz = cons ? np.num.cons[0] : np.num.az, nr = cons ? np.num.cons[1] : np.num.ar;
+      if (nz === 'imya' && known) nz = 'imyat';   // 100 views → imyat mushaahada
+      out.push(piece(nz, nr, { num: true }));
     }
     for (const a of pre) { const f = adjForm(a.key, 'm'); out.push(piece(f[0], f[1])); }
     if (!known) {
+      const lower = !head.user && head.unk && /^[a-z]/.test(head.unk) && !head.name;
+      const art = lower && (np.det === 'def' || np.det === 'that' || np.poss) && !np.owner ? ['il-', 'ال'] : ['', ''];
       if (np.det === 'this' && !head.user) out.push(piece('hal', 'هال'));
       else if (np.det === 'that' && !head.user) out.push(piece('hadhaak', 'هذاك'));
-      out.push(head.user ? piece(head.user.az, head.user.ar, { user: true }) : piece(head.unk, head.unk, { known: false, unk: true }));
+      out.push(head.user ? piece(head.user.az, head.user.ar, { user: true }) : piece(art[0] + head.unk, art[1] + head.unk, { known: false, unk: true, bare: head.unk }));
       if (np.poss) { const p = resolveP(PRON_POSS[np.poss], ctx.addr); out.push(piece('maal' + SUF_AZ[p], 'مال' + SUF_AR[p])); }
-      for (const a of post) { const f = adjForm(a.key, 'm'); out.push(piece(f[0], f[1])); }
+      for (const a of post) { const f = adjForm(a.key, 'm'); out.push(piece((art[0] ? 'il-' : '') + f[0], (art[1] ? 'ال' : '') + f[1])); }
+      if (np.det === 'another') out.push(piece('thaani', 'ثاني'));
       return { pieces: out, info };
     }
     const N = NOUNS[head.key];
@@ -1963,6 +2225,16 @@
       if (q === 'kifaaya') out.push(piece('kifaaya', 'كفاية'));
       return { pieces: out, info };
     }
+    if (mods.length && !np.owner && mods.every((m) => NOUNS[m.key].loan) && N.loan) {   // quest loader → il-quest loader
+      const words = mods.map((m) => NOUNS[m.key].az).join(' ');
+      const lead = np.det === 'this' ? ['hal ', 'هال'] : np.det === 'that' ? ['hadhaak il-', 'هذاك ال'] : def ? ['il-', 'ال'] : ['', ''];
+      out.push(piece(lead[0] + words + ' ' + az, lead[1] + words + ' ' + ar));
+      if (np.poss) { const p = resolveP(PRON_POSS[np.poss], ctx.addr); out.push(piece('maal' + SUF_AZ[p], 'مال' + SUF_AR[p])); }
+      for (const a of post) { const f = adjForm(a.key, info.feat); out.push(piece((def ? 'il-' : '') + f[0], (def ? 'ال' : '') + f[1])); }
+      if (q === 'akthar') out.push(piece('akthar', 'أكثر'));
+      if (q === 'ba3ad') out.push(piece('ba3ad', 'بعد'));
+      return { pieces: out, info };
+    }
     if (mods.length || np.owner) { [az, ar] = construct(az, ar); }
     else if (np.poss && pre.length && !defNoun) {
       const p = resolveP(PRON_POSS[np.poss], ctx.addr);
@@ -1979,8 +2251,8 @@
       if (ov && !usePl) [az, ar] = ov; else [az, ar] = possess(az, ar, p);
       possDone = true;
     } else if (np.det === 'this') { az = 'hal ' + az; ar = 'هال' + ar; }
-    else if (np.det === 'that') { out.push(info.feat === 'f' ? piece('hadhich', 'هذيج') : info.feat === 'pl' ? piece('hadhelaak', 'هذيلاك') : piece('hadhaak', 'هذاك')); if (!N.proper) { az = 'il-' + az; ar = 'ال' + ar; } }
-    else if (((def && !pre.length) || defNoun) && !N.proper) { az = 'il-' + az; ar = 'ال' + ar; }
+    else if (np.det === 'that') { out.push(info.feat === 'f' ? piece('hadhich', 'هذيج') : info.feat === 'pl' ? piece('hadhelaak', 'هذيلاك') : piece('hadhaak', 'هذاك')); if (!N.proper && !/\bil-/.test(az)) { az = 'il-' + az; ar = 'ال' + ar; } }
+    else if (((def && !pre.length) || defNoun) && !N.proper && !/\bil-/.test(az)) { az = 'il-' + az; ar = 'ال' + ar; }
     out.push(piece(az, ar));
     for (const m of mods) {
       const M = NOUNS[m.key];
@@ -1995,10 +2267,15 @@
       const A = ADJS[a.key];
       const f = adjForm(a.key, info.feat);
       if (A.defd) { out.push(piece(f[0], f[1])); continue; }
-      if (a.key === 'free' && !info.human && !TIME_NOUNS.has(head.key) && head.key !== 'weekend') { out.push(piece('balaash', 'بلاش')); continue; }
+      if (a.key === 'free' && !info.human && !TIME_NOUNS.has(head.key) && head.key !== 'weekend') {
+        if (adjDef) { const g = adjForm('majjaani', info.feat); out.push(piece('il-' + g[0], 'ال' + g[1])); } else out.push(piece('balaash', 'بلاش'));
+        continue;
+      }
       out.push(piece((adjDef ? 'il-' : '') + f[0], (adjDef ? 'ال' : '') + f[1]));
     }
     if (np.ints && post.length) out.push(np.intWord ? piece(np.intWord[0], np.intWord[1]) : piece('wayed', 'وايد'));
+    if (np.tag) { const T = NOUNS[np.tag[0].key]; out.push(piece(T.az + ' ' + np.tag[1].az, T.ar + ' ' + np.tag[1].ar)); }
+    if (np.det === 'another') out.push(info.feat === 'f' ? piece('thaanya', 'ثانية') : piece('thaani', 'ثاني'));
     if (n === 1 && np.num.az === 'wa7id') out.push(N.g === 'f' ? piece('wa7da', 'وحدة') : piece('wa7id', 'واحد'));
     if (tail) out.push(piece(tail[0], tail[1]));
     if (q === 'akthar') out.push(piece('akthar', 'أكثر'));
@@ -2277,7 +2554,7 @@
       const hp = neg ? ['ma ' + h[0], 'ما ' + h[1]] : h;
       out.push(piece(hp[0], hp[1]));
       if (special) { const k = [presentAz(BE, verbP), presentAr(BE, verbP)]; out.push(piece(k[0], k[1])); }
-      pushVerb(mainForm(verbP));
+      pushVerb(mainForm(opts && opts.compP ? opts.compP : verbP));
       if (a.never && !neverPast) out.push(piece('abadan', 'أبداً'));
       return { pieces: out, objIdx, verbKey: V.key };
     }
@@ -2324,13 +2601,19 @@
         const a = analyze(c.parts);
         if (!cur.vg && !cur.aux && !a.main && !c.toInf && subjLike(next) && !cur.subj) { cur.aux = c; continue; }
         if (!cur.vg) {
+          if (c.toInf && cur.aux && cur.subj) { cur.vg = cur.aux; cur.aux = null; cur.rest.push({ k: 'VG2', c }); continue; }   // is there a way to skip → fi 6areega asawi skip
           if (cur.aux) c.parts = cur.aux.parts.concat(c.parts);
           cur.vg = c;
           continue;
         }
         const finite = c.parts[0] && (c.parts[0].t === 'aux' || c.parts[0].t === 'modal');   // "the bot i made | is fast"
+        if (cur.vg && !a.main && (a.modal || a.doAux || a.did || a.will) && next && next.k === 'PRON' && next.role !== 'obj' && next.role !== 'poss' && chunks[i + 2] && chunks[i + 2].k === 'VG') {
+          segs.push(cur); cur = { pre: [], subj: null, aux: c, vg: null, rest: [], split: true, question: true }; continue;   // ... can i get it back
+        }
+        const causMain = cur.vg && (() => { const m = cur.vg.parts.find((x) => x.t === 'verb'); return m && CAUSATIVES.has(m.key); })();
         const adjacent = !finite && (prevC === cur.vg || (prevC && prevC.k === 'TO') ||
-          (objPron(prevC) && chunks[i - 2] === cur.vg && !a.hasAux && a.main && a.main.form === 'base'));
+          (objPron(prevC) && chunks[i - 2] === cur.vg && !a.hasAux && a.main && a.main.form === 'base') ||
+          (causMain && prevC && (prevC.k === 'NP' || prevC.k === 'IND') && chunks[i - 2] === cur.vg && !a.hasAux && a.main && a.main.form === 'base'));
         if (adjacent || c.toInf) { cur.rest.push({ k: 'VG2', c }); continue; }
         segs.push(cur);
         cur = { pre: [], subj: null, aux: null, vg: c, rest: [], inherit: true, split: true };
@@ -2367,6 +2650,7 @@
         if (cur.vg || cur.subj) { segs.push(cur); cur = { pre: [], subj: c, aux: null, vg: null, rest: [], split: true }; continue; }
         cur.subj = c; continue;
       }
+      if (c.k === 'THERE' && cur.vg && !cur.subj && !cur.rest.length && !cur.aux) { cur.subj = c; cur.inverted = true; continue; }
       if (subjLike(c) && cur.aux && !cur.subj && !cur.vg) { cur.subj = c; cur.inverted = true; continue; }
       if (!cur.vg && !cur.aux) cur.pre.push(c); else cur.rest.push(c);
     }
@@ -2466,7 +2750,7 @@
     // i don't know anyone → ma a3arf a7ad; i asked him to help me → 6alabt minnah ysaa3idni
     if (a.main && a.main.key === 'know') {
       const o1 = seg.rest[0];
-      const person = o1 && ((o1.k === 'IND' && /one|body/.test(o1.it.key)) || (o1.k === 'NP' && npInfo(o1).human) || (o1.k === 'PRON' && o1.w !== 'it' && o1.role !== 'subj'));
+      const person = o1 && ((o1.k === 'IND' && /one|body/.test(o1.it.key)) || o1.k === 'NP' || o1.k === 'DEM' || o1.k === 'OWN' || (o1.k === 'PRON' && o1.w !== 'it' && o1.role !== 'subj'));
       if (person) a.main = Object.assign({}, a.main, { key: 'know_p' });
     }
     if (a.main && a.main.key === 'ask' && seg.rest.some((c) => c.k === 'VG2' && c.c.toInf) && seg.rest[0] && (seg.rest[0].k === 'PRON' || seg.rest[0].k === 'NP')) a.main = Object.assign({}, a.main, { key: 'ask_to' });
@@ -2478,12 +2762,14 @@
     }
     const objNP = seg.rest.find((c) => c.k === 'NP');
     if (a.main && a.main.key === 'save' && objNP && ['money', 'gold', 'coin', 'time', 'hour', 'minute', 'day', 'week', 'month', 'year'].includes(headKey(objNP))) a.main = Object.assign({}, a.main, { key: 'save_t' });
-    if (a.main && a.main.key === 'run' && ((obj0 && obj0.k === 'NP' && RUN_OBJ.has(headKey(obj0))) || (!obj0 && seg.rel && RUN_OBJ.has(seg.rel.head)))) a.main = Object.assign({}, a.main, { key: 'turn on' });
+    if (a.main && a.main.key === 'run' && ((obj0 && obj0.k === 'NP' && RUN_OBJ.has(headKey(obj0))) || (obj0 && obj0.k === 'PRON' && ['it', 'them'].includes(obj0.w)) || (!obj0 && seg.rel && RUN_OBJ.has(seg.rel.head)))) a.main = Object.assign({}, a.main, { key: 'turn on' });
     if (a.main && a.main.key === 'fail' && obj0 && obj0.k === 'NP' && ['test', 'lesson', 'class'].includes(headKey(obj0))) a.main = Object.assign({}, a.main, { key: 'fail_exam' });
     if (a.main && a.main.key === 'meet' && !obj0) a.main = Object.assign({}, a.main, { key: 'meet_r' });
     // i'm streaming tonight → basawi stream il-laila
     if (a.main && a.prog && a.tense === 'present' && !VERBS[a.main.key].ap && seg.rest.some(isFutureTime)) Object.assign(a, { prog: false, tense: 'future' });
     if (a.main && a.main.key === 'carry' && obj0 && obj0.k === 'PRON' && !['it', 'them'].includes(obj0.w)) a.main = Object.assign({}, a.main, { key: 'carry_g' });
+    if (a.main && a.main.key === 'drop' && ((seg.subj && seg.subj.k === 'NP' && ['boss', 'monster', 'mob', 'chest', 'enemy', 'quest', 'map', 'dungeon', 'event'].includes(headKey(seg.subj))) || (seg.subj && seg.subj.k === 'PRON' && seg.subj.w === 'it' && ctx.ante && ctx.ante.drop))) a.main = Object.assign({}, a.main, { key: 'drop_g' });
+    if (a.main && a.main.key === 'make' && obj0 && (obj0.k === 'NP' || obj0.k === 'PRON' || obj0.k === 'IND') && seg.rest[seg.rest.indexOf(obj0) + 1] && seg.rest[seg.rest.indexOf(obj0) + 1].k === 'VG2' && !seg.rest[seg.rest.indexOf(obj0) + 1].c.toInf) a.main = Object.assign({}, a.main, { key: 'let' });   // make the bot pick up → 5alli il-bot yilga6
     for (let i = 1; i < seg.rest.length; i++) {   // help with the bot → musaa3ada fil-bot
       const c = seg.rest[i], prevC = seg.rest[i - 1];
       if (c.k === 'PP' && prevC.k === 'NP' && NOUN_PREP[headKey(prevC)] && NOUN_PREP[headKey(prevC)][c.eng]) seg.rest[i] = Object.assign({}, c, { key: NOUN_PREP[headKey(prevC)][c.eng], eng: 'x' });
@@ -2504,9 +2790,30 @@
       const t = a.tense, neg = a.neg;
       const w = t === 'past' ? (neg ? ['ma kaan fi', 'ما كان في'] : ['kaan fi', 'كان في']) : t === 'future' ? (neg ? ['ma bykoon fi', 'ما بيكون في'] : ['bykoon fi', 'بيكون في']) : neg ? ['ma fi', 'ما في'] : ['fi', 'في'];
       out.push(piece(w[0], w[1]));
+      let agentP = null, vk = null, vp = '3m';
       for (const c of seg.rest) {
-        if (c.k === 'VG2') { out.push(...renderVG(Object.assign({}, analyze(c.c.parts), { tense: 'present' }), '1p', ctx, {}).pieces); continue; }
-        out.push(...renderRest(c, ctx, st, null, '3m').pieces);
+        if (c.k === 'VG2') {
+          const headN = seg.rest.find((x) => x.k === 'NP');
+          const genericYou = headN && ['way', 'method', 'option', 'chance', 'trick', 'command', 'button', 'place', 'map', 'quest', 'shortcut'].includes(headKey(headN));
+          const cp = agentP || (ctx.question ? '1s' : genericYou ? resolveP('2', ctx.addr) : '1p');
+          const r2 = renderVG(Object.assign({}, analyze(c.c.parts), { tense: 'present' }), cp, ctx, {});
+          out.push(...r2.pieces); vk = r2.verbKey; vp = cp; continue;
+        }
+        if (c.k === 'PRON' && c.role !== 'poss' && vk) {   // anyone to help me → a7ad ysaa3idni
+          const V = VERBS[vk], op = pronP(c, ctx), oi = out.length - 1;
+          if (V && V.obj) { const q = prepPron(V.obj, op); out.push(piece(q[0], q[1])); }
+          else { const pc = out[oi]; const q = attachObj(pc.az, pc.ar, op); pc.az = q[0]; pc.ar = q[1]; }
+          continue;
+        }
+        if (c.k === 'NP' && !vk) { const inf = npInfo(c); agentP = (inf.human || THING_AGENTS.has(headKey(c))) ? inf.p || (inf.feat === 'f' ? '3f' : inf.feat === 'pl' ? '3p' : '3m') : null; }
+        else if (c.k === 'IND' && !vk) agentP = /one|body/.test(c.it.key) ? '3m' : null;
+        if (c.k === 'NP' && vk && VERBS[vk] && (VERBS[vk].objNP || VERBS[vk].obj)) {   // a way to skip the cutscene → asawi skip lil-cutscene
+          const ob = VERBS[vk].objNP || VERBS[vk].obj, np = renderNP(c, ctx, {});
+          const m = mergePrep(ob, np.pieces[0]);
+          out.push(...(m ? [m, ...np.pieces.slice(1)] : [piece(ob.replace(/_/g, ' '), PREP_AR[ob] || ob), ...np.pieces]));
+          continue;
+        }
+        out.push(...renderRest(c, ctx, st, vk, vp).pieces);
       }
       st.tense = t; st.imp = false;
       return out;
@@ -2540,7 +2847,8 @@
         if (subjKind === 'it' || !['these', 'those'].includes(seg.subj.w)) { p = cf === 'f' ? '3f' : cf === 'pl' ? '3p' : '3m'; feat = cf; }
       }
       const showDem = subjKind === 'dem' || (subjKind === 'it' && t === 'present' && !st.subord && (!hasComp || firstNP));
-      const yearsComp = subjKind === 'pron' && firstNP && headKey(firstNP) === 'year';
+      const ageNum = subjKind === 'pron' && comp.length === 1 && comp[0].k === 'NUM' && !comp[0].it.time && comp[0].it.n >= 10 && comp[0].it.n < 120 && ['1s', '2', '2m', '2f', '3m', '3f'].includes(p) && !a.neg && t === 'present';
+      const yearsComp = (subjKind === 'pron' && firstNP && headKey(firstNP) === 'year') || ageNum;
       const hasStill = a.mids.some((m) => m.k === 'still');
       if (imperativeBe) {
         const kf = a.neg ? ['la ' + presentAz(BE, resolveP('2', ctx.addr)), 'لا ' + presentAr(BE, resolveP('2', ctx.addr))] : imperativeForm(BE, ctx.addr);
@@ -2569,6 +2877,7 @@
         } else {
           if (st.subord && !a.neg && !hasStill && !yearsComp && subjKind !== 'dem') out.push(piece(presentAz(BE, p), presentAr(BE, p)));
           else if (subjKind === 'pron' && !hasStill && !seg.subj.silent) out.push(...(yearsComp ? [piece(...umr(p))] : renderAny(seg.subj, ctx).pieces));
+          else if (subjKind === 'pron' && seg.subj.silent && yearsComp) out.push(piece(...umr(p)));
           presentNeg = a.neg;
         }
         out.push(...midPieces(a.mids, p));
@@ -2585,7 +2894,8 @@
           continue;
         }
         if (c.k === 'PP' && lastAdj && ADJ_PREP[lastAdj] && ADJ_PREP[lastAdj][c.eng] !== undefined) {
-          const k2 = ADJ_PREP[lastAdj][c.eng];
+          let k2 = ADJ_PREP[lastAdj][c.eng];
+          if (c.eng === 'with' && lastAdj === 'busy' && c.obj && ((c.obj.k === 'NP' && (npInfo(c.obj).human || WITH_PEOPLE.has(headKey(c.obj)))) || (c.obj.k === 'PRON' && !['it', 'them'].includes(c.obj.w)))) k2 = 'wiyya';   // busy with my family → mash3'ool wiyya ahali
           out.push(...renderPP(Object.assign({}, c, { key: k2 || null, eng: k2 ? 'x' : 'of' }), ctx, null, p).pieces);
           continue;
         }
@@ -2660,7 +2970,8 @@
     } else if (seg.vg.toInf) {
       r = renderVG(Object.assign({}, a, { tense: 'present' }), verbP, ctx, {});
     } else {
-      r = renderVG(a, verbP, ctx, { imperative, pronSubj: subjKind === 'pron', thing: thing && subjKind !== 'dem' });
+      const together = (a.modal === 'want' || a.modal === 'like') && /^2/.test(verbP || '') && seg.rest.some((c) => c.k === 'ADV' && c.it.az === 'sawa');   // do you want to play together → tabi nil3ab sawa
+      r = renderVG(a, verbP, ctx, { imperative, pronSubj: subjKind === 'pron' && !(seg.subj && seg.subj.silent), thing: thing && subjKind !== 'dem', compP: together ? '1p' : null });
     }
     const base = out.length;
     out.push(...r.pieces);
@@ -2683,6 +2994,7 @@
         }
         if (objIdx >= 0 && !attached && V && !V.special) {
           if (V.key === 'take' && (subjKind === 'it' || subjKind === 'dem') && (!nextC || nextC.k !== 'VG2')) { const q = prepPron('min', op); out.push(piece(q[0], q[1])); }
+          else if (['pay', 'sell', 'send', 'give', 'show', 'tell'].includes(V.key) && !['it', 'them'].includes(c.w) && (!nextC || nextC.k === 'PP' || nextC.k === 'ADV' || nextC.k === 'CONJ')) { const q = prepPron('li', op); out.push(piece(q[0], q[1])); objP = op; objFilled = true; continue; }   // paid him → dafa3t lah
           else if (V.obj && V.tail) { const q = prepPron(V.obj, op); const pc = out[objIdx]; pc.az = pc.az.replace(' ' + V.tail[0], ' ' + q[0] + ' ' + V.tail[0]); pc.ar = pc.ar.replace(' ' + V.tail[1], ' ' + q[1] + ' ' + V.tail[1]); }
           else if (V.obj) { const q = prepPron(V.obj, op); out.push(piece(q[0], q[1])); }
           else if (V.io && nextC && (nextC.k === 'NP' || nextC.k === 'DEM')) { const q = prepPron(V.io, op); out.push(piece(q[0], q[1])); }
@@ -2698,7 +3010,13 @@
       if (c.k === 'VG2') {
         const a2 = analyze(c.c.parts);
         const nx = seg.rest[i + 1];
+        const pv = seg.rest[i - 1];
+        if (!objP && c.c.toInf && pv && V && ['need', 'want', 'find', 'get', 'ask', 'look for', 'wait for', 'have', 'know'].includes(V.key)) {
+          if (pv.k === 'IND' && /one|body/.test(pv.it.key)) objP = '3m';
+          else if (pv.k === 'NP' && npInfo(pv).human) objP = npInfo(pv).p;
+        }
         if (a2.main && a2.main.key === 'like' && V && ['forget', 'remember'].includes(V.key) && nx && nx.k === 'NP' && ['video', 'picture', 'comment', 'stream', 'channel'].includes(headKey(nx))) a2.main = Object.assign({}, a2.main, { key: 'like_yt' });
+        if (a2.main && a2.main.key === 'run' && nx && ((nx.k === 'NP' && RUN_OBJ.has(headKey(nx))) || (nx.k === 'PRON' && ['it', 'them'].includes(nx.w)))) a2.main = Object.assign({}, a2.main, { key: 'turn on' });
         // does anyone know how to get it → a7ad yadri shlon a7a99ila (the one asking wants it)
         const howTo = subjKind === 'ind' && seg.rest[i - 1] && seg.rest[i - 1].k === 'WH';
         const r2 = renderVG(Object.assign({}, a2, { tense: 'present', neg: a2.neg }), objP || (imperative ? resolveP('2', ctx.addr) : howTo ? '1s' : verbP), ctx, {});
@@ -2740,6 +3058,11 @@
       }
     }
     st.p = imperative ? null : p; st.feat = feat; st.imp = !!imperative;
+    {   // remember the last thing mentioned, so a later "it" agrees with it: "i can't join the room, it's full" → malyaana
+      const nps = [seg.subj && seg.subj.k === 'NP' ? seg.subj : null].concat(seg.rest.filter((c) => c.k === 'NP' || (c.k === 'PP' && c.obj && c.obj.k === 'NP'))).filter(Boolean).map((c) => (c.k === 'PP' ? c.obj : c));
+      const last = nps[nps.length - 1];
+      if (last) { const inf = npInfo(last); if (!inf.human && !inf.pl) ctx.ante = { p: inf.p, feat: inf.feat }; else ctx.ante = null; }
+    }
     st.tense = a.tense === 'future' ? 'future' : a.tense;
     return out;
   }
@@ -2749,6 +3072,9 @@
     const h = c.nouns[c.nouns.length - 1];
     return !!(h && h.user && h.user.key && /^(a while|a long time|a bit|a moment|a second|a minute)$/.test(h.user.key));
   }
+  const WITH_PEOPLE = new Set(['family', 'team', 'guild', 'clan', 'crew', 'squad', 'group', 'kids', 'parents', 'people', 'class', 'party']);
+  const CAUSATIVES = new Set(['make', 'let', 'help', 'watch', 'see', 'hear', 'have']);
+  const THING_AGENTS = new Set(['bot', 'script', 'program', 'app', 'tool', 'plugin', 'command', 'feature', 'option', 'button', 'class', 'skill', 'item', 'pet', 'weapon', 'spell', 'potion']);
   const THING_VERBS = new Set(['release_i', 'happen', 'rain', 'cost', 'crash', 'freeze', 'lag', 'overheat', 'go down', 'spawn', 'respawn', 'last']);
   const NOUN_PREP = { help: { with: 'fi', on: 'fi' }, problem: { with: 'fi', in: 'fi' }, question: { about: '3an', on: '3an' }, idea: { about: '3an', for: '7ag' },
     opinion: { about: 'fi', on: 'fi' }, issue: { with: 'fi' }, bug: { in: 'fi', with: 'fi' }, video: { about: '3an' }, tutorial: { about: '3an' } };
@@ -2788,6 +3114,7 @@
       }
       chunks.push(A);
     }
+    splitRunOns(chunks);
     markReducedRelatives(chunks);
     frontStrandedPreps(chunks);
     for (let i = 0; i + 1 < chunks.length; i++) {
@@ -2813,7 +3140,7 @@
     while (lead < chunks.length && (lead > 0 ? isVocative(chunks[lead]) : addressWord(chunks[lead]) && chunks.length > lead + 1)) { chunks[lead] = asBro(chunks[lead]); lead++; }
     const afterLead = chunks[lead];
     const knowLead = lead > 0 && chunks[lead - 1].k === 'FIXED' && FIX_KNOW.has(chunks[lead - 1].it.key) && afterLead &&
-      (afterLead.k === 'WH' || (afterLead.k === 'CONJ' && ['when', 'if', 'whether', 'why', 'where', 'how'].includes(afterLead.it.w)) || (afterLead.k === 'NP' && afterLead.det === 'which'));   // i know what you mean → adri shu tig9id
+      (afterLead.k === 'WH' || (afterLead.k === 'CONJ' && ['when', 'if', 'whether', 'why', 'where', 'how', 'that'].includes(afterLead.it.w)) || (afterLead.k === 'NP' && afterLead.det === 'which'));   // i know what you mean → adri shu tig9id
     if (lead > 0 && afterLead && afterLead.k !== 'PUNCT' && !knowLead) chunks.splice(lead, 0, { k: 'PUNCT', it: { s: ',' }, auto: true });
     const plural = chunks.some((c) => (c.k === 'FIXED' && ['guys', 'everyone', 'everybody', 'hello everyone', 'hi everyone', 'hi all', 'hello guys', 'hi guys', 'hey guys', 'yo guys', 'hey everyone'].includes(c.it.key)) || (c.k === 'NP' && isBare(c) && headKey(c) === 'guy' && c.nouns[0].pl));
     const savedAddr = ctx.addr;
@@ -2831,23 +3158,40 @@
       segs.forEach((s, i) => {
         if (rel) { if (i === 0) s.rel = rel; else if (rel.subjMain && !s.subj) s.relMain = rel; }
         if (i > 0 && s.split && !s.relMain && !s.embedded && needComma(segs[i - 1]) && !lastIsPunct()) out.push(comma());
+        // i think he is right → a7sib inna 9a7; i know you are tired → adri innak ta3baan
+        const modalComp = s.vg && (() => { const a2 = analyze(s.vg.parts); return a2.modal === 'must' || a2.modal === 'maybe'; })();
+        const wantInn = s.subj && !s.rel && !s.relMain && !modalComp && ((i === 0 && st.pendingInn) || (i > 0 && s.split && !s.embedded && thatVerbBefore(segs[i - 1]) && !s.inverted));
+        if (wantInn) {
+          if (s.subj.k === 'PRON' && s.subj.role !== 'obj' && s.subj.role !== 'poss') {
+            const q = INN[pronP(s.subj, ctx)] || INN['3m'];
+            out.push(piece(q[0], q[1]));
+            s = Object.assign({}, s, { subj: Object.assign({}, s.subj, { silent: true, innP: pronP(s.subj, ctx) }) });
+          } else if (s.subj.k === 'NP' || s.subj.k === 'DEM' || s.subj.k === 'IND' || s.subj.k === 'THERE') out.push(piece('inn', 'إن'));
+        }
+        st.pendingInn = false;
         out.push(...renderSegment(s, ctx, st, first && i === 0));
       });
       first = false;
       clause = [];
     };
     for (const c of chunks) {
-      if (c.k === 'PUNCT') { flush(); st.sep = /[,;:]/.test(c.it.s) ? 'comma' : null; st.subord = false; out.push({ az: c.it.s, ar: c.it.s, punct: true, known: true }); if (/[.!?]/.test(c.it.s)) { st.p = null; st.feat = null; first = true; } continue; }
+      if (c.k === 'PUNCT') { flush(); st.sep = /[,;:]/.test(c.it.s) ? 'comma' : null; st.subord = false; out.push({ az: c.it.s, ar: c.it.s, punct: true, known: true }); if (/[.!?]/.test(c.it.s)) { st.p = null; st.feat = null; first = true; } if (c.splitQ) { ctx.question = false; ctx.splitQ = true; } continue; }
       if (c.k === 'CONJ') {
         flush();
         st.sep = 'conj';
+        if (c.it.w === 'that' && c.it.inn) { st.pendingInn = true; if (c.it.az === 'inn') continue; }
         st.subord = SUBORD.has(c.it.az);
         if ((c.it.w === 'but' || c.it.w === 'so') && !lastIsPunct()) out.push(comma());
         if (c.it.w === 'so' && allLead) { out.push(piece('ya3ni', 'يعني')); continue; }   // "nice, so i don't have to do anything?" → ya3ni
         out.push(...simplePieces(c, ctx));
         continue;
       }
-      if (c.k === 'FIXED' && CLAUSE_FIXED.has(c.it.key) && clause.length && (clause.some((x) => x.k === 'VG') || (clause[clause.length - 1].k === 'FIXED' && CLAUSE_FIXED.has(clause[clause.length - 1].it.key)))) { flush(); if (!lastIsPunct()) out.push(comma()); }
+      if (c.k === 'FIXED' && CLAUSE_FIXED.has(c.it.key) && clause.length && (clause.some((x) => x.k === 'VG') || (clause[clause.length - 1].k === 'FIXED' && CLAUSE_FIXED.has(clause[clause.length - 1].it.key)))) {
+        const lastVG = clause.filter((x) => x.k === 'VG').pop();
+        const m = lastVG && lastVG.parts.find((x) => x.t === 'verb');
+        const thatV = m && THAT_VERBS.has(m.key) && clause[clause.length - 1] === lastVG;
+        flush(); if (!lastIsPunct() && !thatV) out.push(comma());
+      }
       if (c.k === 'REL') {
         // the bot that farms gold → il-bot illi yfarrim gold; a bot that farms gold → bot yfarrim gold
         const ante = clause[clause.length - 1];
@@ -2921,6 +3265,38 @@
     }
   }
   /* "what server are you on?" → "3ala ay server inta?" */
+  /* Messages typed without punctuation: "i sold my weapon can i get it back", "which server are you in i cant find you". */
+  function splitRunOns(chunks) {
+    const subjP = (c) => c && c.k === 'PRON' && c.role !== 'obj' && c.role !== 'poss';
+    for (let i = 1; i + 1 < chunks.length; i++) {
+      const c = chunks[i], prev = chunks[i - 1], n1 = chunks[i + 1], n2 = chunks[i + 2];
+      if (prev.k === 'PUNCT' || prev.k === 'CONJ') continue;
+      const before = chunks.slice(0, i);
+      let j = i - 1; while (j >= 0 && chunks[j].k !== 'PUNCT' && chunks[j].k !== 'CONJ') j--;
+      const clause = chunks.slice(j + 1, i);
+      const hasVerb = clause.some((x) => x.k === 'VG' && !x.toInf);
+      if (!hasVerb) continue;
+      // a stranded preposition, then a new subject: "are you in | i cant find"
+      if (prev.k === 'PP' && !prev.obj && !prev.ing && subjP(c) && n1 && n1.k === 'VG') { chunks.splice(i, 0, { k: 'PUNCT', it: { s: ',' }, auto: true }); i++; continue; }
+      // a question, then a command: "whats your ign | add me in game"
+      if (c.k === 'VG' && !c.toInf && (prev.k === 'NP' || prev.k === 'OWN') && clause.some((x) => x.k === 'WH') && n1 && (n1.k === 'PRON' && n1.role !== 'subj' || n1.k === 'NP')) {
+        const a = analyze(c.parts);
+        const lastVG = clause.filter((x) => x.k === 'VG').pop();
+        const aux = lastVG && analyze(lastVG.parts);
+        if (a.main && a.main.form === 'base' && !a.hasAux && !a.neg && aux && aux.beOnly) { chunks.splice(i, 0, { k: 'PUNCT', it: { s: '?' }, auto: true, splitQ: true }); i++; continue; }
+      }
+      // "where are you | come here": inverted wh-question, then a command
+      if (c.k === 'VG' && !c.toInf && prev.k === 'PRON' && prev.role !== 'obj' && prev.role !== 'poss' && chunks[i - 2] && chunks[i - 2].k === 'VG' && chunks[i - 3] && chunks[i - 3].k === 'WH') {
+        const a = analyze(c.parts), aux = analyze(chunks[i - 2].parts);
+        if (a.main && a.main.form === 'base' && !a.hasAux && !a.neg && aux.beOnly && !aux.main && (!n1 || n1.k === 'ADV' || n1.k === 'PP' || n1.k === 'NP' || (n1.k === 'PRON' && n1.role !== 'subj'))) { chunks.splice(i, 0, { k: 'PUNCT', it: { s: '?' }, auto: true, splitQ: true }); i++; continue; }
+      }
+      // a bare modal/aux + subject pronoun + verb after a complete clause: "... | can i get it back"
+      if (c.k === 'VG' && !c.toInf && subjP(n1) && n2 && n2.k === 'VG' && !n2.toInf) {
+        const a = analyze(c.parts);
+        if (!a.main && (a.modal || a.doAux || a.did || a.will) && (prev.k === 'NP' || prev.k === 'PRON' || prev.k === 'ADV' || prev.k === 'PP' || prev.k === 'IND' || prev.k === 'DEM')) { chunks.splice(i, 0, { k: 'PUNCT', it: { s: ',' }, auto: true }); i++; continue; }
+      }
+    }
+  }
   function frontStrandedPreps(chunks) {
     let start = 0;
     for (let i = 0; i <= chunks.length; i++) {
@@ -2944,8 +3320,29 @@
   }
   function comma() { return { az: ',', ar: ',', punct: true, known: true }; }
   /* No comma after "i think / i know / i hope ...": what follows belongs to them. */
+  const THAT_FIXED = new Set(['i know', 'i do not know', 'do not know', 'i have no idea', 'no idea', 'i hope', 'i think', 'i guess', 'i bet', 'i am sure', 'i am not sure', 'not sure', 'i believe', 'i feel like', 'i wish', 'i heard', 'i swear', 'i promise', 'i agree', 'i understand', 'i see', 'i mean']);
+  const INN = { '1s': ['inni', 'إني'], '2': ['innak', 'إنك'], '2m': ['innak', 'إنك'], '2f': ['innich', 'إنج'], '2p': ['inkum', 'إنكم'], '3m': ['inna', 'إنه'], '3f': ['inha', 'إنها'], '1p': ['innana', 'إننا'], '3p': ['inhum', 'إنهم'] };
+  const SURE_ADJ = new Set(['sure', 'certain', 'afraid', 'glad', 'happy', 'sorry', 'surprised', 'worried', 'scared', 'positive']);
+  function sureBefore(prev) {
+    if (!prev || !prev.vg) return false;
+    const a = analyze(prev.vg.parts);
+    const last = prev.rest[prev.rest.length - 1];
+    return !!(a.beOnly && last && last.k === 'ADJP' && last.adjs.some((x) => SURE_ADJ.has(x.key)));
+  }
+  function thatVerbBefore(prev) {
+    if (!prev || !prev.vg) return false;
+    if (sureBefore(prev)) return true;
+    const a = analyze(prev.vg.parts);
+    const m = a.main;
+    if (!m || !THAT_VERBS.has(m.key) || m.key === 'hope' || m.key === 'see' || m.key === 'feel') return false;
+    const last = prev.rest[prev.rest.length - 1];
+    if (last && last.k === 'VG2') return false;
+    if (last && last.k === 'WH') return false;
+    return true;
+  }
   function needComma(prev) {
     if (!prev || !prev.vg) return false;
+    if (sureBefore(prev)) return false;
     const a = analyze(prev.vg.parts);
     if (a.main && THAT_VERBS.has(a.main.key)) return false;
     const v2 = prev.rest.filter((c) => c.k === 'VG2').pop();
@@ -2956,7 +3353,8 @@
     'hello', 'hi', 'hey', 'yo', 'hello everyone', 'hi everyone', 'hi all', 'hello guys', 'hi guys', 'hey guys', 'welcome', 'welcome back',
     'ah', 'ahh', 'ohh', 'hmm', 'umm', 'uh', 'damn', 'dang', 'i do not know', 'do not know', 'i have no idea', 'no idea', 'i know', 'i know right',
     'sheesh', 'deadass', 'lowkey', 'highkey', 'facts', 'same', 'same here', 'my bad', 'probably not', 'not really', 'of course not',
-    'wow', 'oh', 'oops', 'ugh', 'lol', 'haha', 'hahaha', 'omg', 'oh my god', 'sorry', 'i am sorry', 'i am so sorry', 'so sorry', 'thank you',
+    'wow', 'oh', 'oops', 'ugh', 'lol', 'haha', 'hahaha', 'omg', 'oh my god', 'sorry', 'i am sorry', 'i am so sorry', 'so sorry', 'thank you', 'thanks again', 'thank you again', 'wait', 'bet', 'say less',
+    'peace be upon you', 'salam', 'salaam', 'salam alaikum', 'salaam alaikum', 'assalamu alaikum', 'assalam alaikum', 'and peace be upon you', 'walaikum salam', 'wa alaikum salam',
     'thanks', 'thank you very much', 'thank you so much', 'thanks a lot', 'excuse me', 'congratulations', 'congrats', 'good morning',
     'good afternoon', 'good evening', 'good luck', 'seriously', 'exactly', 'i see', 'got it', 'no problem', 'no worries', 'never mind',
     'wallah', 'i swear', 'inshallah', 'god willing', 'alhamdulillah', 'thank god', 'by the way', 'to be honest', 'in my opinion', 'well done',
@@ -2988,7 +3386,29 @@
   /* Questions typed without "?": "where are you", "can you help me", "do you like it". */
   const Q_AUX = new Set(['do', 'does', 'did', 'are', 'is', 'am', 'was', 'were', 'can', 'could', 'will', 'would', 'should', 'have', 'has', 'shall', 'may']);
   function looksLikeQuestion(toks) {
-    const w = toks.filter((t) => !t.punct).map((t) => t.w);
+    // the last clause decides: "my account got hacked, what do i do" / "i sold it can i get it back"
+    const parts = []; let cur = [];
+    for (const t of toks) { if (t.punct && /[,;:]/.test(t.o)) { parts.push(cur); cur = []; } else if (!t.punct && !t.emoji) cur.push(t.w); }
+    parts.push(cur);
+    const last = parts[parts.length - 1];
+    if (parts.length > 1 && last.length) return questionWords(last) || runOnQuestion(last);
+    return questionWords(parts[0] || []) || runOnQuestion(parts[0] || []);
+  }
+  function runOnQuestion(w) {
+    const subj = (x) => !!x && (!!PRON_SUBJ[x] || x === 'you' || x === 'u' || x === 'it' || x === 'there' || x === 'this' || x === 'that' || x === 'anyone' || x === 'someone' || x === 'everyone');
+    const EMB = ['if', 'know', 'tell', 'ask', 'wonder', 'sure', 'idea', 'matter', 'see', 'remember', 'forget', 'understand', 'guess', 'decide', 'what', 'how', 'why', 'where', 'who', 'which', 'when', 'that', 'whether', 'and', 'or', 'but', 'so', 'then', 'cause', 'because', 'to', 'not'];
+    let q = -1;
+    for (let k = 1; k + 1 < w.length; k++) {
+      if (EMB.includes(w[k - 1]) || PRON_SUBJ[w[k - 1]] || w[k - 1] === 'you') continue;
+      if (WH[w[k]] && Q_AUX.has(w[k + 1]) && subj(w[k + 2])) { q = k; continue; }
+      if ((Q_AUX.has(w[k]) || MODAL[w[k]]) && subj(w[k + 1]) && w[k + 2] && (['is', 'are', 'was', 'were', 'am'].includes(w[k]) || (verbInfo(w[k + 2]) || []).some((r) => r.form === 'base' || r.form === 'pp' || r.form === 'ing') || w[k + 2] === 'be' || w[k + 2] === 'not' || w[k + 2] === 'have')) q = k;
+    }
+    if (q < 0) return false;
+    // the question must be the last clause: "how r u i need help" is not one
+    for (let k = q + 3; k + 1 < w.length; k++) if ((w[k] === 'i' || w[k] === 'we' || w[k] === 'he' || w[k] === 'she' || w[k] === 'they') && w[k + 1] && (verbInfo(w[k + 1]) || AUX.has(w[k + 1]) || MODAL[w[k + 1]])) return false;
+    return true;
+  }
+  function questionWords(w) {
     if (w.length >= 8 && w.slice(4).some((x) => x === 'i' || x === 'we')) return false;   // "how r u i need help..." runs on
     let i = 0;
     while (i < w.length && ['hey', 'hi', 'hello', 'bro', 'so', 'and', 'but', 'ok', 'okay', 'yo', 'guys', 'dude', 'by', 'the', 'way', 'to', 'be', 'honest', 'honestly', 'anyway', 'also',
@@ -3063,7 +3483,9 @@
     for (const line of lines) {
       if (!line.trim()) { azLines.push(''); arLines.push(''); continue; }
       const toks = [];
-      for (const t of expandTokens(tokenize(line))) {
+      const line2 = line.replace(/\b(\d{1,2}) ?(am|pm)\b/gi, '$1$2').replace(/\b(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)-(one|two|three|four|five|six|seven|eight|nine)\b/gi, '$1 $2')
+        .replace(/\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty)-(minute|hour|day|week|month|year|second|minutes|hours|days|weeks|months|years|seconds)\b/gi, '$1 $2');
+      for (const t of expandTokens(tokenize(line2))) {
         if (t.punct || t.arabic || t.posss || t.exp || t.keep || /^[A-Z]/.test(t.o.slice(1)) || (/^[A-Z]/.test(t.o) && toks.length && !toks[toks.length - 1].punct)) { toks.push(t); continue; }
         let fix = correctWord(t.w, userWords);
         if (!fix && (/([a-z])\1\1/.test(t.w) || /^(ha){3,}h?$/.test(t.w) || /^(ah){2,}a?$/.test(t.w)) && !vocab().has(t.w) && !userWords.has(t.w)) fix = unstretch(t.w);   // soooo → so, pleaseee → please
@@ -3080,6 +3502,7 @@
       for (const s of sentences) {
         let pieces;
         ctx.question = looksLikeQuestion(s) || s.some((t) => t.punct && t.o.includes('?'));
+        ctx.splitQ = false;
         try { pieces = renderSentence(lex(s, ctx), ctx); }
         catch (e) { FALLBACK.n++; FALLBACK.last = e; pieces = wordByWord(s, ctx); }
         let lastTok = s[s.length - 1], tailEmoji = 0;
@@ -3087,13 +3510,13 @@
         if (lastTok && !lastTok.punct && pieces.length) {
           const words = s.filter((t) => !t.punct && !t.emoji).length;
           const at = Math.max(0, pieces.length - tailEmoji);
-          if (looksLikeQuestion(s)) pieces.splice(at, 0, { az: '?', ar: '?', punct: true, known: true });
+          if (ctx.splitQ ? runOnQuestion(s.filter((t) => !t.punct && !t.emoji).map((t) => t.w)) : looksLikeQuestion(s)) pieces.splice(at, 0, { az: '?', ar: '?', punct: true, known: true });
           else if (words >= 3) pieces.splice(at, 0, { az: '.', ar: '.', punct: true, known: true });
         }
         all = all.concat(pieces);
       }
       for (const pc of all) {
-        if (pc.known === false && pc.unk && /[a-z]/i.test(pc.az) && !unknown.includes(pc.az.toLowerCase())) unknown.push(pc.az.toLowerCase());
+        if (pc.known === false && pc.unk && /[a-z]/i.test(pc.az) && !unknown.includes((pc.bare || pc.az).toLowerCase())) unknown.push((pc.bare || pc.az).toLowerCase());
         const own = pc.known !== false && !pc.num && !pc.punct && !pc.user && !pc.raw && !pc.name;
         if (own) pc.az = sunLetters(pc.az).replace(/([369]')\1/g, '$1');
         if (opts.style === 'letters' && own) pc.az = toLetters(pc.az);

@@ -152,8 +152,8 @@
  {
   "en": "i think that this idea is good",
   "addr": "m",
-  "az": "a7sib hal fikra zaina.",
-  "ar": "أحسب هالفكرة زينة."
+  "az": "a7sib inn hal fikra zaina.",
+  "ar": "أحسب إن هالفكرة زينة."
  },
  {
   "en": "he doesn't like coffee",
@@ -494,8 +494,8 @@
  {
   "en": "how much does it cost?",
   "addr": "m",
-  "az": "bcham?",
-  "ar": "بچم؟"
+  "az": "cham ykallif?",
+  "ar": "چم يكلف؟"
  },
  {
   "en": "the game is free",
@@ -578,8 +578,8 @@
  {
   "en": "i tried to make a game but it was hard",
   "addr": "m",
-  "az": "7aawalt asawi lu3ba, bas kaan 9a3b.",
-  "ar": "حاولت أسوي لعبة، بس كان صعب."
+  "az": "7aawalt asawi lu3ba, bas kaanat 9a3ba.",
+  "ar": "حاولت أسوي لعبة، بس كانت صعبة."
  },
  {
   "en": "can you send me the file?",
@@ -956,8 +956,8 @@
  {
   "en": "don't be sad",
   "addr": "f",
-  "az": "la tkooneen za3laana.",
-  "ar": "لا تكونين زعلانة."
+  "az": "la tiz3aleen.",
+  "ar": "لا تزعلين."
  },
  {
   "en": "sit down",
@@ -1004,8 +1004,8 @@
  {
   "en": "let me know",
   "addr": "f",
-  "az": "3allmeeni.",
-  "ar": "علميني."
+  "az": "5abbreeni.",
+  "ar": "خبريني."
  },
  {
   "en": "what is this?",
@@ -1136,8 +1136,8 @@
  {
   "en": "i like to play video games in my free time",
   "addr": "m",
-  "az": "a7ibb al3ab al3aab video fi wagti il-faa9'i.",
-  "ar": "أحب ألعب ألعاب فيديو في وقتي الفاضي."
+  "az": "a7ibb al3ab al3aab video fi wagt faraa3'i.",
+  "ar": "أحب ألعب ألعاب فيديو في وقت فراغي."
  },
  {
   "en": "my favorite game is minecraft",
@@ -1292,14 +1292,14 @@
  {
   "en": "tell me if you find any bugs",
   "addr": "m",
-  "az": "gool li law tilgi ay a5laal.",
-  "ar": "قول لي لو تلقي أي أخلال."
+  "az": "gool li law tilgi ay bugaat.",
+  "ar": "قول لي لو تلقي أي بقات."
  },
  {
   "en": "i fixed the bug yesterday",
   "addr": "m",
-  "az": "9alla7t il-5alal ams.",
-  "ar": "صلحت الخلل أمس."
+  "az": "9alla7t il-bug ams.",
+  "ar": "صلحت البق أمس."
  },
  {
   "en": "i'm proud of my game",
@@ -1352,8 +1352,8 @@
  {
   "en": "does anyone know how to get the void highlord class?",
   "addr": "m",
-  "az": "a7ad yadri shlon a7a99il void highlord class?",
-  "ar": "أحد يدري شلون أحصل void highlord كلاس؟"
+  "az": "a7ad yadri shlon a7a99il il-void highlord class?",
+  "ar": "أحد يدري شلون أحصل الvoid highlord كلاس؟"
  },
  {
   "en": "i finished the quest yesterday",
@@ -1526,8 +1526,8 @@
  {
   "en": "i found the bug in my code",
   "addr": "m",
-  "az": "ligeet il-5alal fil-code maali.",
-  "ar": "لقيت الخلل في الكود مالي."
+  "az": "ligeet il-bug fil-code maali.",
+  "ar": "لقيت البق في الكود مالي."
  },
  {
   "en": "can you test it for me?",
@@ -1934,8 +1934,8 @@
  {
   "en": "everyone who plays this game knows that",
   "addr": "m",
-  "az": "il-kil illi yil3ab hal lu3ba yadri hadha.",
-  "ar": "الكل اللي يلعب هاللعبة يدري هذا."
+  "az": "il-kil illi yil3ab hal lu3ba ya3arf hadha.",
+  "ar": "الكل اللي يلعب هاللعبة يعرف هذا."
  },
  {
   "en": "i don't know anyone who plays it",
@@ -2060,8 +2060,8 @@
  {
   "en": "nobody knows the answer",
   "addr": "m",
-  "az": "ma7ad yadri il-jawaab.",
-  "ar": "محد يدري الجواب."
+  "az": "ma7ad ya3arf il-jawaab.",
+  "ar": "محد يعرف الجواب."
  },
  {
   "en": "is anyone here?",
@@ -2150,8 +2150,8 @@
  {
   "en": "if you finish the quest, you will get a reward",
   "addr": "m",
-  "az": "law t5alli9 il-quest, bt7a99il reward.",
-  "ar": "لو تخلص الكويست، بتحصل ريوارد."
+  "az": "law t5alli9 il-quest, bt7a99il jaa2iza.",
+  "ar": "لو تخلص الكويست، بتحصل جائزة."
  },
  {
   "en": "if it rains, we will stay home",
@@ -2216,14 +2216,14 @@
  {
   "en": "i fixed the bug in the plugin",
   "addr": "m",
-  "az": "9alla7t il-5alal fil-plugin.",
-  "ar": "صلحت الخلل في البلقن."
+  "az": "9alla7t il-bug fil-plugin.",
+  "ar": "صلحت البق في البلقن."
  },
  {
   "en": "check the console for errors",
   "addr": "m",
-  "az": "shayyik il-console 3ala a56aa2.",
-  "ar": "شيك الكونسول على أخطاء."
+  "az": "shayyik il-console 3ala erroraat.",
+  "ar": "شيك الكونسول على ايرورات."
  },
  {
   "en": "i'll upload the new version tonight",
@@ -2288,8 +2288,8 @@
  {
   "en": "this boss drops a rare item",
   "addr": "m",
-  "az": "hal boss y6ayyi7 item naadir.",
-  "ar": "هالبوس يطيح آيتم نادر."
+  "az": "hal boss ynazzil item naadir.",
+  "ar": "هالبوس ينزل آيتم نادر."
  },
  {
   "en": "i finally got the rare drop",
@@ -2468,14 +2468,14 @@
  {
   "en": "he said he will come",
   "addr": "m",
-  "az": "gaal byiyi.",
-  "ar": "قال بييي."
+  "az": "gaal inna byiyi.",
+  "ar": "قال إنه بييي."
  },
  {
   "en": "she told me that she is busy",
   "addr": "m",
-  "az": "gaalat li hiya mash3'oola.",
-  "ar": "قالت لي هي مشغولة."
+  "az": "gaalat li inha mash3'oola.",
+  "ar": "قالت لي إنها مشغولة."
  },
  {
   "en": "i asked him to help me",
@@ -2552,8 +2552,8 @@
  {
   "en": "how do i get to the dark fortress?",
   "addr": "m",
-  "az": "shlon aw9al dark fortress?",
-  "ar": "شلون أوصل dark fortress؟"
+  "az": "shlon aw9al il-dark fortress?",
+  "ar": "شلون أوصل الdark fortress؟"
  },
  {
   "en": "you have to finish the story first",
@@ -2600,13 +2600,13 @@
  {
   "en": "get a better weapon",
   "addr": "m",
-  "az": "7a99il sila7 a7san.",
+  "az": "7a99il silaa7 a7san.",
   "ar": "حصل سلاح أحسن."
  },
  {
   "en": "which weapon is the best for this class?",
   "addr": "m",
-  "az": "ay sila7 il-a7san 7ag hal class?",
+  "az": "ay silaa7 il-a7san 7ag hal class?",
   "ar": "أي سلاح الأحسن حق هالكلاس؟"
  },
  {
@@ -2642,8 +2642,8 @@
  {
   "en": "how much does it cost?",
   "addr": "m",
-  "az": "bcham?",
-  "ar": "بچم؟"
+  "az": "cham ykallif?",
+  "ar": "چم يكلف؟"
  },
  {
   "en": "it's too expensive for me",
@@ -2690,8 +2690,8 @@
  {
   "en": "calm down, it's just a game",
   "addr": "m",
-  "az": "rawwig, bas lu3ba.",
-  "ar": "روق، بس لعبة."
+  "az": "haddi, bas lu3ba.",
+  "ar": "هدي، بس لعبة."
  },
  {
   "en": "i'm going to make a video about this update",
@@ -2708,7 +2708,7 @@
  {
   "en": "i got a hundred views today",
   "addr": "m",
-  "az": "7a99alt imya mushaahada il-yoom.",
+  "az": "7a99alt imyat mushaahada il-yoom.",
   "ar": "حصلت مية مشاهدة اليوم."
  },
  {
@@ -2786,8 +2786,8 @@
  {
   "en": "the new version has a lot of bugs",
   "addr": "m",
-  "az": "in-nus5a il-yideeda feeha wayed a5laal.",
-  "ar": "النسخة اليديدة فيها وايد أخلال."
+  "az": "in-nus5a il-yideeda feeha wayed bugaat.",
+  "ar": "النسخة اليديدة فيها وايد بقات."
  },
  {
   "en": "we found a way to fix it",
@@ -2840,8 +2840,8 @@
  {
   "en": "my dad said he will help me",
   "addr": "m",
-  "az": "abooy gaal bysaa3idni.",
-  "ar": "أبوي قال بيساعدني."
+  "az": "abooy gaal inna bysaa3idni.",
+  "ar": "أبوي قال إنه بيساعدني."
  },
  {
   "en": "i'm studying computer science",
@@ -3686,8 +3686,8 @@
  {
   "en": "make sure to subscribe and turn on notifications",
   "addr": "m",
-  "az": "la tinsa tishtirik wtsha3'il tanbeehaat.",
-  "ar": "لا تنسى تشترك وتشغل تنبيهات."
+  "az": "la tinsa tishtirik wtsha3'il ish3aaraat.",
+  "ar": "لا تنسى تشترك وتشغل إشعارات."
  },
  {
   "en": "the link is in the description",
@@ -3818,14 +3818,14 @@
  {
   "en": "if you find a bug, please report it",
   "addr": "m",
-  "az": "law tilgi 5alal, law sama7t balli3' 3annah.",
-  "ar": "لو تلقي خلل، لو سمحت بلغ عنه."
+  "az": "law tilgi bug, law sama7t balli3' 3annah.",
+  "ar": "لو تلقي بق، لو سمحت بلغ عنه."
  },
  {
   "en": "join my discord server for updates",
   "addr": "m",
-  "az": "dish server id-discord maali 7ag ta7deethaat.",
-  "ar": "دش سيرفر الديسكورد مالي حق تحديثات."
+  "az": "dish id-discord server maali 7ag ta7deethaat.",
+  "ar": "دش الdiscord سيرفر مالي حق تحديثات."
  },
  {
   "en": "my friend helped me test the bot",
@@ -4034,8 +4034,8 @@
  {
   "en": "my class rank is 10",
   "addr": "m",
-  "az": "rank il-class maali 10.",
-  "ar": "رانك الكلاس مالي 10."
+  "az": "il-class rank maali 10.",
+  "ar": "الclass رانك مالي 10."
  },
  {
   "en": "when i was young, i used to play this game every day",
@@ -4250,8 +4250,8 @@
  {
   "en": "don't be sad",
   "addr": "m",
-  "az": "la tkoon za3laan.",
-  "ar": "لا تكون زعلان."
+  "az": "la tiz3al.",
+  "ar": "لا تزعل."
  },
  {
   "en": "i feel bad",
@@ -4304,8 +4304,8 @@
  {
   "en": "i don't care",
   "addr": "m",
-  "az": "ma ahtamm.",
-  "ar": "ما أهتم."
+  "az": "ma yhimni.",
+  "ar": "ما يهمني."
  },
  {
   "en": "it doesn't matter",
@@ -4604,14 +4604,14 @@
  {
   "en": "that's a great idea",
   "addr": "m",
-  "az": "hadhi fikra 5a6eera.",
-  "ar": "هذي فكرة خطيرة."
+  "az": "hadhi fikra mumtaaza.",
+  "ar": "هذي فكرة ممتازة."
  },
  {
   "en": "i don't think that's a good idea",
   "addr": "m",
-  "az": "ma a7sib hadhi fikra zaina.",
-  "ar": "ما أحسب هذي فكرة زينة."
+  "az": "ma a7sib inn hadhi fikra zaina.",
+  "ar": "ما أحسب إن هذي فكرة زينة."
  },
  {
   "en": "let's do it",
@@ -4742,8 +4742,8 @@
  {
   "en": "lmk if it works",
   "addr": "m",
-  "az": "3allimni law yishti3'il.",
-  "ar": "علمني لو يشتغل."
+  "az": "5abbirni law yishti3'il.",
+  "ar": "خبرني لو يشتغل."
  },
  {
   "en": "will do",
@@ -4766,8 +4766,8 @@
  {
   "en": "how long did it take u?",
   "addr": "m",
-  "az": "cham 5adh minnak?",
-  "ar": "چم خذ منك؟"
+  "az": "cham a5adh wagt minnak?",
+  "ar": "چم أخذ وقت؟"
  },
  {
   "en": "like 3 months on and off",
@@ -4928,8 +4928,8 @@
  {
   "en": "ok ok calm down lol",
   "addr": "m",
-  "az": "tamaam tamaam, rawwig, hhhh.",
-  "ar": "تمام تمام، روق، هههه."
+  "az": "tamaam tamaam, haddi, hhhh.",
+  "ar": "تمام تمام، هدي، هههه."
  },
  {
   "en": "ya i know",
@@ -5078,8 +5078,8 @@
  {
   "en": "chill bro its just a game",
   "addr": "m",
-  "az": "rawwig 5ooy, bas lu3ba.",
-  "ar": "روق خوي، بس لعبة."
+  "az": "haddi 5ooy, bas lu3ba.",
+  "ar": "هدي خوي، بس لعبة."
  },
  {
   "en": "lvl 100 finally 🎉",
@@ -5114,8 +5114,8 @@
  {
   "en": "how do u get the ioda",
   "addr": "m",
-  "az": "shlon t7a99il ioda?",
-  "ar": "شلون تحصل ioda؟"
+  "az": "shlon t7a99il il-ioda?",
+  "ar": "شلون تحصل الioda؟"
  },
  {
   "en": "can someone carry me pls",
@@ -5312,8 +5312,8 @@
  {
   "en": "i think its gonna be fine",
   "addr": "m",
-  "az": "a7sib bykoon zain.",
-  "ar": "أحسب بيكون زين."
+  "az": "a7sib inna bykoon zain.",
+  "ar": "أحسب إنه بيكون زين."
  },
  {
   "en": "hes the one who made the bot",
@@ -5390,8 +5390,8 @@
  {
   "en": "hey i downloaded ur bot but when i open it nothing happens, what should i do",
   "addr": "m",
-  "az": "hala, nazzalt il-bot maalak, bas lamma afikka, wala shay y9eer, shu laazim asawi.",
-  "ar": "هلا، نزلت البوت مالك، بس لما أفكه، ولا شي يصير، شو لازم أسوي."
+  "az": "hala, nazzalt il-bot maalak, bas lamma afikka, wala shay y9eer, shu laazim asawi?",
+  "ar": "هلا، نزلت البوت مالك، بس لما أفكه، ولا شي يصير، شو لازم أسوي؟"
  },
  {
   "en": "did u extract the zip first? u need to extract it then run the exe",
@@ -5426,14 +5426,14 @@
  {
   "en": "np, if u have any other problem just dm me",
   "addr": "m",
-  "az": "ma fi mushkila, law 3indak ay mushkila thaanya, bas traasilni.",
-  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية، بس تراسلني."
+  "az": "ma fi mushkila, law 3indak ay mushkila thaanya bas traasilni.",
+  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية بس تراسلني."
  },
  {
   "en": "one more thing, how do i change the class",
   "addr": "m",
-  "az": "shay thaani, shlon a3'ayyir il-class.",
-  "ar": "شي ثاني، شلون أغير الكلاس."
+  "az": "shay thaani, shlon a3'ayyir il-class?",
+  "ar": "شي ثاني، شلون أغير الكلاس؟"
  },
  {
   "en": "go to settings and pick the class from the list then click save",
@@ -5456,8 +5456,8 @@
  {
   "en": "will do, btw are u gonna add more features",
   "addr": "m",
-  "az": "basaweeh, 3ala fikra bt9'eef maizzaat akthar.",
-  "ar": "بسويه، على فكرة بتضيف ميزات أكثر."
+  "az": "basaweeh, 3ala fikra bt9'eef maizzaat akthar?",
+  "ar": "بسويه، على فكرة بتضيف ميزات أكثر؟"
  },
  {
   "en": "yeah im working on auto quest and auto sell rn",
@@ -5570,14 +5570,14 @@
  {
   "en": "hi, how are you today my friend, I'm simply trying the link you sent me.",
   "addr": "m",
-  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrashta li.",
-  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشته لي."
+  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrasht li.",
+  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشت لي."
  },
  {
   "en": "hi, how are you today my friend, im simply testing the link you sent me",
   "addr": "m",
-  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrashta li.",
-  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشته لي."
+  "az": "hala, shlonak il-yoom rabee3i, bas gaa3id ajarrib il-link illi 6arrasht li.",
+  "ar": "هلا، شلونك اليوم ربيعي، بس قاعد أجرب اللينك اللي طرشت لي."
  },
  {
   "en": "hi, simply is actually an English word, not my friend's name.",
@@ -5606,14 +5606,14 @@
  {
   "en": "there are no abbreviations in my previous messages.",
   "addr": "m",
-  "az": "ma fi i5ti9aaraat fi rasaayili is-saabga.",
-  "ar": "ما في اختصارات في رسايلي السابقة."
+  "az": "ma fi i5ti9aaraat fi rasaayili illi gabil.",
+  "ar": "ما في اختصارات في رسايلي اللي قبل."
  },
  {
   "en": "there are no abbreviations in my previous messages",
   "addr": "m",
-  "az": "ma fi i5ti9aaraat fi rasaayili is-saabga.",
-  "ar": "ما في اختصارات في رسايلي السابقة."
+  "az": "ma fi i5ti9aaraat fi rasaayili illi gabil.",
+  "ar": "ما في اختصارات في رسايلي اللي قبل."
  },
  {
   "en": "there is no problem",
@@ -5636,8 +5636,8 @@
  {
   "en": "the link you sent me is not working",
   "addr": "m",
-  "az": "il-link illi 6arrashta li mob gaa3id yishti3'il.",
-  "ar": "اللينك اللي طرشته لي مب قاعد يشتغل."
+  "az": "il-link illi 6arrasht li mob gaa3id yishti3'il.",
+  "ar": "اللينك اللي طرشت لي مب قاعد يشتغل."
  },
  {
   "en": "send me the link again",
@@ -5666,14 +5666,14 @@
  {
   "en": "the previous version was better",
   "addr": "m",
-  "az": "in-nus5a is-saabga kaanat a7san.",
-  "ar": "النسخة السابقة كانت أحسن."
+  "az": "in-nus5a illi gabil kaanat a7san.",
+  "ar": "النسخة اللي قبل كانت أحسن."
  },
  {
   "en": "whats the previous quest",
   "addr": "m",
-  "az": "shu il-quest is-saabig?",
-  "ar": "شو الكويست السابق؟"
+  "az": "shu il-quest illi gabil?",
+  "ar": "شو الكويست اللي قبل؟"
  },
  {
   "en": "i simply dont understand",
@@ -5686,5 +5686,953 @@
   "addr": "m",
   "az": "bi5ti9aar, il-bot 5arbaan.",
   "ar": "باختصار، البوت خربان."
+ },
+ {
+  "en": "anyone selling a dage class?",
+  "addr": "m",
+  "az": "a7ad ybee3 dage class?",
+  "ar": "أحد يبيع كلاس dage؟"
+ },
+ {
+  "en": "the bot got stuck at the boss and stopped attacking",
+  "addr": "m",
+  "az": "il-bot 3allag fil-boss wwaggaf yhaajim.",
+  "ar": "البوت علق في البوس ووقف يهاجم."
+ },
+ {
+  "en": "my account got hacked last night, what do i do",
+  "addr": "m",
+  "az": "7saabi ithakkar il-baar7a, shu asawi?",
+  "ar": "حسابي اتهكر البارحة، شو أسوي؟"
+ },
+ {
+  "en": "how many acs is the membership",
+  "addr": "m",
+  "az": "cham AC il-membership?",
+  "ar": "چم AC الممبرشب؟"
+ },
+ {
+  "en": "does this bot work on the new update?",
+  "addr": "m",
+  "az": "hal bot yishti3'il 3ala it-ta7deeth il-yideed?",
+  "ar": "هالبوت يشتغل على التحديث اليديد؟"
+ },
+ {
+  "en": "whats your ign? add me in game",
+  "addr": "m",
+  "az": "shu il-ign maalak? 9'eefni fil-lu3ba.",
+  "ar": "شو الign مالك؟ ضيفني في اللعبة."
+ },
+ {
+  "en": "i cant join the room, its full",
+  "addr": "m",
+  "az": "ma agdar adish ir-room, malyaan.",
+  "ar": "ما أقدر أدش الروم، مليان."
+ },
+ {
+  "en": "the drop rate is terrible, i farmed for 3 hours and got nothing",
+  "addr": "m",
+  "az": "id-drop rate 5aayis, farramt 3 saa3aat wma 7a99alt shay.",
+  "ar": "الدروب ريت خايس، فرمت 3 ساعات وما حصلت شي."
+ },
+ {
+  "en": "which bot file do i use for the nulgath quest",
+  "addr": "m",
+  "az": "ay malaff bot asta5dim 7ag in-nulgath quest?",
+  "ar": "أي ملف بوت أستخدم حق الكويست nulgath؟"
+ },
+ {
+  "en": "im getting kicked every 5 minutes",
+  "addr": "m",
+  "az": "gaa3id an6irid kil 5 dagaayig.",
+  "ar": "قاعد آنطرد كل 5 دقايق."
+ },
+ {
+  "en": "the mods are watching, dont bot in the main server",
+  "addr": "m",
+  "az": "il-mods gaa3deen y6aal3oon, il-bot ma fil-main server.",
+  "ar": "المودز قاعدين يطالعون، البوت ما في السيرفر main."
+ },
+ {
+  "en": "i need someone to help me with the ultra boss tonight",
+  "addr": "m",
+  "az": "a7taaj a7ad ysaa3idni fil-ultra boss il-laila.",
+  "ar": "أحتاج أحد يساعدني في البوس ultra الليلة."
+ },
+ {
+  "en": "is there a way to skip the cutscene",
+  "addr": "m",
+  "az": "fi 6areega asawi skip lil-cutscene?",
+  "ar": "في طريقة أسوي سكب للكت سين؟"
+ },
+ {
+  "en": "my inventory is full, i have to sell some items",
+  "addr": "m",
+  "az": "il-inventory maali malyaan, laazim abee3 kam item.",
+  "ar": "الانفنتوري مالي مليان، لازم أبيع كم آيتم."
+ },
+ {
+  "en": "can you show me how to set up the quest loader",
+  "addr": "m",
+  "az": "tigdar twarreeni shlon a9'abbi6 il-quest loader?",
+  "ar": "تقدر توريني شلون أضبط الquest لودر؟"
+ },
+ {
+  "en": "i lost my rank 10 class because i deleted it by mistake",
+  "addr": "m",
+  "az": "5sirt il-class rank 10 maali 3ashaan masa7ta bil-3'ala6.",
+  "ar": "خسرت الكلاس رانك 10 مالي عشان مسحته بالغلط."
+ },
+ {
+  "en": "the guild leader kicked me for no reason",
+  "addr": "m",
+  "az": "il-guild leader 6iradni bdoon sabab.",
+  "ar": "القلد leader طردني بدون سبب."
+ },
+ {
+  "en": "how long does it take to rank up a class",
+  "addr": "m",
+  "az": "cham yaa5idh wagt 3ashaan tsawi rank up class?",
+  "ar": "چم ياخذ وقت عشان تسوي رانك أب كلاس؟"
+ },
+ {
+  "en": "i bought the membership and it didnt give me the items",
+  "addr": "m",
+  "az": "shareet il-membership wma 3a6aani il-itemaat.",
+  "ar": "شريت الممبرشب وما عطاني الآيتمات."
+ },
+ {
+  "en": "this quest needs 50 kills and i only have 12",
+  "addr": "m",
+  "az": "hal quest yi7taaj 50 kill wbas 3indi 12.",
+  "ar": "هالكويست يحتاج 50 كيل وبس عندي 12."
+ },
+ {
+  "en": "the game is asking me to verify my email",
+  "addr": "m",
+  "az": "il-lu3ba gaa3da ti6lub minni a2akkid il-email maali.",
+  "ar": "اللعبة قاعدة تطلب مني أأكد الإيميل مالي."
+ },
+ {
+  "en": "why is everyone in this map afk",
+  "addr": "m",
+  "az": "laish il-kil fi hal map afk?",
+  "ar": "ليش الكل في هالماب afk؟"
+ },
+ {
+  "en": "my bot stops when the window is not active",
+  "addr": "m",
+  "az": "il-bot maali ywaggif lamma il-window mob sha3'aal.",
+  "ar": "البوت مالي يوقف لما الويندو مب شغال."
+ },
+ {
+  "en": "the free version only has 3 commands",
+  "addr": "m",
+  "az": "in-nus5a il-majjaaniyya bas feeha 3 commands.",
+  "ar": "النسخة المجانية بس فيها 3 كوماندز."
+ },
+ {
+  "en": "can you make the bot pick up the drops automatically",
+  "addr": "m",
+  "az": "tigdar t5alli il-bot tlgi6 id-dropaat b-roo7a?",
+  "ar": "تقدر تخلي البوت تلقط الدروبات بروحه؟"
+ },
+ {
+  "en": "the file is corrupted, download it again",
+  "addr": "m",
+  "az": "il-malaff 5arbaan, nazzila marra thaanya.",
+  "ar": "الملف خربان، نزله مرة ثانية."
+ },
+ {
+  "en": "i get an error when i open the app",
+  "addr": "m",
+  "az": "yi6la3 li error lamma afikk it-ta6beeg.",
+  "ar": "يطلع لي ايرور لما أفك التطبيق."
+ },
+ {
+  "en": "try running it as admin",
+  "addr": "m",
+  "az": "jarrib tsha3'ila ka-admin.",
+  "ar": "جرب تشغله كأدمن."
+ },
+ {
+  "en": "restart your router and try again",
+  "addr": "m",
+  "az": "sawwi restart lir-router maalak w7aawil marra thaanya.",
+  "ar": "سوّ ريستارت للراوتر مالك وحاول مرة ثانية."
+ },
+ {
+  "en": "my antivirus deleted the bot",
+  "addr": "m",
+  "az": "il-antivirus maali masa7 il-bot.",
+  "ar": "الأنتي فايروس مالي مسح البوت."
+ },
+ {
+  "en": "download it from the link in the description",
+  "addr": "m",
+  "az": "nazzila min il-link fil-wa9f.",
+  "ar": "نزله من اللينك في الوصف."
+ },
+ {
+  "en": "which version of windows do you have",
+  "addr": "m",
+  "az": "ay nus5a windows 3indak?",
+  "ar": "أي نسخة ويندوز عندك؟"
+ },
+ {
+  "en": "the bot doesnt work on mac",
+  "addr": "m",
+  "az": "il-bot ma yishti3'il 3ala mac.",
+  "ar": "البوت ما يشتغل على ماك."
+ },
+ {
+  "en": "copy the folder to your desktop",
+  "addr": "m",
+  "az": "insa5 il-folder 7ag id-desktop maalak.",
+  "ar": "انسخ الفولدر حق الديسكتوب مالك."
+ },
+ {
+  "en": "your password is wrong, reset it",
+  "addr": "m",
+  "az": "il-password maalak 3'ala6, sawwi lah reset.",
+  "ar": "الباسورد مالك غلط، سوّ له ريسيت."
+ },
+ {
+  "en": "clear the cache and refresh the page",
+  "addr": "m",
+  "az": "imsa7 il-cache wsawwi refresh lil-9af7a.",
+  "ar": "امسح الكاش وسوّ ريفرش للصفحة."
+ },
+ {
+  "en": "i updated the drivers and now the screen is black",
+  "addr": "m",
+  "az": "7addatht id-driveraat wil7een ish-shaasha sooda.",
+  "ar": "حدثت الدرايفرات والحين الشاشة سودا."
+ },
+ {
+  "en": "the installer keeps asking for a password",
+  "addr": "m",
+  "az": "il-installer ya6'all yi6lub password.",
+  "ar": "الانستولر يظل يطلب باسورد."
+ },
+ {
+  "en": "it says the file is already open in another program",
+  "addr": "m",
+  "az": "ygool inn il-malaff 5alaa9 maftoo7 fi barnaamij thaani.",
+  "ar": "يقول إن الملف خلاص مفتوح في برنامج ثاني."
+ },
+ {
+  "en": "unplug it and plug it in again",
+  "addr": "m",
+  "az": "if9ila wrakkiba marra thaanya.",
+  "ar": "افصله وركبه مرة ثانية."
+ },
+ {
+  "en": "what are you doing this weekend",
+  "addr": "m",
+  "az": "shu gaa3id tsawi hal wiikend?",
+  "ar": "شو قاعد تسوي هالويكند؟"
+ },
+ {
+  "en": "i have work tomorrow morning so i cant stay up late",
+  "addr": "m",
+  "az": "3indi shu3'ul bacher i9-9ub7, 3ashaan chidhi ma agdar ashar mit2a55ir.",
+  "ar": "عندي شغل باجر الصبح، عشان چذي ما أقدر أسهر متأخر."
+ },
+ {
+  "en": "its too hot outside, lets stay home",
+  "addr": "m",
+  "az": "7aarr wayed barra, yalla nig3id fil-bait.",
+  "ar": "حار وايد برا، يلا نقعد في البيت."
+ },
+ {
+  "en": "did you eat?",
+  "addr": "m",
+  "az": "kalt?",
+  "ar": "كلت؟"
+ },
+ {
+  "en": "my phone battery is dead, ill text you when i charge it",
+  "addr": "m",
+  "az": "baytri it-tilifoon maali 6aafi, baraasilak lamma ash7ana.",
+  "ar": "بيتري التيلفون مالي طافي، براسلك لما أشحنه."
+ },
+ {
+  "en": "im at the mall with my cousins",
+  "addr": "m",
+  "az": "ana fil-mall wiyya 3yaal 3ammi.",
+  "ar": "أنا في المول ويا عيال عمي."
+ },
+ {
+  "en": "the traffic was crazy today",
+  "addr": "m",
+  "az": "iz-za7ma kaanat 5ibla il-yoom.",
+  "ar": "الزحمة كانت خبلة اليوم."
+ },
+ {
+  "en": "ill call you later",
+  "addr": "m",
+  "az": "badigg 3alaik ba3dain.",
+  "ar": "بدق عليك بعدين."
+ },
+ {
+  "en": "my mom is calling me, one sec",
+  "addr": "m",
+  "az": "ummi gaa3da tdigg 3alay, dageega.",
+  "ar": "أمي قاعدة تدق علي، دقيقة."
+ },
+ {
+  "en": "we are going to the beach on friday if the weather is good",
+  "addr": "m",
+  "az": "i7na raay7een il-ba7ar yoom il-yim3a law il-jaw zain.",
+  "ar": "إحنا رايحين البحر يوم الجمعة لو الجو زين."
+ },
+ {
+  "en": "i havent seen him since school",
+  "addr": "m",
+  "az": "ma shifta min ayyaam il-madrasa.",
+  "ar": "ما شفته من أيام المدرسة."
+ },
+ {
+  "en": "she doesnt like spicy food",
+  "addr": "m",
+  "az": "ma t7ibb il-akil il-7aarr.",
+  "ar": "ما تحب الأكل الحار."
+ },
+ {
+  "en": "can you pick me up from the airport at 6",
+  "addr": "m",
+  "az": "tigdar tmurr 3alay min il-ma6aar is-saa3a 6?",
+  "ar": "تقدر تمر علي من المطار الساعة 6؟"
+ },
+ {
+  "en": "i forgot my wallet at home",
+  "addr": "m",
+  "az": "niseet booki fil-bait.",
+  "ar": "نسيت بوكي في البيت."
+ },
+ {
+  "en": "the exam was harder than i expected",
+  "addr": "m",
+  "az": "il-imti7aan kaan a93ab min ma twagga3t.",
+  "ar": "الامتحان كان أصعب من ما توقعت."
+ },
+ {
+  "en": "happy birthday bro, hope you have a great day",
+  "addr": "m",
+  "az": "3eed meelaad sa3eed 5ooy, atmanna lak yoom mumtaaz.",
+  "ar": "عيد ميلاد سعيد خوي، أتمنى لك يوم ممتاز."
+ },
+ {
+  "en": "congrats on the new job",
+  "addr": "m",
+  "az": "mabrook, 3ala il-wa6'eefa il-yideeda.",
+  "ar": "مبروك، على الوظيفة اليديدة."
+ },
+ {
+  "en": "i hope you feel better soon",
+  "addr": "m",
+  "az": "ma tshoof sharr.",
+  "ar": "ما تشوف شر."
+ },
+ {
+  "en": "let me know when you reach",
+  "addr": "m",
+  "az": "5abbirni lamma tiw9al.",
+  "ar": "خبرني لما توصل."
+ },
+ {
+  "en": "i ordered food, it will arrive in 20 minutes",
+  "addr": "m",
+  "az": "6alabt akil, byiw9al ba3d 20 dageega.",
+  "ar": "طلبت أكل، بيوصل بعد 20 دقيقة."
+ },
+ {
+  "en": "bet",
+  "addr": "m",
+  "az": "tamm",
+  "ar": "تم"
+ },
+ {
+  "en": "say less",
+  "addr": "m",
+  "az": "abshir",
+  "ar": "أبشر"
+ },
+ {
+  "en": "ur cracked at this game",
+  "addr": "m",
+  "az": "inta fannaan fi hal lu3ba.",
+  "ar": "إنت فنان في هاللعبة."
+ },
+ {
+  "en": "skill issue",
+  "addr": "m",
+  "az": "skill issue",
+  "ar": "سكل إشو"
+ },
+ {
+  "en": "touch grass",
+  "addr": "m",
+  "az": "i6la3 shoof id-dinya",
+  "ar": "اطلع شوف الدنيا"
+ },
+ {
+  "en": "thats a big L",
+  "addr": "m",
+  "az": "hadha L chibeer.",
+  "ar": "هذا L چبير."
+ },
+ {
+  "en": "W update",
+  "addr": "m",
+  "az": "ta7deeth W",
+  "ar": "تحديث W"
+ },
+ {
+  "en": "mid",
+  "addr": "m",
+  "az": "3aadi",
+  "ar": "عادي"
+ },
+ {
+  "en": "im cooked",
+  "addr": "m",
+  "az": "ri7t feeha.",
+  "ar": "رحت فيها."
+ },
+ {
+  "en": "this is sus",
+  "addr": "m",
+  "az": "hadha mashbooh.",
+  "ar": "هذا مشبوه."
+ },
+ {
+  "en": "no shot",
+  "addr": "m",
+  "az": "musta7eel",
+  "ar": "مستحيل"
+ },
+ {
+  "en": "my guy",
+  "addr": "m",
+  "az": "5ooy",
+  "ar": "خوي"
+ },
+ {
+  "en": "its giving broke",
+  "addr": "m",
+  "az": "shakla mfallis.",
+  "ar": "شكله مفلس."
+ },
+ {
+  "en": "hes goated",
+  "addr": "m",
+  "az": "huwa us6oora.",
+  "ar": "هو أسطورة."
+ },
+ {
+  "en": "cope harder",
+  "addr": "m",
+  "az": "it7ammal akthar",
+  "ar": "اتحمل أكثر"
+ },
+ {
+  "en": "if you dont update the bot it will keep crashing every time you log in",
+  "addr": "m",
+  "az": "law ma t7addith il-bot, bya6'all y6ee7 kil ma tdish.",
+  "ar": "لو ما تحدث البوت، بيظل يطيح كل ما تدش."
+ },
+ {
+  "en": "i told him to stop but he kept spamming the chat until the mod banned him",
+  "addr": "m",
+  "az": "gilt lah ywaggif, bas 6'all ysawi spam lil-chat lain il-mod sawwa lah ban.",
+  "ar": "قلت له يوقف، بس ظل يسوي سبام للشات لين المود سوى له بان."
+ },
+ {
+  "en": "when i was a kid we used to play this game every day after school",
+  "addr": "m",
+  "az": "lamma kint yaahil, kinna nil3ab hal lu3ba kil yoom ba3d il-madrasa.",
+  "ar": "لما كنت ياهل، كنا نلعب هاللعبة كل يوم بعد المدرسة."
+ },
+ {
+  "en": "the reason the bot stops is that the server disconnects you after an hour",
+  "addr": "m",
+  "az": "is-sabab il-bot ywaggif, inn is-server yif9ilak ba3d saa3a?",
+  "ar": "السبب البوت يوقف، إن السيرفر يفصلك بعد ساعة؟"
+ },
+ {
+  "en": "i would have helped you yesterday but i was busy with my family",
+  "addr": "m",
+  "az": "kint basaa3idak ams, bas kint mash3'ool wiyya ahali.",
+  "ar": "كنت بساعدك أمس، بس كنت مشغول ويا أهلي."
+ },
+ {
+  "en": "even though the update was small, it fixed most of the bugs",
+  "addr": "m",
+  "az": "ma3a inn it-ta7deeth kaan 9i3'eer, 9alla7 a3'lab il-bugaat.",
+  "ar": "مع إن التحديث كان صغير، صلح أغلب البقات."
+ },
+ {
+  "en": "the guy who sold me the account disappeared after i paid him",
+  "addr": "m",
+  "az": "ir-rayyal illi baa3 li il-7saab i5tafa ba3d ma dafa3t lah.",
+  "ar": "الريال اللي باع لي الحساب اختفى بعد ما دفعت له."
+ },
+ {
+  "en": "you should have told me before you deleted the files",
+  "addr": "m",
+  "az": "kaan laazim tgool li gabil la masa7t il-malaffaat.",
+  "ar": "كان لازم تقول لي قبل لا مسحت الملفات."
+ },
+ {
+  "en": "whoever finishes the quest first gets the reward",
+  "addr": "m",
+  "az": "illi y5alli9 il-quest awwal, y7a99il il-jaa2iza.",
+  "ar": "اللي يخلص الكويست أول، يحصل الجائزة."
+ },
+ {
+  "en": "i was about to log off when the boss finally spawned",
+  "addr": "m",
+  "az": "kint ba6la3 lamma il-boss a5eeran 6ila3.",
+  "ar": "كنت بطلع لما البوس أخيراً طلع."
+ },
+ {
+  "en": "sorry i couldnt reply, i was driving",
+  "addr": "m",
+  "az": "aasif, ma gdart aridd, kint asoog.",
+  "ar": "آسف، ما قدرت أرد، كنت أسوق."
+ },
+ {
+  "en": "not sure if this is a bug or im doing something wrong",
+  "addr": "m",
+  "az": "mob mit2akkid law hadha bug walla gaa3id asawi shay 3'ala6.",
+  "ar": "مب متأكد لو هذا بق ولا قاعد أسوي شي غلط."
+ },
+ {
+  "en": "honestly idk anymore",
+  "addr": "m",
+  "az": "bi9raa7a, ma adri 5alaa9.",
+  "ar": "بصراحة، ما أدري خلاص."
+ },
+ {
+  "en": "wait, which one?",
+  "addr": "m",
+  "az": "in6ir, ay wa7id?",
+  "ar": "انطر، أي واحد؟"
+ },
+ {
+  "en": "nvm its working now",
+  "addr": "m",
+  "az": "3aadi, gaa3id yishti3'il il7een.",
+  "ar": "عادي، قاعد يشتغل الحين."
+ },
+ {
+  "en": "are you sure about that",
+  "addr": "m",
+  "az": "inta mit2akkid min hadhaak?",
+  "ar": "إنت متأكد من هذاك؟"
+ },
+ {
+  "en": "whatever, do what you want",
+  "addr": "m",
+  "az": "3aadi, sawwi illi tabeeh?",
+  "ar": "عادي، سوّ اللي تبيه؟"
+ },
+ {
+  "en": "i dont care anymore",
+  "addr": "m",
+  "az": "ma yhimni 5alaa9.",
+  "ar": "ما يهمني خلاص."
+ },
+ {
+  "en": "what time is it there",
+  "addr": "m",
+  "az": "cham is-saa3a hnaak?",
+  "ar": "چم الساعة هناك؟"
+ },
+ {
+  "en": "can i borrow your account for a bit",
+  "addr": "m",
+  "az": "agdar aa5idh 7saabak shway?",
+  "ar": "أقدر آخذ حسابك شوي؟"
+ },
+ {
+  "en": "dont tell anyone i gave you this",
+  "addr": "m",
+  "az": "la tgool 7ag a7ad inni 3a6eetak hadha.",
+  "ar": "لا تقول حق أحد إني عطيتك هذا."
+ },
+ {
+  "en": "the stream starts at 9 dont be late",
+  "addr": "m",
+  "az": "is-stream yibda is-saa3a 9 la tit2a55ar.",
+  "ar": "الستريم يبدا الساعة 9 لا تتأخر."
+ },
+ {
+  "en": "good game everyone, same time tomorrow?",
+  "addr": "m",
+  "az": "gg il-kil, nafs il-wagt bacher?",
+  "ar": "gg الكل، نفس الوقت باجر؟"
+ },
+ {
+  "en": "bro my ping is so high i cant even move in this map",
+  "addr": "m",
+  "az": "5ooy, il-ping maali 3aali wayed, 7atta ma agdar a7arrik fi hal map.",
+  "ar": "خوي، البنق مالي عالي وايد، حتى ما أقدر أحرك في هالماب."
+ },
+ {
+  "en": "did the boss drop anything good or just trash items",
+  "addr": "m",
+  "az": "il-boss nazzal ay shay zain walla bas itemaat 5aaysa?",
+  "ar": "البوس نزل أي شي زين ولا بس آيتمات خايسة؟"
+ },
+ {
+  "en": "wait for me at the spawn point ill be back in 2 mins",
+  "addr": "m",
+  "az": "in6irni fi nug6at is-spawn, barja3 ba3d dageegtain.",
+  "ar": "انطرني في نقطة السبون، برجع بعد دقيقتين."
+ },
+ {
+  "en": "why did you kick him from the party he was helping us",
+  "addr": "m",
+  "az": "laish 6iradta min il-party, kaan ysaa3idna?",
+  "ar": "ليش طردته من البارتي، كان يساعدنا؟"
+ },
+ {
+  "en": "i need 2 more quests to unlock the new class",
+  "addr": "m",
+  "az": "a7taaj questain ba3ad afta7 il-class il-yideed.",
+  "ar": "أحتاج كويستين بعد أفتح الكلاس اليديد."
+ },
+ {
+  "en": "dont click that link its a scam to steal your account",
+  "addr": "m",
+  "az": "la ti9'3'a6 hadhaak il-link, hadha na9b tboog 7saabak.",
+  "ar": "لا تضغط هذاك اللينك، هذا نصب تبوق حسابك."
+ },
+ {
+  "en": "my game froze again i have to restart my pc",
+  "addr": "m",
+  "az": "lu3bati 3allagat marra thaanya, laazim asawi restart lil-computer maali.",
+  "ar": "لعبتي علقت مرة ثانية، لازم أسوي ريستارت للكمبيوتر مالي."
+ },
+ {
+  "en": "are you guys playing tonight or going out",
+  "addr": "m",
+  "az": "btil3aboon shabaab il-laila walla gaa3deen ti6la3oon?",
+  "ar": "بتلعبون شباب الليلة ولا قاعدين تطلعون؟"
+ },
+ {
+  "en": "send me the bot settings on discord when you finish",
+  "addr": "m",
+  "az": "6arrish li settings il-bot 3ala discord lamma t5alli9.",
+  "ar": "طرش لي سيتنقز البوت على ديسكورد لما تخلص."
+ },
+ {
+  "en": "i stayed up until 4 am farming and still didnt get the drop",
+  "addr": "m",
+  "az": "sihart lain is-saa3a 4 il-fayir kint afarrim wba3adni ma 7a99alt id-drop.",
+  "ar": "سهرت لين الساعة 4 الفير كنت أفرم وبعدني ما حصلت الدروب."
+ },
+ {
+  "en": "how much did you pay for your new monitor",
+  "addr": "m",
+  "az": "cham dafa3t 7ag shaashtak il-yideeda?",
+  "ar": "چم دفعت حق شاشتك اليديدة؟"
+ },
+ {
+  "en": "the server is down for maintenance for another hour",
+  "addr": "m",
+  "az": "server is down 7ag 9iyaana 7ag saa3a thaanya.",
+  "ar": "server is down حق صيانة حق ساعة ثانية."
+ },
+ {
+  "en": "wallah this boss is impossible without a healer in the room",
+  "addr": "m",
+  "az": "wallah, hal boss musta7eel bdoon healer fir-room.",
+  "ar": "والله، هالبوس مستحيل بدون هيلر في الروم."
+ },
+ {
+  "en": "hold on im ordering shawarma want anything from the restaurant",
+  "addr": "m",
+  "az": "in6ir shway gaa3id a6lub shawarma, abi ay shay min il-ma63am.",
+  "ar": "انطر شوي قاعد أطلب شاورما، أبي أي شي من المطعم."
+ },
+ {
+  "en": "i accidentally sold my best weapon can i get it back",
+  "addr": "m",
+  "az": "bi3t bil-3'ala6 a7san silaa7 7agi, agdar arja3a?",
+  "ar": "بعت بالغلط أحسن سلاح حقي، أقدر أرجعه؟"
+ },
+ {
+  "en": "turn off your antivirus before extracting the zip file",
+  "addr": "m",
+  "az": "i6fi il-antivirus maalak gabil la afikk malaff iz-zip.",
+  "ar": "اطف الأنتي فايروس مالك قبل لا أفك ملف الزب."
+ },
+ {
+  "en": "he keeps killing me every time i join the pvp room",
+  "addr": "m",
+  "az": "ya6'all yigtilni kil ma adish il-pvp room.",
+  "ar": "يظل يقتلني كل ما أدش الpvp روم."
+ },
+ {
+  "en": "im heading to dubai mall rn ill hop on when i get back home",
+  "addr": "m",
+  "az": "ana raayi7 dbay mall il7een, badish lamma arja3 il-bait.",
+  "ar": "أنا رايح دبي مول الحين، بدش لما أرجع البيت."
+ },
+ {
+  "en": "which server are you in i cant find your name",
+  "addr": "m",
+  "az": "fi ay server inta, ma agdar algi isimak.",
+  "ar": "في أي سيرفر إنت، ما أقدر ألقي اسمك."
+ },
+ {
+  "en": "stop afk farming in public rooms or youll get banned",
+  "addr": "m",
+  "az": "waggif tfarrim afk fir-roomaat il-3aamma walla btinbannid.",
+  "ar": "وقف تفرم afk في الرومات العامة ولا بتانبند."
+ },
+ {
+  "en": "Peace be upon you.\r",
+  "addr": "m",
+  "az": "is-salaam 3alaikum.\n",
+  "ar": "السلام عليكم.\n"
+ },
+ {
+  "en": "And peace be upon you too.\r",
+  "addr": "m",
+  "az": "w3alaikum is-salaam.\n",
+  "ar": "وعليكم السلام.\n"
+ },
+ {
+  "en": "How are you?\r",
+  "addr": "m",
+  "az": "shlonak?\n",
+  "ar": "شلونك؟\n"
+ },
+ {
+  "en": "I'm fine, thank you. How about you?\r",
+  "addr": "m",
+  "az": "ana zain, mashkoor. winta?\n",
+  "ar": "أنا زين، مشكور. وإنت؟\n"
+ },
+ {
+  "en": "I'm doing well. What's your name?\r",
+  "addr": "m",
+  "az": "ana zain. shu ismak?\n",
+  "ar": "أنا زين. شو اسمك؟\n"
+ },
+ {
+  "en": "My name is Ahmed. What's yours?\r",
+  "addr": "m",
+  "az": "ismi Ahmed. winta?\n",
+  "ar": "اسمي Ahmed. وإنت؟\n"
+ },
+ {
+  "en": "My name is Ali. Nice to meet you.\r",
+  "addr": "m",
+  "az": "ismi Ali. tsharrafna.\n",
+  "ar": "اسمي Ali. تشرفنا.\n"
+ },
+ {
+  "en": "Nice to meet you too.\r",
+  "addr": "m",
+  "az": "ish-sharaf li.\n",
+  "ar": "الشرف لي.\n"
+ },
+ {
+  "en": "How old are you?\r",
+  "addr": "m",
+  "az": "cham 3umrak?\n",
+  "ar": "چم عمرك؟\n"
+ },
+ {
+  "en": "I'm twenty years old. And you?\r",
+  "addr": "m",
+  "az": "3umri 3ishreen sana. winta?\n",
+  "ar": "عمري عشرين سنة. وإنت؟\n"
+ },
+ {
+  "en": "I'm twenty-two. Which country are you from?\r",
+  "addr": "m",
+  "az": "3umri 22. min ay balad inta?\n",
+  "ar": "عمري 22. من أي بلد إنت؟\n"
+ },
+ {
+  "en": "I'm from Egypt. Where are you from?\r",
+  "addr": "m",
+  "az": "ana min ma9ir. min wain inta?\n",
+  "ar": "أنا من مصر. من وين إنت؟\n"
+ },
+ {
+  "en": "I'm from Denmark. Do you live near here?\r",
+  "addr": "m",
+  "az": "ana min Denmark. tiskin greeb min hni?\n",
+  "ar": "أنا من Denmark. تسكن قريب من هني؟\n"
+ },
+ {
+  "en": "Yes, I live nearby.\r",
+  "addr": "m",
+  "az": "ee, askin greeb.\n",
+  "ar": "إي، أسكن قريب.\n"
+ },
+ {
+  "en": "Do you speak English?\r",
+  "addr": "m",
+  "az": "titkallam ingleezi?\n",
+  "ar": "تتكلم انجليزي؟\n"
+ },
+ {
+  "en": "Yes, but I'm still learning.\r",
+  "addr": "m",
+  "az": "ee, bas ba3adni at3allam.\n",
+  "ar": "إي، بس بعدني أتعلم.\n"
+ },
+ {
+  "en": "Would you like to practise together?\r",
+  "addr": "m",
+  "az": "tabi nitmarran sawa?\n",
+  "ar": "تبي نتمرن سوا؟\n"
+ },
+ {
+  "en": "Yes, that would be great.\r",
+  "addr": "m",
+  "az": "ee, bykoon 7ilu wayed.\n",
+  "ar": "إي، بيكون حلو وايد.\n"
+ },
+ {
+  "en": "What do you do in your free time?\r",
+  "addr": "m",
+  "az": "shu tsawi fi wagt faraa3'ak?\n",
+  "ar": "شو تسوي في وقت فراغك؟\n"
+ },
+ {
+  "en": "I play games and watch movies.\r",
+  "addr": "m",
+  "az": "al3ab al3aab wa6aali3 aflaam.\n",
+  "ar": "ألعب ألعاب وأطالع أفلام.\n"
+ },
+ {
+  "en": "What kind of games do you like?\r",
+  "addr": "m",
+  "az": "ay noo3 al3aab t7ibb?\n",
+  "ar": "أي نوع ألعاب تحب؟\n"
+ },
+ {
+  "en": "I like adventure games. What about you?\r",
+  "addr": "m",
+  "az": "a7ibb al3aab il-mu3'aamara. winta?\n",
+  "ar": "أحب ألعاب المغامرة. وإنت؟\n"
+ },
+ {
+  "en": "I like those too. Do you play every day?\r",
+  "addr": "m",
+  "az": "a7ibb hadhola ba3ad. til3ab kil yoom?\n",
+  "ar": "أحب هذولا بعد. تلعب كل يوم؟\n"
+ },
+ {
+  "en": "Only when I have time.\r",
+  "addr": "m",
+  "az": "bas lamma 3indi wagt.\n",
+  "ar": "بس لما عندي وقت.\n"
+ },
+ {
+  "en": "Are you busy right now?\r",
+  "addr": "m",
+  "az": "inta mash3'ool il7een?\n",
+  "ar": "إنت مشغول الحين؟\n"
+ },
+ {
+  "en": "No, why?\r",
+  "addr": "m",
+  "az": "la, laish?\n",
+  "ar": "لا، ليش؟\n"
+ },
+ {
+  "en": "I need help.\r",
+  "addr": "m",
+  "az": "a7taaj musaa3ada.\n",
+  "ar": "أحتاج مساعدة.\n"
+ },
+ {
+  "en": "Of course. What do you need?\r",
+  "addr": "m",
+  "az": "akeed. shu ti7taaj?\n",
+  "ar": "أكيد. شو تحتاج؟\n"
+ },
+ {
+  "en": "I'm trying to find the train station.\r",
+  "addr": "m",
+  "az": "gaa3id adawwir 3ala ma7a66at il-gi6aar.\n",
+  "ar": "قاعد أدور على محطة القطار.\n"
+ },
+ {
+  "en": "It's near the supermarket.\r",
+  "addr": "m",
+  "az": "greeb min is-soobarmaarkit.\n",
+  "ar": "قريب من السوبرماركت.\n"
+ },
+ {
+  "en": "Is it far from here?\r",
+  "addr": "m",
+  "az": "ba3eed 3an hni?\n",
+  "ar": "بعيد عن هني؟\n"
+ },
+ {
+  "en": "No, it's about a ten-minute walk.\r",
+  "addr": "m",
+  "az": "la, tagreeban 10 dagaayig mashi.\n",
+  "ar": "لا، تقريباً 10 دقايق مشي.\n"
+ },
+ {
+  "en": "Can you show me the way?\r",
+  "addr": "m",
+  "az": "tigdar twarreeni id-darb?\n",
+  "ar": "تقدر توريني الدرب؟\n"
+ },
+ {
+  "en": "Sure. I'm going in that direction.\r",
+  "addr": "m",
+  "az": "akeed. ana raayi7 dhaak i9-9oob.\n",
+  "ar": "أكيد. أنا رايح ذاك الصوب.\n"
+ },
+ {
+  "en": "Thank you. That's very kind of you.\r",
+  "addr": "m",
+  "az": "mashkoor. ma tga99ir.\n",
+  "ar": "مشكور. ما تقصر.\n"
+ },
+ {
+  "en": "You're welcome. When does your train leave?\r",
+  "addr": "m",
+  "az": "il-3afu. mita gi6aarak yi6la3?\n",
+  "ar": "العفو. متى قطارك يطلع؟\n"
+ },
+ {
+  "en": "In thirty minutes.\r",
+  "addr": "m",
+  "az": "ba3d 30 dageega.\n",
+  "ar": "بعد 30 دقيقة.\n"
+ },
+ {
+  "en": "You have plenty of time. Let's go.\r",
+  "addr": "m",
+  "az": "3indak wayed wagt. yalla.\n",
+  "ar": "عندك وايد وقت. يلا.\n"
+ },
+ {
+  "en": "Thanks again. I'm glad I met you.\r",
+  "addr": "m",
+  "az": "mashkoor marra thaanya. mistaanis inni t3arraft 3alaik.\n",
+  "ar": "مشكور مرة ثانية. مستانس إني تعرفت عليك.\n"
+ },
+ {
+  "en": "I'm glad I met you too.\r",
+  "addr": "m",
+  "az": "wana ba3ad mistaanis inni t3arraft 3alaik.\n",
+  "ar": "وأنا بعد مستانس إني تعرفت عليك.\n"
  }
 ]
