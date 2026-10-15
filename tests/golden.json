@@ -698,8 +698,8 @@
  {
   "en": "I have been working on this game for a long time.",
   "addr": "pl",
-  "az": "gaa3id ashti3'il 3ala hal lu3ba min fatra 6aweela.",
-  "ar": "قاعد أشتغل على هاللعبة من فترة طويلة."
+  "az": "gaa3id ashti3'il 3ala hal lu3ba min zamaan.",
+  "ar": "قاعد أشتغل على هاللعبة من زمان."
  },
  {
   "en": "The graphics are not good yet.",
@@ -2000,8 +2000,8 @@
  {
   "en": "i kept playing all night",
   "addr": "m",
-  "az": "6'allait al3ab kil il-lail.",
-  "ar": "ظليت ألعب كل الليل."
+  "az": "6'allait al3ab 6ool il-lail.",
+  "ar": "ظليت ألعب طول الليل."
  },
  {
   "en": "he keeps calling me",
@@ -2552,8 +2552,8 @@
  {
   "en": "how do i get to the dark fortress?",
   "addr": "m",
-  "az": "shlon aw9al il-dark fortress?",
-  "ar": "شلون أوصل الdark fortress؟"
+  "az": "shlon aw9al il-gal3a il-3'aamga?",
+  "ar": "شلون أوصل القلعة الغامقة؟"
  },
  {
   "en": "you have to finish the story first",
@@ -5054,8 +5054,8 @@
  {
   "en": "nvm found it",
   "addr": "m",
-  "az": "3aadi, ligeeta.",
-  "ar": "عادي، لقيته."
+  "az": "3aadi, malgi huwa.",
+  "ar": "عادي، ملقي هو."
  },
  {
   "en": "ty so much bro ur a legend",
@@ -5426,8 +5426,8 @@
  {
   "en": "np, if u have any other problem just dm me",
   "addr": "m",
-  "az": "ma fi mushkila, law 3indak ay mushkila thaanya bas traasilni.",
-  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية بس تراسلني."
+  "az": "ma fi mushkila, law 3indak ay mushkila thaanya bas risaala ana.",
+  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية بس رسالة أنا."
  },
  {
   "en": "one more thing, how do i change the class",
@@ -5750,8 +5750,8 @@
  {
   "en": "the mods are watching, dont bot in the main server",
   "addr": "m",
-  "az": "il-mods gaa3deen y6aal3oon, il-bot ma fil-main server.",
-  "ar": "المودز قاعدين يطالعون، البوت ما في السيرفر main."
+  "az": "il-mods gaa3deen y6aal3oon, il-bot ma fis-server ir-ra2eesi.",
+  "ar": "المودز قاعدين يطالعون، البوت ما في السيرفر الرئيسي."
  },
  {
   "en": "i need someone to help me with the ultra boss tonight",
@@ -5787,7 +5787,7 @@
   "en": "the guild leader kicked me for no reason",
   "addr": "m",
   "az": "il-guild leader 6iradni bdoon sabab.",
-  "ar": "القلد leader طردني بدون سبب."
+  "ar": "الguild ليدر طردني بدون سبب."
  },
  {
   "en": "how long does it take to rank up a class",
