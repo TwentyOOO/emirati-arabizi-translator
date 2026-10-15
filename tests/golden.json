@@ -1862,8 +1862,8 @@
  {
   "en": "never give up",
   "addr": "m",
-  "az": "la tistaslim.",
-  "ar": "لا تستسلم."
+  "az": "la tistaslim abadan.",
+  "ar": "لا تستسلم أبداً."
  },
  {
   "en": "i will try my best",
@@ -4341,7 +4341,7 @@
   "en": "my phone is dead",
   "addr": "m",
   "az": "tilifooni 6aafi.",
-  "ar": "تيلفوني طافي."
+  "ar": "تلفوني طافي."
  },
  {
   "en": "i need to charge my phone",
@@ -5198,8 +5198,8 @@
  {
   "en": "ez win",
   "addr": "m",
-  "az": "fooz sahl",
-  "ar": "فوز سهل"
+  "az": "sahl tfooz",
+  "ar": "سهل تفوز"
  },
  {
   "en": "sheesh that was close",
@@ -5408,7 +5408,7 @@
  {
   "en": "install the latest version of .net and restart ur pc",
   "addr": "m",
-  "az": "nazzil a7dath nus5a .net wsawwi restart lil-computer maalak.",
+  "az": "nazzil a7dath nus5at .net wsawwi restart lil-computer maalak.",
   "ar": "نزل أحدث نسخة .net وسوّ ريستارت للكمبيوتر مالك."
  },
  {
@@ -5426,8 +5426,8 @@
  {
   "en": "np, if u have any other problem just dm me",
   "addr": "m",
-  "az": "ma fi mushkila, law 3indak ay mushkila thaanya bas risaala ana.",
-  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية بس رسالة أنا."
+  "az": "ma fi mushkila, law 3indak ay mushkila thaanya bas 6arrish li dm.",
+  "ar": "ما في مشكلة، لو عندك أي مشكلة ثانية بس طرش لي dm."
  },
  {
   "en": "one more thing, how do i change the class",
@@ -6080,8 +6080,8 @@
  {
   "en": "thats a big L",
   "addr": "m",
-  "az": "hadha L chibeer.",
-  "ar": "هذا L چبير."
+  "az": "hadha 5asaara chibeera.",
+  "ar": "هذا خسارة چبيرة."
  },
  {
   "en": "W update",
@@ -6634,5 +6634,377 @@
   "addr": "m",
   "az": "wana ba3ad mistaanis inni t3arraft 3alaik.\n",
   "ar": "وأنا بعد مستانس إني تعرفت عليك.\n"
+ },
+ {
+  "en": "he hit me and the boss hit him back",
+  "addr": "m",
+  "az": "6aggni wil-boss 6agga 6'ahar.",
+  "ar": "طقني والبوس طقه ظهر."
+ },
+ {
+  "en": "the arrow hit the target",
+  "addr": "m",
+  "az": "is-sahm 6agg il-hadaf.",
+  "ar": "السهم طق الهدف."
+ },
+ {
+  "en": "he set up the server yesterday",
+  "addr": "m",
+  "az": "9'abba6 is-server ams.",
+  "ar": "ضبط السيرفر أمس."
+ },
+ {
+  "en": "the door of the house is broken",
+  "addr": "m",
+  "az": "baab il-bait 5arbaan.",
+  "ar": "باب البيت خربان."
+ },
+ {
+  "en": "the king of the jungle",
+  "addr": "m",
+  "az": "malik il-3'aaba.",
+  "ar": "ملك الغابة."
+ },
+ {
+  "en": "the price of the sword is too high",
+  "addr": "m",
+  "az": "si3r is-saif 3aali wayed.",
+  "ar": "سعر السيف عالي وايد."
+ },
+ {
+  "en": "a picture of the boss",
+  "addr": "m",
+  "az": "9oorat il-boss.",
+  "ar": "صورة البوس."
+ },
+ {
+  "en": "the rest of the day",
+  "addr": "m",
+  "az": "baagi il-yoom.",
+  "ar": "باقي اليوم."
+ },
+ {
+  "en": "neither he nor i",
+  "addr": "m",
+  "az": "la huwa wala ana.",
+  "ar": "لا هو ولا أنا."
+ },
+ {
+  "en": "a guy named Ahmed",
+  "addr": "m",
+  "az": "rayyal isma Ahmed.",
+  "ar": "ريال اسمه Ahmed."
+ },
+ {
+  "en": "i tend to forget names",
+  "addr": "m",
+  "az": "3aadatan ansa asaami.",
+  "ar": "عادةً أنسى أسامي."
+ },
+ {
+  "en": "this item does not exist",
+  "addr": "m",
+  "az": "hal item mob mawjood.",
+  "ar": "هالآيتم مب موجود."
+ },
+ {
+  "en": "the filter is on",
+  "addr": "m",
+  "az": "il-filter shaghghaal.",
+  "ar": "الفلتر شغال."
+ },
+ {
+  "en": "the light is off",
+  "addr": "m",
+  "az": "il-lait 6aafi.",
+  "ar": "الليت طافي."
+ },
+ {
+  "en": "i claimed he won",
+  "addr": "m",
+  "az": "idda3ait inna faaz.",
+  "ar": "ادعيت إنه فاز."
+ },
+ {
+  "en": "i recommend this game",
+  "addr": "m",
+  "az": "an9a7 li hal lu3ba.",
+  "ar": "أنصح لهاللعبة."
+ },
+ {
+  "en": "my foot swelled up",
+  "addr": "m",
+  "az": "riyili intaf5at.",
+  "ar": "ريلي انتفخت."
+ },
+ {
+  "en": "take a seat please",
+  "addr": "m",
+  "az": "ig3id law sama7t.",
+  "ar": "اقعد لو سمحت."
+ },
+ {
+  "en": "watch out for the boss",
+  "addr": "m",
+  "az": "intabih min il-boss.",
+  "ar": "انتبه من البوس."
+ },
+ {
+  "en": "never give up",
+  "addr": "m",
+  "az": "la tistaslim abadan.",
+  "ar": "لا تستسلم أبداً."
+ },
+ {
+  "en": "he is allergic to nuts",
+  "addr": "m",
+  "az": "huwa 7assaas min mukassaraat.",
+  "ar": "هو حساس من مكسرات."
+ },
+ {
+  "en": "he is fond of her",
+  "addr": "m",
+  "az": "huwa m7ibb.",
+  "ar": "هو محب."
+ },
+ {
+  "en": "it is unfair",
+  "addr": "m",
+  "az": "mob 3adil.",
+  "ar": "مب عدل."
+ },
+ {
+  "en": "this quest is endless",
+  "addr": "m",
+  "az": "hal quest ma yi5la9.",
+  "ar": "هالكويست ما يخلص."
+ },
+ {
+  "en": "i was offended by his words",
+  "addr": "m",
+  "az": "kint mit9'aayig min kilmaata.",
+  "ar": "كنت متضايق من كلماته."
+ },
+ {
+  "en": "he is more famous than me",
+  "addr": "m",
+  "az": "huwa ash-har minni.",
+  "ar": "هو أشهر مني."
+ },
+ {
+  "en": "the most important thing",
+  "addr": "m",
+  "az": "akthar shay shay muhimm.",
+  "ar": "أكثر شي شي مهم."
+ },
+ {
+  "en": "he is taller than me",
+  "addr": "m",
+  "az": "huwa a6wal minni.",
+  "ar": "هو أطول مني."
+ },
+ {
+  "en": "the funniest guy in the guild",
+  "addr": "m",
+  "az": "a9'7ak rayyal fil-guild.",
+  "ar": "أضحك ريال في القلد."
+ },
+ {
+  "en": "i am fond of this game",
+  "addr": "m",
+  "az": "ana m7ibb hal lu3ba.",
+  "ar": "أنا محب هاللعبة."
+ },
+ {
+  "en": "everyone except me",
+  "addr": "m",
+  "az": "il-kil illai.",
+  "ar": "الكل إلاي."
+ },
+ {
+  "en": "within 5 minutes",
+  "addr": "m",
+  "az": "5ilaal 5 dagaayig.",
+  "ar": "خلال 5 دقايق."
+ },
+ {
+  "en": "across the street",
+  "addr": "m",
+  "az": "3abr ish-shaari3.",
+  "ar": "عبر الشارع."
+ },
+ {
+  "en": "on behalf of the guild",
+  "addr": "m",
+  "az": "niyaabatan 3an il-guild.",
+  "ar": "نيابةً عن القلد."
+ },
+ {
+  "en": "in spite of the rain we played",
+  "addr": "m",
+  "az": "ra3'm il-ma6ar li3abna.",
+  "ar": "رغم المطر لعبنا."
+ },
+ {
+  "en": "feel free to ask",
+  "addr": "m",
+  "az": "la titraddad is2al.",
+  "ar": "لا تتردد اسأل."
+ },
+ {
+  "en": "for your sake",
+  "addr": "m",
+  "az": "3ashaanak.",
+  "ar": "عشانك."
+ },
+ {
+  "en": "more importantly, we won",
+  "addr": "m",
+  "az": "wil-ahamm, fizna.",
+  "ar": "والأهم، فزنا."
+ },
+ {
+  "en": "you nailed it",
+  "addr": "m",
+  "az": "9'abba6t-ha.",
+  "ar": "ضبطتها."
+ },
+ {
+  "en": "i figured it out",
+  "addr": "m",
+  "az": "3arafta.",
+  "ar": "عرفته."
+ },
+ {
+  "en": "i am concerned about you",
+  "addr": "m",
+  "az": "ana galgaan 3alaik.",
+  "ar": "أنا قلقان عليك."
+ },
+ {
+  "en": "he owes me 10 dollars",
+  "addr": "m",
+  "az": "huwa madyoon li 10 doolaaraat.",
+  "ar": "هو مديون لي 10 دولارات."
+ },
+ {
+  "en": "i fainted",
+  "addr": "m",
+  "az": "a3'ma 3alay",
+  "ar": "أغمى علي"
+ },
+ {
+  "en": "my dearest friend",
+  "addr": "m",
+  "az": "a3azz rabee3 3indi.",
+  "ar": "أعز ربيع عندي."
+ },
+ {
+  "en": "i keep forgetting",
+  "addr": "m",
+  "az": "a6'all ansa.",
+  "ar": "أظل أنسى."
+ },
+ {
+  "en": "he admitted it",
+  "addr": "m",
+  "az": "i3taraf bih.",
+  "ar": "اعترف به."
+ },
+ {
+  "en": "oh my god what the hell",
+  "addr": "m",
+  "az": "ya allah, shu hal 5arabee6.",
+  "ar": "يا الله، شو هالخرابيط."
+ },
+ {
+  "en": "hell no",
+  "addr": "m",
+  "az": "la wallah",
+  "ar": "لا والله"
+ },
+ {
+  "en": "the rent is due tomorrow",
+  "addr": "m",
+  "az": "il-eejaar waajib bacher.",
+  "ar": "الإيجار واجب باجر."
+ },
+ {
+  "en": "fyi the boss is up",
+  "addr": "m",
+  "az": "lil-3ilm il-boss up.",
+  "ar": "للعلم البوس up."
+ },
+ {
+  "en": "i am afk atm",
+  "addr": "m",
+  "az": "ana afk il7een.",
+  "ar": "أنا afk الحين."
+ },
+ {
+  "en": "u got rekt",
+  "addr": "m",
+  "az": "indammart.",
+  "ar": "اندمرت."
+ },
+ {
+  "en": "hmu later",
+  "addr": "m",
+  "az": "kallimni ba3dain",
+  "ar": "كلمني بعدين"
+ },
+ {
+  "en": "thanks m8",
+  "addr": "m",
+  "az": "mashkoor, rabee3",
+  "ar": "مشكور، ربيع"
+ },
+ {
+  "en": "w8 for me",
+  "addr": "m",
+  "az": "in6irni.",
+  "ar": "انطرني."
+ },
+ {
+  "en": "c u l8r",
+  "addr": "m",
+  "az": "nshoofak 3ugub.",
+  "ar": "نشوفك عقب."
+ },
+ {
+  "en": "that is a w",
+  "addr": "m",
+  "az": "hadhi fawz.",
+  "ar": "هذي فوز."
+ },
+ {
+  "en": "he is tilted",
+  "addr": "m",
+  "az": "huwa mi3a99ib.",
+  "ar": "هو معصب."
+ },
+ {
+  "en": "he ghosted me",
+  "addr": "m",
+  "az": "6annashni.",
+  "ar": "طنشني."
+ },
+ {
+  "en": "w/o you",
+  "addr": "m",
+  "az": "bdoonak",
+  "ar": "بدونك"
+ },
+ {
+  "en": "bro i am dead",
+  "addr": "m",
+  "az": "5ooy ana mayyit min i9'-9'i7k.",
+  "ar": "خوي أنا ميت من الضحك."
+ },
+ {
+  "en": "gotcha",
+  "addr": "m",
+  "az": "fihamt 3alaik",
+  "ar": "فهمت عليك"
  }
 ]

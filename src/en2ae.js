@@ -515,7 +515,7 @@
     clear: ["masa7t masa7 msa7 imsa7|مسحت مسح مسح امسح", { lv: 'i' }],
     expect: ["twagga3t twagga3 twagga3 twagga3|توقعت توقع توقع توقع", {}],
     disappear: ["i5tafait i5tafa 5tafi i5tafi|اختفيت اختفى يختفي اختف", {}],
-    skip: ["=do", { tail: 'skip|سكب', objNP: 'li' }],
+    skip: ["=do", { tail: 'skip|سكب', obj: 'li', objNP: 'li' }],
     'rank up': ["=do", { tail: 'rank_up|رانك_أب', objNP: 'li' }],
     unlock: ["fita7t fita7 fta7 ifta7|فتحت فتح فتح افتح", { lv: 'i' }],
     steal: ["boogt baag boog boog|بوقت باق بوق بوق", { past: 'stole', pp: 'stolen' }],
@@ -924,7 +924,7 @@
   const POSS_OV = { 'brother:1s': ['5ooy', 'خوي'], 'father:1s': ['abooy', 'أبوي'], 'mother:1s': ['ummi', 'أمي'], 'sister:1s': ['u5ti', 'أختي'],
     'brother:2m': ['a5ook', 'أخوك'], 'father:2m': ['ubook', 'أبوك'], 'brother:3m': ['a5ooh', 'أخوه'], 'father:3m': ['ubooh', 'أبوه'] };
   const THAT_VERBS = new Set(['think', 'know', 'say', 'tell', 'hope', 'believe', 'feel', 'mean', 'see', 'hear', 'understand', 'remember', 'forget',
-    'realize', 'realise', 'notice', 'guess', 'bet', 'admit', 'promise', 'swear', 'doubt', 'assume', 'suppose', 'expect', 'pretend', 'prove', 'imagine', 'wish', 'decide', 'agree', 'confirm', 'mention', 'learn', 'discover']);
+    'realize', 'realise', 'notice', 'guess', 'bet', 'admit', 'promise', 'swear', 'doubt', 'assume', 'suppose', 'expect', 'pretend', 'prove', 'imagine', 'wish', 'decide', 'agree', 'confirm', 'mention', 'learn', 'discover', 'claim', 'conclude', 'ensure', 'insist', 'deny', 'announce', 'argue', 'complain', 'reply', 'warn', 'predict', 'suspect', 'reckon', 'figure', 'sense', 'acknowledge', 'declare', 'reveal', 'indicate', 'suggest', 'recommend', 'request', 'demand']);
   const TIME_NOUNS = new Set(['minute', 'hour', 'day', 'week', 'month', 'year', 'second', 'time', 'night', 'morning']);
   const EXPAND = {
     "i'm": 'i am', im: 'i am', "you're": 'you are', youre: 'you are', "he's": 'he is', hes: 'he is', "she's": 'she is', shes: 'she is', "it's": 'it is',
@@ -2432,6 +2432,1002 @@
   for (const [k, v] of Object.entries(X3_ADVS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADV_RAW) && !(kk + '_' in ADV_RAW)) ADV_RAW[kk] = v; }
   for (const [k, v] of Object.entries(X3_FIXED)) { const kk = k.trim(); if (!(kk in FIXED_RAW)) FIXED_RAW[kk] = v; }
   for (const [k, v] of Object.entries(X3_NOUN_ALIAS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_ALIAS)) NOUN_ALIAS[kk] = v; }
+  const X4_NOUNS = {
+    regard: "ta7iyya ta7iyyaat f|تحية تحيات", lesbian: "mithliyya mithliyyaat fh|مثلية مثليات", complaint: "shakwa shakaawi f|شكوى شكاوي", handle_n: "magba9' magaabi9' m|مقبض مقابض", doorknob: "magba9' magaabi9' m|مقبض مقابض",
+    burden: "7iml a7maal m|حمل أحمال", manner: "6areega 6urug f|طريقة طرق", mount: "jabal jbaal m|جبل جبال", pound: "jinaih jinaihaat m|جنيه جنيهات",
+    motel: "fundug fanaadig m|فندق فنادق", rifle: "bindigiyya banaadig f|بندقية بنادق", reception: "istigbaal istigbaal m|استقبال استقبال", brick: "6ooba 6oob f|طوبة طوب",
+    lap: "7ijr 7ijr m|حجر حجر", bucket: "dalu dlaa m|دلو دلا", badge: "shaara shaaraat f|شارة شارات", hip: "wirk awraak m|ورك أوراك",
+    foundation: "asaas asaasaat m|أساس أساسات", labor: "3amal 3amal m|عمل عمل", labour: "3amal 3amal m|عمل عمل", log: "sijill sijillaat m|سجل سجلات",
+    combat: "gitaal gitaal m|قتال قتال", polish: "talmee3 talmee3 m|تلميع تلميع", weed: "7asheesh 7asheesh m|حشيش حشيش", ton: "6ann a6naan m|طن أطنان",
+    satellite: "gamar_9inaa3i agmaar_9inaa3iyya m|قمر_صناعي أقمار_صناعية", jersey: "jersey jerseyaat m|جيرسي جيرسيات", eagle: "9agr 9goor m|صقر صقور", privacy: "5u9oo9iyya 5u9oo9iyya f|خصوصية خصوصية",
+    chapter: "fa9l fu9ool m|فصل فصول", wisdom: "7ikma 7ikam f|حكمة حكم", barn: "7a6'eera 7a6'aayir f|حظيرة حظاير", farmer: "muzaari3 muzaari3een mh|مزارع مزارعين",
+    pub: "baar baaraat m|بار بارات", plot: "7abka 7abkaat f|حبكة حبكات", proposal: "igtiraa7 igtiraa7aat m|اقتراح اقتراحات", basis: "asaas asaasaat m|أساس أساسات",
+    manners: "adab adab m|أدب أدب", twist: "laffa laffaat f|لفة لفات", cent: "sant santaat m|سنت سنتات", meter: "mitir amtaar m|متر أمتار",
+    metre: "mitir amtaar m|متر أمتار", humor: "5iffat_damm 5iffat_damm f|خفة_دم خفة_دم", humour: "5iffat_damm 5iffat_damm f|خفة_دم خفة_دم", cowboy: "kaawboy kaawboyaat mh|كاوبوي كاوبويات",
+    radar: "raadaar raadaaraat m|رادار رادارات", prosecutor: "mudda3i mudda3een mh|مدعي مدعين", pump: "ma9'a55a ma9'a55aat f|مضخة مضخات", marine: "ba7riyya ba7riyya f|بحرية بحرية",
+    bid: "3ar9' 3uroo9' m|عرض عروض", nest: "3ishsh 3shoosh m|عش عشوش", palm: "na5la na5al f|نخلة نخل", medication: "dawa adwiya m|دوا أدوية",
+    gravity: "jaadhibiyya jaadhibiyya f|جاذبية جاذبية", booze: "5amr 5umoor m|خمر خمور", vodka: "vodka vodka f|فودكا فودكا", height: "6ool 6ool m|طول طول",
+    chemical: "maadda_keemyaa2iyya mawaad_keemyaa2iyya f|مادة_كيميائية مواد_كيميائية", fund: "9andoog 9anaadeeg m|صندوق صناديق", web: "il-web il-web m|الويب الويب", phase: "mar7ala maraa7il f|مرحلة مراحل",
+    prom: "7aflat_ta5arruj 7aflaat_ta5arruj f|حفلة_تخرج حفلات_تخرج", editor: "mu7arrir mu7arrireen mh|محرر محررين", whip: "soo6 aswaa6 m|سوط أسواط", region: "man6iga manaa6ig f|منطقة مناطق",
+    temper: "6ab3 6ibaa3 m|طبع طباع", sunshine: "shams shams f|شمس شمس", poker: "bookar bookar m|بوكر بوكر", entertainment: "tasliya tasliya f|تسلية تسلية",
+    blanket: "ba66aaniyya ba66aaniyyaat f|بطانية بطانيات", nut: "mukassaraat mukassaraat f|مكسرات مكسرات", needle: "ibra ibar f|إبرة إبر", weakness: "9'a3f 9'a3f m|ضعف ضعف",
+    method: "6areega 6urug f|طريقة طرق", permit: "ta9ree7 ta9aaree7 m|تصريح تصاريح", ranger: "7aaris 7urraas mh|حارس حراس", zoo: "7adeegat_7aywaanaat 7adaayig_7aywaanaat f|حديقة_حيوانات حدايق_حيوانات",
+    passenger: "raakib rukkaab mh|راكب ركاب", technique: "tiqniyya tiqniyyaat f|تقنية تقنيات", bunny: "arnab araanib m|أرنب أرانب", baron: "baaroon baaroonaat mh|بارون بارونات",
+    marshal: "maarshaal maarshaalaat mh|مارشال مارشالات", massage: "masaaj masaajaat m|مساج مساجات", menu: "menu menuhaat m|منيو منيوهات", diary: "mudhakkiraat mudhakkiraat f|مذكرات مذكرات",
+    wagon: "3araba 3arabaat f|عربة عربات", audition: "i5tibaar_adaa i5tibaaraat_adaa m|اختبار_أداء اختبارات_أداء", casino: "kazeeno kazeenohaat m|كازينو كازينوهات", bacon: "bacon bacon m|بيكون بيكون",
+    forgiveness: "musaama7a musaama7a f|مسامحة مسامحة", ancestor: "jadd ajdaad mh|جد أجداد", conduct: "sulook sulook m|سلوك سلوك", sheet: "waraga awraag f|ورقة أوراق",
+    avenue: "shaari3 shawaari3 m|شارع شوارع", investment: "istithmaar istithmaaraat m|استثمار استثمارات", ram: "raam raam m|رام رام", ranch: "mazra3a mazaari3 f|مزرعة مزارع",
+    ash: "ramaad ramaad m|رماد رماد", leather: "jild jild m|جلد جلد", conspiracy: "mu2aamara mu2aamaraat f|مؤامرة مؤامرات", guardian: "wali awliya mh|ولي أوليا",
+    rumor: "ishaa3a ishaa3aat f|إشاعة إشاعات", rumour: "ishaa3a ishaa3aat f|إشاعة إشاعات", yen: "yen yen m|ين ين", terror: "ru3b ru3b m|رعب رعب",
+    misunderstanding: "soo2_fahm soo2_fahm m|سوء_فهم سوء_فهم", parade: "isti3raa9' isti3raa9'aat m|استعراض استعراضات", immunity: "manaa3a manaa3a f|مناعة مناعة", pearl: "loolwa loolu f|لولوة لولو",
+    priority: "awlawiyya awlawiyyaat f|أولوية أولويات", conflict: "5ilaaf 5ilaafaat m|خلاف خلافات", cherry: "karaza karaz f|كرزة كرز", fee: "rasm rusoom m|رسم رسوم",
+    radiation: "ish3aa3 ish3aa3aat m|إشعاع إشعاعات", lung: "ri2a ri2aat f|رئة رئات", ideal: "mithaal amthila m|مثال أمثلة", turtle: "sil7afa sala7if f|سلحفاة سلاحف",
+    candidate: "murashsha7 murashsha7een mh|مرشح مرشحين", hunger: "yoo3 yoo3 m|يوع يوع", combination: "5ali6 5ali6 m|خلط خلط", nanny: "murabbiya murabbiyaat fh|مربية مربيات",
+    gut: "ba6in b6oon m|بطن بطون", bureau: "maktab makaatib m|مكتب مكاتب", pillow: "m5adda m5addaat f|مخدة مخدات", ace: "aas aasaat m|آس آسات",
+    cart: "3araba 3arabaat f|عربة عربات", ham: "la7am_5anzeer la7am_5anzeer m|لحم_خنزير لحم_خنزير", galaxy: "majarra majarraat f|مجرة مجرات", jewelry: "dhahab dhahab m|ذهب ذهب",
+    jewellery: "dhahab dhahab m|ذهب ذهب", alliance: "ta7aaluf ta7aalufaat m|تحالف تحالفات", clothing: "malaabis malaabis f|ملابس ملابس", dough: "3ajeen 3ajeen m|عجين عجين",
+    wreck: "7u6aam 7u6aam m|حطام حطام", inch: "inch inchaat m|إنش إنشات", arrival: "wu9ool wu9ool m|وصول وصول", basket: "salla silal f|سلة سلل",
+    scandal: "fa9'ee7a fa9'aayi7 f|فضيحة فضايح", instant: "la76'a la7a6'aat f|لحظة لحظات", rehearsal: "broova broovaat f|بروفة بروفات", republic: "jumhooriyya jumhooriyyaat f|جمهورية جمهوريات",
+    counsel: "mu7aami mu7aameen mh|محامي محامين", bait: "6u3m 6u3oom m|طعم طعوم", dignity: "karaama karaama f|كرامة كرامة", heroin: "heroyeen heroyeen m|هيروين هيروين",
+    economy: "iqti9aad iqti9aad m|اقتصاد اقتصاد", tissue: "mandeel manaadeel m|منديل مناديل", excitement: "7amaas 7amaas m|حماس حماس", mankind: "il-bashar il-bashar m|البشر البشر",
+    vessel: "safeena sufun f|سفينة سفن", hut: "kookh akwaa5 m|كوخ أكواخ", element: "3un9ur 3anaa9ir m|عنصر عناصر", coma: "3'aiboba 3'aiboba f|غيبوبة غيبوبة",
+    coffin: "taaboot tawaabeet m|تابوت توابيت", cocaine: "kokaayeen kokaayeen m|كوكايين كوكايين", puppy: "jarw jiraa m|جرو جرا", announcement: "i3laan i3laanaat m|إعلان إعلانات",
+    oath: "gasam agsaam m|قسم أقسام", cotton: "gu6un gu6un m|قطن قطن", deposit: "3arboon 3araabeen m|عربون عرابين", autopsy: "tashree7 tashree7aat m|تشريح تشريحات",
+    gig: "7afla 7aflaat f|حفلة حفلات", suite: "janaa7 ajni7a m|جناح أجنحة", beam: "shu3aa3 ashi33a m|شعاع أشعة", poet: "shaa3ir shu3ara mh|شاعر شعرا",
+    arrow: "sahm ashum m|سهم أسهم", counselor: "mustashaar mustashaareen mh|مستشار مستشارين", journalist: "9a7afi 9a7afiyyeen mh|صحفي صحفيين", operator: "mushaghghil mushaghghileen mh|مشغل مشغلين",
+    inn: "fundug fanaadig m|فندق فنادق", roommate: "shareek_sakan shuraka_sakan mh|شريك_سكن شركا_سكن", scum: "7uthaala 7uthaala f|حثالة حثالة", commitment: "iltizaam iltizaamaat m|التزام التزامات",
+    misery: "ta3aasa ta3aasa f|تعاسة تعاسة", theft: "sirga sirgaat f|سرقة سرقات", embrace: "7u9'n a79'aan m|حضن أحضان", flame: "lahab lahab m|لهب لهب",
+    silk: "7areer 7areer m|حرير حرير", cemetery: "magbara magaabir f|مقبرة مقابر", rear: "warra warra m|ورا ورا", bin: "9andoog_zibaala 9anaadeeg_zibaala m|صندوق_زبالة صناديق_زبالة",
+    gum: "3ilcha 3ilach f|علچة علچ", corporal: "3areef 3urafa mh|عريف عرفا", rap: "raab raab m|راب راب", debate: "munaa6'ara munaa6'araat f|مناظرة مناظرات",
+    era: "3a9r 3u9oor m|عصر عصور", liquid: "saayil sawaayil m|سايل سوايل", feast: "waleema walaayim f|وليمة ولايم", profession: "mihna mihan f|مهنة مهن",
+    bench: "mag3ad magaa3id m|مقعد مقاعد", symptom: "3ara9' a3raa9' m|عرض أعراض", scout: "kashshaaf kashshaafa mh|كشاف كشافة", aircraft: "6ayyaara 6ayyaaraat f|طيارة طيارات",
+    cabinet: "kabat kabataat m|كبت كبتات", display: "shaasha shaashaat f|شاشة شاشات", sorrow: "7uzn 7uzn m|حزن حزن", vault: "5azna 5azaayin f|خزنة خزاين",
+    quote: "igtibaas igtibaasaat m|اقتباس اقتباسات", penalty: "3ugooba 3ugoobaat f|عقوبة عقوبات", bargain: "9afga 9afgaat f|صفقة صفقات", pepper: "filfil filfil m|فلفل فلفل",
+    helmet: "5oodha 5oodhaat f|خوذة خوذات", fuss: "9'ajja 9'ajja f|ضجة ضجة", arrangement: "tarteeb tarteebaat m|ترتيب ترتيبات", tin: "3ilba 3ilab f|علبة علب",
+    collar: "yaaga yaagaat f|ياقة ياقات", belief: "i3tigaad i3tigaadaat m|اعتقاد اعتقادات", psycho: "majnoon majaaneen mh|مجنون مجانين", sum: "majmoo3 majmoo3 m|مجموع مجموع",
+    ladder: "sillam salaalim m|سلم سلالم", alternative: "badeel badaayil m|بديل بدايل", raid: "3'aara 3'aaraat f|غارة غارات", heel: "ka3b ku3oob m|كعب كعوب",
+    cruise: "ri7la_ba7riyya ri7laat_ba7riyya f|رحلة_بحرية رحلات_بحرية", rhythm: "eegaa3 eegaa3aat m|إيقاع إيقاعات", drum: "6abl 6ubool m|طبل طبول", barrel: "barmeel baraameel m|برميل براميل",
+    cargo: "shu7na shu7naat f|شحنة شحنات", cannon: "midfa3 madaafi3 m|مدفع مدافع", ally: "7aleef 7ulafa mh|حليف حلفا", kindness: "6eeba 6eeba f|طيبة طيبة",
+    grip: "gab9'a gab9'aat f|قبضة قبضات", skirt: "tannoora tannooraat f|تنورة تنورات", association: "jam3iyya jam3iyyaat f|جمعية جمعيات", spike: "shooka shuwak f|شوكة شوك",
+    gallery: "ma3ra9' ma3aari9' m|معرض معارض", ginger: "zanjabeel zanjabeel m|زنجبيل زنجبيل", fist: "gab9'a gab9'aat f|قبضة قبضات", creation: "5alg 5alg m|خلق خلق",
+    tension: "tawattur tawattur m|توتر توتر", envy: "7asad 7asad m|حسد حسد", whale: "7oot 7eetaan m|حوت حيتان", dial: "girs agraa9 m|قرص أقراص",
+    congress: "mu2tamar mu2tamaraat m|مؤتمر مؤتمرات", villa: "villa villaat f|فيلا فيلات", comic: "koomik koomiks m|كوميك كوميكس", volunteer: "muta6awwi3 muta6awwi3een mh|متطوع متطوعين",
+    perspective: "man6'oor man6'ooraat m|منظور منظورات", cycle: "dawra dawraat f|دورة دورات", psychic: "3arraaf 3arraafeen mh|عراف عرافين", goose: "wazza wazz f|وزة وز",
+    conclusion: "5ulaa9a 5ulaa9aat f|خلاصة خلاصات", designer: "mu9ammim mu9ammimeen mh|مصمم مصممين", importance: "ahammiyya ahammiyya f|أهمية أهمية", hatred: "karaahiya karaahiya f|كراهية كراهية",
+    cam: "kaamira kaamiraat f|كاميرا كاميرات", scotch: "wiski wiski m|ويسكي ويسكي", tub: "banyo banyohaat m|بانيو بانيوهات", bathtub: "banyo banyohaat m|بانيو بانيوهات",
+    addition: "i9'aafa i9'aafaat f|إضافة إضافات", ritual: "6ags 6ugoos m|طقس طقوس", prey: "fareesa faraayis f|فريسة فرايس", warden: "sajjaan sajjaaneen mh|سجان سجانين",
+    ceiling: "sagf sugoof m|سقف سقوف", zombie: "zombi zombiyaat mh|زومبي زومبيات", institute: "ma3had ma3aahid m|معهد معاهد", democracy: "deemoqraa6iyya deemoqraa6iyya f|ديمقراطية ديمقراطية",
+    myth: "us6oora asaa6eer f|أسطورة أساطير", appetite: "shahiyya shahiyya f|شهية شهية", rod: "3a9a 3u9i f|عصا عصي", shepherd: "raa3i ru3aat mh|راعي رعاة",
+    deer: "3'azaal 3'izlaan m|غزال غزلان", inspiration: "ilhaam ilhaam m|إلهام إلهام", dummy: "dumya dumaa f|دمية دمى", sailor: "ba77aar ba77aara mh|بحار بحارة",
+    destination: "wijha wijhaat f|وجهة وجهات", picnic: "kashta kashtaat f|كشتة كشتات", idol: "9anam a9naam m|صنم أصنام", formula: "mu3aadala mu3aadalaat f|معادلة معادلات",
+    clerk: "muwa6'6'af muwa6'6'afeen mh|موظف موظفين", samurai: "saamooraay saamooraay mh|ساموراي ساموراي", consciousness: "wa3i wa3i m|وعي وعي", butcher: "ga99aab ga99aabeen mh|قصاب قصابين",
+    ministry: "wizaara wizaaraat f|وزارة وزارات", brandy: "braandi braandi m|براندي براندي", parole: "ifraaj_mashroo6 ifraaj_mashroo6 m|إفراج_مشروط إفراج_مشروط", candle: "sham3a shumoo3 f|شمعة شموع",
+    passage: "mamarr mamarraat m|ممر ممرات", organ: "3u9'u a39'aa m|عضو أعضا", luxury: "fa5aama fa5aama f|فخامة فخامة", pistol: "musaddas musaddasaat m|مسدس مسدسات",
+    sunset: "3'uroob 3'uroob m|غروب غروب", sunrise: "shuroog shuroog m|شروق شروق", tomb: "gabr gboor m|قبر قبور", engineering: "handasa handasa f|هندسة هندسة",
+    balloon: "baaloona baaloonaat f|بالونة بالونات", broadcast: "bathth bathth m|بث بث", ninja: "ninja ninjaat mh|نينجا نينجات", eternity: "abad abad m|أبد أبد",
+    slice: "shree7a sharaayi7 f|شريحة شرايح", pace: "sur3a sur3aat f|سرعة سرعات", concrete: "5arasaana 5arasaana f|خرسانة خرسانة", euro: "yooro yoorohaat m|يورو يوروهات",
+    sausage: "nagaanig nagaanig f|نقانق نقانق", constable: "shur6i shur6a mh|شرطي شرطة", subway: "metro metro m|مترو مترو", metro: "metro metro m|مترو مترو",
+    scheme: "5u66a 5u6a6 f|خطة خطط", protocol: "brotokol brotokolaat m|بروتوكول بروتوكولات", kidney: "kilya kilaa f|كلية كلى", invasion: "3'azw 3'azawaat m|غزو غزوات",
+    discipline: "in9'ibaa6 in9'ibaa6 m|انضباط انضباط", horn: "boori bawaari m|بوري بواري", absence: "3'iyaab 3'iyaab m|غياب غياب", philosophy: "falsafa falsafaat f|فلسفة فلسفات",
+    verdict: "7ukum a7kaam m|حكم أحكام", privilege: "imtiyaaz imtiyaazaat m|امتياز امتيازات", scent: "ree7a rawaayi7 f|ريحة روايح", daylight: "9'aw_in-nahaar 9'aw_in-nahaar m|ضو_النهار ضو_النهار",
+    consent: "muwaafaga muwaafagaat f|موافقة موافقات", wizard: "saa7ir sa7ara mh|ساحر سحرة", plague: "6aa3oon 6aa3oon m|طاعون طاعون", breeze: "naseem naseem m|نسيم نسيم",
+    rascal: "shagi ashgiya mh|شقي أشقيا", instinct: "3'areeza 3'araayiz f|غريزة غرايز", porter: "7ammaal 7ammaala mh|حمال حمالة", wrist: "mi39am ma3aa9im m|معصم معاصم",
+    drain: "majra majaari m|مجرى مجاري", sector: "qi6aa3 qi6aa3aat m|قطاع قطاعات", income: "da5l da5l m|دخل دخل", laser: "laizar laizaraat m|ليزر ليزرات",
+    boxing: "mulaakama mulaakama f|ملاكمة ملاكمة", thumb: "ibhaam abaahim m|إبهام أباهم", lobby: "lobby lobbyaat m|لوبي لوبيات", recipe: "wa9fa wa9faat f|وصفة وصفات",
+    missile: "9aaroo5 9awaaree5 m|صاروخ صواريخ", hockey: "hooki hooki m|هوكي هوكي", bubble: "fugaa3a fagaagee3 f|فقاعة فقاقيع", maximum: "7add_agsa 7add_agsa m|حد_أقصى حد_أقصى",
+    minimum: "7add_adna 7add_adna m|حد_أدنى حد_أدنى", carriage: "3araba 3arabaat f|عربة عربات", cellar: "gabu gabawaat m|قبو قبوات", associate: "zameel zumala mh|زميل زملا",
+    honesty: "9idj 9idj m|صدج صدج", rainbow: "gaws_guza7 agwaas_guza7 m|قوس_قزح أقواس_قزح", seed: "bidhra bidhoor f|بذرة بذور", deed: "3amal a3maal m|عمل أعمال",
+    expense: "ma9roof ma9aareef m|مصروف مصاريف", pirate: "gur9aan garaa9ina mh|قرصان قراصنة", prostitute: "3aahira 3aahiraat fh|عاهرة عاهرات", retirement: "tagaa3ud tagaa3ud m|تقاعد تقاعد",
+    platform: "min9a min9aat f|منصة منصات", illusion: "wahm awhaam m|وهم أوهام", mill: "6aa7oona 6awaa7een f|طاحونة طواحين", mole: "5aal 5eelaan m|خال خيلان",
+    prosecution: "niyaaba niyaaba f|نيابة نيابة", copper: "nu7aas nu7aas m|نحاس نحاس", heir: "wareeth waratha mh|وريث ورثة", length: "6ool a6waal m|طول أطوال",
+    enterprise: "mu2assasa mu2assasaat f|مؤسسة مؤسسات", roast: "mashwi mashwi m|مشوي مشوي", flood: "faya9'aan faya9'aanaat m|فيضان فيضانات", harbor: "meena mawaani m|مينا مواني",
+    harbour: "meena mawaani m|مينا مواني", mansion: "ga9r gu9oor m|قصر قصور", auction: "mazaad mazaadaat m|مزاد مزادات", bachelor: "a3zab 3uzzaab mh|أعزب عزاب",
+    shotgun: "bindigiyya banaadig f|بندقية بنادق", cocktail: "koktail koktailaat m|كوكتيل كوكتيلات", donkey: "7maar 7ameer m|حمار حمير", civilization: "7a9'aara 7a9'aaraat f|حضارة حضارات",
+    civilisation: "7a9'aara 7a9'aaraat f|حضارة حضارات", depression: "ikti2aab ikti2aab m|اكتئاب اكتئاب", bra: "sitiyaan sitiyaanaat m|ستيان ستيانات", spill: "insikaab insikaab m|انسكاب انسكاب",
+    phrase: "3ibaara 3ibaaraat f|عبارة عبارات", disgrace: "3aar 3aar m|عار عار", approval: "muwaafaga muwaafagaat f|موافقة موافقات", fur: "farw faraa m|فرو فرا",
+    jewel: "jawhara jawaahir f|جوهرة جواهر", cheek: "5add 5udood m|خد خدود", ditch: "7ufra 7ufar f|حفرة حفر", dime: "dime dimeaat m|دايم دايمات",
+    waitress: "garsoona garsoonaat fh|قرصونة قرصونات", spite: "7igd 7igd m|حقد حقد", rebel: "mutamarrid mutamarrideen mh|متمرد متمردين", orbit: "madaar madaaraat m|مدار مدارات",
+    gin: "jin jin m|جن جن", toe: "i9ba3_riyil a9aabi3_riyil m|إصبع_ريل أصابع_ريل", sympathy: "ta3aa6uf ta3aa6uf m|تعاطف تعاطف", growth: "numuww numuww m|نمو نمو",
+    psychiatrist: "6abeeb_nafsi a6ibba_nafsiyyeen mh|طبيب_نفسي أطبا_نفسيين", encounter: "liga liga2aat m|لقا لقاءات", column: "3amood a3mida m|عمود أعمدة", hallway: "mamarr mamarraat m|ممر ممرات",
+    decade: "3agd 3ugood m|عقد عقود", brass: "nu7aas nu7aas m|نحاس نحاس", shrink: "6abeeb_nafsi a6ibba_nafsiyyeen mh|طبيب_نفسي أطبا_نفسيين", programme: "barnaamij baraamij m|برنامج برامج",
+    lust: "shahwa shahawaat f|شهوة شهوات", label: "laasig lawaasig m|لاصق لواصق", tan: "sumra sumra f|سمرة سمرة", ego: "3'uroor 3'uroor m|غرور غرور",
+    companion: "rafeeg rufaga mh|رفيق رفقا", lottery: "yaana9eeb yaana9eeb m|يانصيب يانصيب", worm: "dooda dood f|دودة دود", butterfly: "faraasha faraash f|فراشة فراش",
+    dialogue: "7iwaar 7iwaaraat m|حوار حوارات", pervert: "mun7arif mun7arifeen mh|منحرف منحرفين", den: "wakr awkaar m|وكر أوكار", politician: "siyaasi siyaasiyyeen mh|سياسي سياسيين",
+    logic: "man6ig man6ig m|منطق منطق", gratitude: "imtinaan imtinaan m|امتنان امتنان", exception: "istithnaa istithnaa2aat m|استثناء استثناءات", compromise: "7all_wasa6 7ulool_wasa6 m|حل_وسط حلول_وسط",
+    majority: "a3'labiyya a3'labiyya f|أغلبية أغلبية", journal: "majalla majallaat f|مجلة مجلات", climate: "manaa5 manaa5 m|مناخ مناخ", ink: "7ibr 7ibr m|حبر حبر",
+    administration: "idaara idaaraat f|إدارة إدارات", resort: "muntaja3 muntaja3aat m|منتجع منتجعات", capacity: "si3a si3aat f|سعة سعات", opponent: "5a9m 5u9oom mh|خصم خصوم",
+    instrument: "aala aalaat f|آلة آلات", messenger: "rasool rusul mh|رسول رسل", survivor: "naaji naajeen mh|ناجي ناجين", archer: "raami rumaat mh|رامي رماة",
+    cloth: "gumaash agmisha m|قماش أقمشة", pond: "birka birak f|بركة برك", runway: "madraj madaarij m|مدرج مدارج", sickness: "mara9' amraa9' m|مرض أمراض",
+    civilian: "madani madaniyyeen mh|مدني مدنيين", shrimp: "rubyaan rubyaan m|ربيان ربيان", championship: "bu6oola bu6oolaat f|بطولة بطولات", household: "bait byoot m|بيت بيوت",
+    curiosity: "fu9'ool fu9'ool m|فضول فضول", forehead: "jabha jabhaat f|جبهة جبهات", hunter: "9ayyaad 9ayyaadeen mh|صياد صيادين", hint: "talmee7 talmee7aat m|تلميح تلميحات",
+    peanut: "fustug fustug m|فستق فستق", bracelet: "siwaar asaawir m|سوار أساور", gesture: "eemaa2a eemaa2aat f|إيماءة إيماءات", rib: "9'il3 9'uloo3 m|ضلع ضلوع",
+    homeland: "wa6an aw6aan m|وطن أوطان", leap: "gafza gafzaat f|قفزة قفزات", leaf: "waraga awraag f|ورقة أوراق", jar: "martabaan martabaanaat m|مرطبان مرطبانات",
+    savage: "mutawa77ish mutawa77isheen mh|متوحش متوحشين", creek: "jadwal jadaawil m|جدول جداول", pony: "mahr amhaar m|مهر أمهار", cleaner: "mna6'6'if mna6'6'ifaat m|منظف منظفات",
+    lunatic: "majnoon majaaneen mh|مجنون مجانين", gal: "bint banaat fh|بنت بنات", colony: "musta3mara musta3maraat f|مستعمرة مستعمرات", volume: "9oot 9oot m|صوت صوت",
+    saving: "tawfeer tawfeeraat m|توفير توفيرات", harvest: "7a9aad 7a9aad m|حصاد حصاد", buffalo: "jaamoos jawaamees m|جاموس جواميس", firework: "al3aab_naariyya al3aab_naariyya f|ألعاب_نارية ألعاب_نارية",
+    poverty: "fagr fagr m|فقر فقر", leadership: "giyaada giyaada f|قيادة قيادة", ambition: "6umoo7 6umoo7aat m|طموح طموحات", trouser: "ban6aloon ban6aloonaat m|بنطلون بنطلونات",
+    racist: "3un9uri 3un9uriyyeen mh|عنصري عنصريين", ankle: "kaa7il kawaa7il m|كاحل كواحل", villain: "shirreer ashraar mh|شرير أشرار", draft: "muswadda muswaddaat f|مسودة مسودات",
+    countess: "koontessa koontessaat fh|كونتيسة كونتيسات", portrait: "9oora 9uwar f|صورة صور", font: "5a66 5u6oo6 m|خط خطوط", pencil: "galam_ru9aa9 aglaam_ru9aa9 m|قلم_رصاص أقلام_رصاص",
+    pen: "galam aglaam m|قلم أقلام", notebook_: "daftar dafaatir m|دفتر دفاتر", eraser: "mimsa7a mimsa7aat f|ممسحة ممساحات", ruler: "mis6ara masaa6ir f|مسطرة مساطر",
+    bag_s: "shan6a shuna6 f|شنطة شنط", backpack: "shan6at_6'ahr shuna6_6'ahr f|شنطة_ظهر شنط_ظهر", textbook: "kitaab kutub m|كتاب كتب", dictionary: "gaamoos gawaamees m|قاموس قواميس",
+    essay: "magaal magaalaat m|مقال مقالات", thesis: "risaala rasaayil f|رسالة رسايل", lecture: "mu7aa9'ara mu7aa9'araat f|محاضرة محاضرات", tuition: "ru9oom ru9oom f|رسوم رسوم",
+    scholarship: "bi3tha bi3thaat f|بعثة بعثات", campus: "7aram_jaami3i 7aram_jaami3i m|حرم_جامعي حرم_جامعي", dorm: "sakan sakan m|سكن سكن", hostel: "sakan sakan m|سكن سكن",
+    cafeteria: "kafateerya kafateeryaat f|كافتيريا كافتيريات", canteen: "kafateerya kafateeryaat f|كافتيريا كافتيريات", playground: "mal3ab malaa3ib m|ملعب ملاعب", classroom: "fa9l fu9ool m|فصل فصول",
+  };
+  const X4_ADJS = {
+    fond: "m7ibb m7ibba m7ibbeen|محب محبة محبين", effective: "fa33aal fa33aala fa33aaleen|فعال فعالة فعالين", inner: "daa5ili daa5iliyya daa5iliyyeen|داخلي داخلية داخليين",
+    catholic: "kaathooleeki kaathooleekiyya kaathooleekiyyeen|كاثوليكي كاثوليكية كاثوليكيين", creative: "mubdi3 mubdi3a mubdi3een|مبدع مبدعة مبدعين", various: "mu5talif mu5talifa mu5talifeen|مختلف مختلفة مختلفين",
+    delighted: "mabsoo6 mabsoo6a mabsoo6een|مبسوط مبسوطة مبسوطين", vast: "waasi3 waas3a waas3een|واسع واسعة واسعين", largest: "^akbar|أكبر", constant: "thaabit thaabta thaabteen|ثابت ثابتة ثابتين",
+    solar: "shamsi shamsiyya shamsiyyeen|شمسي شمسية شمسيين", lame: "sa5eef sa5eefa su5afa|سخيف سخيفة سخفا", undercover: "sirri sirriyya sirriyyeen|سري سرية سريين",
+    tragic: "ma2saawi ma2saawiyya ma2saawiyyeen|مأساوي مأساوية مأساويين", limited: "ma7dood ma7dooda ma7doodeen|محدود محدودة محدودين",
+    sober: "9aa7i 9aa7ya 9aa7een|صاحي صاحية صاحين", delicate: "7assaas 7assaasa 7assaaseen|حساس حساسة حساسين", independent: "mustagill mustagilla mustagilleen|مستقل مستقلة مستقلين",
+    petty: "taafih taafha taafheen|تافه تافهة تافهين", sunny: "mushmis mushmisa mushmiseen|مشمس مشمسة مشمسين",
+    unfair: "mob_3adil mob_3adil mob_3adil|مب_عدل مب_عدل مب_عدل", absurd: "sa5eef sa5eefa su5afa|سخيف سخيفة سخفا", sore: "y3awwir t3awwir y3awwiroon|يعور تعور يعورون",
+    unconscious: "mi3'ma_3alaih mi3'ma_3alaiha mi3'ma_3alaihum|مغمى_عليه مغمى_عليها مغمى_عليهم", severe: "shadeed shadeeda shadeedeen|شديد شديدة شديدين", splendid: "raa2i3 raa2i3a raa2i3een|رائع رائعة رائعين",
+    vulnerable: "9'a3eef 9'a3eefa 9'u3afa|ضعيف ضعيفة ضعفا", vital: "9'aroori 9'arooriyya 9'arooriyyeen|ضروري ضرورية ضروريين", unexpected: "3'air_mutawagga3 3'air_mutawagga3a 3'air_mutawagga3een|غير_متوقع غير_متوقعة غير_متوقعين",
+    supreme: "a3la|أعلى", broad: "waasi3 waas3a waas3een|واسع واسعة واسعين", foul: "wasi5 was5a was5een|وسخ وسخة وسخين",
+    infected: "mu9aab mu9aaba mu9aabeen|مصاب مصابة مصابين", relieved: "murta7 murta7a murta7een|مرتاح مرتاحة مرتاحين", solo: "solo solo solo|سولو سولو سولو", practical: "3amali 3amaliyya 3amaliyyeen|عملي عملية عمليين",
+    adorable: "kyoot kyoot kyoot|كيوت كيوت كيوت", anonymous: "majhool majhoola majhooleen|مجهول مجهولة مجهولين", harsh: "gaasi gaasya gaasyeen|قاسي قاسية قاسيين", faithful: "wafi wafiyya awfiya|وفي وفية أوفيا",
+    shitty: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين", keen: "mit7ammis mit7ammisa mit7ammiseen|متحمس متحمسة متحمسين", aggressive: "3udwaani 3udwaaniyya 3udwaaniyyeen|عدواني عدوانية عدوانيين",
+    pale: "shaa7ib shaa7ba shaa7been|شاحب شاحبة شاحبين", significant: "muhimm muhimma muhimmeen|مهم مهمة مهمين", visual: "ba9ari ba9ariyya ba9ariyyeen|بصري بصرية بصريين", honored: "mitsharrif mitsharrifa mitsharrifeen|متشرف متشرفة متشرفين",
+    honoured: "mitsharrif mitsharrifa mitsharrifeen|متشرف متشرفة متشرفين", sonic: "9awti 9awtiyya 9awtiyyeen|صوتي صوتية صوتيين", rusty: "m9addi m9addya m9addyeen|مصدي مصدية مصديين",
+    dedicated: "mukarras mukarrasa mukarraseen|مكرس مكرسة مكرسين", primary: "asaasi asaasiyya asaasiyyeen|أساسي أساسية أساسيين", wee: "9i3'eer 9i3'eera 9i3'aar|صغير صغيرة صغار",
+    dull: "mumill mumilla mumilleen|ممل مملة مملين", worthless: "ma_yiswa ma_tiswa ma_yiswoon|ما_يسوى ما_تسوى ما_يسوون", instrumental: "asaasi asaasiyya asaasiyyeen|أساسي أساسية أساسيين",
+    bold: "jaree2 jaree2a jaree2een|جريء جريئة جريئين", twisted: "malwi malwiyya malwiyyeen|ملوي ملوية ملويين", martial: "gitaali gitaaliyya gitaaliyyeen|قتالي قتالية قتاليين", imperial: "imbraa6oori imbraa6ooriyya imbraa6ooriyyeen|إمبراطوري إمبراطورية إمبراطوريين", paranoid: "mitwahhim mitwahhima mitwahhimeen|متوهم متوهمة متوهمين", neat: "murattab murattaba murattabeen|مرتب مرتبة مرتبين", glorious: "majeed majeeda majeedeen|مجيد مجيدة مجيدين", pacific: "haadi haadya haadyeen|هادي هادية هاديين",
+    blank: "faa9'i faa9'ya faa9'yeen|فاضي فاضية فاضيين", tender: "6ari 6ariyya 6ariyyeen|طري طرية طريين", genuine: "a9li a9liyya a9liyyeen|أصلي أصلية أصليين",
+    strict: "9aarim 9aarma 9aarmeen|صارم صارمة صارمين", brutal: "wa7shi wa7shiyya wa7shiyyeen|وحشي وحشية وحشيين", thrilled: "mit7ammis mit7ammisa mit7ammiseen|متحمس متحمسة متحمسين",
+    prior: "saabig saabga saabgeen|سابق سابقة سابقين", outer: "5aariji 5aarijiyya 5aarijiyyeen|خارجي خارجية خارجيين", handy: "mufeed mufeeda mufeedeen|مفيد مفيدة مفيدين", stiff: "yaabis yaabsa yaabseen|يابس يابسة يابسين",
+    genetic: "wiraathi wiraathiyya wiraathiyyeen|وراثي وراثية وراثيين", marvelous: "raa2i3 raa2i3a raa2i3een|رائع رائعة رائعين", marvellous: "raa2i3 raa2i3a raa2i3een|رائع رائعة رائعين", endless: "ma_yi5la9 ma_ti5la9 ma_yi5la9oon|ما_يخلص ما_تخلص ما_يخلصون",
+    jolly: "mari7 mari7a mari7een|مرح مرحة مرحين", convenient: "munaasib munaasiba munaasibeen|مناسب مناسبة مناسبين", offended: "mit9'aayig mit9'aayga mit9'aaygeen|متضايق متضايقة متضايقين",
+    bald: "a9la3 9al3a 9ul3|أصلع صلعا صلع", convicted: "mudaan mudaana mudaaneen|مدان مدانة مدانين", mature: "naa9'ij naa9'ja naa9'jeen|ناضج ناضجة ناضجين",
+    fatal: "mumeet mumeeta mumeeteen|مميت مميتة مميتين", distracted: "mshattat mshattata mshattateen|مشتت مشتتة مشتتين", fortunate: "ma76'oo6' ma76'oo6'a ma76'oo6'een|محظوظ محظوظة محظوظين",
+    hilarious: "mu9'7ik_wayed mu9'7ika_wayed mu9'7ikeen_wayed|مضحك_وايد مضحكة_وايد مضحكين_وايد", exclusive: "7a9ri 7a9riyya 7a9riyyeen|حصري حصرية حصريين", dreadful: "fa6'ee3 fa6'ee3a fa6'ee3een|فظيع فظيعة فظيعين",
+    intimate: "7ameem 7ameema 7ameemeen|حميم حميمة حميمين", eager: "mit7ammis mit7ammisa mit7ammiseen|متحمس متحمسة متحمسين", allergic: "7assaas 7assaasa 7assaaseen|حساس حساسة حساسين",
+    accomplished: "naaji7 naaj7a naaj7een|ناجح ناجحة ناجحين", essential: "9'aroori 9'arooriyya 9'arooriyyeen|ضروري ضرورية ضروريين", passionate: "sha3'oof sha3'oofa sha3'oofeen|شغوف شغوفة شغوفين",
+    precise: "dageeg dageega dageegeen|دقيق دقيقة دقيقين", accurate: "dageeg dageega dageegeen|دقيق دقيقة دقيقين", wooden: "5ashabi 5ashabiyya 5ashabiyyeen|خشبي خشبية خشبيين", harmless: "mob_mu2dhi mob_mu2dhiya mob_mu2dhiyeen|مب_مؤذي مب_مؤذية مب_مؤذيين",
+    vicious: "shirs shirsa shirseen|شرس شرسة شرسين", nearest: "^agrab|أقرب", greedy: "6ammaa3 6ammaa3a 6ammaa3een|طماع طماعة طماعين", arrogant: "ma3'roor ma3'roora ma3'rooreen|مغرور مغرورة مغرورين",
+    mutual: "mutabaadal mutabaadala mutabaadaleen|متبادل متبادلة متبادلين", educated: "mit3allim mit3allima mit3allimeen|متعلم متعلمة متعلمين", doomed: "mantahi mantahya mantahyeen|منتهي منتهية منتهيين", alcoholic: "sakraan sakraana sakraaneen|سكران سكرانة سكرانين", drunk: "sakraan sakraana sakraaneen|سكران سكرانة سكرانين", };
+  const X4_VERBS = {
+    admire: ["gaddart gaddar gaddir gaddir|قدرت قدر قدر قدر", {}],
+    recommend: ["na9a7t na9a7 n9a7 in9a7|نصحت نصح نصح انصح", { lv: 'a', obj: 'li', objNP: 'li' }],
+    polish_v: ["lamma3t lamma3 lammi3 lammi3|لمعت لمع لمع لمع", {}],
+    twist: ["liffait laff liff liff|لفيت لف لف لف", {}],
+    book_v: ["7ajazt 7ajaz 7jiz i7jiz|حجزت حجز حجز احجز", { lv: 'i' }],
+    reserve: ["7ajazt 7ajaz 7jiz i7jiz|حجزت حجز حجز احجز", { lv: 'i' }],
+    pump_v: ["9'a55ait 9'a55 9'u55 9'u55|ضخيت ضخ ضخ ضخ", {}],
+    whip_v: ["jaladt jalad jlid ijlid|جلدت جلد جلد اجلد", { lv: 'i' }],
+    interfere: ["tdha55alt tdha55al tdha55al tdha55al|تدخلت تدخل تدخل تدخل", { lv: 'i', in: 'fi', with: 'fi' }],
+    permit_v: ["sama7t sama7 sma7 isma7|سمحت سمح سمح اسمح", { lv: 'i', obj: 'li', objNP: 'li' }],
+    con: ["na9abt na9ab n9ub in9ub|نصبت نصب نصب انصب", { lv: 'u', obj: '3ala', objNP: '3ala' }],
+    chant: ["raddadt raddad raddid raddid|رددت ردد ردد ردد", {}],
+    conduct_v: ["ajrait ajra ajri ajri|أجريت أجرى أجري أجر", {}],
+    approve: ["waafagt waafag waafig waafig|وافقت وافق وافق وافق", { on: '3ala', obj: '3ala', objNP: '3ala' }],
+    direct_v: ["wajjaht wajjah wajjih wajjih|وجهت وجه وجه وجه", {}],
+    toss: ["ramait rama rmi irmi|رميت رمى رمي ارم", { lv: 'i' }],
+    react: ["raddait radd ridd ridd|رديت رد رد رد", { to: '3ala' }],
+    embrace: ["7a9'ant 7a9'an 7u9'un u7u9'n|حضنت حضن حضن احضن", { lv: 'u' }],
+    communicate: ["tawaa9alt tawaa9al tawaa9al tawaa9al|تواصلت تواصل تواصل تواصل", { lv: 'i', with: 'wiyya' }],
+    swell: ["intafa5t intafa5 ntifi5 intifi5|انتفخت انتفخ انتفخ انتفخ", { past: 'swelled', pp: 'swollen', lv: 'i' }],
+    form_v: ["kawwant kawwan kawwin kawwin|كونت كون كون كون", {}],
+    display_v: ["3ara9't 3ara9' 3ri9' i3ri9'|عرضت عرض عرض اعرض", { lv: 'i' }],
+    quote_v: ["igtabast igtabas gtibis igtibis|اقتبست اقتبس اقتبس اقتبس", { lv: 'i' }],
+    shove: ["daffait daff diff diff|دفيت دف دف دف", {}],
+    cooperate: ["t3aawant t3aawan t3aawan t3aawan|تعاونت تعاون تعاون تعاون", { lv: 'i', with: 'wiyya' }],
+    claim_v: ["idda3ait idda3a dda3i idda3i|ادعيت ادعى ادعي ادع", { lv: 'i' }],
+    forbid: ["mana3t mana3 mna3 imna3|منعت منع منع امنع", { past: 'forbade', pp: 'forbidden', lv: 'a' }],
+    prohibit: ["mana3t mana3 mna3 imna3|منعت منع منع امنع", { lv: 'a' }],
+    cycle_v: ["rikabt rikab rkab irkab|ركبت ركب ركب اركب", { lv: 'i' }],
+    conclude: ["istantajt istantaj stantij istantij|استنتجت استنتج استنتج استنتج", { lv: 'i' }],
+    file_v: ["gaddamt gaddam gaddim gaddim|قدمت قدم قدم قدم", {}],
+    establish: ["assast assas assis assis|أسست أسس أسس أسس", {}],
+    broadcast_v: ["baththait bathth bithth bithth|بثيت بث بث بث", { past: 'broadcast', pp: 'broadcast' }],
+    ensure: ["t2akkadt t2akkad t2akkad t2akkad|تأكدت تأكد تأكد تأكد", { lv: 'i', obj: 'min', objNP: 'min' }],
+    accompany: ["raafagt raafag raafig raafig|رافقت رافق رافق رافق", {}],
+    assist: ["saa3adt saa3ad saa3id saa3id|ساعدت ساعد ساعد ساعد", {}],
+    withdraw: ["si7abt si7ab s7ab is7ab|سحبت سحب سحب اسحب", { past: 'withdrew', pp: 'withdrawn', lv: 'i' }],
+    negotiate: ["tfaawa9't tfaawa9' tfaawa9' tfaawa9'|تفاوضت تفاوض تفاوض تفاوض", { lv: 'i', with: 'wiyya' }],
+    beware: ["intabaht intabah ntibih intibih|انتبهت انتبه انتبه انتبه", { lv: 'i', of: 'min' }],
+    repay: ["raddait radd ridd ridd|رديت رد رد رد", { past: 'repaid', pp: 'repaid', obj: 'li', objNP: 'li' }],
+    spill: ["dalagt dalag dlig idlig|دلقت دلق دلق ادلق", { lv: 'i' }],
+    slam: ["9afagt 9afag 9fig i9fig|صفقت صفق صفق اصفق", { lv: 'i' }],
+    thud: ["6i7t 6aa7 6ee7 6ee7|طحت طاح طيح طيح", {}],
+    screech: ["9arra5t 9arra5 9arri5 9arri5|صرخت صرخ صرخ صرخ", {}],
+    roar: ["za2art za2ar z2ir iz2ir|زأرت زأر زئر ازئر", { lv: 'i' }],
+    pound_v: ["daggait dagg digg digg|دقيت دق دق دق", {}],
+    creak: ["9arrait 9arr 9irr 9irr|صريت صر صر صر", {}],
+    rumble: ["ga3ga3t ga3ga3 ga3gi3 ga3gi3|قعقعت قعقع قعقع قعقع", {}],
+    mutter: ["tamtamt tamtam tamtim tamtim|تمتمت تمتم تمتم تمتم", {}],
+    stutter: ["tla3thamt tla3tham tla3tham tla3tham|تلعثمت تلعثم تلعثم تلعثم", { lv: 'i' }],
+    lecture_v: ["7aa9'art 7aa9'ar 7aa9'ir 7aa9'ir|حاضرت حاضر حاضر حاضر", {}],
+    preach: ["wa3a6't wa3a6' w3i6' iw3i6'|وعظت وعظ وعظ اوعظ", { lv: 'i' }],
+    cram: ["7afa6't 7afa6' 7fa6' i7fa6'|حفظت حفظ حفظ احفظ", { lv: 'a' }],
+    tutor: ["darrast darras darris darris|درست درس درس درس", {}],
+    plagiarize: ["nasa5t nasa5 nsa5 insa5|نسخت نسخ نسخ انسخ", { lv: 'i' }],
+    flunk: ["rasabt rasab rsib irsib|رسبت رسب رسب ارسب", { lv: 'i' }],
+    mop: ["masa7t masa7 msa7 imsa7|مسحت مسح مسح امسح", { lv: 'i' }],
+    dust_v: ["na6'6'aft na6'6'af na6'6'if na6'6'if|نظفت نظف نظف نظف", {}],
+    scrub: ["farakt farak frik ifrik|فركت فرك فرك افرك", { lv: 'i' }],
+    rinse: ["sha66aft sha66af sha66if sha66if|شطفت شطف شطف شطف", {}],
+    soak: ["naga3t naga3 nga3 inga3|نقعت نقع نقع انقع", { lv: 'a' }],
+    peel: ["gashshart gashshar gashshir gashshir|قشرت قشر قشر قشر", {}],
+    chop: ["ga66a3t ga66a3 ga66i3 ga66i3|قطعت قطع قطع قطع", {}],
+    slice_v: ["ga66a3t ga66a3 ga66i3 ga66i3|قطعت قطع قطع قطع", {}],
+    grill: ["shawait shawa shwi ishwi|شويت شوى شوي اشو", { lv: 'i' }],
+    roast_v: ["shawait shawa shwi ishwi|شويت شوى شوي اشو", { lv: 'i' }],
+    stir: ["7arrakt 7arrak 7arrik 7arrik|حركت حرك حرك حرك", {}],
+    simmer: ["3'alait 3'ala 3'li i3'li|غليت غلى غلي اغل", { lv: 'i' }],
+    marinate: ["tabbalt tabbal tabbil tabbil|تبلت تبل تبل تبل", {}],
+    season_v: ["tabbalt tabbal tabbil tabbil|تبلت تبل تبل تبل", {}],
+    microwave_v: ["sa55ant sa55an sa55in sa55in|سخنت سخن سخن سخن", {}],
+    heat: ["sa55ant sa55an sa55in sa55in|سخنت سخن سخن سخن", {}],
+    sip: ["rashaft rashaf rshif irshif|رشفت رشف رشف ارشف", { lv: 'i' }],
+    gulp: ["bila3t bila3 bla3 ibla3|بلعت بلع بلع ابلع", { lv: 'a' }],
+    snack_v: ["akalt_snaak akal_snaak aakil_snaak kil_snaak|أكلت_سناك أكل_سناك آكل_سناك كل_سناك", {}],
+    overeat: ["akalt_wayed akal_wayed aakil_wayed kil_wayed|أكلت_وايد أكل_وايد آكل_وايد كل_وايد", { past: 'overate', pp: 'overeaten' }],
+    'stand up': ["wigaft wigaf wgaf oogaf|وقفت وقف وقف اوقف", { past: 'stood', lv: 'i' }],
+    'come in': ["dashshait dashsh dishsh dishsh|دشيت دش دش دش", { past: 'came', pp: 'come' }],
+    'get in': ["dashshait dashsh dishsh dishsh|دشيت دش دش دش", { past: 'got', pp: 'gotten' }],
+    'slow down': ["ba66ait ba66a ba66i ba66i|بطيت بطى بطي بطي", {}],
+    'speed up': ["sarra3t sarra3 sarri3 sarri3|سرعت سرع سرع سرع", { past: 'sped', pp: 'sped' }],
+    'carry on': ["kammalt kammal kammil kammil|كملت كمل كمل كمل", {}],
+    'cheer up': ["farra7t farra7 farri7 farri7|فرحت فرح فرح فرح", {}],
+    'calm down': ["haddait hadda haddi haddi|هديت هدى هدي هدي", {}],
+    'shut down': ["6affait 6affa 6affi 6affi|طفيت طفى طفي طفي", { past: 'shut', pp: 'shut' }],
+    'put down': ["7a66ait 7a66 7u66 7u66|حطيت حط حط حط", { past: 'put', pp: 'put' }],
+    'let down': ["5ayyabt 5ayyab 5ayyib 5ayyib|خيبت خيب خيب خيب", { past: 'let', pp: 'let' }],
+    'cut off': ["ga6a3t ga6a3 g6a3 ig6a3|قطعت قطع قطع اقطع", { past: 'cut', pp: 'cut', lv: 'a' }],
+    'swell up': ["intafa5t intafa5 ntifi5 intifi5|انتفخت انتفخ انتفخ انتفخ", { past: 'swelled', pp: 'swollen', lv: 'i' }],
+    upset_v: ["za33alt za33al za33il za33il|زعلت زعل زعل زعل", { past: 'upset', pp: 'upset' }],
+    bow_v: ["in7anait in7ana n7ini in7ini|انحنيت انحنى انحني انحن", { lv: 'i' }],
+    'take out': ["6alla3t 6alla3 6alli3 6alli3|طلعت طلع طلع طلع", { past: 'took', pp: 'taken' }],
+    'bring back': ["rajja3t rajja3 rajji3 rajji3|رجعت رجع رجع رجع", { past: 'brought', pp: 'brought' }],
+    'hand over': ["sallamt sallam sallim sallim|سلمت سلم سلم سلم", {}],
+    'hand in': ["sallamt sallam sallim sallim|سلمت سلم سلم سلم", {}],
+    'hand out': ["wazza3t wazza3 wazzi3 wazzi3|وزعت وزع وزع وزع", {}],
+    'throw away': ["ramait rama rmi irmi|رميت رمى رمي ارم", { past: 'threw', pp: 'thrown', lv: 'i' }],
+    'throw out': ["ramait rama rmi irmi|رميت رمى رمي ارم", { past: 'threw', pp: 'thrown', lv: 'i' }],
+  };
+  const X4_ADVS = {
+    halfway: "fi nu9 i6-6areeg|في نص الطريق", closely: "3an greeb|عن قريب", specifically: "bil-dhaat|بالذات", strictly: "bi-9araama|بصرامة", backwards: "warra|ورا",
+    legally: "gaanooniyyan|قانونياً", amongst: "bain|بين", wholeheartedly: "min kil galbi|من كل قلبي",
+    };
+  const X4_FIXED = {
+    'in spite of': "ra3'm|رغم", 'in the rear': "warra|ورا", 'at the rear': "warra|ورا", 'on the contrary': "bil-3aks|بالعكس", 'in addition': "bil-i9'aafa|بالإضافة", 'in addition to': "bil-i9'aafa ila|بالإضافة إلى",
+    'with regards to': "b5u9oo9|بخصوص", 'in regards to': "b5u9oo9|بخصوص", 'best regards': "ma3 taqdeeri|مع تقديري", 'kind regards': "ma3 taqdeeri|مع تقديري", 'my regards to': "sallim li 3ala|سلم لي على",
+    'send my regards': "sallim li 3alaihum|سلم لي عليهم", 'send my regards to': "sallim li 3ala|سلم لي على", 'give my regards to': "sallim li 3ala|سلم لي على", 'give my regards': "sallim li 3alaihum|سلم لي عليهم", 'darn it': "uff|أف", 'dang it': "uff|أف",
+    'take a seat': A3("ig3id|اقعد", "ig3idi|اقعدي", "ig3idoo|اقعدوا"), 'have a seat': A3("ig3id|اقعد", "ig3idi|اقعدي", "ig3idoo|اقعدوا"),
+    'go away': A3("roo7 3anni|روح عني", "roo7i 3anni|روحي عني", "roo7oo 3anni|روحوا عني"),
+    'back off': A3("ib3id|ابعد", "ib3idi|ابعدي", "ib3idoo|ابعدوا"), 'step back': A3("irja3 warra|ارجع ورا", "irja3i warra|ارجعي ورا", "irja3oo warra|ارجعوا ورا"), 'move over': A3("zi7|زح", "zi7i|زحي", "zi7oo|زحوا"),
+    'look out': A3("intabih|انتبه", "intabhi|انتبهي", "intabhoo|انتبهوا"), 'watch out': A3("intabih|انتبه", "intabhi|انتبهي", "intabhoo|انتبهوا"), 'heads up': A3("intabih|انتبه", "intabhi|انتبهي", "intabhoo|انتبهوا"),
+    'watch out for': "intabih min|انتبه من", 'look out for': "intabih min|انتبه من",
+    'cheer up': A3("ifra7|افرح", "ifra7i|افرحي", "ifra7oo|افرحوا"), 'chill out': A3("rawwig|روق", "rawwigi|روقي", "rawwigoo|روقوا"),
+    'never give up': A3("la tistaslim abadan|لا تستسلم أبداً", "la tistaslimeen abadan|لا تستسلمين أبداً", "la tistaslimoon abadan|لا تستسلمون أبداً"),
+    'do not give up': A3("la tistaslim|لا تستسلم", "la tistaslimeen|لا تستسلمين", "la tistaslimoon|لا تستسلمون"),
+    'hands up': A3("irfa3 eedak|ارفع إيدك", "irfa3i eedich|ارفعي إيدج", "irfa3oo eedkum|ارفعوا إيدكم"),
+    'knock it off': "bass|بس", 'that is enough': "bass 5alaa9|بس خلاص", 'enough is enough': "bass 5alaa9|بس خلاص", 'forget about it': "insa|انسى",
+    'aha': "aah|آه", 'whew': "il-7amdulillah|الحمدلله", 'darn': "uff|أف", 'bingo': "bingo|بنقو", 'voila': "haak|هاك", 'tada': "haak|هاك",
+  };
+  const X4_NOUN_ALIAS = { regards: 'regard', lungs: 'lung', ribs: 'rib', heels: 'heel', toes: 'toe', cheeks: 'cheek', ancestors: 'ancestor', rumors: 'rumor', rumours: 'rumour', elements: 'element', symptoms: 'symptom',
+    seeds: 'seed', expenses: 'expense', jewels: 'jewel', tales: 'tale', methods: 'method', funds: 'fund', horns: 'horn', drums: 'drum', fireworks: 'firework', trousers: 'trouser', savings: 'saving',
+    dudes: 'dude', assholes: 'asshole', politicians: 'politician', pirates: 'pirate', hunters: 'hunter', farmers: 'farmer', passengers: 'passenger', couples: 'couple', turtles: 'turtle', objects: 'object',
+    grounds: 'ground', arrangements: 'arrangement', affairs: 'affair', figures: 'figure', bits: 'bit', meters: 'meter', metres: 'metre', inches: 'inch', cents: 'cent', euros: 'euro', pounds: 'pound', yens: 'yen',
+    tale: 'story', ground: 'land', bit: 'piece', figure: 'number', affair: 'relationship', object: 'thing', couple: 'pair', dude: 'guy', asshole: 'idiot' };
+  Object.assign(ADJ_PREP, { allergic: { to: 'min' }, fond: { of: '' }, keen: { on: '3ala' }, eager: { for: 'li' }, passionate: { about: 'b' }, dedicated: { to: 'li' }, greedy: { for: 'li' }, offended: { by: 'min' }, vulnerable: { to: 'li' } });
+  for (const [k, v] of Object.entries(X4_NOUNS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_RAW) && !(kk + '_' in NOUN_RAW)) NOUN_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X4_ADJS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADJ_RAW) && !(kk + '_' in ADJ_RAW)) ADJ_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X4_VERBS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in VERB_RAW) && !(kk + '_' in VERB_RAW)) VERB_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X4_ADVS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADV_RAW) && !(kk + '_' in ADV_RAW)) ADV_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X4_FIXED)) { const kk = k.trim(); if (!(kk in FIXED_RAW)) FIXED_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X4_NOUN_ALIAS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_ALIAS)) NOUN_ALIAS[kk] = v; }
+  const X5_NOUNS = {
+    pleasure: "siroor siroor m|سرور سرور", sheriff: "ma2moor ma2mooreen mh|مأمور مأمورين", mayor: "3umda 3umad mh|عمدة عمد", priest: "gissees gusus mh|قسيس قسس",
+    jury: "hay2at_mu7allafeen hay2aat_mu7allafeen f|هيئة_محلفين هيئات_محلفين", pity: "shafaga shafaga f|شفقة شفقة", jerk: "7ageer 7ugara mh|حقير حقرا", freak: "majnoon majaaneen mh|مجنون مجانين",
+    penny: "fils fuloos m|فلس فلوس", estate: "3agaar 3agaaraat m|عقار عقارات", saint: "qiddees qiddeeseen mh|قديس قديسين", makeup: "makyaaj makyaaj m|مكياج مكياج",
+    thanksgiving: "3eed_ish-shukr 3eed_ish-shukr m|عيد_الشكر عيد_الشكر", presentation: "3ar9'_tagdeemi 3uroo9'_tagdeemiyya m|عرض_تقديمي عروض_تقديمية", reservation: "7ajz 7ujoozaat m|حجز حجوزات",
+    coordinate: "i7daathi i7daathiyyaat m|إحداثي إحداثيات", umbrella: "shamsiyya shamsiyyaat f|شمسية شمسيات", carbon: "karboon karboon m|كربون كربون", memorial: "nu9b_tidhkaari an9aab_tidhkaariyya m|نصب_تذكاري أنصاب_تذكارية",
+    earthquake: "zilzaal zalaazil m|زلزال زلازل", echo: "9ada 9ada m|صدى صدى", swamp: "mustanga3 mustanga3aat m|مستنقع مستنقعات", manual: "daleel adilla m|دليل أدلة",
+    rig: "rig rigaat m|رق رقات", depth: "3umg a3maag m|عمق أعماق", assassin: "assassin assassins mh|أساسن أساسنز", torch: "mish3al mashaa3il m|مشعل مشاعل",
+    reunion: "lammat_shaml lammaat_shaml f|لمة_شمل لمات_شمل", stall: "kushk akshaak m|كشك أكشاك", legacy: "irth irth m|إرث إرث", literature: "adab adab m|أدب أدب",
+    panel: "lo7a lo7aat f|لوحة لوحات", sequence: "tasalsul tasalsulaat m|تسلسل تسلسلات", anxiety: "galag galag m|قلق قلق", dice: "zahr zahr m|زهر زهر",
+    orphan: "yateem aytaam mh|يتيم أيتام", advertising: "i3laanaat i3laanaat f|إعلانات إعلانات", nickname: "lagab algaab m|لقب ألقاب", dot: "nug6a nuga6 f|نقطة نقط",
+    scenario: "seenaaryo seenaaryohaat m|سيناريو سيناريوهات", lipstick: "rooj rooj m|روج روج", fiction: "5ayaal 5ayaal m|خيال خيال", musician: "moosigi moosigiyyeen mh|موسيقي موسيقيين",
+    calendar: "tagweem tagaaweem m|تقويم تقاويم", balcony: "balkoona balkoonaat f|بلكونة بلكونات", melody: "la7n al7aan m|لحن ألحان", barbecue: "barbikyoo barbikyoo m|باربكيو باربكيو",
+    cricket: "kreekit kreekit m|كريكت كريكت", laboratory: "mu5tabar mu5tabaraat m|مختبر مختبرات", landlord: "9aa7ib_il-milk a97aab_il-milk mh|صاحب_الملك أصحاب_الملك", cottage: "kookh akwaa5 m|كوخ أكواخ",
+    backyard: "7oosh 7eeshaan m|حوش حيشان", rash: "6af7 6af7 m|طفح طفح", despair: "ya2s ya2s m|يأس يأس", hawk: "9agr 9goor m|صقر صقور",
+    short_n: "short shortaat m|شورت شورتات", distress: "9'eeg 9'eeg m|ضيق ضيق", magician: "saa7ir sa7ara mh|ساحر سحرة", dynamite: "deenaameet deenaameet m|ديناميت ديناميت",
+    pudding: "booding booding m|بودنق بودنق", corporation: "sharika sharikaat f|شركة شركات", disorder: "i9'6iraab i9'6iraabaat m|اضطراب اضطرابات", sadness: "7uzn 7uzn m|حزن حزن",
+    specialist: "a5i9aa2i a5i9aa2iyyeen mh|أخصائي أخصائيين", prescription: "wa9fa_6ibbiyya wa9faat_6ibbiyya f|وصفة_طبية وصفات_طبية", grid: "shabaka shabakaat f|شبكة شبكات", haircut: "gi99at_sha3ar gi99aat_sha3ar f|قصة_شعر قصات_شعر",
+    lodge: "kookh akwaa5 m|كوخ أكواخ", feather: "reesha reesh f|ريشة ريش", oak: "balloo6 balloo6 m|بلوط بلوط", olive: "zaitoona zaitoon f|زيتونة زيتون",
+    maniac: "majnoon majaaneen mh|مجنون مجانين", landscape: "man6'ar manaa6'ir m|منظر مناظر", straw: "ma99aa9a ma99aa9aat f|مصاصة مصاصات", dam: "sadd sudood m|سد سدود",
+    rehab: "ta2heel ta2heel m|تأهيل تأهيل", agenda: "ajinda ajindaat f|أجندة أجندات", glue: "9am3' 9am3' m|صمغ صمغ", diner: "ma63am ma6aa3im m|مطعم مطاعم",
+    sketch: "rasma rasmaat f|رسمة رسمات", parliament: "barlamaan barlamaanaat m|برلمان برلمانات", topic: "maw9'oo3 mawaa9'ee3 m|موضوع مواضيع", salmon: "salmon salmon m|سلمون سلمون",
+    wig: "baarooka baarookaat f|باروكة باروكات", wax: "sham3 sham3 m|شمع شمع", herd: "ga6ee3 gu63aan m|قطيع قطعان", integrity: "nazaaha nazaaha f|نزاهة نزاهة",
+    gangster: "gangster gangsteriyya mh|قانقستر قانقسترية", briefcase: "shan6a shuna6 f|شنطة شنط", puppet: "dumya dumaa f|دمية دمى", pancake: "bankaik bankaik m|بانكيك بانكيك",
+    database: "database database f|داتابيس داتابيس", heartbeat: "9'arbat_galb 9'arbaat_galb f|ضربة_قلب ضربات_قلب", cigar: "seegaar seegaaraat m|سيجار سيجارات", noodle: "noodles noodles m|نودلز نودلز",
+    mug: "koob akwaab m|كوب أكواب", fountain: "naafoora nawaafeer f|نافورة نوافير", observation: "mulaa7a6'a mulaa7a6'aat f|ملاحظة ملاحظات", attic: "3illiyya 3illiyyaat f|علية عليات",
+    harmony: "insijaam insijaam m|انسجام انسجام", difficulty: "9u3ooba 9u3oobaat f|صعوبة صعوبات", substance: "maadda mawaad f|مادة مواد", thread: "thread threadaat m|ثريد ثريدات",
+    gap: "fajwa fajawaat f|فجوة فجوات", chapel: "kaneesa kanaayis f|كنيسة كنايس", railway: "sikkat_7adeed sikak_7adeed f|سكة_حديد سكك_حديد", railroad: "sikkat_7adeed sikak_7adeed f|سكة_حديد سكك_حديد",
+    pension: "ma3aash ma3aashaat m|معاش معاشات", poster: "boostar boostaraat m|بوستر بوسترات", addict: "mudmin mudmineen mh|مدمن مدمنين", accountant: "mu7aasib mu7aasibeen mh|محاسب محاسبين",
+    tumor: "waram awraam m|ورم أورام", tumour: "waram awraam m|ورم أورام", jeep: "jeep jeepaat m|جيب جيبات", wheelchair: "kursi_mut7arrik karaasi_mut7arrika m|كرسي_متحرك كراسي_متحركة",
+    tobacco: "tabi3' tabi3' m|تبغ تبغ", yoga: "yoga yoga f|يوقا يوقا", variety: "tanawwu3 tanawwu3 m|تنوع تنوع", cord: "silk aslaak m|سلك أسلاك",
+    explosive: "mutafajjir mutafajjiraat m|متفجر متفجرات", origin: "a9l u9ool m|أصل أصول", rogue: "rogue rogues mh|روق روقز", corruption: "fasaad fasaad m|فساد فساد",
+    ski: "tazalluj tazalluj m|تزلج تزلج", vet: "6abeeb_bai6ari a6ibba_bai6ariyyeen mh|طبيب_بيطري أطبا_بيطريين", lobster: "istaakoza istaakoza m|استاكوزا استاكوزا", canal: "ganaa ganawaat f|قناة قنوات",
+    shade: "6'ill 6'ilaal m|ظل ظلال", orchestra: "orkestra orkestraat f|أوركسترا أوركسترات", guidance: "irshaad irshaad m|إرشاد إرشاد", rival: "munaafis munaafiseen mh|منافس منافسين",
+    elite: "nu5ba nu5ba f|نخبة نخبة", chart: "chart chartaat m|تشارت تشارتات", resident: "saakin sukkaan mh|ساكن سكان", stew: "9aaloona 9aaloonaat f|صالونة صالونات",
+    nun: "raahiba raahibaat fh|راهبة راهبات", satisfaction: "ri9'a ri9'a m|رضا رضا", spark: "sharaara sharaaraat f|شرارة شرارات", peak: "gimma gimam f|قمة قمم",
+    breed: "fa9eela fa9aayil f|فصيلة فصايل", architect: "muhandis_mi3maari muhandiseen_mi3maariyyeen mh|مهندس_معماري مهندسين_معماريين", dose: "jur3a jur3aat f|جرعة جرعات", bolt: "bargi baraa3'i m|برغي براغي",
+    autograph: "tawgee3 tawgee3aat m|توقيع توقيعات", asset: "a9l u9ool m|أصل أصول", essence: "jawhar jawhar m|جوهر جوهر", disco: "disko disko m|ديسكو ديسكو",
+    handful: "7afna 7afnaat f|حفنة حفنات", pumpkin: "gar3a gar3 f|قرعة قرع", anchor: "mirsaa maraasi f|مرساة مراسي", urge: "ra3'ba ra3'baat f|رغبة رغبات",
+    vein: "3irg 3uroog m|عرق عروق", obsession: "hawas hawas m|هوس هوس", razor: "moos amwaas m|موس أمواس", mutant: "mutant mutants mh|ميوتنت ميوتنتس",
+    rack: "raff rfoof m|رف رفوف", expectation: "tawaggu3 tawaggu3aat m|توقع توقعات", pigeon: "7amaama 7amaam f|حمامة حمام", demonstration: "mu6'aahara mu6'aaharaat f|مظاهرة مظاهرات",
+    treason: "5iyaana 5iyaana f|خيانة خيانة", violin: "kamanja kamanjaat f|كمنجة كمنجات", lifestyle: "nam6_7ayaat anmaa6_7ayaat m|نمط_حياة أنماط_حياة", realm: "realm realms m|ريلم ريلمز",
+    tuna: "toona toona f|تونة تونة", nursing: "tamree9' tamree9' m|تمريض تمريض", altar: "madhba7 madhaabi7 m|مذبح مذابح", jelly: "jeli jeli m|جيلي جيلي",
+    thrill: "ithaara ithaara f|إثارة إثارة", lounge: "9aala 9aalaat f|صالة صالات", dimension: "bu3d ab3aad m|بعد أبعاد", bodyguard: "7aaris_sha59i 7urraas_sha59iyyeen mh|حارس_شخصي حراس_شخصيين",
+    rug: "sijjaada sajaajeed f|سجادة سجاجيد", jaw: "fakk fkook m|فك فكوك", popcorn: "bobkoorn bobkoorn m|بوبكورن بوبكورن", courtroom: "gaa3at_ma7kama gaa3aat_ma7kama f|قاعة_محكمة قاعات_محكمة",
+    documentary: "film_wathaa2iqi aflaam_wathaa2iqiyya m|فيلم_وثائقي أفلام_وثائقية", donor: "mutabarri3 mutabarri3een mh|متبرع متبرعين", shipment: "shu7na shu7naat f|شحنة شحنات", vest: "sidairi sidairiyyaat m|صديري صديريات",
+    mechanic: "meekaaneeki meekaaneekiyya mh|ميكانيكي ميكانيكية", relation: "3alaaga 3alaagaat f|علاقة علاقات", fare: "ujra ujoor f|أجرة أجور", karma: "karma karma f|كارما كارما",
+    saddle: "sarj srooj m|سرج سروج", burial: "dafn dafn m|دفن دفن", detention: "i7tijaaz i7tijaaz m|احتجاز احتجاز", vow: "nadhr nudhoor m|نذر نذور",
+    breakdown: "inhiyaar inhiyaaraat m|انهيار انهيارات", gown: "fustaan fasaateen m|فستان فساتين", countryside: "reef reef m|ريف ريف", swan: "baja3a baja3 f|بجعة بجع",
+    moonlight: "9'aw_il-gumar 9'aw_il-gumar m|ضو_القمر ضو_القمر", identification: "hawiyya hawiyyaat f|هوية هويات", consideration: "i3tibaar i3tibaaraat m|اعتبار اعتبارات", bandit: "li9 lu9oo9 mh|لص لصوص",
+    transplant: "zar3 zar3 m|زرع زرع", loneliness: "wi7da wi7da f|وحدة وحدة", frost: "9agee3 9agee3 m|صقيع صقيع", registration: "tasjeel tasjeel m|تسجيل تسجيل",
+    prophet: "nabi anbiya mh|نبي أنبيا", constitution: "dustoor dasaateer m|دستور دساتير", buyer: "mushtari mushtareen mh|مشتري مشترين", volcano: "burkaan baraakeen m|بركان براكين",
+    accomplice: "shareek shuraka mh|شريك شركا", bounty: "mukaafa2a mukaafa2aat f|مكافأة مكافآت", asylum: "lujoo2 lujoo2 m|لجوء لجوء", duel: "duel duels m|ديول ديولز",
+    carnival: "karnafaal karnafaalaat m|كرنفال كرنفالات", tray: "9eeniyya 9awaani f|صينية صواني", handcuff: "kalabsh kalabshaat m|كلبش كلبشات", barrier: "7aajiz 7awaajiz m|حاجز حواجز",
+    hunch: "i7saas i7saas m|إحساس إحساس", yacht: "ya5t yu5oot m|يخت يخوت", stain: "bug3a buga3 f|بقعة بقع", syndrome: "mutalaazima mutalaazimaat f|متلازمة متلازمات",
+    ambush: "kameen kamaayin m|كمين كماين", violation: "mu5aalafa mu5aalafaat f|مخالفة مخالفات", owl: "booma boom f|بومة بوم", cane: "3a9a 3u9i f|عصا عصي",
+    folks: "jamaa3a jamaa3a mh|جماعة جماعة", examination: "fa79 fu7oo9aat m|فحص فحوصات", slaughter: "madhba7a madhaabi7 f|مذبحة مذابح", triumph: "inti9aar inti9aaraat m|انتصار انتصارات",
+    vengeance: "intiqaam intiqaam m|انتقام انتقام", replacement: "badeel badaayil m|بديل بدايل", institution: "mu2assasa mu2assasaat f|مؤسسة مؤسسات", fabric: "gumaash agmisha m|قماش أقمشة",
+    corridor: "mamarr mamarraat m|ممر ممرات", pledge: "wa3d wu3ood m|وعد وعود", housing: "sakan sakan m|سكن سكن", mines: "manaajim manaajim m|مناجم مناجم",
+    whereabouts: "makaan makaan m|مكان مكان", welfare: "rafaahiya rafaahiya f|رفاهية رفاهية", profit: "rib7 arbaa7 m|ربح أرباح", humor_n: "5iffat_damm 5iffat_damm f|خفة_دم خفة_دم",
+    troops: "junood junood mh|جنود جنود", bud: "5ooy 5waan mh|خوي خوان", cans: "3ilab 3ilab f|علب علب", feathers: "reesh reesh m|ريش ريش",
+    shorts: "short shortaat m|شورت شورتات", noodles: "noodles noodles m|نودلز نودلز", pancakes: "bankaik bankaik m|بانكيك بانكيك", handcuffs: "kalabshaat kalabshaat f|كلبشات كلبشات",
+    coordinates: "i7daathiyyaat i7daathiyyaat f|إحداثيات إحداثيات", assets: "u9ool u9ool f|أصول أصول", expectations: "tawaggu3aat tawaggu3aat f|توقعات توقعات", veins: "3uroog 3uroog m|عروق عروق",
+    profits: "arbaa7 arbaa7 m|أرباح أرباح", bandits: "lu9oo9 lu9oo9 mh|لصوص لصوص", hundred: "miya miyaat f|مية ميات", thousand: "alf aalaaf m|ألف آلاف", million: "milyoon malaayeen m|مليون ملايين",
+  };
+  const X5_ADJS = {
+    final: "a5eer a5eera a5eereen|أخير أخيرة أخيرين", particular: "mu3ayyan mu3ayyana mu3ayyaneen|معين معينة معينين", committed: "multazim multazima multazimeen|ملتزم ملتزمة ملتزمين",
+    financial: "maali maaliyya maaliyyeen|مالي مالية ماليين", spiritual: "roo7aani roo7aaniyya roo7aaniyyeen|روحاني روحانية روحانيين", humble: "mutawaa9'i3 mutawaa9'i3a mutawaa9'i3een|متواضع متواضعة متواضعين",
+    skinny: "na7eef na7eefa nu7aaf|نحيف نحيفة نحاف", slim: "na7eef na7eefa nu7aaf|نحيف نحيفة نحاف", folk: "sha3bi sha3biyya sha3biyyeen|شعبي شعبية شعبيين", stuffed: "shab3aan shab3aana shab3aaneen|شبعان شبعانة شبعانين",
+    domestic: "daa5ili daa5iliyya daa5iliyyeen|داخلي داخلية داخليين", economic: "iqti9aadi iqti9aadiyya iqti9aadiyyeen|اقتصادي اقتصادية اقتصاديين", tremendous: "haa2il haa2ila haa2ileen|هائل هائلة هائلين",
+    possessed: "maskoon maskoona maskooneen|مسكون مسكونة مسكونين", logical: "man6igi man6igiyya man6igiyyeen|منطقي منطقية منطقيين", medium: "wasa6 wasa6 wasa6|وسط وسط وسط",
+    spectacular: "mudhhil mudhhila mudhhileen|مذهل مذهلة مذهلين", reliable: "mawthoog mawthooga mawthoogeen|موثوق موثوقة موثوقين", elegant: "aneeg aneega aneegeen|أنيق أنيقة أنيقين",
+    crucial: "7aasim 7aasma 7aasmeen|حاسم حاسمة حاسمين", crowded: "za7ma za7ma za7ma|زحمة زحمة زحمة", isolated: "ma3zool ma3zoola ma3zooleen|معزول معزولة معزولين",
+    fragile: "hashsh hashsha hashsheen|هش هشة هشين", suitable: "munaasib munaasiba munaasibeen|مناسب مناسبة مناسبين", initial: "awwali awwaliyya awwaliyyeen|أولي أولية أوليين",
+    hostile: "mu3aadi mu3aadiya mu3aadiyeen|معادي معادية معاديين", classified: "sirri sirriyya sirriyyeen|سري سرية سريين", shiny: "laamma3 laamma3a laamma3een|لماع لماعة لماعين",
+    unpleasant: "mob_7ilu mob_7ilwa mob_7ilween|مب_حلو مب_حلوة مب_حلوين", toxic: "toxic toxic toxic|توكسك توكسك توكسك", sensible: "3aagil 3aagla 3uggaal|عاقل عاقلة عقال",
+    conscious: "waa3i waa3ya waa3yeen|واعي واعية واعيين", sincere: "9aadig 9aadga 9aadgeen|صادق صادقة صادقين", bizarre: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين",
+    confidential: "sirri sirriyya sirriyyeen|سري سرية سريين", relevant: "lah_3alaaga laha_3alaaga lahum_3alaaga|له_علاقة لها_علاقة لهم_علاقة", intact: "saleem saleema saleemeen|سليم سليمة سليمين",
+    identical: "mi6aabig mi6aabga mi6aabgeen|مطابق مطابقة مطابقين", consistent: "thaabit thaabta thaabteen|ثابت ثابتة ثابتين", organic: "3u9'wi 3u9'wiyya 3u9'wiyyeen|عضوي عضوية عضويين",
+    digital: "ragmi ragmiyya ragmiyyeen|رقمي رقمية رقميين", sentimental: "3aa6ifi 3aa6ifiyya 3aa6ifiyyeen|عاطفي عاطفية عاطفيين", dried: "mjaffaf mjaffafa mjaffafeen|مجفف مجففة مجففين",
+    inappropriate: "mob_munaasib mob_munaasiba mob_munaasibeen|مب_مناسب مب_مناسبة مب_مناسبين", immortal: "5aalid 5aalda 5aaldeen|خالد خالدة خالدين", delightful: "raa2i3 raa2i3a raa2i3een|رائع رائعة رائعين",
+    automatic: "otomaatik otomaatik otomaatik|أوتوماتيك أوتوماتيك أوتوماتيك", amusing: "mu9'7ik mu9'7ika mu9'7ikeen|مضحك مضحكة مضحكين", unnecessary: "mob_laazim mob_laazma mob_laazmeen|مب_لازم مب_لازمة مب_لازمين",
+    ignorant: "jaahil jaahla juhhaal|جاهل جاهلة جهال", modest: "mutawaa9'i3 mutawaa9'i3a mutawaa9'i3een|متواضع متواضعة متواضعين", subtle: "5afeef 5afeefa 5ifaaf|خفيف خفيفة خفاف",
+    inevitable: "7atmi 7atmiyya 7atmiyyeen|حتمي حتمية حتميين", humiliated: "mdhallal mdhallala mdhallaleen|مذلل مذللة مذللين", historical: "taaree5i taaree5iyya taaree5iyyeen|تاريخي تاريخية تاريخيين",
+    fierce: "shirs shirsa shirseen|شرس شرسة شرسين", hollow: "faa9'i faa9'ya faa9'yeen|فاضي فاضية فاضيين", radical: "jidhri jidhriyya jidhriyyeen|جذري جذرية جذريين",
+    frustrated: "mi7ba6 mi7ba6a mi7ba6een|محبط محبطة محبطين", magnetic: "mi3'naa6eesi mi3'naa6eesiyya mi3'naa6eesiyyeen|مغناطيسي مغناطيسية مغناطيسيين", outstanding: "mumtaaz mumtaaza mumtaazeen|ممتاز ممتازة ممتازين",
+    interior: "daa5ili daa5iliyya daa5iliyyeen|داخلي داخلية داخليين", surrounding: "mu7ee6 mu7ee6a mu7ee6een|محيط محيطة محيطين", reckless: "mutahawwir mutahawwira mutahawwireen|متهور متهورة متهورين",
+    heavenly: "samaawi samaawiyya samaawiyyeen|سماوي سماوية سماويين", casual: "kaajwal kaajwal kaajwal|كاجوال كاجوال كاجوال", respectable: "mu7taram mu7tarama mu7tarameen|محترم محترمة محترمين",
+    pointless: "ma_lah_da3i ma_laha_da3i ma_lahum_da3i|ما_له_داعي ما_لها_داعي ما_لهم_داعي", efficient: "fa33aal fa33aala fa33aaleen|فعال فعالة فعالين", outrageous: "fa6'ee3 fa6'ee3a fa6'ee3een|فظيع فظيعة فظيعين",
+    gracious: "kareem kareema kuramaa|كريم كريمة كرما", legendary: "us6oori us6ooriyya us6ooriyyeen|أسطوري أسطورية أسطوريين", mechanical: "meekaaneeki meekaaneekiyya meekaaneekiyyeen|ميكانيكي ميكانيكية ميكانيكيين",
+    artificial: "9inaa3i 9inaa3iyya 9inaa3iyyeen|صناعي صناعية صناعيين", incoming: "jaay jaaya jaayeen|جاي جاية جايين", lethal: "mumeet mumeeta mumeeteen|مميت مميتة مميتين",
+    epic: "epic epic epic|إبك إبك إبك", blunt: "9aree7 9aree7a 9ura7a|صريح صريحة صرحا", thoughtful: "la6eef la6eefa lu6afa|لطيف لطيفة لطفا",
+    hairy: "msha33ir msha33ira msha33ireen|مشعر مشعرة مشعرين", childish: "6ufooli 6ufooliyya 6ufooliyyeen|طفولي طفولية طفوليين", unstable: "mob_mustagirr mob_mustagirra mob_mustagirreen|مب_مستقر مب_مستقرة مب_مستقرين",
+    grounded: "mamnoo3_min_i6-6al3a mamnoo3a_min_i6-6al3a mamnoo3een_min_i6-6al3a|ممنوع_من_الطلعة ممنوعة_من_الطلعة ممنوعين_من_الطلعة", express: "saree3 saree3a saree3een|سريع سريعة سريعين",
+    underwater: "ta7t_il-maay ta7t_il-maay ta7t_il-maay|تحت_الماي تحت_الماي تحت_الماي", eliminated: "mi6la3 mi6la3a mi6la3een|مطلع مطلعة مطلعين", drunken: "sakraan sakraana sakraaneen|سكران سكرانة سكرانين",
+    // comparatives
+    taller: "a6wal|أطول", larger: "achbar|أچبر", quicker: "asra3|أسرع", happier: "mabsoo6_akthar|مبسوط_أكثر", funnier: "mu9'7ik_akthar|مضحك_أكثر", luckier: "ma76'oo6'_akthar|محظوظ_أكثر",
+    busier: "mash3'ool_akthar|مشغول_أكثر", lazier: "aksal|أكسل", crazier: "majnoon_akthar|مجنون_أكثر", wiser: "a7kam|أحكم", deeper: "a3mag|أعمق", wider: "awsa3|أوسع",
+    thinner: "an7af|أنحف", fatter: "asman|أسمن", sweeter: "a7la|أحلى", softer: "an3am|أنعم", tougher: "a93ab|أصعب", smoother: "an3am|أنعم", calmer: "ahda|أهدى", quieter: "ahda|أهدى",
+    fresher: "6aazaj_akthar|طازج_أكثر", newer: "ajdad|أجدد", simpler: "absa6|أبسط", poorer: "afgar|أفقر", kinder: "a6yab|أطيب", braver: "ashja3|أشجع", dumber: "a3'ba|أغبى",
+    louder: "a3la|أعلى", warmer: "adfa|أدفى", safer: "a2man|آمن", cleaner_: "an6'af|أنظف", dirtier: "awsa5|أوسخ", uglier: "absha3|أبشع", fancier: "af5am|أفخم", sadder: "a7zan|أحزن",
+    thicker: "ath5an|أثخن", rougher: "a5shan|أخشن", rarer: "andar|أندر", brighter: "anwar|أنور", darker: "a6'lam|أظلم", cuter: "akyoot|أكيوت", angrier: "mi3a99ib_akthar|معصب_أكثر",
+    hungrier: "yoo3aan_akthar|يوعان_أكثر", tastier: "aladhdh|ألذ", healthier: "a977|أصح", wealthier: "a3'na|أغنى", friendlier: "al6af|ألطف", scarier: "a5waf|أخوف", nearer: "agrab|أقرب",
+    stupider: "a3'ba|أغبى", stranger_: "a3'rab|أغرب", weirder: "a3'rab|أغرب", greater: "a36'am|أعظم", worthier: "ajdar|أجدر", bolder: "ajra2|أجرأ", fuller: "amla|أملى", emptier: "afra3'|أفرغ",
+    // superlatives
+    tallest: "^a6wal|أطول", largest_: "^achbar|أچبر", quickest: "^asra3|أسرع", happiest: "^as3ad|أسعد", funniest: "^a9'7ak|أضحك", luckiest: "^akthar_wa7id_ma76'oo6'|أكثر_واحد_محظوظ",
+    busiest: "^akthar_wa7id_mash3'ool|أكثر_واحد_مشغول", laziest: "^aksal|أكسل", craziest: "^akthar_wa7id_majnoon|أكثر_واحد_مجنون", wisest: "^a7kam|أحكم", deepest: "^a3mag|أعمق", widest: "^awsa3|أوسع",
+    thinnest: "^an7af|أنحف", fattest: "^asman|أسمن", sweetest: "^a7la|أحلى", softest: "^an3am|أنعم", toughest: "^a93ab|أصعب", calmest: "^ahda|أهدى", quietest: "^ahda|أهدى",
+    simplest: "^absa6|أبسط", poorest: "^afgar|أفقر", kindest: "^a6yab|أطيب", bravest: "^ashja3|أشجع", dumbest: "^a3'ba|أغبى", loudest: "^a3la|أعلى", warmest: "^adfa|أدفى", safest: "^a2man|آمن",
+    cleanest: "^an6'af|أنظف", dirtiest: "^awsa5|أوسخ", ugliest: "^absha3|أبشع", fanciest: "^af5am|أفخم", saddest: "^a7zan|أحزن", thickest: "^ath5an|أثخن", rarest: "^andar|أندر",
+    brightest: "^anwar|أنور", darkest: "^a6'lam|أظلم", cutest: "^akyoot|أكيوت", tastiest: "^aladhdh|ألذ", healthiest: "^a977|أصح", wealthiest: "^a3'na|أغنى", scariest: "^a5waf|أخوف",
+    earliest: "^abkar|أبكر", slowest: "^ab6a2|أبطأ", coldest: "^abrad|أبرد", hottest: "^a7arr|أحر", farthest: "^ab3ad|أبعد", furthest: "^ab3ad|أبعد", fewest: "^agal|أقل", least: "^agal|أقل",
+    finest: "^a7san|أحسن", strangest: "^a3'rab|أغرب", weirdest: "^a3'rab|أغرب", stupidest: "^a3'ba|أغبى", shortest: "^ag9ar|أقصر", heaviest: "^athgal|أثقل", lightest: "^a5aff|أخف",
+    lowest_: "^awa6a|أوطى", nicest_: "^a7la|أحلى", fastest_: "^asra3|أسرع", biggest_: "^achbar|أچبر", worthiest: "^ajdar|أجدر", boldest: "^ajra2|أجرأ", fullest: "^amla|أملى",
+    // more/most + adjective
+    'most expensive': "^a3'la|أغلى", 'more expensive': "a3'la|أغلى", 'most important': "^ahamm|أهم", 'more important': "ahamm|أهم", 'most beautiful': "^ajmal|أجمل", 'more beautiful': "ajmal|أجمل",
+    'most famous': "^ash-har|أشهر", 'more famous': "ash-har|أشهر", 'most difficult': "^a93ab|أصعب", 'more difficult': "a93ab|أصعب", 'most dangerous': "^a56ar|أخطر", 'more dangerous': "a56ar|أخطر",
+    'most powerful': "^agwa|أقوى", 'more powerful': "agwa|أقوى", 'most popular': "^ash-har|أشهر", 'more popular': "ash-har|أشهر", 'most useful': "^anfa3|أنفع", 'more useful': "anfa3|أنفع",
+    'most interesting': "^amta3|أمتع", 'more interesting': "amta3|أمتع", 'most fun': "^amta3|أمتع", 'more fun': "amta3|أمتع", 'most boring': "^amall|أمل", 'more boring': "amall|أمل",
+    'most comfortable': "^arya7|أريح", 'more comfortable': "arya7|أريح", 'most common': "^ashya3|أشيع", 'more common': "ashya3|أشيع", 'most valuable': "^athman|أثمن", 'more valuable': "athman|أثمن",
+    'most intelligent': "^adhka|أذكى", 'more intelligent': "adhka|أذكى", 'most delicious': "^aladhdh|ألذ", 'more delicious': "aladhdh|ألذ", 'most successful': "^anja7|أنجح", 'more successful': "anja7|أنجح",
+    'most accurate': "^adagg|أدق", 'more accurate': "adagg|أدق", 'most recent': "^a7dath|أحدث", 'more recent': "a7dath|أحدث", 'most active': "^anshat|أنشط", 'more active': "anshat|أنشط",
+    'most efficient': "^akfa2|أكفأ", 'more efficient': "akfa2|أكفأ", 'most honest': "^a9dag|أصدق", 'more honest': "a9dag|أصدق", 'most generous': "^akram|أكرم", 'more generous': "akram|أكرم",
+    'most patient': "^a9bar|أصبر", 'more patient': "a9bar|أصبر", 'more careful': "a7ra9|أحرص", 'most careful': "^a7ra9|أحرص", 'most experienced': "^a5bar|أخبر", 'more experienced': "a5bar|أخبر",
+    'most reliable': "^awthag|أوثق", 'more reliable': "awthag|أوثق", 'most handsome': "^awsam|أوسم", 'more handsome': "awsam|أوسم", 'most amazing': "^arwa3|أروع", 'more amazing': "arwa3|أروع",
+    'most wonderful': "^arwa3|أروع", 'most awesome': "^arwa3|أروع", 'most annoying': "^akthar_shay_mzi3ij|أكثر_شي_مزعج", 'more annoying': "mzi3ij_akthar|مزعج_أكثر", 'most helpful': "^akthar_wa7id_ysaa3id|أكثر_واحد_يساعد",
+    'most serious': "^ajadd|أجد", 'more serious': "ajadd|أجد", 'most talented': "^amhar|أمهر", 'more talented': "amhar|أمهر", 'most skilled': "^amhar|أمهر", 'more skilled': "amhar|أمهر",
+    'most special': "^amyaz|أميز", 'more special': "amyaz|أميز", 'most effective': "^anja3|أنجع", 'more effective': "anja3|أنجع", 'most polite': "^a2dab|أأدب", 'more polite': "a2dab|أأدب",
+    'most romantic': "^akthar_wa7id_romansi|أكثر_واحد_رومانسي", 'more romantic': "romansi_akthar|رومانسي_أكثر", 'most creative': "^abda3|أبدع", 'more creative': "abda3|أبدع", 'most unique': "^amyaz|أميز",
+    'most exciting': "^amta3|أمتع", 'more exciting': "amta3|أمتع", 'most peaceful': "^ahda|أهدى", 'more peaceful': "ahda|أهدى", 'most convenient': "^ansab|أنسب", 'more convenient': "ansab|أنسب",
+    'most suitable': "^ansab|أنسب", 'more suitable': "ansab|أنسب", 'most appropriate': "^ansab|أنسب", 'more appropriate': "ansab|أنسب", 'most obvious': "^awa9'a7|أوضح", 'more obvious': "awa9'a7|أوضح",
+    'most expensive one': "^a3'la_wa7id|أغلى_واحد", 'most precious': "^a3'la|أغلى", 'more precious': "a3'la|أغلى", 'most hated': "^akthar_wa7id_makrooh|أكثر_واحد_مكروه", 'most loved': "^akthar_wa7id_ma7boob|أكثر_واحد_محبوب",
+  };
+  const X5_VERBS = {
+    commit: ["irtakabt irtakab rtikib irtikib|ارتكبت ارتكب ارتكب ارتكب", { lv: 'i' }],
+    'freak out': ["injannait injann njann injann|انجنيت انجن انجن انجن", { lv: 'i' }],
+    hand_v: ["naawalt naawal naawil naawil|ناولت ناول ناول ناول", { io: true }],
+    ease: ["5affaft 5affaf 5affif 5affif|خففت خفف خفف خفف", {}],
+    eliminate: ["ga9'ait ga9'a g9'i ig9'i|قضيت قضى قضي اقض", { lv: 'i', obj: '3ala', objNP: '3ala' }],
+    pursue: ["6aaradt 6aarad 6aarid 6aarid|طاردت طارد طارد طارد", {}],
+    tolerate: ["t7ammalt t7ammal t7ammal t7ammal|تحملت تحمل تحمل تحمل", { lv: 'i' }],
+    hesitate: ["tradadt tradad tradad tradad|ترددت تردد تردد تردد", { lv: 'i' }],
+    persuade: ["agna3t agna3 gni3 igni3|أقنعت أقنع قنع أقنع", { lv: 'i' }],
+    dip: ["3'ammast 3'ammas 3'ammis 3'ammis|غمست غمس غمس غمس", {}],
+    restore: ["rajja3t rajja3 rajji3 rajji3|رجعت رجع رجع رجع", {}],
+    possess: ["malakt malak mlik imlik|ملكت ملك ملك املك", { lv: 'i' }],
+    purchase: ["=buy", {}],
+    humiliate: ["dhallalt dhallal dhallil dhallil|ذللت ذلل ذلل ذلل", {}],
+    adore: ["3ashagt 3ashag 3shag i3shag|عشقت عشق عشق اعشق", { lv: 'a' }],
+    urge_v: ["7aththait 7athth 7ithth 7ithth|حثيت حث حث حث", {}],
+    slaughter_v: ["dhiba7t dhiba7 dhba7 idhba7|ذبحت ذبح ذبح اذبح", { lv: 'a' }],
+    resolve: ["=solve", {}],
+    consult: ["istashart istashaar stasheer istasheer|استشرت استشار استشير استشر", { lv: 'i' }],
+    vow_v: ["nadhart nadhar ndhir indhir|نذرت نذر نذر انذر", { lv: 'i' }],
+    refer: ["7awwalt 7awwal 7awwil 7awwil|حولت حول حول حول", { to: 'li' }],
+    dispatch: ["arsalt arsal arsil arsil|أرسلت أرسل أرسل أرسل", {}],
+    lure: ["3'arrait 3'arra 3'arri 3'arri|غريت غرى غري غري", {}],
+    haul: ["jarrait jarr jurr jurr|جريت جر جر جر", {}],
+    strain_v: ["ajhadt ajhad ajhid ajhid|أجهدت أجهد أجهد أجهد", {}],
+    rally_v: ["tjamma3t tjamma3 tjamma3 tjamma3|تجمعت تجمع تجمع تجمع", { lv: 'i' }],
+    pose_v: ["wagaft wagaf wgaf oogaf|وقفت وقف وقف اوقف", { lv: 'i' }],
+    breed_v: ["rabbait rabba rabbi rabbi|ربيت ربى ربي ربي", { past: 'bred', pp: 'bred' }],
+    disagree: ["i5talaft i5talaf 5tilif i5tilif|اختلفت اختلف اختلف اختلف", { lv: 'i', with: 'wiyya' }],
+    hush_v: ["sakatt sakat skit iskit|سكت سكت سكت اسكت", { lv: 'i' }],
+    howl: ["3await 3awa 3awi i3wi|عويت عوى عوي اعو", { lv: 'i' }],
+    growl: ["za2art za2ar z2ir iz2ir|زأرت زأر زئر ازئر", { lv: 'i' }],
+    purr: ["5ar5art 5ar5ar 5ar5ir 5ar5ir|خرخرت خرخر خرخر خرخر", {}],
+    meow: ["mawmawt mawmaw mawmiw mawmiw|موموت مومو مومو مومو", {}],
+    hiss: ["fa77ait fa77 fi77 fi77|فحيت فح فح فح", {}],
+    buzz: ["6ann 6ann 6inn 6inn|طن طن طن طن", {}],
+    glow: ["twahhajt twahhaj twahhaj twahhaj|توهجت توهج توهج توهج", { lv: 'i' }],
+    sparkle: ["lama3t lama3 lma3 ilma3|لمعت لمع لمع المع", { lv: 'a' }],
+    fade: ["bihatt bihat bhat ibhat|بهتت بهت بهت ابهت", { lv: 'a' }],
+    emerge: ["6ila3t 6ila3 6la3 i6la3|طلعت طلع طلع اطلع", { lv: 'a' }],
+    arise: ["6ila3t 6ila3 6la3 i6la3|طلعت طلع طلع اطلع", { past: 'arose', pp: 'arisen', lv: 'a' }],
+  };
+  const X5_ADVS = {
+    awhile: "shway|شوي", equally: "bil-mithl|بالمثل", strongly: "*bshidda|بشدة", lightly: "bshway|بشوي", sharply: "bi-7idda|بحدة", beautifully: "bshakil 7ilu|بشكل حلو",
+    mentally: "nafsiyyan|نفسياً", physically: "jasadiyyan|جسدياً", emotionally: "3aa6ifiyyan|عاطفياً", financially: "maaliyyan|مالياً", importantly: "il-ahamm|الأهم", versus: "9'idd|ضد",
+    minus: "naagi9|ناقص", plus_: "zaayid|زايد", aside: "3ala janb|على جنب", nowadays: "hal ayyaam|هالأيام", formerly: "gabil|قبل", lately_: "hal ayyaam|هالأيام",
+    hereby: "bhadha|بهذا", thereby: "wbchidhi|وبچذي", likewise: "bil-mithl|بالمثل", otherwise_: "wila|وإلا", meanwhile_: "fi nafs il-wagt|في نفس الوقت",
+  };
+  const X5_FIXED = {
+    'for your sake': A3("3ashaanak|عشانك", "3ashaanich|عشانج", "3ashaankum|عشانكم"), 'for my sake': "3ashaani|عشاني", 'for his sake': "3ashaana|عشانه", 'for her sake': "3ashaanha|عشانها",
+    'for our sake': "3ashaanna|عشاننا", 'for their sake': "3ashaanhum|عشانهم", 'for the sake of': "3ashaan|عشان", "for god's sake": "bil-laah 3alaik|بالله عليك", 'for gods sake': "bil-laah 3alaik|بالله عليك",
+    'for god sake': "bil-laah 3alaik|بالله عليك", "for heaven's sake": "bil-laah 3alaik|بالله عليك", 'for heavens sake': "bil-laah 3alaik|بالله عليك", 'god almighty': "ya allah|يا الله",
+    'feel free to': A3("la titraddad|لا تتردد", "la titraddadeen|لا تترددين", "la titraddadoon|لا تترددون"), 'more importantly': "wil-ahamm|والأهم", 'most importantly': "wil-ahamm|والأهم",
+    'nailed it': "9'abba6t-ha|ضبطتها", 'you nailed it': A3("9'abba6t-ha|ضبطتها", "9'abba6tee-ha|ضبطتيها", "9'abba6too-ha|ضبطتوها"), 'i nailed it': "9'abba6t-ha|ضبطتها",
+    'hush': A3("iskit|اسكت", "iskiti|اسكتي", "iskitoo|اسكتوا"), 'howdy': "hala|هلا", 'kiddo': "ya walad|يا ولد", 'sweetie': A3("7abeebi|حبيبي", "7abeebti|حبيبتي", "7abaaybi|حبايبي"),
+    'merry christmas': "3eed meelaad majeed|عيد ميلاد مجيد", 'your highness': "9aa7ib is-sumuww|صاحب السمو", 'your majesty': "jalaalatak|جلالتك", 'your honor': "7a9'rat il-gaa9'i|حضرة القاضي",
+    'your honour': "7a9'rat il-gaa9'i|حضرة القاضي", 'your excellency': "ma3aaleek|معاليك", 'real estate': "3agaaraat|عقارات", 'boarding pass': "boarding pass|بوردنق باس",
+    'take into consideration': "5idh bi3tibaarak|خذ باعتبارك", 'take into account': "5idh bi3tibaarak|خذ باعتبارك", 'i have a hunch': "3indi i7saas|عندي إحساس", 'far better': "a7san b-wayed|أحسن بوايد",
+    'far more': "akthar b-wayed|أكثر بوايد", 'far worse': "ashyan b-wayed|أشين بوايد", 'even better': "a7san ba3ad|أحسن بعد", 'even more': "akthar ba3ad|أكثر بعد", 'even worse': "ashyan ba3ad|أشين بعد",
+    'even less': "agal ba3ad|أقل بعد", 'aside from': "3'air|غير", 'beyond that': "akthar min chidhi|أكثر من چذي", 'come along': A3("ta3aal wiyyaay|تعال وياي", "ta3aali wiyyaay|تعالي وياي", "ta3aaloo wiyyaay|تعالوا وياي"),
+    'the slightest': "adna|أدنى", 'not the slightest idea': "wala adna fikra|ولا أدنى فكرة", 'my dearest': "3azeezi|عزيزي", 'in the meanwhile': "fi nafs il-wagt|في نفس الوقت",
+    'the least you can do': "agal shay tigdar tsaweeh|أقل شي تقدر تسويه", 'at the very least': "3ala il-agal|على الأقل", 'to say the least': "3ala il-agal|على الأقل", 'last but not least': "wa5eeran wmob aa5iran|وأخيراً ومب آخراً",
+    'in the long run': "3ala il-madaa il-ba3eed|على المدى البعيد", 'in the short term': "3ala il-madaa il-greeb|على المدى القريب", 'on the other hand': "min naa7ya thaanya|من ناحية ثانية", 'on one hand': "min naa7ya|من ناحية",
+    'in other words': "ya3ni|يعني", 'that is to say': "ya3ni|يعني", 'as a matter of fact': "bil-7ageega|بالحقيقة", 'as far as i know': "3ala 7asab 3ilmi|على حسب علمي", 'as far as i can tell': "3ala 7asab ma ashoof|على حسب ما أشوف",
+    'as far as i am concerned': "bin-nisba li|بالنسبة لي", 'for what it is worth': "3ala kil 7aal|على كل حال", 'at the end of the day': "fil-a5eer|في الأخير", 'when it comes to': "lamma yiyi il-kalaam 3an|لما ييي الكلام عن",
+    'in terms of': "min naa7yat|من ناحية", 'with respect to': "b5u9oo9|بخصوص", 'in light of': "3ala 9'aw|على ضو", 'in the event of': "fi 7aalat|في حالة", 'in case of': "fi 7aalat|في حالة",
+    'by the time': "lain|لين", 'in no time': "b-sur3a|بسرعة", 'from time to time': "min wagt lil-thaani|من وقت للثاني", 'all of a sudden': "fajaa2tan|فجأة", 'out of the blue': "fajaa2tan|فجأة",
+    'out of nowhere': "min wain ma adri|من وين ما أدري", 'in the middle of nowhere': "fi makaan ma feeh a7ad|في مكان ما فيه أحد", 'once and for all': "marra wa7da wlil-abad|مرة وحدة وللأبد", 'sooner than expected': "asra3 min il-mutawagga3|أسرع من المتوقع",
+    'better late than never': "an tiyi mit2a55ir a7san min inn ma tiyi|أن تيي متأخر أحسن من إن ما تيي", 'easier said than done': "il-kalaam as-hal min il-fi3l|الكلام أسهل من الفعل", 'it is what it is': "hadha illi feeh|هذا اللي فيه",
+    'whatever it takes': "mahma kallaf il-amr|مهما كلف الأمر", 'no matter what': "mahma 9aar|مهما صار", 'no matter how': "mahma|مهما", 'no matter where': "wain ma|وين ما", 'no matter when': "mita ma|متى ما", 'no matter who': "min ma|من ما",
+    'against all odds': "ra3'm kil shay|رغم كل شي", 'at any cost': "mahma kallaf|مهما كلف", 'at all costs': "mahma kallaf|مهما كلف", 'under no circumstances': "wala b-ay 7aal|ولا بأي حال", 'by all means': "akeed|أكيد",
+    'by no means': "abadan|أبداً", 'in no way': "abadan|أبداً", 'needless to say': "ma yi7taaj agool|ما يحتاج أقول", 'it goes without saying': "ma yi7taaj kalaam|ما يحتاج كلام", 'to be honest with you': "ba9aara7a|بصراحة",
+    'if i were you': "law ana mkaanak|لو أنا مكانك", 'if i was you': "law ana mkaanak|لو أنا مكانك", 'in my shoes': "fi makaani|في مكاني", 'in your shoes': "fi makaanak|في مكانك", 'put yourself in my shoes': A3("7u66 nafsak mkaani|حط نفسك مكاني", "7u66i nafsich mkaani|حطي نفسج مكاني", "7u66oo nafskum mkaani|حطوا نفسكم مكاني"),
+  };
+  Object.assign(X5_FIXED, { 'each of them': "kil wa7id minhum|كل واحد منهم", 'each of us': "kil wa7id minna|كل واحد منا", 'each of you': "kil wa7id minkum|كل واحد منكم", 'both of them': "ithnainhum|اثنينهم", 'both of us': "ithnainna|اثنيننا", 'both of you': "ithnainkum|اثنينكم",
+    'one of them': "wa7id minhum|واحد منهم", 'one of us': "wa7id minna|واحد منا", 'one of you': "wa7id minkum|واحد منكم", 'some of them': "ba39'hum|بعضهم", 'some of us': "ba39'na|بعضنا", 'some of you': "ba39'kum|بعضكم",
+    'all of them': "kilhum|كلهم", 'all of us': "kilna|كلنا", 'all of you': "kilkum|كلكم", 'none of us': "wala wa7id minna|ولا واحد منا", 'none of you': "wala wa7id minkum|ولا واحد منكم", 'most of them': "a3'labhum|أغلبهم",
+    'most of us': "a3'labna|أغلبنا", 'most of you': "a3'labkum|أغلبكم", 'the two of us': "i7na il-ithnain|إحنا الاثنين", 'the three of us': "i7na ith-thalaatha|إحنا الثلاثة", 'the two of them': "hum il-ithnain|هم الاثنين", 'the two of you': "intum il-ithnain|انتم الاثنين",
+    'a lot of them': "wayed minhum|وايد منهم", 'a lot of us': "wayed minna|وايد منا", 'a lot of you': "wayed minkum|وايد منكم", 'many of them': "wayed minhum|وايد منهم", 'many of us': "wayed minna|وايد منا", 'few of them': "shway minhum|شوي منهم",
+    'half of them': "nu9hum|نصهم", 'half of us': "nu9na|نصنا", 'half of it': "nu9ah|نصه", 'all of it': "killah|كله", 'some of it': "shway minnah|شوي منه", 'most of it': "a3'labah|أغلبه", 'none of it': "wala shay minnah|ولا شي منه", 'part of it': "juz2 minnah|جزء منه",
+    'the rest of it': "baageeh|باقيه", 'the rest of them': "baageehum|باقيهم", 'the rest of us': "baageena|باقينا", 'the rest of you': "baageekum|باقيكم", 'the rest': "il-baagi|الباقي", 'i said so': "gilt chidhi|قلت چذي", 'because i said so': "3ashaan gilt chidhi|عشان قلت چذي",
+    'i told you so': "gilt lak|قلت لك", 'the king of kings': "malik il-mulook|ملك الملوك" });
+  Object.assign(X5_NOUNS, { screenshot: "screenshot screenshotaat m|سكرين_شوت سكرين_شوتات", heal: "heal healaat m|هيل هيلات", nerf: "nerf nerfaat m|نيرف نيرفات", buff: "buff buffaat m|بف بفات", troll: "troll trolls mh|ترول ترولز",
+    restart: "restart restart m|ريستارت ريستارت", reset: "reset reset m|ريست ريست", refresh: "refresh refresh m|ريفرش ريفرش", block: "block blockaat m|بلوك بلوكات", spam: "spam spam m|سبام سبام", teleport: "teleport teleport m|تيليبورت تيليبورت",
+    glitch: "glitch glitchaat m|قلتش قلتشات", mute: "mute mute m|ميوت ميوت", tag: "tag tagaat m|تاق تاقات", scroll: "scroll scrollaat m|سكرول سكرولات", zoom: "zoom zoom m|زوم زوم", scan: "scan scanaat m|سكان سكانات",
+    filter: "filter filteraat m|فلتر فلترات", format: "format format m|فورمات فورمات", prank: "mgalb mgaalib m|مقلب مقالب", bluff: "bluff bluff m|بلف بلف", flex: "flex flex m|فلكس فلكس", patrol: "dawriyya dawriyyaat f|دورية دوريات", skip: "skip skip m|سكب سكب" });
+  Object.assign(X5_VERBS, { tend: ["i3tanait i3tana 3tini i3tini|اعتنيت اعتنى اعتني اعتن", { lv: 'i', obj: 'b', objNP: 'b' }] });
+  Object.assign(X5_ADJS, { dearest: "^a3azz|أعز", operating: "shaghghaal shaghghaala shaghghaaleen|شغال شغالة شغالين", 'turned off': "6aafi 6aafya 6aafyeen|طافي طافية طافيين", existing: "mawjood mawjooda mawjoodeen|موجود موجودة موجودين" });
+  Object.assign(MULTI, { 'the rest of': { t: 'fixed', az: 'baagi', ar: 'باقي', key: 'the rest of' }, 'the number of': { t: 'fixed', az: '3adad', ar: 'عدد', key: 'the number of' }, 'the top of': { t: 'prep', key: 'a3la', eng: 'x' }, 'the amount of': { t: 'fixed', az: 'kammiyyat', ar: 'كمية', key: 'the amount of' } });
+  Object.assign(PREP_AR, { a3la: 'أعلى' });
+  const X5_NOUN_ALIAS = { folk: 'folks', buddy_: 'bud', relations: 'relation', vows: 'vow', jaws: 'jaw', owls: 'owl', rugs: 'rug', barriers: 'barrier', trays: 'tray', stains: 'stain', violations: 'violation',
+    shades: 'shade', rivals: 'rival', residents: 'resident', donors: 'donor', buyers: 'buyer', prophets: 'prophet', orphans: 'orphan', addicts: 'addict', musicians: 'musician', specialists: 'specialist',
+    feathers_: 'feather', olives: 'olive', dots: 'dot', gaps: 'gap', topics: 'topic', sketches: 'sketch', posters: 'poster', cigars: 'cigar', mugs: 'mug', fountains: 'fountain', jeeps: 'jeep',
+    volcanoes: 'volcano', volcanos: 'volcano', yachts: 'yacht', ambushes: 'ambush', examinations: 'examination', nicknames: 'nickname', scenarios: 'scenario', calendars: 'calendar', balconies: 'balcony',
+    melodies: 'melody', swamps: 'swamp', torches: 'torch', stalls: 'stall', panels: 'panel', sequences: 'sequence', umbrellas: 'umbrella', earthquakes: 'earthquake', echoes: 'echo', manuals: 'manual',
+    pennies: 'penny', pence: 'penny', saints: 'saint', priests: 'priest', mayors: 'mayor', sheriffs: 'sheriff', jerks: 'jerk', freaks: 'freak', estates: 'estate', reservations: 'reservation',
+    hundreds: 'hundred', thousands: 'thousand', millions: 'million', billion: 'million_', hunches: 'hunch', herds: 'herd', wigs: 'wig', gowns: 'gown', swans: 'swan', bolts: 'bolt', doses: 'dose',
+    autographs: 'autograph', pumpkins: 'pumpkin', anchors: 'anchor', urges: 'urge', razors: 'razor', mutants: 'mutant', racks: 'rack', pigeons: 'pigeon', violins: 'violin', lifestyles: 'lifestyle',
+    realms: 'realm', dimensions: 'dimension', bodyguards: 'bodyguard', documentaries: 'documentary', shipments: 'shipment', vests: 'vest', mechanics: 'mechanic', fares: 'fare', saddles: 'saddle',
+    breakdowns: 'breakdown', ambitions: 'ambition', duels: 'duel', carnivals: 'carnival', syndromes: 'syndrome', canes: 'cane', orchestras: 'orchestra', cottages: 'cottage', backyards: 'backyard',
+    landlords: 'landlord', laboratories: 'laboratory', labs: 'laboratory', lab: 'laboratory', rogues: 'rogue', assassins: 'assassin', rigs: 'rig', depths: 'depth', legacies: 'legacy', tumors: 'tumor', tumours: 'tumour' };
+  Object.assign(ADJ_PREP, { committed: { to: 'li' }, suitable: { for: 'li' }, relevant: { to: 'b' }, identical: { to: 'li' }, hostile: { to: 'li' }, frustrated: { with: 'min' }, humiliated: { by: 'min' }, final: {} });
+  Object.assign(ADJ_ALIAS, { drunken_: 'drunk', bizarre_: 'strange', fierce_: 'vicious', hollow_: 'empty', lethal_: 'fatal', efficient_: 'effective', modest_: 'humble', amusing_: 'funny', marvelous_: 'amazing', marvellous_: 'amazing' });
+  Object.assign(PREP, { along: '3ala_6ool', except: 'illa', across: '3abr', within: '5ilaal', beyond: 'wara', versus: "9'idd", minus: 'naagi9', plus: 'zaayid', besides: "3'air", excluding: "3'air", including: 'bma_feeh', regarding: 'b5u9oo9', concerning: 'b5u9oo9', unlike: '3aks', amid: 'wasa6', amongst: 'bain', throughout: '6ool', underneath: 'ta7t', beneath: 'ta7t', alongside: 'yamm', opposite: 'mgaabil', inside_: 'daa5il', outside_: 'barra' });
+  Object.assign(PREP_AR, { '3ala_6ool': 'على طول', illa: 'إلا', '3abr': 'عبر', '5ilaal': 'خلال', naagi9: 'ناقص', zaayid: 'زايد', "3'air": 'غير', bma_feeh: 'بما فيه', b5u9oo9: 'بخصوص', '3aks': 'عكس', wasa6: 'وسط', '6ool': 'طول', daa5il: 'داخل', barra: 'برا', mgaabil: 'مقابل' });
+  Object.assign(CONJ, { nor: ['wala', 'ولا'], lest: ['la', 'لا'], provided: ['bshar6', 'بشرط'], supposing: ['law', 'لو'], till_: ['lain', 'لين'] });
+  Object.assign(MULTI, { 'a bunch of': { t: 'quant', q: 'wayed' }, 'bunch of': { t: 'quant', q: 'wayed' }, 'a handful of': { t: 'quant', q: 'kam' }, 'a couple of': { t: 'quant', q: 'kam' }, 'couple of': { t: 'quant', q: 'kam' },
+    'a number of': { t: 'quant', q: 'kam' }, 'a ton of': { t: 'quant', q: 'wayed' }, 'tons of': { t: 'quant', q: 'wayed' }, 'loads of': { t: 'quant', q: 'wayed' }, 'a load of': { t: 'quant', q: 'wayed' }, 'a great deal of': { t: 'quant', q: 'wayed' },
+    'in spite of': { t: 'prep', key: "ra3'm", eng: 'in spite of' }, 'regardless of': { t: 'prep', key: "ra3'm", eng: 'regardless of' }, 'on behalf of': { t: 'prep', key: 'niyaabatan_3an', eng: 'on behalf of' },
+    'according to': { t: 'prep', key: '7asab', eng: 'according to' }, 'on top of': { t: 'prep', key: 'foog', eng: 'on top of' }, 'in the middle of': { t: 'prep', key: 'fi_nu9', eng: 'in the middle of' },
+    'ahead of': { t: 'prep', key: 'gabil', eng: 'ahead of' }, 'along with': { t: 'prep', key: 'wiyya', eng: 'along with' }, 'as for': { t: 'prep', key: 'bin-nisba_li', eng: 'as for' }, 'thanks to': { t: 'prep', key: "bfa9'l", eng: 'thanks to' },
+    'in favor of': { t: 'prep', key: 'ma3', eng: 'in favor of' }, 'in favour of': { t: 'prep', key: 'ma3', eng: 'in favour of' }, 'in charge of': { t: 'prep', key: 'mas2ool_3an', eng: 'in charge of' }, 'in search of': { t: 'prep', key: 'ydawwir_3ala', eng: 'in search of' },
+    'on account of': { t: 'prep', key: '3ashaan', eng: 'on account of' }, 'by means of': { t: 'prep', key: '3an_6areeg', eng: 'by means of' }, 'prior to': { t: 'prep', key: 'gabil', eng: 'prior to' }, 'due to': { t: 'prep', key: 'bsabab', eng: 'due to' },
+    'owing to': { t: 'prep', key: 'bsabab', eng: 'owing to' }, 'apart from': { t: 'prep', key: "3'air", eng: 'apart from' }, 'other than': { t: 'prep', key: "3'air", eng: 'other than' }, 'except for': { t: 'prep', key: 'illa', eng: 'except for' },
+    'as well as': { t: 'conj', az: 'wba3ad', ar: 'وبعد' }, 'as long as': { t: 'conj', az: '6ool ma', ar: 'طول ما' }, 'as soon as': { t: 'conj', az: 'awwal ma', ar: 'أول ما' }, 'even if': { t: 'conj', az: '7atta law', ar: 'حتى لو' },
+    'even though': { t: 'conj', az: 'ma3a inn', ar: 'مع إن' }, 'in case': { t: 'conj', az: 'fi 7aal', ar: 'في حال' }, 'so that': { t: 'conj', az: '3ashaan', ar: 'عشان' }, 'in order to': { t: 'conj', az: '3ashaan', ar: 'عشان' },
+    'as if': { t: 'conj', az: 'ka2inn', ar: 'كأن' }, 'as though': { t: 'conj', az: 'ka2inn', ar: 'كأن' }, 'now that': { t: 'conj', az: 'il7een w', ar: 'الحين و' }, 'the moment': { t: 'conj', az: 'awwal ma', ar: 'أول ما' } });
+  Object.assign(PREP_AR, { niyaabatan_3an: 'نيابةً عن', '7asab': 'حسب', 'bin-nisba_li': 'بالنسبة ل', "bfa9'l": 'بفضل', ma3: 'مع', mas2ool_3an: 'مسؤول عن', ydawwir_3ala: 'يدور على', bsabab: 'بسبب', "ra3'm": 'رغم' });
+  for (const [k, v] of Object.entries(X5_NOUNS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_RAW) && !(kk + '_' in NOUN_RAW)) NOUN_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X5_ADJS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADJ_RAW) && !(kk + '_' in ADJ_RAW)) ADJ_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X5_VERBS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in VERB_RAW) && !(kk + '_' in VERB_RAW)) VERB_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X5_ADVS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADV_RAW) && !(kk + '_' in ADV_RAW)) ADV_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X5_FIXED)) { const kk = k.trim(); if (!(kk in FIXED_RAW)) FIXED_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X5_NOUN_ALIAS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_ALIAS)) NOUN_ALIAS[kk] = v; }
+  for (const k of Object.keys(X5_ADJS)) if (k.includes(' ') && !(k in MULTI)) MULTI[k] = { t: 'adj', key: k };
+  const X6_NOUNS = {
+    odds: "i7timaalaat i7timaalaat f|احتمالات احتمالات", breach: "5arg 5uroogaat m|خرق خروقات", compound: "mujamma3 mujamma3aat m|مجمع مجمعات", morgue: "mashra7a mashaari7 f|مشرحة مشارح",
+    transmission: "irsaal irsaal m|إرسال إرسال", smack: "kaff kfoof m|كف كفوف", settlement: "taswiya taswiyaat f|تسوية تسويات", circuit: "daa2ira dawaa2ir f|دائرة دوائر",
+    choir: "kooraal kooraalaat m|كورال كورالات", courtesy: "lu6f lu6f m|لطف لطف", hatch: "fat7a fat7aat f|فتحة فتحات", quid: "jinaih jinaihaat m|جنيه جنيهات",
+    pastor: "gissees gusus mh|قسيس قسس", rupee: "roobiyya roobiyyaat f|روبية روبيات", evolution: "ta6awwur ta6awwur m|تطور تطور", bartender: "baarman baarmanaat mh|بارمان بارمانات",
+    shuttle: "baa9 baa9aat m|باص باصات", perimeter: "mu7ee6 mu7ee6aat m|محيط محيطات", representative: "mumaththil mumaththileen mh|ممثل ممثلين", scoundrel: "nadhl andhaal mh|نذل أنذال",
+    pad: "daftar dafaatir m|دفتر دفاتر", cue: "ishaara ishaaraat f|إشارة إشارات", pursuit: "mu6aarada mu6aaradaat f|مطاردة مطاردات", dash: "sharr6a sharr6aat f|شرطة شرطات",
+    senate: "majlis_ish-shuyoo5 majlis_ish-shuyoo5 m|مجلس_الشيوخ مجلس_الشيوخ", abortion: "ijhaa9' ijhaa9' m|إجهاض إجهاض", sting: "las3a las3aat f|لسعة لسعات", expedition: "ri7la_istikshaafiyya ri7laat_istikshaafiyya f|رحلة_استكشافية رحلات_استكشافية",
+    plea: "tawassul tawassulaat m|توسل توسلات", maker: "9aani3 9unnaa3 mh|صانع صناع", marsh: "mustanga3 mustanga3aat m|مستنقع مستنقعات", peg: "watad awtaad m|وتد أوتاد",
+    rum: "ram ram m|رم رم", salvation: "5alaa9 5alaa9 m|خلاص خلاص", globe: "kura_ar9'iyya kuraat_ar9'iyya f|كرة_أرضية كرات_أرضية", precinct: "mar-kaz_shur6a maraakiz_shur6a m|مركز_شرطة مراكز_شرطة",
+    orphanage: "daar_aytaam door_aytaam f|دار_أيتام دور_أيتام", gypsy: "3'ajari 3'ajar mh|غجري غجر", maiden: "3adhra 3adhaara fh|عذرا عذارى", congressman: "naa2ib nuwwaab mh|نائب نواب",
+    cardinal: "kaardinaal kaardinaalaat mh|كاردينال كاردينالات", enforcement: "tanfeedh tanfeedh m|تنفيذ تنفيذ", marijuana: "7asheesh 7asheesh m|حشيش حشيش", chorus: "koorus koorus m|كورس كورس",
+    disposal: "ta9arruf ta9arruf m|تصرف تصرف", particle: "juzay2 juzay2aat m|جزيء جزيئات", pod: "kabsoola kabsoolaat f|كبسولة كبسولات", phantom: "shaba7 ashbaa7 m|شبح أشباح",
+    outcome: "nateeja nataayij f|نتيجة نتايج", extent: "7add 7udood m|حد حدود", stack: "koom akwaam m|كوم أكوام", wheat: "gam7 gam7 m|قمح قمح",
+    departure: "mu3'aadara mu3'aadaraat f|مغادرة مغادرات", kin: "ahal ahal mh|أهل أهل", surf: "rukoob_amwaaj rukoob_amwaaj m|ركوب_أمواج ركوب_أمواج", kilometer: "keelo keelowaat m|كيلو كيلوات",
+    kilometre: "keelo keelowaat m|كيلو كيلوات", spaghetti: "spageeti spageeti m|سباقيتي سباقيتي", chili: "filfil_7aarr filfil_7aarr m|فلفل_حار فلفل_حار", hay: "gashsh gashsh m|قش قش",
+    sniper: "gannaa9 gannaa9a mh|قناص قناصة", horizon: "ufug aafaag m|أفق آفاق", twilight: "3'asag 3'asag m|غسق غسق", reflection: "in3ikaas in3ikaasaat m|انعكاس انعكاسات",
+    wage: "ajr ujoor m|أجر أجور", waist: "5a9r 5u9oor m|خصر خصور", disappointment: "5aibat_amal 5aibaat_amal f|خيبة_أمل خيبات_أمل", voyage: "ri7la ri7laat f|رحلة رحلات",
+    sunlight: "9'aw_ish-shams 9'aw_ish-shams m|ضو_الشمس ضو_الشمس", casualty: "i9aaba i9aabaat f|إصابة إصابات", mattress: "farsha farshaat f|فرشة فرشات", marketing: "tasweeg tasweeg m|تسويق تسويق",
+    occupation: "i7tilaal i7tilaal m|احتلال احتلال", exhibit: "ma3roo9' ma3roo9'aat m|معروض معروضات", urine: "bool bool m|بول بول", ingredient: "mukawwin mukawwinaat m|مكون مكونات",
+    hurricane: "i39aar a3aa9eer m|إعصار أعاصير", limo: "leemoozeen leemoozeenaat f|ليموزين ليموزينات", spa: "spa spa m|سبا سبا", grocery: "bagaala bagaalaat f|بقالة بقالات",
+    terminal: "9aala 9aalaat f|صالة صالات", exhibition: "ma3ra9' ma3aari9' m|معرض معارض", disappearance: "i5tifaa i5tifaa m|اختفا اختفا", pier: "ra9eef ar9ifa m|رصيف أرصفة",
+    betrayal: "5iyaana 5iyaanaat f|خيانة خيانات", psychology: "3ilm_in-nafs 3ilm_in-nafs m|علم_النفس علم_النفس", keeper: "7aaris 7urraas mh|حارس حراس", collector: "jaami3 jaami3een mh|جامع جامعين",
+    grudge: "7igd a7gaad m|حقد أحقاد", lid: "3'a6a 3'a6ayaat m|غطا غطايات", follower: "mutaabi3 mutaabi3een mh|متابع متابعين", submarine: "3'awwaa9a 3'awwaa9aat f|غواصة غواصات",
+    joker: "jokar jokaraat m|جوكر جوكرات", opposition: "mu3aara9'a mu3aara9'a f|معارضة معارضة", hose: "lay layaat m|لي ليات", partnership: "sharaaka sharaakaat f|شراكة شراكات",
+    astronaut: "raa2id_fa9'aa ruwwaad_fa9'aa mh|رائد_فضا رواد_فضا", porch: "balkoona balkoonaat f|بلكونة بلكونات", garlic: "thoom thoom m|ثوم ثوم", ammunition: "dha5eera dha5aayir f|ذخيرة ذخاير",
+    ammo: "dha5eera dha5aayir f|ذخيرة ذخاير", sushi: "sooshi sooshi m|سوشي سوشي", setup: "setup setup m|ستب ستب", handwriting: "5a66 5u6oo6 m|خط خطوط",
+    virtue: "fa9'eela fa9'aayil f|فضيلة فضايل", lawsuit: "da3wa da3aawi f|دعوى دعاوي", mustache: "shaarib shawaarib m|شارب شوارب", moustache: "shaarib shawaarib m|شارب شوارب",
+    sultan: "sul6aan salaa6een mh|سلطان سلاطين", workshop: "warsha warash f|ورشة ورش", nerd: "nerd nerds mh|نيرد نيردز", crook: "na99aab na99aabeen mh|نصاب نصابين",
+    battlefield: "saa7at_ma3raka saa7aat_ma3raka f|ساحة_معركة ساحات_معركة", stash: "ma5zoon ma5zoonaat m|مخزون مخزونات", foreigner: "ajnabi ajaanib mh|أجنبي أجانب", mint: "ni3naa3 ni3naa3 m|نعناع نعناع",
+    inheritance: "wiraatha wiraatha f|وراثة وراثة", recognition: "i3tiraaf i3tiraaf m|اعتراف اعتراف", ferry: "3abbaara 3abbaaraat f|عبارة عبارات", portal: "portal portalaat m|بورتال بورتالات",
+    sensation: "i7saas a7aasees m|إحساس أحاسيس", delight: "bahja bahja f|بهجة بهجة", boundary: "7add 7udood m|حد حدود", caution: "7adhar 7adhar m|حذر حذر",
+    obligation: "iltizaam iltizaamaat m|التزام التزامات", sleeve: "kumm akmaam m|كم أكمام", confirmation: "ta2keed ta2keedaat m|تأكيد تأكيدات", mushroom: "fu6r fu6r m|فطر فطر",
+    millionaire: "milyooneer milyooneeriyya mh|مليونير مليونيرية", adoption: "tabanni tabanni m|تبني تبني", comet: "mudhannab mudhannabaat m|مذنب مذنبات", warmth: "difa difa m|دفا دفا",
+    doom: "halaak halaak m|هلاك هلاك", aisle: "mamarr mamarraat m|ممر ممرات", edition: "i9daar i9daaraat m|إصدار إصدارات", beggar: "shi77aat shi77aata mh|شحات شحاتة",
+    raven: "3'uraab 3'irbaan m|غراب غربان", spaceship: "safeenat_fa9'aa sufun_fa9'aa f|سفينة_فضا سفن_فضا", ant: "namla namil f|نملة نمل", tequila: "tekeela tekeela f|تكيلا تكيلا",
+    inquiry: "istifsaar istifsaaraat m|استفسار استفسارات", antique: "ti7fa tu7af f|تحفة تحف", employment: "taw6'eef taw6'eef m|توظيف توظيف", mule: "ba3'al bi3'aal m|بغل بغال",
+    local: "ma7alli ma7alliyyeen mh|محلي محليين", bunker: "mal-ja malaaji m|ملجأ ملاجئ", phenomenon: "6'aahira 6'awaahir f|ظاهرة ظواهر", ape: "gird grooda m|قرد قرود",
+    bruise: "kadma kadmaat f|كدمة كدمات", hometown: "balad balad m|بلد بلد", earring: "7alag 7ilgaan m|حلق حلقان", rookie: "mubtadi mubtadi2een mh|مبتدئ مبتدئين",
+    runner: "3addaa 3addaa2een mh|عداء عدائين", sponsor: "raa3i ru3aat mh|راعي رعاة", karate: "karaateh karaateh m|كاراتيه كاراتيه", grease: "sha7m shu7oom m|شحم شحوم",
+    dinosaur: "daynaa9oor daynaa9ooraat m|دايناصور دايناصورات", rebellion: "tamarrud tamarrudaat m|تمرد تمردات", barber: "7allaag 7allaageen mh|حلاق حلاقين",
+    sabotage: "ta5reeb ta5reeb m|تخريب تخريب", squirrel: "sinjaab sanaajeeb m|سنجاب سناجيب", werewolf: "mustadh2ib mustadh2ibeen mh|مستذئب مستذئبين", savior: "mu5alli9 mu5alli9een mh|مخلص مخلصين",
+    saviour: "mu5alli9 mu5alli9een mh|مخلص مخلصين", perfection: "kamaal kamaal m|كمال كمال", mentor: "murshid murshideen mh|مرشد مرشدين", enthusiasm: "7amaas 7amaas m|حماس حماس",
+    audio: "9oot 9oot m|صوت صوت", initiative: "mubaadara mubaadaraat f|مبادرة مبادرات", parrot: "babba3'aa babba3'aawaat m|ببغا ببغاوات", piggy: "5anzoor 5anaazeer m|خنزور خنازير",
+    funding: "tamweel tamweel m|تمويل تمويل", acquaintance: "ma3rifa ma3aarif mh|معرفة معارف", bedtime: "wagt_in-noom wagt_in-noom m|وقت_النوم وقت_النوم", rail: "sikka sikak f|سكة سكك",
+    rooster: "deech dyooch m|ديچ ديوچ", banker: "ma9rafi ma9rafiyyeen mh|مصرفي مصرفيين", bacteria: "bakteerya bakteerya f|بكتيريا بكتيريا", cupboard: "kabat kabataat m|كبت كبتات",
+    sanctuary: "malaadh malaadhaat m|ملاذ ملاذات", temptation: "i3'raa i3'raa2aat m|إغرا إغراءات", vibe: "vibe vibes m|فايب فايبز", scrap: "5urda 5urda f|خردة خردة",
+    lizard: "sa7liyya sa7aali f|سحلية سحالي", separation: "infi9aal infi9aal m|انفصال انفصال", intern: "mutadarrib mutadarribeen mh|متدرب متدربين", tab: "tab tabaat m|تاب تابات",
+    junkie: "mudmin mudmineen mh|مدمن مدمنين", carrier: "naagil naagileen mh|ناقل ناقلين", thirst: "3a6ash 3a6ash m|عطش عطش", pickup: "pickup pickupaat m|بيك_أب بيك_أبات",
+    spice: "bhaar bhaaraat m|بهار بهارات", caller: "muttasil muttasileen mh|متصل متصلين", knot: "3ugda 3ugad f|عقدة عقد", massacre: "majzara majaazir f|مجزرة مجازر",
+    herb: "3ushba a3shaab f|عشبة أعشاب", grenade: "gumbula_yadawiyya ganaabil_yadawiyya f|قنبلة_يدوية قنابل_يدوية", kilo: "keelo keelowaat m|كيلو كيلوات", nursery: "7a9'aana 7a9'aanaat f|حضانة حضانات",
+    protein: "brooteen brooteenaat m|بروتين بروتينات", elbow: "koo3 kee3aan m|كوع كيعان", mustard: "mastarda mastarda f|مسطردة مسطردة", terrace: "6arrma 6arrmaat f|طرمة طرمات",
+    transportation: "muwaa9alaat muwaa9alaat f|مواصلات مواصلات", lens: "3adasa 3adasaat f|عدسة عدسات", interference: "tadha55ul tadha55ulaat m|تدخل تدخلات", mourning: "7idaad 7idaad m|حداد حداد",
+    trainer: "mudarrib mudarribeen mh|مدرب مدربين", janitor: "farraash farraasheen mh|فراش فراشين", jackass: "7maar 7ameer mh|حمار حمير", reminder: "tadhkeer tadhkeeraat m|تذكير تذكيرات",
+    culprit: "il-faa3il il-faa3ileen mh|الفاعل الفاعلين", jasmine: "yaasmeen yaasmeen m|ياسمين ياسمين", womb: "ra7im ar7aam m|رحم أرحام", injustice: "6'ulm 6'ulm m|ظلم ظلم",
+    fracture: "kasr kusoor m|كسر كسور", insanity: "jinoon jinoon m|جنون جنون", peasant: "fallaa7 fallaa7een mh|فلاح فلاحين", blossom: "zahra zuhoor f|زهرة زهور",
+    agony: "3adhaab 3adhaab m|عذاب عذاب", shack: "kookh akwaa5 m|كوخ أكواخ", mold: "3afan 3afan m|عفن عفن", antidote: "tiryaag tiryaagaat m|ترياق ترياقات",
+    bunk: "sareer saraayir m|سرير سراير", graveyard: "magbara magaabir f|مقبرة مقابر", aspect: "jaanib jawaanib m|جانب جوانب", lemonade: "laimoon laimoon m|ليمون ليمون",
+    flour: "6i7een 6i7een m|طحين طحين", felony: "jinaaya jinaayaat f|جناية جنايات", substitute: "badeel badaayil m|بديل بدايل", splash: "rashsha rashshaat f|رشة رشات",
+    exile: "manfa manaafi m|منفى منافي", aspirin: "asbireen asbireen m|أسبرين أسبرين", drone: "drone drones m|درون درونز", province: "muqaa6a3a muqaa6a3aat f|مقاطعة مقاطعات",
+    triangle: "muthallath muthallathaat m|مثلث مثلثات", strawberry: "farawla farawla f|فراولة فراولة", token: "token tokens m|توكن توكنز", diagnosis: "tash5ee9 tash5ee9aat m|تشخيص تشخيصات",
+    extension: "tamdeed tamdeedaat m|تمديد تمديدات", scoop: "5abar_7a9ri a5baar_7a9riyya m|خبر_حصري أخبار_حصرية", hospitality: "9'iyaafa 9'iyaafa f|ضيافة ضيافة", survey: "istibyaan istibyaanaat m|استبيان استبيانات",
+    recommendation: "taw9iya taw9iyaat f|توصية توصيات", skeleton: "haikal_3a6'mi hayaakil_3a6'miyya m|هيكل_عظمي هياكل_عظمية", toll: "rasm rusoom m|رسم رسوم", spear: "rum7 rimaa7 m|رمح رماح",
+    petition: "3aree9'a 3araayi9' f|عريضة عرايض", baggage: "shuna6 shuna6 f|شنط شنط", scumbag: "7ageer 7ugara mh|حقير حقرا", tribute: "takreem takreemaat m|تكريم تكريمات",
+    claw: "mi5lab ma5aalib m|مخلب مخالب", donation: "tabarru3 tabarru3aat m|تبرع تبرعات", boxer: "mulaakim mulaakimeen mh|ملاكم ملاكمين", misfortune: "soo2_7a6' soo2_7a6' m|سوء_حظ سوء_حظ",
+    involvement: "tawarru6 tawarru6 m|تورط تورط", wilderness: "barriyya barriyya f|برية برية", dome: "gubba gibaab f|قبة قباب", tactic: "taktik taktikaat m|تكتيك تكتيكات",
+    grandparent: "jadd ajdaad mh|جد أجداد", biscuit: "baskoot baskoot m|بسكوت بسكوت", gorilla: "3'oreella 3'oreellaat f|غوريلا غوريلات", dynasty: "salaala salaalaat f|سلالة سلالات",
+    gardener: "bustaani bustaaniyya mh|بستاني بستانية", barracks: "thakana thakanaat f|ثكنة ثكنات", establishment: "mu2assasa mu2assasaat f|مؤسسة مؤسسات", lump: "kutla kutal f|كتلة كتل",
+    dwarf: "gazam agzaam mh|قزم أقزام", pint: "kaas kaasaat m|كاس كاسات", gaze: "na6'ra na6'raat f|نظرة نظرات", nuisance: "iz3aaj iz3aaj m|إزعاج إزعاج",
+    grandchild: "7afeed a7faad mh|حفيد أحفاد", rental: "eejaar eejaaraat m|إيجار إيجارات", vegetarian: "nabaati nabaatiyyeen mh|نباتي نباتيين", timer: "mu2aggit mu2aggitaat m|مؤقت مؤقتات",
+    athlete: "riyaa9'i riyaa9'iyyeen mh|رياضي رياضيين", slavery: "3uboodiyya 3uboodiyya f|عبودية عبودية", grove: "bustaan basaateen m|بستان بساتين", coverage: "ta3'6iya ta3'6iya f|تغطية تغطية",
+    hen: "dijaaja dijaaj f|دجاجة دجاج", pyramid: "haram ahraam m|هرم أهرام", trumpet: "boog abwaag m|بوق أبواق", debris: "7u6aam 7u6aam m|حطام حطام",
+    cement: "ismant ismant m|إسمنت إسمنت", comedian: "koomeedyaan koomeedyaanaat mh|كوميديان كوميديانات", harassment: "ta7arrush ta7arrush m|تحرش تحرش", monitoring: "muraaqaba muraaqaba f|مراقبة مراقبة",
+    housekeeper: "5addaama 5addaamaat fh|خدامة خدامات", artillery: "madfa3iyya madfa3iyya f|مدفعية مدفعية", cereal: "kornfleks kornfleks m|كورنفلكس كورنفلكس", portion: "7i99a 7i9a9 f|حصة حصص",
+    slit: "shagg shugoog m|شق شقوق", waltz: "faals faals m|فالس فالس", gag: "nukta nukat f|نكتة نكت", telescope: "tiliskoob tiliskoobaat m|تلسكوب تلسكوبات",
+    verse: "aaya aayaat f|آية آيات", babysitter: "jaleesat_a6faal jaleesaat_a6faal fh|جليسة_أطفال جليسات_أطفال", wit: "dhakaa dhakaa m|ذكا ذكا", bliss: "sa3aada sa3aada f|سعادة سعادة",
+    recorder: "musajjil musajjilaat m|مسجل مسجلات", turf: "man6iga manaa6ig f|منطقة مناطق", psychologist: "a5i9aa2i_nafsi a5i9aa2iyyeen_nafsiyyeen mh|أخصائي_نفسي أخصائيين_نفسيين", jock: "riyaa9'i riyaa9'iyyeen mh|رياضي رياضيين",
+    wrath: "3'a9'ab 3'a9'ab m|غضب غضب", jurisdiction: "i5ti9aa9 i5ti9aa9aat m|اختصاص اختصاصات", impulse: "indifaa3 indifaa3aat m|اندفاع اندفاعات", penguin: "ba6reeg ba6aareeg m|بطريق بطاريق",
+    nickel: "nikil nikil m|نيكل نيكل", rag: "5irga 5irag f|خرقة خرق", condolence: "ta3ziya ta3aazi f|تعزية تعازي", disrespect: "gillat_i7tiraam gillat_i7tiraam f|قلة_احترام قلة_احترام",
+    underworld: "3aalam_il-jareema 3aalam_il-jareema m|عالم_الجريمة عالم_الجريمة", marble: "ru5aam ru5aam m|رخام رخام", masterpiece: "tu7fa tu7af f|تحفة تحف", regime: "ni6'aam an6'ima m|نظام أنظمة",
+    contempt: "i7tigaar i7tigaar m|احتقار احتقار", batch: "duf3a duf3aat f|دفعة دفعات", compartment: "magsoora magaa9eer f|مقصورة مقاصير", hustle: "shaghal shaghal m|شغل شغل",
+    inmate: "sajeen sujana mh|سجين سجنا", scooter: "skootar skootaraat m|سكوتر سكوترات", viewer: "mushaahid mushaahideen mh|مشاهد مشاهدين", taco: "taako taako m|تاكو تاكو",
+    brigade: "liwa alwiya m|لوا ألوية", lookout: "muraaqib muraaqibeen mh|مراقب مراقبين", merchandise: "bi9'aa3a ba9'aayi3 f|بضاعة بضايع", duchess: "dooqa dooqaat fh|دوقة دوقات",
+    flock: "ga6ee3 gu63aan m|قطيع قطعان", glimpse: "lam7a lam7aat f|لمحة لمحات", compensation: "ta3wee9' ta3wee9'aat m|تعويض تعويضات", currency: "3umla 3umlaat f|عملة عملات",
+    medic: "mus3if mus3ifeen mh|مسعف مسعفين", sewer: "majaari majaari f|مجاري مجاري", hull: "haikal hayaakil m|هيكل هياكل", toad: "9'ifda3 9'afaadi3 m|ضفدع ضفادع",
+    moose: "moos moos m|موس موس", souvenir: "tidhkaar tidhkaaraat m|تذكار تذكارات", compass: "boo9la boo9laat f|بوصلة بوصلات", mercury: "zi2bag zi2bag m|زئبق زئبق",
+    brace: "daa3im dawaa3im m|داعم دواعم", thrust: "daf3a daf3aat f|دفعة دفعات", achievement: "injaaz injaazaat m|إنجاز إنجازات", monastery: "dair adyira m|دير أديرة",
+    recruit: "mujannad mujannadeen mh|مجند مجندين", creator: "mubdi3 mubdi3een mh|مبدع مبدعين", artery: "shiryaan sharaayeen m|شريان شرايين", distribution: "tawzee3 tawzee3 m|توزيع توزيع",
+    stereo: "stiryo stiryohaat m|ستريو ستريوهات", ark: "safeena sufun f|سفينة سفن", carpenter: "najjaar najjaareen mh|نجار نجارين", narcotic: "mu5addir mu5addiraat m|مخدر مخدرات",
+    slipper: "shib-shib shabaashib m|شبشب شباشب", footprint: "athar aathaar m|أثر آثار", pact: "3ahd 3uhood m|عهد عهود", preparation: "ta79'eer ta79'eeraat m|تحضير تحضيرات",
+    denial: "inkaar inkaar m|إنكار إنكار", flute: "naay naayaat m|ناي نايات", juvenile: "7adath a7daath mh|حدث أحداث", memo: "mudhakkira mudhakkiraat f|مذكرة مذكرات",
+    canvas: "gumaash agmisha m|قماش أقمشة", driveway: "madkhal madaakhil m|مدخل مداخل", kitten: "gi6wa gi6aawa f|قطوة قطاوة", shaft: "3amood a3mida m|عمود أعمدة",
+    sherry: "sheeri sheeri m|شيري شيري", overtime: "wagt_i9'aafi wagt_i9'aafi m|وقت_إضافي وقت_إضافي", resignation: "istigaala istigaalaat f|استقالة استقالات", madman: "majnoon majaaneen mh|مجنون مجانين",
+    reform: "i9laa7 i9laa7aat m|إصلاح إصلاحات", runway_: "madraj madaarij m|مدرج مدارج", mumbling: "tamtama tamtama f|تمتمة تمتمة", probe: "ta7geeg ta7geegaat m|تحقيق تحقيقات",
+    lone: "wa7eed wa7eedeen mh|وحيد وحيدين", acre: "fadaan fadaadeen m|فدان فدادين", cavalry: "fursaan fursaan mh|فرسان فرسان", battalion: "kateeba kataayib f|كتيبة كتايب",
+    stripper: "raagi9a raagi9aat fh|راقصة راقصات", assassination: "i3'tiyaal i3'tiyaalaat m|اغتيال اغتيالات", gong: "jars ajraas m|جرس أجراس", parish: "abrashiyya abrashiyyaat f|أبرشية أبرشيات",
+    squeal: "9arr5a 9arr5aat f|صرخة صرخات", bash: "7afla 7aflaat f|حفلة حفلات", platoon: "fa9eela fa9aayil f|فصيلة فصايل", rendezvous: "maw3id mawaa3eed m|موعد مواعيد",
+    grunt: "jundi junood mh|جندي جنود", guinea: "3'eenya 3'eenya f|غينيا غينيا", magistrate: "gaa9'i gu9'aa mh|قاضي قضاة", quantum: "kam kam m|كم كم",
+    discharge: "ta9ree7 ta9aaree7 m|تصريح تصاريح", lining: "bi6aana bi6aanaat f|بطانة بطانات", chancellor: "mustashaar mustashaareen mh|مستشار مستشارين", barb: "shooka shuwak f|شوكة شوك",
+    poppy: "5ash5aash 5ash5aash m|خشخاش خشخاش", hamlet: "garya guraa f|قرية قرى", pentagon: "il-bentaagon il-bentaagon m|البنتاغون البنتاغون", bidding: "muzaayada muzaayadaat f|مزايدة مزايدات",
+    tackle: "3arrgala 3arrgalaat f|عرقلة عرقلات", kilos: "keelowaat keelowaat m|كيلوات كيلوات", flowing: "tadaffug tadaffug m|تدفق تدفق", gunshot: "6alga 6algaat f|طلقة طلقات",
+    gunfire: "i6laag_naar i6laag_naar m|إطلاق_نار إطلاق_نار", champagne: "shambaanya shambaanya f|شمبانيا شمبانيا", county: "muqaa6a3a muqaa6a3aat f|مقاطعة مقاطعات", suicide: "inti7aar inti7aar m|انتحار انتحار",
+    superman: "superman superman mh|سوبرمان سوبرمان", static: "tashweesh tashweesh m|تشويش تشويش", sperm: "7ayawaanaat_manawiyya 7ayawaanaat_manawiyya f|حيوانات_منوية حيوانات_منوية", blues: "blues blues m|بلوز بلوز",
+    contrary: "3aks 3aks m|عكس عكس", whore: "3aahira 3aahiraat fh|عاهرة عاهرات", bastard: "nadhl andhaal mh|نذل أنذال", crap: "5araabee6 5araabee6 m|خرابيط خرابيط",
+    bullshit: "kalaam_faa9'i kalaam_faa9'i m|كلام_فاضي كلام_فاضي", goddamn: "il-mal3oon il-mal3ooneen m|الملعون الملعونين", butt: "mu2a55ira mu2a55iraat f|مؤخرة مؤخرات", ass: "7maar 7ameer mh|حمار حمير",
+    prick: "7ageer 7ugara mh|حقير حقرا", dick: "7ageer 7ugara mh|حقير حقرا", slut: "3aahira 3aahiraat fh|عاهرة عاهرات", bitch: "kalba kalbaat fh|كلبة كلبات",
+    hell: "jahannam jahannam f|جهنم جهنم", nigga: "5ooy 5waan mh|خوي خوان", sex: "jins jins m|جنس جنس", porn: "ibaa7i ibaa7i m|إباحي إباحي", penis: "ga9'eeb gu9'baan m|قضيب قضبان",
+  };
+  const X6_ADJS = {
+    dressed: "laabis laabsa laabseen|لابس لابسة لابسين", concerned: "galgaan galgaana galgaaneen|قلقان قلقانة قلقانين", intelligent: "dhaki dhakiyya adhkiya|ذكي ذكية أذكيا",
+    magnificent: "raa2i3 raa2i3a raa2i3een|رائع رائعة رائعين", sealed: "msakkar msakkara msakkareen|مسكر مسكرة مسكرين", located: "mawjood mawjooda mawjoodeen|موجود موجودة موجودين",
+    sophisticated: "mu3aggad mu3aggada mu3aggadeen|معقد معقدة معقدين", revolutionary: "thawri thawriyya thawriyyeen|ثوري ثورية ثوريين",
+    linked: "marboo6 marboo6a marboo6een|مربوط مربوطة مربوطين", cultural: "thagaafi thagaafiyya thagaafiyyeen|ثقافي ثقافية ثقافيين", honorable: "mu7taram mu7tarama mu7tarameen|محترم محترمة محترمين",
+    honourable: "mu7taram mu7tarama mu7tarameen|محترم محترمة محترمين", psychological: "nafsi nafsiyya nafsiyyeen|نفسي نفسية نفسيين", biological: "bayoloji bayolojiyya bayolojiyyeen|بيولوجي بيولوجية بيولوجيين",
+    legitimate: "shar3i shar3iyya shar3iyyeen|شرعي شرعية شرعيين", feared: "ma5oof ma5oofa ma5oofeen|مخوف مخوفة مخوفين", obliged: "mu9'6arr mu9'6arra mu9'6arreen|مضطر مضطرة مضطرين",
+    forensic: "jinaa2i jinaa2iyya jinaa2iyyeen|جنائي جنائية جنائيين", exotic: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين", noisy: "9'ajja 9'ajja 9'ajja|ضجة ضجة ضجة",
+    meaningless: "ma_lah_ma3na ma_laha_ma3na ma_lahum_ma3na|ما_له_معنى ما_لها_معنى ما_لهم_معنى", restless: "mob_mirtaa7 mob_mirtaa7a mob_mirtaa7een|مب_مرتاح مب_مرتاحة مب_مرتاحين", clumsy: "a5rag 5arga 5urg|أخرق خرقا خرق",
+    primitive: "bidaa2i bidaa2iyya bidaa2iyyeen|بدائي بدائية بدائيين", peculiar: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين", artistic: "fanni fanniyya fanniyyeen|فني فنية فنيين",
+    atomic: "dharri dharriyya dharriyyeen|ذري ذرية ذريين", urban: "7a9'ari 7a9'ariyya 7a9'ariyyeen|حضري حضرية حضريين", nude: "3aari 3aarya 3aaryeen|عاري عارية عاريين",
+    tidy: "murattab murattaba murattabeen|مرتب مرتبة مرتبين", classy: "raagi raagya raagyeen|راقي راقية راقيين", cheerful: "mari7 mari7a mari7een|مرح مرحة مرحين",
+    acceptable: "magbool magboola magbooleen|مقبول مقبولة مقبولين", realistic: "waaqi3i waaqi3iyya waaqi3iyyeen|واقعي واقعية واقعيين", sufficient: "kaafi kaafya kaafyeen|كافي كافية كافيين",
+    intellectual: "muthaggaf muthaggafa muthaggafeen|مثقف مثقفة مثقفين", ruthless: "gaasi gaasya gaasyeen|قاسي قاسية قاسيين", crappy: "5aayis 5aaysa 5aayseen|خايس خايسة خايسين",
+    unemployed: "3aa6il 3aa6la 3aa6leen|عاطل عاطلة عاطلين", antique_: "ateeg ateega ateegeen|عتيق عتيقة عتيقين", stray: "9'aal 9'aala 9'aaleen|ضال ضالة ضالين",
+    dental: "sinni sinniyya sinniyyeen|سني سنية سنيين", infinite: "la_nihaa2i la_nihaa2iyya la_nihaa2iyyeen|لا_نهائي لا_نهائية لا_نهائيين", irrelevant: "ma_lah_3alaaga ma_laha_3alaaga ma_lahum_3alaaga|ما_له_علاقة ما_لها_علاقة ما_لهم_علاقة",
+    irresponsible: "mob_mas2ool mob_mas2oola mob_mas2ooleen|مب_مسؤول مب_مسؤولة مب_مسؤولين", surgical: "jiraa7i jiraa7iyya jiraa7iyyeen|جراحي جراحية جراحيين", elderly: "kabeer_fis-sinn kabeera_fis-sinn kbaar_fis-sinn|كبير_في_السن كبيرة_في_السن كبار_في_السن",
+    profound: "3ameeg 3ameega 3ameegeen|عميق عميقة عميقين", detailed: "mufa99al mufa99ala mufa99aleen|مفصل مفصلة مفصلين", careless: "muhmil muhmila muhmileen|مهمل مهملة مهملين",
+    sloppy: "muhmil muhmila muhmileen|مهمل مهملة مهملين", hideous: "bashi3 bash3a bash3een|بشع بشعة بشعين", fatty: "dihni dihniyya dihniyyeen|دهني دهنية دهنيين",
+    superb: "mumtaaz mumtaaza mumtaazeen|ممتاز ممتازة ممتازين", righteous: "9aali7 9aal7a 9aal7een|صالح صالحة صالحين", rational: "3agli 3agliyya 3agliyyeen|عقلي عقلية عقليين",
+    immune: "ma7mi ma7miyya ma7miyyeen|محمي محمية محميين", crooked: "ma3wooj ma3wooja ma3woojeen|معووج معووجة معووجين", definite: "akeed akeeda akeedeen|أكيد أكيدة أكيدين",
+    elementary: "ibtidaa2i ibtidaa2iyya ibtidaa2iyyeen|ابتدائي ابتدائية ابتدائيين", fundamental: "asaasi asaasiyya asaasiyyeen|أساسي أساسية أساسيين", utter: "^kaamil|كامل",
+    devastated: "mdammar mdammara mdammareen|مدمر مدمرة مدمرين", authentic: "a9li a9liyya a9liyyeen|أصلي أصلية أصليين", overwhelmed: "ma3'loob_3ala_amra ma3'looba_3ala_amrha ma3'loobeen_3ala_amrhum|مغلوب_على_أمره مغلوبة_على_أمرها مغلوبين_على_أمرهم",
+    swift: "saree3 saree3a saree3een|سريع سريعة سريعين", cozy: "daafi daafya daafyeen|دافي دافية دافيين", elaborate: "mufa99al mufa99ala mufa99aleen|مفصل مفصلة مفصلين",
+    gifted: "mawhoob mawhooba mawhoobeen|موهوب موهوبة موهوبين", solitary: "wa7eed wa7eeda wa7eedeen|وحيد وحيدة وحيدين", yummy: "ladheedh ladheedha ladheedheen|لذيذ لذيذة لذيذين",
+    slack: "mitraa5i mitraa5ya mitraa5yeen|متراخي متراخية متراخيين", mild: "5afeef 5afeefa 5ifaaf|خفيف خفيفة خفاف", carved: "man7oot man7oota man7ooteen|منحوت منحوتة منحوتين",
+    diplomatic: "diblomaasi diblomaasiyya diblomaasiyyeen|دبلوماسي دبلوماسية دبلوماسيين", partial: "juz2i juz2iyya juz2iyyeen|جزئي جزئية جزئيين", ungrateful: "naakir_il-jameel naakra_il-jameel naakreen_il-jameel|ناكر_الجميل ناكرة_الجميل ناكرين_الجميل",
+    neutral: "mu7aayid mu7aayda mu7aaydeen|محايد محايدة محايدين", presidential: "ri2aasi ri2aasiyya ri2aasiyyeen|رئاسي رئاسية رئاسيين", colored: "mlawwan mlawwana mlawwaneen|ملون ملونة ملونين",
+    coloured: "mlawwan mlawwana mlawwaneen|ملون ملونة ملونين", conservative: "mu7aafi6' mu7aafi6'a mu7aafi6'een|محافظ محافظة محافظين", forged: "muzawwar muzawwara muzawwareen|مزور مزورة مزورين",
+    authorized: "mu5awwal mu5awwala mu5awwaleen|مخول مخولة مخولين", parallel: "muwaazi muwaazya muwaazyeen|موازي موازية موازيين", overall: "^ijmaali|إجمالي",
+    shaped: "mshakkal mshakkala mshakkaleen|مشكل مشكلة مشكلين", matched: "mi6aabig mi6aabga mi6aabgeen|مطابق مطابقة مطابقين", vile: "7ageer 7ageera 7ugara|حقير حقيرة حقرا",
+    imaginary: "5ayaali 5ayaaliyya 5ayaaliyyeen|خيالي خيالية خياليين", distinguished: "mumayyaz mumayyaza mumayyazeen|مميز مميزة مميزين", addicted: "mudmin mudmina mudmineen|مدمن مدمنة مدمنين",
+    shameless: "ma_yisti7i ma_tisti7i ma_yisti7oon|ما_يستحي ما_تستحي ما_يستحون", stern: "9aarim 9aarma 9aarmeen|صارم صارمة صارمين", curly: "mkashkash mkashkasha mkashkasheen|مكشكش مكشكشة مكشكشين",
+    stoned: "mas6ool mas6oola mas6ooleen|مسطول مسطولة مسطولين", supernatural: "5aarig 5aarga 5aargeen|خارق خارقة خارقين", bankrupt: "muflis muflisa mufliseen|مفلس مفلسة مفلسين",
+    slippery: "yzallig tzallig yzalligoon|يزلق تزلق يزلقون", numerous: "wayed wayed wayed|وايد وايد وايد", sane: "3aagil 3aagla 3uggaal|عاقل عاقلة عقال",
+    founded: "mu2assas mu2assasa mu2assaseen|مؤسس مؤسسة مؤسسين", impatient: "ma_3inda_9abur ma_3indha_9abur ma_3indhum_9abur|ما_عنده_صبر ما_عندها_صبر ما_عندهم_صبر",
+    civilized: "muta7a9'9'ir muta7a9'9'ira muta7a9'9'ireen|متحضر متحضرة متحضرين", dynamic: "deenaameeki deenaameekiyya deenaameekiyyeen|ديناميكي ديناميكية ديناميكيين", unbearable: "ma_yin6aag ma_tin6aag ma_yin6aagoon|ما_ينطاق ما_تنطاق ما_ينطاقون",
+    juicy: "mlayyan mlayyana mlayyaneen|ملين ملينة ملينين", eerie: "mur3ib mur3iba mur3ibeen|مرعب مرعبة مرعبين", apparent: "waa9'i7 waa9'7a waa9'7een|واضح واضحة واضحين",
+    grim: "ka2eeb ka2eeba ka2eebeen|كئيب كئيبة كئيبين", medieval: "min_il-3u9oor_il-wus6a min_il-3u9oor_il-wus6a min_il-3u9oor_il-wus6a|من_العصور_الوسطى من_العصور_الوسطى من_العصور_الوسطى", frustrating: "mu7bi6 mu7bi6a mu7bi6een|محبط محبطة محبطين",
+    funky: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين", precious: "3'aali 3'aalya 3'aalyeen|غالي غالية غاليين", upbeat: "mutafaa2il mutafaa2ila mutafaa2ileen|متفائل متفائلة متفائلين",
+    ominous: "mash2oom mash2ooma mash2oomeen|مشؤوم مشؤومة مشؤومين", flattered: "mitsharrif mitsharrifa mitsharrifeen|متشرف متشرفة متشرفين", wretched: "ta3ees ta3eesa tu3asa|تعيس تعيسة تعسا",
+    condemned: "mudaan mudaana mudaaneen|مدان مدانة مدانين", naval: "ba7ri ba7riyya ba7riyyeen|بحري بحرية بحريين", democratic: "deemoqraa6i deemoqraa6iyya deemoqraa6iyyeen|ديمقراطي ديمقراطية ديمقراطيين",
+    misunderstood: "ma7ad_faahma ma7ad_faahimha ma7ad_faahimhum|محد_فاهمه محد_فاهمها محد_فاهمهم", thorough: "dageeg dageega dageegeen|دقيق دقيقة دقيقين", jammed: "3aalig 3aalga 3aalgeen|عالق عالقة عالقين",
+    inherited: "mawrooth mawrootha mawrootheen|موروث موروثة موروثين", sheer: "^kaamil|كامل", queer: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين",
+    expelled: "ma6rood ma6rooda ma6roodeen|مطرود مطرودة مطرودين", discreet: "katoom katooma katoomeen|كتوم كتومة كتومين",
+    spared: "naaji naajya naajyeen|ناجي ناجية ناجيين", preferred: "mufa9'9'al mufa9'9'ala mufa9'9'aleen|مفضل مفضلة مفضلين", aged: "kabeer_fis-sinn kabeera_fis-sinn kbaar_fis-sinn|كبير_في_السن كبيرة_في_السن كبار_في_السن",
+    sustained: "mustamirr mustamirra mustamirreen|مستمر مستمرة مستمرين", abducted: "ma56oof ma56oofa ma56oofeen|مخطوف مخطوفة مخطوفين", panicked: "mar3oob mar3ooba mar3oobeen|مرعوب مرعوبة مرعوبين",
+    framed: "mlaffag_lah mlaffag_laha mlaffag_lahum|ملفق_له ملفق_لها ملفق_لهم", freed: "mu7arrar mu7arrara mu7arrareen|محرر محررة محررين", combined: "mujtami3 mujtami3a mujtami3een|مجتمع مجتمعة مجتمعين",
+    listed: "madraj madraja madrajeen|مدرج مدرجة مدرجين", destined: "mu5a99a9 mu5a99a9a mu5a99a9een|مخصص مخصصة مخصصين", ironic: "saa5ir saa5ra saa5reen|ساخر ساخرة ساخرين",
+    advised: "man9oo7 man9oo7a man9oo7een|منصوح منصوحة منصوحين", programmed: "mubarmaj mubarmaja mubarmajeen|مبرمج مبرمجة مبرمجين", discharged: "ma9roof ma9roofa ma9roofeen|مصروف مصروفة مصروفين",
+    exotic_: "3'areeb 3'areeba 3'areebeen|غريب غريبة غريبين", triple: "thulaathi thulaathiyya thulaathiyyeen|ثلاثي ثلاثية ثلاثيين", auto: "otomaatik otomaatik otomaatik|أوتوماتيك أوتوماتيك أوتوماتيك",
+    sexual: "jinsi jinsiyya jinsiyyeen|جنسي جنسية جنسيين", gay: "mithli mithliyya mithliyyeen|مثلي مثلية مثليين", motherfucker: "7ageer 7ageera 7ugara|حقير حقيرة حقرا",
+    fucked: "5arbaan 5arbaana 5arbaaneen|خربان خربانة خربانين", honored_: "mitsharrif mitsharrifa mitsharrifeen|متشرف متشرفة متشرفين",
+  };
+  const X6_VERBS = {
+    'figure out': ["fahamt fiham fham ifham|فهمت فهم فهم افهم", { past: 'figured', lv: 'a' }],
+    screw: ["5arrabt 5arrab 5arrib 5arrib|خربت خرب خرب خرب", {}],
+    'screw up': ["5arrabt 5arrab 5arrib 5arrib|خربت خرب خرب خرب", {}],
+    'mess up': ["5arrabt 5arrab 5arrib 5arrib|خربت خرب خرب خرب", {}],
+    blow: ["nafa5t nafa5 nfi5 infi5|نفخت نفخ نفخ انفخ", { past: 'blew', pp: 'blown', lv: 'i' }],
+    'blow up': ["fajjart fajjar fajjir fajjir|فجرت فجر فجر فجر", { past: 'blew', pp: 'blown' }],
+    step: ["da3ast da3as d3as id3as|دعست دعس دعس ادعس", { lv: 'a', on: '3ala', obj: '3ala' }],
+    phone: ["itta9alt itta9al tta9il itta9il|اتصلت اتصل اتصل اتصل", { lv: 'i', obj: 'b', objNP: 'b' }],
+    indicate: ["ashart ashaar asheer asheer|أشرت أشار أشير أشر", { to: 'li' }],
+    fulfill: ["7aggagt 7aggag 7aggig 7aggig|حققت حقق حقق حقق", {}],
+    fulfil: ["7aggagt 7aggag 7aggig 7aggig|حققت حقق حقق حقق", {}],
+    plead: ["tawassalt tawassal tawassal tawassal|توسلت توسل توسل توسل", { lv: 'i', past: ['pleaded', 'pled'] }],
+    oppose: ["3aara9't 3aara9' 3aari9' 3aari9'|عارضت عارض عارض عارض", {}],
+    bloom: ["zahhart zahhar zahhir zahhir|زهرت زهر زهر زهر", {}],
+    whine: ["tdhammart tdhammar tdhammar tdhammar|تذمرت تذمر تذمر تذمر", { lv: 'i' }],
+    await: ["intidhart intidhar ntidhir intidhir|انتظرت انتظر انتظر انتظر", { lv: 'i' }],
+    confront: ["waajaht waajah waajih waajih|واجهت واجه واجه واجه", {}],
+    evacuate: ["a5lait a5la a5li a5li|أخليت أخلى أخلي أخل", {}],
+    define: ["3arraft 3arraf 3arrif 3arrif|عرفت عرف عرف عرف", {}],
+    acknowledge: ["i3taraft i3taraf 3tirif i3tirif|اعترفت اعترف اعترف اعترف", { lv: 'i', obj: 'b', objNP: 'b' }],
+    justify: ["barrart barrar barrir barrir|بررت برر برر برر", {}],
+    expand: ["wassa3t wassa3 wassi3 wassi3|وسعت وسع وسع وسع", {}],
+    quarrel: ["t5aa9amt t5aa9am t5aa9am t5aa9am|تخاصمت تخاصم تخاصم تخاصم", { lv: 'i', with: 'wiyya' }],
+    reflect: ["3akast 3akas 3kis i3kis|عكست عكس عكس اعكس", { lv: 'i' }],
+    offend: ["9'aayagt 9'aayag 9'aayig 9'aayig|ضايقت ضايق ضايق ضايق", {}],
+    demonstrate: ["warrait warra warri warri|وريت ورى وري ور", {}],
+    trace: ["tatabba3t tatabba3 tatabba3 tatabba3|تتبعت تتبع تتبع تتبع", { lv: 'i' }],
+    pronounce: ["nu6agt nu6ag n6ig in6ig|نطقت نطق نطق انطق", { lv: 'i' }],
+    underestimate: ["istahant istahaan stiheen istiheen|استهنت استهان استهين استهن", { lv: 'i', obj: 'b', objNP: 'b' }],
+    sponsor_v: ["mawwalt mawwal mawwil mawwil|مولت مول مول مول", {}],
+    alter: ["3'ayyart 3'ayyar 3'ayyir 3'ayyir|غيرت غير غير غير", {}],
+    discharge_v: ["sarra7t sarra7 sarri7 sarri7|سرحت سرح سرح سرح", {}],
+    retrieve: ["istarja3t istarja3 starji3 istarji3|استرجعت استرجع استرجع استرجع", { lv: 'i' }],
+    reconsider: ["a3adt_in-na6'ar a3aad_in-na6'ar a3eed_in-na6'ar a3id_in-na6'ar|أعدت_النظر أعاد_النظر أعيد_النظر أعد_النظر", { in: 'fi', obj: 'fi', objNP: 'fi' }],
+    undo: ["raja3t raja3 rja3 irja3|رجعت رجع رجع ارجع", { past: 'undid', pp: 'undone', lv: 'a' }],
+    rebuild: ["3ammart 3ammar 3ammir 3ammir|عمرت عمر عمر عمر", { past: 'rebuilt', pp: 'rebuilt' }],
+    sew: ["5ayya6t 5ayya6 5ayyi6 5ayyi6|خيطت خيط خيط خيط", { past: 'sewed', pp: 'sewn' }],
+    dismiss: ["9araft 9araf 9rif i9rif|صرفت صرف صرف اصرف", { lv: 'i' }],
+    forge: ["zawwart zawwar zawwir zawwir|زورت زور زور زور", {}],
+    gag: ["kammamt kammam kammim kammim|كممت كمم كمم كمم", {}],
+    tackle: ["3argalt 3argal 3argil 3argil|عرقلت عرقل عرقل عرقل", {}],
+    hustle: ["ishtaghalt ishtaghal shtaghil ishtaghil|اشتغلت اشتغل اشتغل اشتغل", { lv: 'i' }],
+    brace: ["ista3addait ista3add sta3idd ista3idd|استعديت استعد استعد استعد", { lv: 'i' }],
+    thrust: ["dafa3t dafa3 dfa3 idfa3|دفعت دفع دفع ادفع", { past: 'thrust', pp: 'thrust', lv: 'a' }],
+    recruit_v: ["jannadt jannad jannid jannid|جندت جند جند جند", {}],
+    rehearse: ["tmarrant tmarran tmarran tmarran|تمرنت تمرن تمرن تمرن", { lv: 'i' }],
+    pinch: ["gara9t gara9 gri9 igri9|قرصت قرص قرص اقرص", { lv: 'i' }],
+    untie: ["fakkait fakk fikk fikk|فكيت فك فك فك", {}],
+    stalk: ["tlaa7agt tlaa7ag tlaa7ag tlaa7ag|تلاحقت تلاحق تلاحق تلاحق", { lv: 'i' }],
+    whack: ["9'arabt 9'arab 9'rib i9'rib|ضربت ضرب ضرب اضرب", { lv: 'i' }],
+    panic: ["5aft 5aaf 5aaf 5aaf|خفت خاف خاف خاف", { past: 'panicked', pp: 'panicked' }],
+    abduct: ["5a6aft 5a6af 5a6if i5a6if|خطفت خطف خطف اخطف", { lv: 'i' }],
+    bump: ["9adamt 9adam 9dim i9dim|صدمت صدم صدم اصدم", { lv: 'i', into: 'fi' }],
+    sustain: ["t7ammalt t7ammal t7ammal t7ammal|تحملت تحمل تحمل تحمل", { lv: 'i' }],
+    surf_v: ["tsaffa7t tsaffa7 tsaffa7 tsaffa7|تصفحت تصفح تصفح تصفح", { lv: 'i' }],
+    exhibit_v: ["3ara9't 3ara9' 3ri9' i3ri9'|عرضت عرض عرض اعرض", { lv: 'i' }],
+    echo_v: ["raddadt raddad raddid raddid|رددت ردد ردد ردد", {}],
+    evolve: ["ta6awwart ta6awwar ta6awwar ta6awwar|تطورت تطور تطور تطور", { lv: 'i' }],
+    carve: ["na7att na7at n7it in7it|نحت نحت نحت انحت", { lv: 'i' }],
+    clap: ["9affagt 9affag 9affig 9affig|صفقت صفق صفق صفق", {}],
+    probe_v: ["7aggagt 7aggag 7aggig 7aggig|حققت حقق حقق حقق", { in: 'fi', obj: 'fi' }],
+    narrate: ["sarradt sarrad sarrid sarrid|سردت سرد سرد سرد", {}],
+    stab: ["6a3ant 6a3an 63an i63an|طعنت طعن طعن اطعن", { lv: 'a' }],
+    mumble: ["tamtamt tamtam tamtim tamtim|تمتمت تمتم تمتم تمتم", {}],
+    tango: ["=do", { tail: 'tango|تانقو' }],
+    fail_: ["fashalt fishal fshal ifshal|فشلت فشل فشل افشل", { lv: 'a' }],
+    reform_v: ["a9la7t a9la7 a9li7 a9li7|أصلحت أصلح أصلح أصلح", {}],
+    resign: ["istagalt istagaal stageel istageel|استقلت استقال استقيل استقل", { lv: 'i', from: 'min' }],
+    bid_v: ["zaayadt zaayad zaayid zaayid|زايدت زايد زايد زايد", { past: 'bid', pp: 'bid', on: '3ala' }],
+    expel: ["6aradt 6arad 6rid i6rid|طردت طرد طرد اطرد", { lv: 'i' }],
+    spare: ["3afait 3afa 3fi i3fi|عفيت عفى عفي اعف", { lv: 'i', about: '3an', obj: '3an', objNP: '3an' }],
+    frame: ["laffagt laffag laffig laffig|لفقت لفق لفق لفق", { obj: 'li', objNP: 'li' }],
+    free_v: ["7arrart 7arrar 7arrir 7arrir|حررت حرر حرر حرر", {}],
+    destine: ["gaddart gaddar gaddir gaddir|قدرت قدر قدر قدر", {}],
+    combine: ["dammajt dammaj dammij dammij|دمجت دمج دمج دمج", {}],
+    list_v: ["sajjalt sajjal sajjil sajjil|سجلت سجل سجل سجل", {}],
+    hang_: ["3allagt 3allag 3allig 3allig|علقت علق علق علق", { past: ['hung', 'hanged'], pp: ['hung', 'hanged'] }],
+    program_: ["barmajt barmaj barmij barmij|برمجت برمج برمج برمج", {}],
+    sting_v: ["lasa3t lasa3 lsa3 ilsa3|لسعت لسع لسع السع", { past: 'stung', pp: 'stung', lv: 'a' }],
+    prep: ["7a9'9'art 7a9'9'ar 7a9'9'ir 7a9'9'ir|حضرت حضر حضر حضر", {}],
+    dress_: ["libast libas lbas ilbas|لبست لبس لبس البس", { lv: 'a' }],
+  };
+  const X6_ADVS = {
+    utterly: "tamaaman|تماماً", freaking: "~wayed|وايد", fucking: "~wayed|وايد", thoroughly: "b-digga|بدقة", purely: "bas|بس", greatly: "wayed|وايد", gradually: "shway shway|شوي شوي", strangely: "3'areeb|غريب",
+    whilst: "bainama|بينما", newly_: "min jadeed|من جديد", overall_: "bshakil 3aam|بشكل عام", virtually_: "tagreeban|تقريباً", sexually: "jinsiyyan|جنسياً",
+    indistinctly: "b-3'umoo9'|بغموض", unto: "li|ل", duh: "akeed|أكيد", whoops: "oops|أوبس", lo: "shoof|شوف", alas: "lil-asaf|للأسف", aye: "ee|إي", ho: "hooy|هوي", ha: "ha|ها",
+    huh: "ha|ها", eh: "ha|ها", um: "umm|أمم", em: "umm|أمم", whoa: "waw|واو", boo: "boo|بو", hallelujah: "il-7amdulillah|الحمدلله", behold: "shoof|شوف", goddamn: "la3na|لعنة",
+  };
+  const X6_FIXED = {
+    'get dressed': A3("ilbas|البس", "ilbisi|البسي", "ilbisoo|البسوا"), 'i am getting dressed': "gaa3id albas|قاعد ألبس", 'what are the odds': "shu il-i7timaal|شو الاحتمال", 'the odds are': "il-i7timaal|الاحتمال",
+    'upside down': "magloob|مقلوب", 'bearing in mind': "ma3 il-a5dh bil-i3tibaar|مع الأخذ بالاعتبار", 'bear in mind': "5idh bi3tibaarak|خذ باعتبارك", 'keep in mind': "5idh bi3tibaarak|خذ باعتبارك",
+    'courtesy of': "bfa9'l|بفضل", 'on cue': "fi wagta|في وقته", 'opposed to': "9'idd|ضد", 'as opposed to': "3aks|عكس", 'plead guilty': "a3tarif bidh-dhanb|أعترف بالذنب", 'not guilty': "mob mudhnib|مب مذنب",
+    'prep time': "wagt it-ta79'eer|وقت التحضير", 'stop whining': A3("bass tdhammur|بس تذمر", "bassi tdhammur|بسي تذمر", "bassoo tdhammur|بسوا تذمر"), 'bugger off': A3("inga6i3|انقطع", "inga6i3i|انقطعي", "inga6i3oo|انقطعوا"),
+    'non stop': "bdoon tawagguf|بدون توقف", 'nonstop': "bdoon tawagguf|بدون توقف", 'to some extent': "ila 7add ma|إلى حد ما", 'to a certain extent': "ila 7add ma|إلى حد ما", 'to what extent': "ila ay 7add|إلى أي حد",
+    'the rent is due': "il-eejaar waajib|الإيجار واجب", 'is due': "musta7agg|مستحق", 'is due tomorrow': "musta7agg bacher|مستحق باچر", 'due tomorrow': "musta7agg bacher|مستحق باچر", 'due today': "musta7agg il-yoom|مستحق اليوم",
+    'as far as i am concerned': "bin-nisba li|بالنسبة لي", 'the parties concerned': "il-a6raaf il-ma3niyya|الأطراف المعنية",
+    'triple kill': "triple kill|تربل كل", 'auto attack': "auto attack|أوتو أتاك", 'stepping stone': "5u6wa|خطوة", 'a dash of': "shwayyat|شوية", 'quitting time': "wagt il-in9iraaf|وقت الانصراف",
+    'god almighty': "ya allah|يا الله", 'oh my god': "ya allah|يا الله", 'oh my gosh': "ya allah|يا الله", 'oh god': "ya rabbi|يا ربي", 'dear god': "ya rabbi|يا ربي", 'good god': "ya allah|يا الله", 'god damn it': "la3na|لعنة",
+    'holy shit': "ya allah|يا الله", 'holy crap': "ya allah|يا الله", 'holy cow': "ya allah|يا الله", 'holy moly': "ya allah|يا الله", 'what the hell': "shu hal 5araabee6|شو هالخرابيط", 'what the heck': "shu hal 5araabee6|شو هالخرابيط",
+    'what the fuck': "shu hal 5araabee6|شو هالخرابيط", 'the hell': "bil-laah|بالله", 'go to hell': A3("roo7 jahannam|روح جهنم", "roo7i jahannam|روحي جهنم", "roo7oo jahannam|روحوا جهنم"), 'hell no': "la wal-laah|لا والله", 'hell yeah': "ee wal-laah|إي والله",
+    'hell yes': "ee wal-laah|إي والله", 'like hell': "wal-laah|والله", 'oh hell': "ya saatir|يا ساتر", 'bloody hell': "ya saatir|يا ساتر", 'what on earth': "shu bil-9'ab6|شو بالضبط", 'how on earth': "shlon bil-9'ab6|شلون بالضبط",
+    'why on earth': "laish bil-9'ab6|ليش بالضبط", 'where on earth': "wain bil-9'ab6|وين بالضبط", 'who on earth': "min bil-9'ab6|من بالضبط", 'fuck off': A3("inga6i3|انقطع", "inga6i3i|انقطعي", "inga6i3oo|انقطعوا"),
+    'fuck you': A3("til3an abook|تلعن أبوك", "til3an abooch|تلعن أبوج", "til3an abookum|تلعن أبوكم"), 'fuck it': "5alaa9 ma 3alaih|خلاص ما عليه", 'fuck this': "5alaa9 ma abi|خلاص ما أبي", 'fuck that': "la ma abi|لا ما أبي", 'fuck': "la3na|لعنة", 'fuck me': "ya saatir|يا ساتر",
+    'fucked up': "5arbaan|خربان", 'screwed up': "5arbaan|خربان", 'i am screwed': "ana 5alla9t|أنا خلصت", 'we are screwed': "i7na 5alla9na|إحنا خلصنا", 'you are screwed': A3("inta 5alla9t|انت خلصت", "inti 5alla9ti|انتي خلصتي", "intum 5alla9tu|انتم خلصتوا"),
+    'shut the fuck up': A3("sidd 7algak|سد حلقك", "siddi 7algich|سدي حلقج", "siddoo 7algkum|سدوا حلقكم"), 'what the hell is this': "shu hadha|شو هذا", 'what the hell is going on': "shu gaa3id y9eer|شو قاعد يصير", 'what the hell happened': "shu illi 9aar|شو اللي صار",
+    'damn it': "la3na|لعنة", 'dammit': "la3na|لعنة", 'damn': "la3na|لعنة", 'goddammit': "la3na|لعنة", 'crap': "5araabee6|خرابيط", 'oh crap': "ya saatir|يا ساتر", 'bullshit': "kalaam faa9'i|كلام فاضي",
+    'that is bullshit': "hadha kalaam faa9'i|هذا كلام فاضي", 'no bullshit': "bdoon kalaam faa9'i|بدون كلام فاضي", 'son of a bitch': "ibn il-kalb|ابن الكلب", 'you bastard': "ya nadhl|يا نذل", 'bastard': "nadhl|نذل", 'you bitch': "ya kalba|يا كلبة",
+    'piss off': A3("inga6i3|انقطع", "inga6i3i|انقطعي", "inga6i3oo|انقطعوا"), 'pissed off': "mi3a99ib|معصب", 'i am pissed': "ana mi3a99ib|أنا معصب", 'i am pissed off': "ana mi3a99ib|أنا معصب", 'pissed': "mi3a99ib|معصب", 'kiss my ass': "bal3a|بلعه",
+    'my ass': "ya salaam|يا سلام", 'kick ass': "5a6eer|خطير", 'badass': "5a6eer|خطير", 'dumbass': "3'abi|غبي", 'smartass': "mitfalsif|متفلسف", 'jackass': "7maar|حمار", 'asshole': "7ageer|حقير", 'you asshole': "ya 7ageer|يا حقير",
+    'oh boy': "ya saatir|يا ساتر", 'oh man': "ya 5ooy|يا خوي", 'oh dear': "ya saatir|يا ساتر", 'oh no': "ya saatir|يا ساتر", 'oh well': "5alaa9|خلاص", 'oh yeah': "ee 9a7|إي صح", 'oh really': "wal-laah|والله", 'oh ok': "aah tamaam|آه تمام",
+    'oh okay': "aah tamaam|آه تمام", 'oh i see': "aah fihamt|آه فهمت", 'oh wow': "waw|واو", 'oh come on': "yalla bass|يلا بس", 'oh please': "law sama7t|لو سمحت", 'oh right': "aah 9a7|آه صح", 'oh yes': "ee|إي", 'oh thanks': "mashkoor|مشكور",
+    'uh huh': "ee|إي", 'uh oh': "ya saatir|يا ساتر", 'mm hmm': "ee|إي", 'mhm': "ee|إي", 'hmm': "hmm|همم", 'umm': "umm|أمم", 'uh': "aa|آ", 'er': "aa|آ", 'ah': "aah|آه", 'ahh': "aah|آه", 'aw': "aww|أوو", 'aww': "aww|أوو", 'ugh': "uff|أف", 'ew': "ya3|يع", 'eww': "ya3|يع",
+    'yikes': "ya saatir|يا ساتر", 'yay': "yaay|ياي", 'woohoo': "yaay|ياي", 'hooray': "yaay|ياي", 'phew': "il-7amdulillah|الحمدلله", 'ouch': "aa5|آخ", 'ow': "aa5|آخ", 'oops': "oops|أوبس", 'psst': "hiss|هس", 'shh': "hiss|هس", 'shhh': "hiss|هس", 'sh': "hiss|هس",
+    'yo': "yo|يو", 'sup': "shu il-a5baar|شو الأخبار", 'wassup': "shu il-a5baar|شو الأخبار", 'whats up': "shu il-a5baar|شو الأخبار", 'what is up': "shu il-a5baar|شو الأخبار", 'howdy partner': "hala 5ooy|هلا خوي", 'yo bro': "yo 5ooy|يو خوي",
+    'meh': "3aadi|عادي", 'nah': "la|لا", 'nope': "la|لا", 'yep': "ee|إي", 'yup': "ee|إي", 'yeah': "ee|إي", 'yea': "ee|إي", 'aye': "ee|إي", 'nay': "la|لا", 'nope nope': "la la|لا لا",
+    'thou': "inta|انت", 'thee': "inta|انت", 'thy': "maalak|مالك", 'thine': "maalak|مالك", 'ye': "intum|انتم", 'monsieur': "sayyid|سيد", 'mademoiselle': "aanisa|آنسة", 'madame': "sayyida|سيدة", 'senor': "sayyid|سيد", 'senorita': "aanisa|آنسة", 'amigo': "9adeegi|صديقي",
+    };
+  Object.assign(X6_FIXED, { 'owes me': "madyoon li|مديون لي", 'owe me': "madyoon li|مديون لي", 'owes you': A3("madyoon lak|مديون لك", "madyoon lich|مديون لج", "madyoon lkum|مديون لكم"), 'owe you': A3("madyoon lak|مديون لك", "madyoon lich|مديون لج", "madyoon lkum|مديون لكم"),
+    'owes him': "madyoon lah|مديون له", 'owe him': "madyoon lah|مديون له", 'owes her': "madyoon laha|مديون لها", 'owe her': "madyoon laha|مديون لها", 'owes us': "madyoon lna|مديون لنا", 'owe us': "madyoon lna|مديون لنا",
+    'owes them': "madyoon lhum|مديون لهم", 'owe them': "madyoon lhum|مديون لهم", 'owed me': "kaan madyoon li|كان مديون لي", 'owed you': A3("kaan madyoon lak|كان مديون لك", "kaan madyoon lich|كان مديون لج", "kaan madyoon lkum|كان مديون لكم"),
+    'owed him': "kaan madyoon lah|كان مديون له", 'owed her': "kaan madyoon laha|كان مديون لها", 'owe': "madyoon|مديون", 'owes': "madyoon|مديون",
+    'i fainted': "a3'ma 3alay|أغمى علي", 'he fainted': "a3'ma 3alaih|أغمى عليه", 'she fainted': "a3'ma 3alaiha|أغمى عليها", 'they fainted': "a3'ma 3alaihum|أغمى عليهم", 'you fainted': A3("a3'ma 3alaik|أغمى عليك", "a3'ma 3alaich|أغمى عليج", "a3'ma 3alaikum|أغمى عليكم"),
+    'fainted': "a3'ma 3alaih|أغمى عليه", 'faint': "y3'ma 3alaih|يغمى عليه", 'i blew it': "5arrabt-ha|خربتها", 'you blew it': A3("5arrabt-ha|خربتها", "5arrabtee-ha|خربتيها", "5arrabtoo-ha|خربتوها"), 'he blew it': "5arrab-ha|خربها", 'we blew it': "5arrabna-ha|خربناها" });
+  const X6_NOUN_ALIAS = { odds_: 'odds', kilometers: 'kilometer', kilometres: 'kilometre', casualties: 'casualty', ingredients: 'ingredient', followers: 'follower', mushrooms: 'mushroom', foreigners: 'foreigner',
+    boundaries: 'boundary', bruises: 'bruise', earrings: 'earring', peasants: 'peasant', tactics: 'tactic', grandparents: 'grandparent', grandchildren: 'grandchild', biscuits: 'biscuit', inmates: 'inmate', viewers: 'viewer',
+    narcotics: 'narcotic', slippers: 'slipper', footprints: 'footprint', particles: 'particle', rupees: 'rupee', wages: 'wage', locals: 'local', dinosaurs: 'dinosaur', condolences: 'condolence', claws: 'claw', acres: 'acre',
+    moustache: 'mustache', whores: 'whore', bastards: 'bastard', bitches: 'bitch', motherfuckers: 'motherfucker', asses: 'ass', tits: 'boobs', boobs: 'chest', fanny: 'butt', arse: 'butt', pussy: 'cat', vagina: 'vagina_', fucker: 'bastard',
+    scoffs: 'laughter', sniffles: 'laughter', sniffs: 'laughter', chatter: 'chatter_', clattering: 'noise', rattling: 'noise', whirring: 'noise', wailing: 'crying', chirping: 'noise', muffled: 'noise', chattering: 'noise', snarling: 'noise', squeaking: 'noise',
+    clamoring: 'noise', echoing: 'echo', exclaims: 'noise', exclaiming: 'noise', clapping: 'noise', whooping: 'noise', narrating: 'noise', narrator: 'narrator_', applause: 'applause_', laughter: 'laughter_' };
+  Object.assign(ADJ_PREP, { concerned: { about: '3ala' }, dressed: { in: 'b' }, addicted: { to: '3ala' }, immune: { to: 'min' }, linked: { to: 'b' }, entitled: { to: '' }, obliged: { to: '' }, located: { in: 'fi' } });
+  for (const [k, v] of Object.entries(X6_NOUNS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_RAW) && !(kk + '_' in NOUN_RAW)) NOUN_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X6_ADJS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADJ_RAW) && !(kk + '_' in ADJ_RAW)) ADJ_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X6_VERBS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in VERB_RAW) && !(kk + '_' in VERB_RAW)) VERB_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X6_ADVS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADV_RAW) && !(kk + '_' in ADV_RAW)) ADV_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X6_FIXED)) { const kk = k.trim(); if (!(kk in FIXED_RAW)) FIXED_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X6_NOUN_ALIAS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_ALIAS)) NOUN_ALIAS[kk] = v; }
+  /* Chat abbreviations and internet / gaming slang */
+  const X7_NOUNS = {
+    meta: "meta meta m|ميتا ميتا", simp: "simp simps mh|سمب سمبز", drip: "drip drip m|درب درب", rizz: "rizz rizz m|رز رز", gyat: "gyat gyat m|قيات قيات", sigma: "sigma sigmas mh|سيقما سيقماز",
+    skibidi: "skibidi skibidi m|سكيبيدي سكيبيدي", ohio: "ohio ohio m|أوهايو أوهايو", brainrot: "brainrot brainrot m|برين_روت برين_روت", clout: "shuhra shuhra f|شهرة شهرة", finesse: "finesse finesse m|فينيس فينيس",
+    copium: "copium copium m|كوبيوم كوبيوم", hopium: "hopium hopium m|هوبيوم هوبيوم", gigachad: "gigachad gigachads mh|قيقا_تشاد قيقا_تشادز", chad: "chad chads mh|تشاد تشادز", karen: "karen karens fh|كارن كارنز",
+    boomer: "boomer boomers mh|بومر بومرز", zoomer: "zoomer zoomers mh|زومر زومرز", millennial: "millennial millennials mh|ميلينيال ميلينيالز", bozo: "3'abi a3'biya mh|غبي أغبيا", smurf: "smurf smurfs mh|سمرف سمرفز",
+    tryhard: "tryhard tryhards mh|تراي_هارد تراي_هاردز", griefing: "griefing griefing m|قريفنق قريفنق", teabagging: "teabagging teabagging m|تي_باقنق تي_باقنق", sandbagging: "sandbagging sandbagging m|ساندباقنق ساندباقنق",
+    diff: "farg furoog m|فرق فروق", scrub: "noob noobs mh|نوب نوبز", ratio: "ratio ratio m|ريشيو ريشيو", pog: "pog pog m|بوق بوق", poggers: "poggers poggers m|بوقرز بوقرز", pogchamp: "pogchamp pogchamp m|بوقتشامب بوقتشامب",
+    kappa: "kappa kappa m|كابا كابا", pepega: "3'abi a3'biya mh|غبي أغبيا", normie: "normie normies mh|نورمي نورميز", weeb: "weeb weebs mh|ويب ويبز", otaku: "otaku otaku mh|أوتاكو أوتاكو", gamer: "gamer gamers mh|قيمر قيمرز",
+    streamer: "streamer streamers mh|ستريمر ستريمرز", youtuber: "youtuber youtubers mh|يوتيوبر يوتيوبرز", influencer: "influencer influencers mh|إنفلونسر إنفلونسرز", tiktoker: "tiktoker tiktokers mh|تيكتوكر تيكتوكرز",
+    vlog: "vlog vlogs m|فلوق فلوقز", vlogger: "vlogger vloggers mh|فلوقر فلوقرز", meme: "meme memes m|ميم ميمز", gif: "gif gifs m|قف قفز", emoji: "emoji emojis m|إيموجي إيموجيز", sticker: "sticker stickers m|ستيكر ستيكرز",
+    hashtag: "hashtag hashtags m|هاشتاق هاشتاقات", selfie: "selfie selfies f|سيلفي سيلفيز", story: "story stories f|ستوري ستوريز", reel: "reel reels m|ريل ريلز", podcast: "podcast podcasts m|بودكاست بودكاستس",
+    playlist: "playlist playlists f|بلاي_لست بلاي_لستات", dm: "dm dms m|دي_إم دي_إمز", pm: "pm pms m|بي_إم بي_إمز", noti: "notification notifications f|نوتيفيكيشن نوتيفيكيشنز", notif: "notification notifications f|نوتيفيكيشن نوتيفيكيشنز",
+    wifi: "wifi wifi m|واي_فاي واي_فاي", hotspot: "hotspot hotspot m|هوت_سبوت هوت_سبوت", charger: "shaa7in shawaa7in m|شاحن شواحن", powerbank: "powerbank powerbanks m|باور_بانك باور_بانكس", airpods: "airpods airpods m|إيربودز إيربودز",
+    headset: "headset headsets m|هيدست هيدستات", mic: "maik maikaat m|مايك مايكات", webcam: "webcam webcams m|ويب_كام ويب_كامز", keyboard: "keyboard keyboards m|كيبورد كيبوردات", mouse_: "mouse mouses m|ماوس ماوسات",
+    monitor: "shaasha shaashaat f|شاشة شاشات", gpu: "gpu gpus m|جي_بي_يو جي_بي_يوز", cpu: "cpu cpus m|سي_بي_يو سي_بي_يوز", ram_: "raam raam m|رام رام", ssd: "ssd ssds m|إس_إس_دي إس_إس_ديز", usb: "usb usbs m|يو_إس_بي يو_إس_بيز",
+    app: "app apps m|آب آبس", browser: "browser browsers m|براوزر براوزرات", tab_: "tab tabs m|تاب تابات", link: "link links m|لنك لنكات", url: "link links m|لنك لنكات", site: "mawgi3 mawaagi3 m|موقع مواقع",
+    website: "mawgi3 mawaagi3 m|موقع مواقع", homepage: "9af7a_ra2eesiyya 9afa7aat_ra2eesiyya f|صفحة_رئيسية صفحات_رئيسية", username: "username usernames m|يوزرنيم يوزرنيمز", nickname_: "lagab algaab m|لقب ألقاب", handle_: "yoozar yoozaraat m|يوزر يوزرات",
+    avatar: "avatar avatars m|أفاتار أفاتارات", pfp: "9oorat_il-brofaayil 9uwar_il-brofaayil f|صورة_البروفايل صور_البروفايل", profile: "brofaayil brofaaylaat m|بروفايل بروفايلات", bio: "bio bios m|بايو بايوز", feed: "feed feed m|فيد فيد",
+    follower_: "mutaabi3 mutaabi3een mh|متابع متابعين", sub: "sub subs mh|سب سبز", subscriber: "mushtarik mushtarikeen mh|مشترك مشتركين", viewer_: "mushaahid mushaahideen mh|مشاهد مشاهدين", view: "mushaahada mushaahadaat f|مشاهدة مشاهدات",
+    like_n: "laayk laaykaat m|لايك لايكات", comment_n: "comment comments m|كومنت كومنتات", share_n: "mushaaraka mushaarakaat f|مشاركة مشاركات", repost: "repost reposts m|ريبوست ريبوستات", retweet: "retweet retweets m|ريتويت ريتويتات",
+    tweet: "tweet tweets m|تويتة تويتات", thread_: "thread threads m|ثريد ثريدات", spoiler: "spoiler spoilers m|سبويلر سبويلرز", trailer: "trailer trailers m|تريلر تريلرات", episode: "7alga 7algaat f|حلقة حلقات",
+    season_: "mawsim mawaasim m|موسم مواسم", series: "musalsal musalsalaat m|مسلسل مسلسلات", anime: "anime anime m|أنمي أنمي", manga: "manga manga f|مانقا مانقا", cosplay: "cosplay cosplay m|كوسبلاي كوسبلاي",
+    esports: "esports esports m|إي_سبورتس إي_سبورتس", tournament: "bu6oola bu6oolaat f|بطولة بطولات", leaderboard: "leaderboard leaderboards m|ليدربورد ليدربوردات", ranked: "ranked ranked m|رانكد رانكد", matchmaking: "matchmaking matchmaking m|ماتش_ميكنق ماتش_ميكنق",
+    lobby_: "lobby lobbies m|لوبي لوبيز", squad: "squad squads m|سكواد سكوادز", duo: "duo duos m|ديو ديوز", solo_: "solo solo m|سولو سولو", trio: "trio trios m|تريو تريوز", teammate: "zameel zumala mh|زميل زملا",
+    mvp: "mvp mvp m|إم_في_بي إم_في_بي", killstreak: "killstreak killstreaks m|كل_ستريك كل_ستريكس", headshot: "headshot headshots m|هيدشوت هيدشوتس", clutch: "clutch clutches m|كلتش كلتشز", ace_: "aas aasaat m|آس آسات",
+    noobs: "noobs noobs mh|نوبز نوبز", pros: "pros pros mh|بروز بروز", hacker: "hacker hackers mh|هاكر هاكرز", cheater: "3'ashshaash 3'ashshaasheen mh|غشاش غشاشين", scammer: "na99aab na99aabeen mh|نصاب نصابين",
+    spammer: "spammer spammers mh|سبامر سبامرز", stalker: "mutarabbi9 mutarabbi9een mh|متربص متربصين", creep: "zi7leef zi7aaleef mh|زحليف زحاليف", weirdo: "3'areeb_a6waar 3'areebeen_a6waar mh|غريب_أطوار غريبين_أطوار", loser: "faashil faashleen mh|فاشل فاشلين",
+    legend: "us6oora asaa6eer mh|أسطورة أساطير", goat: "il-goat il-goat mh|القوت القوت", king: "malik mulook mh|ملك ملوك", queen: "malika malikaat fh|ملكة ملكات", boss_: "boss bosses mh|بوس بوسز",
+    bestie: "bestie besties mh|بستي بستيز", bff: "bff bffs mh|بي_إف_إف بي_إف_إفز", crush: "crush crushes mh|كرش كرشز", ex: "ex exes mh|إكس إكسز", bae: "7abeebi 7abaaybi mh|حبيبي حبايبي", boo: "7abeebi 7abaaybi mh|حبيبي حبايبي",
+    homie: "5ooy 5waan mh|خوي خوان", fam: "rab3 rab3 mh|ربع ربع", squad_: "rab3 rab3 mh|ربع ربع", crew: "rab3 rab3 mh|ربع ربع", gang: "rab3 rab3 mh|ربع ربع", peeps: "naas naas mh|ناس ناس",
+    bruh: "5ooy 5waan mh|خوي خوان", bruv: "5ooy 5waan mh|خوي خوان", lad: "walad awlaad mh|ولد أولاد", lads: "shabaab shabaab mh|شباب شباب", bloke: "rayyal ryaayeel mh|ريال ريايل", chick: "bnayya banaat fh|بنية بنات",
+    hun: "7abeebi 7abaaybi mh|حبيبي حبايبي", hon: "7abeebi 7abaaybi mh|حبيبي حبايبي", sis: "u5ti u5waat fh|أختي أخوات", cuz: "wild_3ammi wild_3ammi mh|ولد_عمي ولد_عمي",
+  };
+  const X7_ADJS = {
+    bussin: "5a6eer 5a6eera 5a6eereen|خطير خطيرة خطيرين", cringe: "mu7rij mu7rija mu7rijeen|محرج محرجة محرجين", cringey: "mu7rij mu7rija mu7rijeen|محرج محرجة محرجين", cringy: "mu7rij mu7rija mu7rijeen|محرج محرجة محرجين",
+    hardstuck: "3aalig 3aalga 3aalgeen|عالق عالقة عالقين", tilted: "mi3a99ib mi3a99iba mi3a99ibeen|معصب معصبة معصبين", janky: "m5arba6 m5arb6a m5arb6een|مخربط مخربطة مخربطين",
+    buggy: "feeh_bugs feeha_bugs feehum_bugs|فيه_بقز فيها_بقز فيهم_بقز", choppy: "mga66a3 mga66a3a mga66a3een|مقطع مقطعة مقطعين", perma: "daa2im daa2ima daa2imeen|دائم دائمة دائمين", permanent: "daa2im daa2ima daa2imeen|دائم دائمة دائمين",
+    legit: "a9li a9liyya a9liyyeen|أصلي أصلية أصليين", sweaty: "sweaty sweaty sweaty|سويتي سويتي سويتي", inting: "yfeed tfeed yfeedoon|يفيد تفيد يفيدون", laggy_: "ylaggig tlaggig ylaggigoon|يلقق تلقق يلققون",
+    salty: "mi3a99ib mi3a99iba mi3a99ibeen|معصب معصبة معصبين", savage: "wa7shi wa7shiyya wa7shiyyeen|وحشي وحشية وحشيين", iconic: "us6oori us6ooriyya us6ooriyyeen|أسطوري أسطورية أسطوريين",
+    basic: "3aadi 3aadiyya 3aadiyyeen|عادي عادية عاديين", woke: "woke woke woke|ووك ووك ووك", thirsty_: "3a6shaan 3a6shaana 3a6shaaneen|عطشان عطشانة عطشانين",
+    shook: "min9idim min9idma min9idmeen|منصدم منصدمة منصدمين", unbothered: "mob mihtamm mob mihtamma mob mihtammeen|مب_مهتم مب_مهتمة مب_مهتمين", delulu: "mitwahhim mitwahhima mitwahhimeen|متوهم متوهمة متوهمين",
+    clapped: "5arbaan 5arbaana 5arbaaneen|خربان خربانة خربانين", washed: "5alla9 5alla9at 5alla9aw|خلص خلصت خلصوا", cracked: "5a6eer 5a6eera 5a6eereen|خطير خطيرة خطيرين", goated: "us6oori us6ooriyya us6ooriyyeen|أسطوري أسطورية أسطوريين",
+    busted: "5arbaan 5arbaana 5arbaaneen|خربان خربانة خربانين", broke_: "muflis muflisa mufliseen|مفلس مفلسة مفلسين", loaded: "3inda floos 3indha floos 3indhum floos|عنده_فلوس عندها_فلوس عندهم_فلوس",
+    online_: "online online online|أونلاين أونلاين أونلاين", offline: "offline offline offline|أوفلاين أوفلاين أوفلاين", muted: "muted muted muted|ميوتد ميوتد ميوتد", banned: "mabnood mabnooda mabnoodeen|مبنود مبنودة مبنودين",
+    verified: "muwaththag muwaththaga muwaththageen|موثق موثقة موثقين", viral: "viral viral viral|فايرل فايرل فايرل", trending: "trending trending trending|تريندنق تريندنق تريندنق", unseen: "ma shaafa ma shaafha ma shaafhum|ما_شافه ما_شافها ما_شافهم",
+  };
+  const X7_VERBS = {
+    yeet: ["ramait rama rmi irmi|رميت رمى رمي ارم", { lv: 'i' }],
+    ghost: ["6annasht 6annash 6annish 6annish|طنشت طنش طنش طنش", {}],
+    ragequit: ["6ila3t_min_il-3a9abiyya 6ila3_min_il-3a9abiyya 6la3_min_il-3a9abiyya i6la3_min_il-3a9abiyya|طلعت_من_العصبية طلع_من_العصبية طلع_من_العصبية اطلع_من_العصبية", { lv: 'a', past: 'ragequit', pp: 'ragequit' }],
+    'rage quit': ["6ila3t_min_il-3a9abiyya 6ila3_min_il-3a9abiyya 6la3_min_il-3a9abiyya i6la3_min_il-3a9abiyya|طلعت_من_العصبية طلع_من_العصبية طلع_من_العصبية اطلع_من_العصبية", { lv: 'a', past: 'rage', pp: 'rage' }],
+    stan: ["=do", { tail: 'stan|ستان', obj: 'li' }],
+    flex_v: ["=do", { tail: 'flex|فلكس' }],
+    simp_v: ["=do", { tail: 'simp|سمب', for: '3ala' }],
+    vibe: ["=do", { tail: 'vibe|فايب' }],
+    sub_v: ["=do", { tail: 'sub|سب' }],
+    subscribe: ["ishtarakt ishtarak shtirik ishtirik|اشتركت اشترك اشترك اشترك", { lv: 'i', to: 'fi' }],
+    unsubscribe: ["al3'ait_il-ishtiraak al3'a_il-ishtiraak al3'i_il-ishtiraak al3'i_il-ishtiraak|ألغيت_الاشتراك ألغى_الاشتراك ألغي_الاشتراك ألغ_الاشتراك", { from: 'min' }],
+    unfollow: ["=do", { tail: 'unfollow|أنفولو', obj: 'li' }],
+    follow_: ["taaba3t taaba3 taabi3 taabi3|تابعت تابع تابع تابع", {}],
+    tweet_v: ["3'arradt 3'arrad 3'arrid 3'arrid|غردت غرد غرد غرد", {}],
+    retweet_v: ["=do", { tail: 'retweet|ريتويت', obj: 'li' }],
+    repost_v: ["=do", { tail: 'repost|ريبوست', obj: 'li' }],
+    livestream: ["=do", { tail: 'live|لايف' }],
+    stream_: ["=do", { tail: 'stream|ستريم' }],
+    binge: ["=do", { tail: 'binge|بنج', obj: 'li' }],
+    'binge watch': ["=do", { tail: 'binge|بنج', obj: 'li' }],
+    doomscroll: ["=do", { tail: 'scroll|سكرول' }],
+    rizz_v: ["=do", { tail: 'rizz|رز', obj: 'li' }],
+    gaslight_: ["=do", { tail: 'gaslight|قاسلايت', obj: 'li' }],
+    clown: ["=do", { tail: 'clown|كلاون', obj: '3ala' }],
+    roast_s: ["=do", { tail: 'roast|روست', obj: 'li' }],
+    rek: ["dammart dammar dammir dammir|دمرت دمر دمر دمر", {}],
+    pwn: ["hazamt hazam hzim ihzim|هزمت هزم هزم اهزم", { lv: 'i' }],
+    own_: ["hazamt hazam hzim ihzim|هزمت هزم هزم اهزم", { lv: 'i' }],
+    clutch_v: ["=do", { tail: 'clutch|كلتش', obj: 'li' }],
+    carry_: ["=do", { tail: 'carry|كاري', obj: 'li' }],
+    boost: ["=do", { tail: 'boost|بوست', obj: 'li' }],
+    grind_: ["=do", { tail: 'grind|قرايند' }],
+    smurf_v: ["=do", { tail: 'smurf|سمرف' }],
+    grief: ["=do", { tail: 'grief|قريف', obj: '3ala' }],
+    camp_: ["=do", { tail: 'camp|كامب' }],
+    gank: ["=do", { tail: 'gank|قانك', obj: 'li' }],
+    respawn_: ["=do", { tail: 'respawn|ريسبون' }],
+    despawn: ["i5tafait i5tafa 5tifi i5tifi|اختفيت اختفى اختفي اختف", { lv: 'i' }],
+    oneshot: ["=do", { tail: 'oneshot|ون_شوت', obj: 'li' }],
+    'one shot': ["=do", { tail: 'oneshot|ون_شوت', obj: 'li' }],
+    unlock: ["fakkait fakk fikk fikk|فكيت فك فك فك", {}],
+    equip: ["labbast labbas labbis labbis|لبست لبس لبس لبس", {}],
+    unequip: ["galla3t galla3 galli3 galli3|قلعت قلع قلع قلع", {}],
+    craft: ["=do", { tail: 'craft|كرافت', obj: 'li' }],
+    enchant: ["=do", { tail: 'enchant|إنشانت', obj: 'li' }],
+    forge_: ["=do", { tail: 'forge|فورج', obj: 'li' }],
+    merge_: ["dammajt dammaj dammij dammij|دمجت دمج دمج دمج", {}],
+    salvage: ["=do", { tail: 'salvage|سالفج', obj: 'li' }],
+    loot_: ["=do", { tail: 'loot|لوت', obj: 'li' }],
+    autoattack: ["=do", { tail: 'auto attack|أوتو أتاك' }],
+  };
+  const X7_ADVS = {
+    atm: "il7een|الحين", rn: "il7een|الحين", irl: "fil-7ageega|في الحقيقة", obv: "waa9'i7|واضح", obvi: "waa9'i7|واضح", defo: "akeed|أكيد", deffo: "akeed|أكيد", lowkey_: "bi9raa7a|بصراحة",
+    highkey_: "9idj|صدج", frfr: "wallah|والله", fr_: "wallah|والله", ong: "wallah|والله", istg: "wallah|والله", legit_: "9idj|صدج", srsly: "bjadd|بجد", obviously_: "waa9'i7|واضح",
+    tbf: "bil-in9aaf|بالإنصاف", nocap: "9idj|صدج", lol_: "haha|ههه", periodt: "w5alaa9|وخلاص", asf: "~wayed|وايد", af: "~wayed|وايد", hella: "~wayed|وايد", lowkey: "bi9raa7a|بصراحة",
+  };
+  const X7_FIXED = {
+    'fyi': "lil-3ilm|للعلم", 'bbl': "barja3 ba3dain|برجع بعدين", 'bbs': "barja3 bsur3a|برجع بسرعة", 'iirc': "idha adhkur 9a7|إذا أذكر صح", 'okie': "tamaam|تمام", 'oki': "tamaam|تمام", 'okie dokie': "tamaam|تمام", 'okey': "tamaam|تمام",
+    'hyd': A3("shlonak|شلونك", "shlonich|شلونج", "shlonkum|شلونكم"), 'stfu': A3("sidd 7algak|سد حلقك", "siddi 7algich|سدي حلقج", "siddoo 7algkum|سدوا حلقكم"), 'gtfo': A3("inga6i3|انقطع", "inga6i3i|انقطعي", "inga6i3oo|انقطعوا"),
+    'got rekt': "indammar|اندمر", 'u got rekt': A3("indammart|اندمرت", "indammarti|اندمرتي", "indammartu|اندمرتوا"), 'you got rekt': A3("indammart|اندمرت", "indammarti|اندمرتي", "indammartu|اندمرتوا"), 'i got rekt': "indammart|اندمرت",
+    'rekt': "mdammar|مدمر", 'get rekt': A3("ru7t feeha|رحت فيها", "ri7ti feeha|رحتي فيها", "ri7tu feeha|رحتوا فيها"), 'got pwned': "inhazam|انهزم", 'pwned': "inhazam|انهزم", 'u got pwned': A3("inhazamt|انهزمت", "inhazamti|انهزمتي", "inhazamtu|انهزمتوا"),
+    'ilysm': A3("a7ibbak wayed|أحبك وايد", "a7ibbich wayed|أحبج وايد", "a7ibbkum wayed|أحبكم وايد"), 'ily': A3("a7ibbak|أحبك", "a7ibbich|أحبج", "a7ibbkum|أحبكم"), 'ily2': A3("wana ba3ad a7ibbak|وأنا بعد أحبك", "wana ba3ad a7ibbich|وأنا بعد أحبج", "wana ba3ad a7ibbkum|وأنا بعد أحبكم"),
+    'hmu': A3("kallimni|كلمني", "kallimeeni|كلميني", "kallimooni|كلموني"), 'hit me up': A3("kallimni|كلمني", "kallimeeni|كلميني", "kallimooni|كلموني"), 'gmorning': "9abaa7 il-5air|صباح الخير", 'gnight': A3("ti9ba7 3ala 5air|تصبح على خير", "ti9ba7een 3ala 5air|تصبحين على خير", "ti9ba7oon 3ala 5air|تصبحون على خير"),
+    'xoxo': "bosaat|بوسات", 'gz': "mabrook|مبروك", 'gratz': "mabrook|مبروك", 'grats': "mabrook|مبروك", 'hbd': A3("kil sana winta 6ayyib|كل سنة وانت طيب", "kil sana winti 6ayyiba|كل سنة وانتي طيبة", "kil sana wintum 6ayyibeen|كل سنة وانتم طيبين"),
+    'hny': "kil 3aam wintum b5air|كل عام وانتم بخير", 'happy new year': "kil 3aam wintum b5air|كل عام وانتم بخير", 'happy eid': "3eedkum mubaarak|عيدكم مبارك", 'eid mubarak': "3eedkum mubaarak|عيدكم مبارك", 'ramadan kareem': "ramadan kareem|رمضان كريم", 'ramadan mubarak': "ramadan mubaarak|رمضان مبارك",
+    'that is a w': "hadhi fawz|هذي فوز", 'thats a w': "hadhi fawz|هذي فوز", 'big w': "fawz chibeer|فوز چبير", 'take the l': A3("tagabbal il-5asaara|تقبل الخسارة", "tagabbali il-5asaara|تقبلي الخسارة", "tagabbaloo il-5asaara|تقبلوا الخسارة"), 'that is an l': "hadhi 5asaara|هذي خسارة", 'thats an l': "hadhi 5asaara|هذي خسارة", 'big l': "5asaara chibeera|خسارة چبيرة",
+    'l bozo': "5asaara ya 3'abi|خسارة يا غبي", 'rip bozo': "rip ya 3'abi|رب يا غبي", 'rq': "6ila3 min il-3a9abiyya|طلع من العصبية", 'perma banned': "mabnood lil-abad|مبنود للأبد", 'perma ban': "ban daa2im|بان دائم", 'permaban': "ban daa2im|بان دائم",
+    'slay': A3("abda3t|أبدعت", "abda3ti|أبدعتي", "abda3tu|أبدعتوا"), 'you slayed': A3("abda3t|أبدعت", "abda3ti|أبدعتي", "abda3tu|أبدعتوا"), 'she slayed': "abda3at|أبدعت", 'he slayed': "abda3|أبدع", 'periodt': "w5alaa9|وخلاص", 'rent free': "bbalaash|ببلاش", 'living rent free in my head': "saakin fi raasi bbalaash|ساكن في راسي ببلاش", 'lives rent free in my head': "saakin fi raasi bbalaash|ساكن في راسي ببلاش", 'rent free in my head': "fi raasi bbalaash|في راسي ببلاش",
+    'caught in 4k': "inmasak bil-jurm il-mashhood|انمسك بالجرم المشهود", 'uno reverse': "3akast-ha 3alaik|عكستها عليك", 'uno reverse card': "3akast-ha 3alaik|عكستها عليك", 'big brain': "3abgari|عبقري", 'smooth brain': "3'abi|غبي", 'galaxy brain': "3abgari|عبقري",
+    '200 iq': "3abgari|عبقري", 'big oof': "ya 7asra|يا حسرة", 'oof': "aa5|آخ", 'ez clap': "sahl wayed|سهل وايد", 'get good': A3("t3allam il3ab|تعلم العب", "t3allami il3abi|تعلمي العبي", "t3allamoo il3aboo|تعلموا العبوا"), 'git gud': A3("t3allam il3ab|تعلم العب", "t3allami il3abi|تعلمي العبي", "t3allamoo il3aboo|تعلموا العبوا"),
+    'skill diff': "farg mahaara|فرق مهارة", 'sksksk': "hahaha|ههههه", 'kekw': "hahaha|ههههه", 'omegalul': "hahahaha|هههههه", 'lul': "haha|ههه", 'lulw': "haha|ههه", 'monkas': "ya saatir|يا ساتر", 'pepehands': "ya 7asra|يا حسرة", 'sadge': "ya 7asra|يا حسرة",
+    'copege': "it7ammal|اتحمل", 'pepelaugh': "hahaha|ههههه", '5head': "3abgari|عبقري", 'weirdchamp': "3'areeb|غريب", 'residentsleeper': "mumill|ممل", 'jebaited': "in5ada3t|انخدعت", 'kappa': "amza7|أمزح", 'pepega': "3'abi|غبي", 'pog': "waaw|واو", 'poggers': "waaw|واو", 'pogchamp': "waaw|واو",
+    'ez': "sahl|سهل", 'gg ez': "gg sahl|قق سهل", 'ggez': "gg sahl|قق سهل", 'ggwp': "gg wp|قق وب", 'gg wp': "gg wp|قق وب", 'glhf': "gl hf|قل هف", 'gl hf': "gl hf|قل هف", 'wp': "wp|وب", 'gl': "gl|قل", 'hf': "hf|هف",
+    'no u': A3("la inta|لا انت", "la inti|لا انتي", "la intum|لا انتم"), 'its giving': "shakla|شكله", "it's giving": "shakla|شكله", 'main character energy': "6aagat il-ba6al|طاقة البطل", 'npc behavior': "ta9arruf npc|تصرف npc", 'npc behaviour': "ta9arruf npc|تصرف npc",
+    'ok boomer': "tamaam ya 3ammi|تمام يا عمي", 'and i oop': "wana oop|وأنا أوب", 'f in the chat': "f fil-chat|f في الشات", 'press f': "i9'3'a6 f|اضغط f", 'press f to pay respects': "i9'3'a6 f lil-i7tiraam|اضغط f للاحترام",
+    'w/': "ma3|مع", 'w/o': "bdoon|بدون", 'b/c': "3ashaan|عشان", 'tl;dr': "il-5ulaa9a|الخلاصة", 'tldr': "il-5ulaa9a|الخلاصة", 'imo': "bra2yi|برأيي", 'imho': "bra2yi|برأيي", 'afaik': "3ala 7asab 3ilmi|على حسب علمي", 'iykyk': "illi yadri yadri|اللي يدري يدري",
+    'tfw': "il-i7saas lamma|الإحساس لما", 'mfw': "wayhi lamma|ويهي لما", 'smh': "ya 5asaara|يا خسارة", 'smdh': "ya 5asaara|يا خسارة", 'fml': "ya 7a6'6'i|يا حظي", 'yolo': "ma n3eesh illa marra|ما نعيش إلا مرة", 'fomo': "5oof inni afawwit|خوف إني أفوت",
+    'dm me': A3("6arrish li dm|طرش لي dm", "6arrishi li dm|طرشي لي dm", "6arrishoo li dm|طرشوا لي dm"), 'pm me': A3("6arrish li pm|طرش لي pm", "6arrishi li pm|طرشي لي pm", "6arrishoo li pm|طرشوا لي pm"), 'follow me': A3("taabi3ni|تابعني", "taabi3eeni|تابعيني", "taabi3ooni|تابعوني"), 'sub to me': A3("sawwi li sub|سو لي سب", "sawwi li sub|سوي لي سب", "sawwoo li sub|سووا لي سب"), 'like and subscribe': "laayk wishtirik|لايك واشترك", 'smash that like button': "i9'3'a6 laayk|اضغط لايك",
+    'link in bio': "il-link fil-bio|اللنك في البايو", 'check my bio': "shoof il-bio maali|شوف البايو مالي", 'drop a like': "7u66 laayk|حط لايك", 'drop a follow': "sawwi follow|سو فولو", 'going live': "basawi live|بسوي لايف", 'i am live': "ana live|أنا لايف",
+    'on stream': "3ala is-stream|على الستريم", 'in game': "fil-lu3ba|في اللعبة", 'ingame': "fil-lu3ba|في اللعبة", 'in the game': "fil-lu3ba|في اللعبة", 'out of game': "barra il-lu3ba|برا اللعبة", 'screen share': "share screen|شير سكرين", 'share screen': "share screen|شير سكرين", 'turn on your mic': A3("shaghghil maikak|شغل مايكك", "shaghghili maikich|شغلي مايكج", "shaghghiloo maikkum|شغلوا مايككم"), 'mic check': "mic check|مايك تشك", 'can you hear me': A3("tisma3ni|تسمعني", "tisma3eeni|تسمعيني", "tisma3ooni|تسمعوني"),
+    'you are muted': A3("inta muted|انت ميوتد", "inti muted|انتي ميوتد", "intum muted|انتم ميوتد"), 'you are on mute': A3("inta muted|انت ميوتد", "inti muted|انتي ميوتد", "intum muted|انتم ميوتد"), 'unmute yourself': A3("sawwi unmute|سو أنميوت", "sawwi unmute|سوي أنميوت", "sawwoo unmute|سووا أنميوت"),
+    'my internet is bad': "il-net maali shain|النت مالي شين", 'my wifi is bad': "il-wifi maali shain|الواي فاي مالي شين", 'the net is slow': "in-net ba6ee2|النت بطيء", 'the internet is slow': "in-net ba6ee2|النت بطيء", 'no signal': "ma fi shabaka|ما في شبكة", 'no internet': "ma fi net|ما في نت",
+    'low battery': "il-ba66aariyya 9'a3eefa|البطارية ضعيفة", 'my phone died': "tilifooni 6afa|تلفوني طفى", 'my phone is dead': "tilifooni 6aafi|تلفوني طافي", 'my battery died': "il-ba66aariyya 5il9at|البطارية خلصت", 'out of battery': "il-ba66aariyya 5il9at|البطارية خلصت",
+    'charge your phone': A3("shi7in tilifoonak|شحن تلفونك", "shi7ni tilifoonich|شحني تلفونج", "shi7noo tilifoonkum|شحنوا تلفونكم"), 'my phone is charging': "tilifooni yshi7in|تلفوني يشحن", 'the link is broken': "il-link ma yishti3'il|اللنك ما يشتغل", 'the link does not work': "il-link ma yishti3'il|اللنك ما يشتغل", 'page not found': "i9-9af7a mob mawjooda|الصفحة مب موجودة", 'error 404': "error 404|إيرور 404", 'it says error': "y6ala3 li error|يطلع لي إيرور",
+  };
+  Object.assign(X7_FIXED, { 'straight up': "bi9raa7a|بصراحة", 'gotcha': "fihamt 3alaik|فهمت عليك", 'binge watched': "6aala3t kil il-7algaat|طالعت كل الحلقات", 'binge watched it': "6aala3t-ha killaha|طالعتها كلها", 'binge watch it': "a6aali3-ha killaha|أطالعها كلها", 'i binge watched': "6aala3t kil il-7algaat|طالعت كل الحلقات", 'i binge watched it': "6aala3t-ha killaha|طالعتها كلها", 'binge watch': "a6aali3 kil il-7algaat|أطالع كل الحلقات", 'binge watching': "gaa3id a6aali3 kil il-7algaat|قاعد أطالع كل الحلقات",
+    'bro i am dead': "5ooy ana mayyit min i9'-9'i7k|خوي أنا ميت من الضحك", 'i am dead': "mayyit min i9'-9'i7k|ميت من الضحك", 'im dead': "mayyit min i9'-9'i7k|ميت من الضحك", 'i am crying': "ab-chi min i9'-9'i7k|أبچي من الضحك", 'im crying': "ab-chi min i9'-9'i7k|أبچي من الضحك", 'crying': "ab-chi|أبچي", 'i am screaming': "a9arri5|أصرخ", 'im screaming': "a9arri5|أصرخ", 'i am weak': "ana mayyit min i9'-9'i7k|أنا ميت من الضحك", 'im weak': "ana mayyit min i9'-9'i7k|أنا ميت من الضحك",
+    'not me': "mob ana|مب أنا", 'the way i': "shlon ana|شلون أنا", 'this you': A3("hadha inta|هذا انت", "hadhi inti|هذي انتي", "hadhola intum|هذولا انتم"), 'say sike': "gool amza7|قول أمزح", 'say sike rn': "gool amza7 il7een|قول أمزح الحين",
+    'sike': "amza7|أمزح", 'psych': "amza7|أمزح", 'jk': "amza7|أمزح", 'jkjk': "amza7|أمزح", 'just kidding': "amza7|أمزح", 'kidding': "amza7|أمزح", 'i am kidding': "amza7|أمزح", 'im kidding': "amza7|أمزح", 'only kidding': "amza7|أمزح", 'lol jk': "haha amza7|ههه أمزح" });
+  const X7_NOUN_ALIAS = { char: 'character', chars: 'character', acc: 'account', accs: 'account', pw: 'password', pwd: 'password', req: 'request', reqs: 'request', pt: 'party', pts: 'party', convo: 'conversation', convos: 'conversation',
+    pic: 'picture', pics: 'picture', vid: 'video', vids: 'video', msg: 'message', msgs: 'message', txt: 'text', bday: 'birthday', wk: 'week', wks: 'week', mo: 'month', mos: 'month', yr: 'year', yrs: 'year', hr: 'hour', hrs: 'hour',
+    min_: 'minute', mins: 'minute', sec: 'second', secs: 'second', noti: 'notification', notis: 'notification', notifs: 'notification', subs: 'sub', pfps: 'pfp', dms: 'dm', pms: 'pm', memes: 'meme', gifs: 'gif', emojis: 'emoji', stickers: 'sticker',
+    hashtags: 'hashtag', selfies: 'selfie', stories_: 'story', reels: 'reel', podcasts: 'podcast', playlists: 'playlist', apps: 'app', links: 'link', sites: 'site', websites: 'website', usernames: 'username', avatars: 'avatar', profiles: 'profile',
+    followers_: 'follower', subscribers: 'subscriber', views: 'view', likes: 'like', comments: 'comment', shares: 'share', tweets: 'tweet', spoilers: 'spoiler', trailers: 'trailer', episodes: 'episode', seasons: 'season', streamers: 'streamer',
+    youtubers: 'youtuber', influencers: 'influencer', gamers: 'gamer', memers: 'meme', simps: 'simp', boomers: 'boomer', zoomers: 'zoomer', smurfs: 'smurf', tryhards: 'tryhard', hackers: 'hacker', cheaters: 'cheater', scammers: 'scammer',
+    losers: 'loser', legends: 'legend', kings: 'king', queens: 'queen', besties: 'bestie', crushes: 'crush', exes: 'ex', homies: 'homie', lads_: 'lad', blokes: 'bloke', chicks: 'chick', teammates: 'teammate', squads: 'squad', duos: 'duo', trios: 'trio',
+    tournaments: 'tournament', headshots: 'headshot', killstreaks: 'killstreak', clutches: 'clutch', bozos: 'bozo', normies: 'normie', weebs: 'weeb', chads: 'chad', karens: 'karen', monitors: 'monitor', keyboards: 'keyboard', headsets: 'headset', chargers: 'charger', mics: 'mic' };
+  for (const [k, v] of Object.entries(X7_NOUNS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_RAW) && !(kk + '_' in NOUN_RAW)) NOUN_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X7_ADJS)) { const kk = k.replace(/_[a-z]*$/, ''); if (kk === 'salty' || (!(kk in ADJ_RAW) && !(kk + '_' in ADJ_RAW))) ADJ_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X7_VERBS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in VERB_RAW) && !(kk + '_' in VERB_RAW)) VERB_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X7_ADVS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in ADV_RAW) && !(kk + '_' in ADV_RAW)) ADV_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X7_FIXED)) { const kk = k.trim(); if (!(kk in FIXED_RAW)) FIXED_RAW[kk] = v; }
+  for (const [k, v] of Object.entries(X7_NOUN_ALIAS)) { const kk = k.replace(/_[a-z]*$/, ''); if (!(kk in NOUN_ALIAS)) NOUN_ALIAS[kk] = v; }
   const NOUNS = {}, NOUN_FORM = new Map(), NOUN_PHRASE = new Map();
   for (const key of Object.keys(NOUN_RAW)) {
     const [a, b] = pair(NOUN_RAW[key]);
@@ -2481,10 +3477,12 @@
     out.s.push(o.s || (/(s|x|z|ch|sh|o)$/.test(base) ? base + 'es' : /[^aeiou]y$/.test(base) ? base.slice(0, -1) + 'ies' : base + 's'));
     const reg = /e$/.test(base) ? base + 'd' : /[^aeiou]y$/.test(base) ? base.slice(0, -1) + 'ied' : base + 'ed';
     const dbl = /^[^aeiou]*[aeiou][bdgklmnprt]$/.test(base) ? base + base.slice(-1) : null;
+    const dbl2 = !dbl && /[^aeiouwy][aeiou][bdgklmnprt]$/.test(base) && !/[aeiou][aeiou][^aeiou]$/.test(base) ? base + base.slice(-1) : null;   // forget → forgetting, admit → admitting
     if (o.past) out.past.push(...[].concat(o.past)); else { out.past.push(reg); if (dbl) out.past.push(dbl + 'ed'); }
     if (o.pp) out.pp.push(...[].concat(o.pp)); else if (o.past) out.pp.push(...[].concat(o.past)); else { out.pp.push(reg); if (dbl) out.pp.push(dbl + 'ed'); }
     out.ing.push(/ie$/.test(base) ? base.slice(0, -2) + 'ying' : /[^e]e$/.test(base) ? base.slice(0, -1) + 'ing' : base + 'ing');
     if (dbl) out.ing.push(dbl + 'ing');
+    if (dbl2) { out.ing.push(dbl2 + 'ing'); if (!o.past) out.past.push(dbl2 + 'ed'); if (!o.pp && !o.past) out.pp.push(dbl2 + 'ed'); }
     return out;
   }
   function addForm(map, form, rec) { if (!map.has(form)) map.set(form, []); const list = map.get(form); if (!list.some((r) => r.key === rec.key && r.form === rec.form)) list.push(rec); }
@@ -2573,7 +3571,8 @@
     'that will be great', 'it would be great', 'that would be good', 'that would be fine', 'that is very kind of you', 'that is so kind of you', 'that is kind of you', 'very kind of you',
     'so kind of you', 'you are too kind', 'you are so kind', 'you are very kind', 'that is very nice of you', 'that is nice of you', 'so nice of you', 'very nice of you',
     'i am glad i met you', 'glad i met you', 'i am happy i met you', 'happy i met you', 'i am glad i met you too', 'glad i met you too', 'thanks again', 'thank you again', 'see you all tomorrow', 'see you all later', 'get well soon', 'good luck everyone', 'good luck guys',
-    'thanks everyone', 'thank you everyone', 'thanks guys', 'thank you guys', 'thanks everyone for', 'thank you everyone for', 'thanks guys for', 'thank you guys for', 'good morning everyone', 'good morning guys', 'good evening everyone', 'good evening guys', 'good night everyone', 'good night guys']);
+    'thanks everyone', 'thank you everyone', 'thanks guys', 'thank you guys', 'thanks everyone for', 'thank you everyone for', 'thanks guys for', 'thank you guys for', 'good morning everyone', 'good morning guys', 'good evening everyone', 'good evening guys', 'good night everyone', 'good night guys',
+    'take a seat', 'have a seat', 'go away', 'back off', 'step back', 'move over', 'look out', 'watch out', 'heads up', 'cheer up', 'chill out', 'hands up', 'knock it off', 'never give up', 'do not give up', 'aha', 'whew', 'darn', 'bingo', 'voila', 'tada']);
   const FIX_END = new Set(['where are you', 'how are you', 'what are you doing', 'what is your name', 'where are you from', 'i see', 'i understand', 'got it', 'i agree', 'i think so', 'i do not think so', 'i am fine', 'i am good',
     'i am ok', 'i am okay', 'i am coming', 'whatever', 'and you', 'what about you', 'me too', 'me neither', 'how much', 'exactly',
     'how about you', 'what is yours', 'what about yours', 'how about yours', 'and yours', 'you too', 'i am doing well', 'i am doing good', 'i am doing fine', 'i am doing ok',
@@ -2584,10 +3583,11 @@
     'is it worth it', 'was it worth it', 'you up', 'you there', 'are you there', 'probably not', 'same', 'same here', 'my bad', 'facts', 'can not wait', 'i can not wait',
     'by mistake', 'by accident', 'for a bit', 'for a little bit', 'for a little while', 'i do not care', 'i do not care anymore', 'bet', 'say less', 'skill issue', 'touch grass',
     'no shot', 'my guy', 'my man', 'my boy', 'cope', 'cope harder', 'i am cooked', 'we are cooked', 'you are cooked', 'he is cooked', 'she is cooked', 'they are cooked', 'cooked',
-    'hope so', 'i hope so', 'i hope not', 'hope not', 'since school', 'since high school', 'since college', 'since university', 'feel better', 'feel better soon', 'whatever you want']);
+    'hope so', 'i hope so', 'i hope not', 'hope not', 'my dearest', 'since school', 'since high school', 'since college', 'since university', 'feel better', 'feel better soon', 'whatever you want']);
   const FIX_KNOW = new Set(['i do not know', 'do not know', 'i have no idea', 'no idea', 'i know']);
   const STARTERS = new Set(['and', 'but', 'so', 'then', 'ok', 'okay', 'yes', 'yeah', 'no', 'oh', 'wow', 'haha', 'lol', 'hi', 'hello', 'hey',
-    'well', 'bro', 'dude', 'guys', 'now', 'alright', 'also', 'man', 'please', 'everyone']);
+    'well', 'bro', 'dude', 'guys', 'now', 'alright', 'also', 'man', 'please', 'everyone',
+    'okie', 'oki', 'okey', 'kk', 'k', 'cool', 'nice', 'great', 'perfect', 'awesome', 'yep', 'yup', 'nah', 'nope', 'sure', 'right', 'true', 'omg', 'lmao', 'lmfao', 'rofl', 'xd', 'yo', 'sup', 'hala', 'anyway', 'anyways', 'btw', 'ah', 'aah', 'ohh', 'ooh', 'hmm', 'huh', 'uh', 'um', 'aight', 'ty', 'thx', 'thanks', 'bruh', 'sis', 'fam', 'homie', 'mate', 'bud', 'buddy', 'sir', 'miss', 'boss', 'chief', 'brother', 'sister', 'habibi', 'ya']);
   const ENDERS = new Set(['and', 'but', 'so', 'bro', 'dude', 'guys', 'man', 'everyone', 'please', 'too', 'again', 'now', 'then', 'lol',
     'haha', 'thanks', 'ok', 'okay', 'anyway', 'today', 'tonight', 'here', 'there', 'my', 'doing', 'i', 'we', 'tho', 'though', 'btw', 'rn', 'bruh', 'smh', 'lmao', 'xd']);
   function startish(toks, i) {
@@ -2613,6 +3613,7 @@
     const lastW = key.split(' ').pop();
     if (DEM[lastW] && next && !next.punct && (NOUN_FORM.has(next.w) || ADJS[next.w])) return false;
     if ((key === 'like this' || key === 'like that') && prev && (PRON_SUBJ[prev.w] || AUX.has(prev.w) || MODAL[prev.w] || prev.w === 'to' || prev.w === 'not')) return false;
+    if ((key === 'i figured' || key === 'i figure') && next && !next.punct && ['it', 'out', 'this', 'that', 'the', 'him', 'her', 'them', 'my', 'your', 'a', 'an'].includes(next.w)) return false;
     if (key === 'got it' && prev && !prev.punct && (PRON_SUBJ[prev.w] || prev.w === 'you' || ['finally', 'just', 'already', 'never'].includes(prev.w))) return false;
     if (key === 'so sorry' && prev && !prev.punct && !STARTERS.has(prev.w)) return false;
     if ((key === 'a while' || key === 'a long time') && next && !next.punct && (NOUN_FORM.has(next.w) || ADJS[next.w])) return false;
@@ -2642,6 +3643,26 @@
     programing: 'programming', langauge: 'language', languge: 'language', arabice: 'arabic', englsh: 'english', engilsh: 'english'
   };
   const NO_FIX = new Set(['ok', 'okay', 'lol', 'gg', 'bro', 'omg', 'idk', 'brb', 'haha', 'hahaha', 'hmm', 'umm', 'uh', 'ah', 'oh', 'wow', 'yo']);
+  const X_TYPOS = { travelling: 'traveling', travelled: 'traveled', traveller: 'traveler', travellers: 'travelers', cancelling: 'canceling', cancelled: 'canceled', labelled: 'labeled', labelling: 'labeling',
+    modelling: 'modeling', modelled: 'modeled', levelled: 'leveled', levelling: 'leveling', signalling: 'signaling', signalled: 'signaled', totalled: 'totaled', marvelled: 'marveled', quarrelled: 'quarreled',
+    fuelled: 'fueled', dialled: 'dialed', dialling: 'dialing', centre: 'center', centres: 'centers', theatre: 'theater', theatres: 'theaters', litre: 'liter', litres: 'liters', fibre: 'fiber',
+    organise: 'organize', organised: 'organized', organising: 'organizing', recognise: 'recognize', recognised: 'recognized', apologise: 'apologize', apologised: 'apologized', apologising: 'apologizing',
+    criticise: 'criticize', criticised: 'criticized', realised: 'realized', realising: 'realizing', memorise: 'memorize', memorised: 'memorized', defence: 'defense', offence: 'offense', licence: 'license',
+    grey: 'gray', pyjamas: 'pajamas', tyre: 'tire', tyres: 'tires', cheque: 'check', analyse: 'analyze', analysed: 'analyzed', paralysed: 'paralyzed', catalogue: 'catalog', aeroplane: 'airplane', cosy: 'cozy',
+    whisky: 'whiskey', doughnut: 'donut', doughnuts: 'donuts', mould: 'mold', plough: 'plow', sceptical: 'skeptical', storey: 'floor', kerb: 'curb', draught: 'draft', ageing: 'aging', judgement: 'judgment',
+    fulfil: 'fulfill', instalment: 'installment', skilful: 'skillful', wilful: 'willful', enrolment: 'enrollment', aluminium: 'aluminum', maths: 'math', learnt: 'learned', dreamt: 'dreamed', burnt: 'burned',
+    spelt: 'spelled', smelt: 'smelled', spoilt: 'spoiled', leapt: 'leaped', knelt: 'kneeled', favourite: 'favorite', favourites: 'favorites', behaviour: 'behavior', neighbour: 'neighbor', neighbours: 'neighbors',
+    flavour: 'flavor', flavours: 'flavors', honour: 'honor', honours: 'honors', labour: 'labor', harbour: 'harbor', humour: 'humor', rumour: 'rumor', rumours: 'rumors', armour: 'armor', savour: 'savor',
+    programme: 'program', programmes: 'programs', aint: 'is not', "ain't": 'is not', gimme: 'give me', lemme: 'let me', gotta: 'have to', kinda: 'kind of', sorta: 'sort of', outta: 'out of', dunno: 'do not know', tryna: 'trying to',
+    finna: 'going to', whatcha: 'what are you', cuz: 'because', coz: 'because', cos: 'because', nvm: 'never mind', prolly: 'probably', fav: 'favorite', fave: 'favorite', dislike: 'do not like', dislikes: 'does not like', disliked: 'did not like', disliking: 'not liking',
+    y: 'why', c: 'see', n: 'and', k: 'ok', b: 'be', m8: 'mate', l8: 'late', l8r: 'later', l8er: 'later', w8: 'wait', h8: 'hate', gr8: 'great', sk8: 'skate', str8: 'straight', '2moro': 'tomorrow', '2morrow': 'tomorrow', '2mrw': 'tomorrow',
+    '2day': 'today', '2nite': 'tonight', '2night': 'tonight', b4: 'before', tmw: 'tomorrow', tmrw: 'tomorrow', tmr: 'tomorrow', tmrrw: 'tomorrow', tonite: 'tonight', 'w/': 'with', 'w/o': 'without', hyd_: 'how are you doing', hru: 'how are you', wyd: 'what are you doing',
+    wbu: 'what about you', hbu: 'what about you', ikr: 'i know right', frfr_: 'for real', ilysm_: 'i love you so much', gmorning_: 'good morning', gnight_: 'good night', nite_: 'night', thanq: 'thank you', thankyou: 'thank you', tq: 'thank you', tyty: 'thank you',
+    congratz: 'congrats', congratulation: 'congratulations', wlcm: 'welcome', wlc: 'welcome', welcum: 'welcome', wat: 'what', wot: 'what', wen: 'when', wer: 'where', wea: 'where', wher: 'where', ther: 'there', thr: 'there', wid: 'with', wit: 'with', wiv: 'with',
+    ova: 'over', eva: 'ever', neva: 'never', betta: 'better', betcha: 'bet you', dontcha: 'do not you', wontcha: 'will not you', aight: 'alright', ight: 'alright', ard: 'alright', aite: 'alright', fone: 'phone', foto: 'photo', fotos: 'photos',
+    kewl: 'cool', kool: 'cool', coo: 'cool', sik: 'sick', dope_: 'dope', lame_: 'lame', wack: 'bad', whack_: 'bad', cray: 'crazy', craycray: 'crazy', obvs: 'obviously', tho_: 'though', altho: 'although', thru_: 'through', enuf: 'enough', enuff: 'enough', nuff: 'enough',
+    lotta: 'a lot of', lotsa: 'lots of', kinda_: 'kind of', hafta: 'have to', hasta: 'has to', oughta: 'ought to', shoulda: 'should have', coulda: 'could have', woulda: 'would have', musta: 'must have', mighta: 'might have', gimme_: 'give me', lemme_: 'let me',
+    ima: 'i am going to', imma: 'i am going to', iam: 'i am', youre: 'you are', theyre: 'they are', weve: 'we have', youve: 'you have', theyve: 'they have', ive: 'i have', hes: 'he is', shes: 'she is', thats: 'that is', whats: 'what is', wheres: 'where is', hows: 'how is', whos: 'who is', isnt: 'is not', arent: 'are not', wasnt: 'was not', werent: 'were not', doesnt: 'does not', didnt: 'did not', cant: 'can not', couldnt: 'could not', wouldnt: 'would not', shouldnt: 'should not', wont: 'will not', havent: 'have not', hasnt: 'has not', hadnt: 'had not', aint_: 'is not' };
   let VOCAB = null;
   function vocab() {
     if (VOCAB) return VOCAB;
@@ -2664,6 +3685,7 @@
     VOCAB = v;
     return v;
   }
+  for (const k of Object.keys(X_TYPOS)) if (!Object.prototype.hasOwnProperty.call(COMMON_TYPOS, k) && !vocab().has(k)) COMMON_TYPOS[k] = X_TYPOS[k];   // UK spellings and chat contractions the tables do not know
   function osa(a, b, max) {
     const la = a.length, lb = b.length;
     if (Math.abs(la - lb) > max) return max + 1;
@@ -2924,6 +3946,20 @@
   const isVerbBase = (w) => !!(w && (VERB_FORM.get(w) || []).some((r) => r.form === 'base'));
   const isNounish = (w) => !!(w && (NOUN_FORM.has(w) || ADJS[w]));
 
+  /* he set up the server / the server shut down: a base-looking phrasal verb after a 3rd-person-singular subject is the past */
+  function phrasalForm(hit, ph, items) {
+    if (hit.form !== 'base' || !ph.some((r) => r.key === hit.key && r.form === 'past')) return hit.form;
+    const last = items[items.length - 1];
+    if (!last || last.t !== 'word') return hit.form;
+    const lnf = NOUN_FORM.get(last.w);
+    if (!(['he', 'she', 'it'].includes(last.w) || (lnf && !lnf.pl && !verbInfo(last.w)) || (!lnf && !verbInfo(last.w) && /^[A-Z][a-z]/.test(last.o || '')))) return hit.form;
+    for (let j = items.length - 2; j >= 0; j--) {
+      const h = items[j];
+      if (h.t === 'punct' || h.t === 'conj' || h.t === 'rel' || h.t === 'wh') break;
+      if (h.t === 'aux' || h.t === 'modal' || h.t === 'verb' || h.t === 'to' || h.t === 'neg' || (h.t === 'word' && (AUX.has(h.w) || MODAL[h.w] || h.w === 'to' || h.w === 'not' || verbInfo(h.w)))) return hit.form;
+    }
+    return 'past';
+  }
   function lex(toks, ctx) {
     const items = [];
     let i = 0;
@@ -2945,6 +3981,8 @@
       if (t.posss) { items.push({ t: 'posss' }); i++; continue; }
       const t1 = toks[i + 1], t2 = toks[i + 2];
       const plain = (x) => !!x && !x.punct && !x.keep && !x.arabic;
+      // neither he nor i → la huwa wala ana
+      if (t.w === 'neither' && toks.slice(i + 1, i + 7).some((x) => plain(x) && x.w === 'nor')) { items.push({ t: 'fixed', az: 'la', ar: 'لا', key: 'neither' }); i++; continue; }
       // a ten minute walk / a 2 hour drive → 10 dagaayig mashi / saa3tain bis-sayyara
       {
         const numTok = (x) => x && !x.punct && (/^\d+$/.test(x.w) || NUMS[x.w]);
@@ -2985,10 +4023,11 @@
       }
       if (/^[WL]$/.test(t.o) && (!t1 || t1.punct || !plain(t1) || ADJS[t1.w] || ['for', 'bro', 'lol', 'fr', 'tbh', 'ngl'].includes(t1.w))) { items.push({ t: 'fixed', az: t.o, ar: t.o, user: true, single: true, keep: true }); i += 1; continue; }
       // plug it in / pick him up / set it up → the phrasal verb, then the pronoun
-      if (plain(t1) && PRON_OBJ[t1.w] && plain(t2) && PHRASAL.get(t.w) && PHRASAL.get(t.w).some((r) => r.particle === t2.w)) {
+      if (plain(t1) && PRON_OBJ[t1.w] && plain(t2) && PHRASAL.get(t.w) && PHRASAL.get(t.w).some((r) => r.particle === t2.w) &&
+          !(['on', 'in', 'off', 'over', 'through', 'around', 'by', 'about', 'under', 'into'].includes(t2.w) && toks[i + 3] && plain(toks[i + 3]) && (DET[toks[i + 3].w] || PRON_POSS[toks[i + 3].w] || NOUN_FORM.has(toks[i + 3].w)))) {   // put it on the table: a preposition, not a particle
         const hit = PHRASAL.get(t.w).find((r) => r.particle === t2.w);
         const key = hit.key === 'pick up' && t1.w !== 'it' && t1.w !== 'them' ? 'pick up_p' : hit.key;
-        items.push({ t: 'verb', key, form: hit.form, o: t.o }, { t: 'pron', w: t1.w, role: 'obj' }); i += 3; continue;
+        items.push({ t: 'verb', key, form: phrasalForm(hit, PHRASAL.get(t.w), items), o: t.o }, { t: 'pron', w: t1.w, role: 'obj' }); i += 3; continue;
       }
       // harder than i expected → a93ab min ma twagga3t
       if (t.w === 'than' && plain(t1) && (PRON_SUBJ[t1.w] || t1.w === 'you') && plain(t2) && (verbInfo(t2.w) || AUX.has(t2.w) || MODAL[t2.w])) {
@@ -3179,10 +4218,44 @@
       }
       if (matched) continue;
       // phrasal verbs: wake up, turn off...
+      // a guy named Ahmed / a game called AQW → rayyal isma Ahmed
+      if ((t.w === 'named' || (t.w === 'called' && t1 && /^[A-Z]/.test(t1.o || ''))) && t1 && !t1.punct && items.length) {
+        const lw = items[items.length - 1];
+        const nf = lw && lw.t === 'word' ? NOUN_FORM.get(lw.w) : null;
+        if (nf && NOUNS[nf.key] && !PRON_SUBJ[lw.w] && !(plain(t1) && (PRON_OBJ[t1.w] || PRON_SUBJ[t1.w]))) {
+          const g = NOUNS[nf.key].g === 'f' && !nf.pl;
+          items.push({ t: 'fixed', az: nf.pl ? 'asaameehum' : g ? 'isimha' : 'isma', ar: nf.pl ? 'أساميهم' : g ? 'اسمها' : 'اسمه', key: 'named' }); i++; continue;
+        }
+      }
+      // the filter is on / the light is off → shaghghaal / 6aafi
+      if (/^(is|are|was|were|am)$/.test(t.w) && plain(t1) && (t1.w === 'on' || t1.w === 'off') && (!t2 || t2.punct || (plain(t2) && ['now', 'again', 'already', 'still', 'too', 'also', 'right', 'rn', 'atm', 'today', 'tonight', 'bro', 'dude', 'guys'].includes(t2.w)))) {
+        items.push({ t: 'word', w: t.w, o: t.o }, { t: 'adj', key: t1.w === 'on' ? 'operating' : 'turned off' }); i += 2; continue;
+      }
+      // i tend to forget → 3aadatan ansa
+      if (/^(tend|tends|tended)$/.test(t.w) && plain(t1) && t1.w === 'to' && plain(t2) && !t2.punct) {
+        items.push({ t: 'adv', az: '3aadatan', ar: 'عادةً', mid: true, k: 'tend' }); i += 2;
+        const vb = (verbInfo(t2.w) || []).find((r) => r.form === 'base');
+        const t3 = toks[i + 1];
+        if (vb && !AUX.has(t2.w) && !(PHRASAL.get(t2.w) && plain(t3) && PHRASAL.get(t2.w).some((r) => r.particle === t3.w))) { items.push({ t: 'verb', key: vb.key, form: 'base', o: t2.o }); i++; }
+        continue;
+      }
+      // it exists / does not exist / existed → mawjood (an adjective, not a verb)
+      if (t.w === 'exist' || t.w === 'exists' || t.w === 'existed') {
+        const n = items.length;
+        const isDo = (x) => x && x.t === 'word' && ['do', 'does', 'did'].includes(x.w);
+        if (n >= 2 && items[n - 1].t === 'word' && items[n - 1].w === 'not' && isDo(items[n - 2])) items.splice(n - 2, 1);
+        else if (n >= 2 && isDo(items[n - 2]) && !(items[n - 1].t === 'word' && items[n - 1].w === 'not')) items.splice(n - 2, 1);
+        else if (n >= 3 && isDo(items[n - 3]) && items[n - 1].t === 'word' && items[n - 1].w !== 'not') items.splice(n - 3, 1);
+        if (t.w === 'existed') items.push({ t: 'word', w: 'was', o: 'was' });
+        items.push({ t: 'adj', key: 'existing' }); i++; continue;
+      }
       const ph = PHRASAL.get(t.w);
       if (ph && toks[i + 1]) {
         const hit = ph.find((r) => r.particle === toks[i + 1].w || (r.particle.includes(' ') && toks.slice(i + 1, i + 1 + r.particle.split(' ').length).map((x) => x.w).join(' ') === r.particle));
-        if (hit) { items.push({ t: 'verb', key: hit.key, form: hit.form, o: t.o }); i += 1 + hit.particle.split(' ').length; continue; }
+        if (hit) {
+          const form = phrasalForm(hit, ph, items);
+          items.push({ t: 'verb', key: hit.key, form, o: t.o }); i += 1 + hit.particle.split(' ').length; continue;
+        }
       }
       items.push({ t: 'word', w: t.w, o: t.o });
       i++;
@@ -3348,6 +4421,16 @@
     if (!r && vb && vb.some((x) => x.form === 'base') && rawPrev && rawPrev.t === 'pron' && (rawPrev.role === 'obj' || rawPrev.role === 'any') && h2 && h2.t === 'verb' &&
         ['help', 'let', 'make', 'watch', 'see', 'hear'].includes(h2.key) && (!NOUN_FORM.has(w) || !nw || DET[nw] || PRON_POSS[nw] || PRON_OBJ[nw] || nw === 'it' || (nextRaw && nextRaw.t === 'punct'))) {
       const b = vb.find((x) => x.form === 'base'); r = { t: 'verb', key: b.key, form: 'base', o };
+    }
+    // he hit me / the arrow hit him / it cost 5 dollars: a base-looking form after a 3rd-person-singular subject can only be the past
+    if (!r && vb && rawPrev && !(nw && NOUN_FORM.has(nw) && NOUN_FORM.has(w) && !PRON_SUBJ[rawPrev.w]) &&
+        ((rawPrev.t === 'pron' && rawPrev.role === 'subj' && ['he', 'she'].includes(rawPrev.w)) || (rawPrev.t === 'pron' && rawPrev.w === 'it') || (rawPrev.t === 'noun' && !rawPrev.pl) || (rawPrev.t === 'unk' && (rawPrev.name || /^[A-Z]/.test(rawPrev.o || ''))))) {
+      const same = vb.find((x) => x.form === 'past' && vb.some((y) => y.key === x.key && y.form === 'base'));
+      if (same) {
+        let ok = true;
+        for (let j = hist.length - 2; j >= 0; j--) { const h = hist[j]; if (h.t === 'punct' || h.t === 'conj' || h.t === 'rel' || h.t === 'wh') break; if (h.t === 'aux' || h.t === 'modal' || h.t === 'verb' || h.t === 'to' || h.t === 'neg') { ok = false; break; } }
+        if (ok) r = { t: 'verb', key: same.key, form: 'past', o };
+      }
     }
     if (!r) r = tagWord0(w, o, prev, nw, nextRaw, nn, ahead, idx, rawPrev);
     if (r && r.t === 'verb') {
@@ -4625,6 +5708,7 @@
       chunks.push(A);
     }
     splitRunOns(chunks);
+    mergeOfConstruct(chunks);
     markReducedRelatives(chunks);
     frontStrandedPreps(chunks);
     for (let i = 0; i + 1 < chunks.length; i++) {
@@ -4805,6 +5889,26 @@
         const a = analyze(c.parts);
         if (!a.main && (a.modal || a.doAux || a.did || a.will) && (prev.k === 'NP' || prev.k === 'PRON' || prev.k === 'ADV' || prev.k === 'PP' || prev.k === 'IND' || prev.k === 'DEM')) { chunks.splice(i, 0, { k: 'PUNCT', it: { s: ',' }, auto: true }); i++; continue; }
       }
+    }
+  }
+  /* the door of the house → baab il-bait: "X of Y" becomes a construct (Y owns X).
+     Containers and parts keep "min" when Y is definite: a piece of the cake → gi63a min il-kaik. */
+  const PARTITIVE = new Set(['piece', 'slice', 'cup', 'glass', 'bottle', 'bowl', 'plate', 'box', 'bag', 'can', 'pack', 'part', 'member', 'bit', 'kind', 'sort', 'type', 'lot', 'bunch', 'couple', 'pair', 'ton', 'load', 'group', 'set', 'drop', 'handful', 'one', 'plenty', 'majority', 'percent']);
+  function mergeOfConstruct(chunks) {
+    for (let i = 0; i + 1 < chunks.length; i++) {
+      const a = chunks[i], b = chunks[i + 1];
+      if (a.k !== 'NP' || b.k !== 'PP' || b.eng !== 'of' || !b.obj || b.ing || b.fronted) continue;
+      if (a.owner || a.poss || a.quant || a.num || !a.nouns.length || a.nouns.some((n) => n.user) || a.det === 'which' || a.det === 'what') continue;
+      const head = headKey(a);
+      if (!head || !NOUNS[head]) continue;
+      const o = b.obj;
+      const defY = (o.k === 'NP' && (['def', 'this', 'that'].includes(o.det) || o.poss || o.owner || o.nouns.some((n) => n.user))) || o.k === 'UNK';
+      const bareY = o.k === 'NP' && isBare(o) && !o.nouns.some((n) => n.user);
+      if (!defY && !bareY) continue;
+      if (PARTITIVE.has(head) || headKey(a) === 'rest') { if (defY) { b.key = 'min'; b.eng = 'x'; } continue; }
+      if (bareY && npInfo(o).pl && npInfo(a).pl) continue;   // the kings of kings
+      a.owner = o;
+      chunks.splice(i + 1, 1);
     }
   }
   function frontStrandedPreps(chunks) {
@@ -4996,7 +6100,7 @@
     for (const line of lines) {
       if (!line.trim()) { azLines.push(''); arLines.push(''); continue; }
       const toks = [];
-      const line2 = line.replace(/\b(\d{1,2}) ?(am|pm)\b/gi, '$1$2').replace(/\b(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)-(one|two|three|four|five|six|seven|eight|nine)\b/gi, '$1 $2')
+      const line2 = line.replace(/\bw\/o\b/gi, 'without').replace(/\bw\/(?=\s|$)/gi, 'with').replace(/\bb\/c\b/gi, 'because').replace(/\btl;dr\b/gi, 'tldr').replace(/\b(\d{1,2}) ?(am|pm)\b/gi, '$1$2').replace(/\b(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)-(one|two|three|four|five|six|seven|eight|nine)\b/gi, '$1 $2')
         .replace(/\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty)-(minute|hour|day|week|month|year|second|minutes|hours|days|weeks|months|years|seconds)\b/gi, '$1 $2');
       for (const t of expandTokens(tokenize(line2))) {
         if (t.punct || t.arabic || t.posss || t.exp || t.keep || /^[A-Z]/.test(t.o.slice(1)) || (/^[A-Z]/.test(t.o) && toks.length && !toks[toks.length - 1].punct)) { toks.push(t); continue; }
