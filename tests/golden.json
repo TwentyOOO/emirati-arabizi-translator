@@ -6396,244 +6396,244 @@
   "ar": "وقف تفرم afk في الرومات العامة ولا بتانبند."
  },
  {
-  "en": "Peace be upon you.\r",
+  "en": "Peace be upon you.",
   "addr": "m",
-  "az": "is-salaam 3alaikum.\n",
-  "ar": "السلام عليكم.\n"
+  "az": "is-salaam 3alaikum.",
+  "ar": "السلام عليكم."
  },
  {
-  "en": "And peace be upon you too.\r",
+  "en": "And peace be upon you too.",
   "addr": "m",
-  "az": "w3alaikum is-salaam.\n",
-  "ar": "وعليكم السلام.\n"
+  "az": "w3alaikum is-salaam.",
+  "ar": "وعليكم السلام."
  },
  {
-  "en": "How are you?\r",
+  "en": "How are you?",
   "addr": "m",
-  "az": "shlonak?\n",
-  "ar": "شلونك؟\n"
+  "az": "shlonak?",
+  "ar": "شلونك؟"
  },
  {
-  "en": "I'm fine, thank you. How about you?\r",
+  "en": "I'm fine, thank you. How about you?",
   "addr": "m",
-  "az": "ana zain, mashkoor. winta?\n",
-  "ar": "أنا زين، مشكور. وإنت؟\n"
+  "az": "ana zain, mashkoor. winta?",
+  "ar": "أنا زين، مشكور. وإنت؟"
  },
  {
-  "en": "I'm doing well. What's your name?\r",
+  "en": "I'm doing well. What's your name?",
   "addr": "m",
-  "az": "ana zain. shu ismak?\n",
-  "ar": "أنا زين. شو اسمك؟\n"
+  "az": "ana zain. shu ismak?",
+  "ar": "أنا زين. شو اسمك؟"
  },
  {
-  "en": "My name is Ahmed. What's yours?\r",
+  "en": "My name is Ahmed. What's yours?",
   "addr": "m",
-  "az": "ismi Ahmed. winta?\n",
-  "ar": "اسمي Ahmed. وإنت؟\n"
+  "az": "ismi Ahmed. winta?",
+  "ar": "اسمي Ahmed. وإنت؟"
  },
  {
-  "en": "My name is Ali. Nice to meet you.\r",
+  "en": "My name is Ali. Nice to meet you.",
   "addr": "m",
-  "az": "ismi Ali. tsharrafna.\n",
-  "ar": "اسمي Ali. تشرفنا.\n"
+  "az": "ismi Ali. tsharrafna.",
+  "ar": "اسمي Ali. تشرفنا."
  },
  {
-  "en": "Nice to meet you too.\r",
+  "en": "Nice to meet you too.",
   "addr": "m",
-  "az": "ish-sharaf li.\n",
-  "ar": "الشرف لي.\n"
+  "az": "ish-sharaf li.",
+  "ar": "الشرف لي."
  },
  {
-  "en": "How old are you?\r",
+  "en": "How old are you?",
   "addr": "m",
-  "az": "cham 3umrak?\n",
-  "ar": "چم عمرك؟\n"
+  "az": "cham 3umrak?",
+  "ar": "چم عمرك؟"
  },
  {
-  "en": "I'm twenty years old. And you?\r",
+  "en": "I'm twenty years old. And you?",
   "addr": "m",
-  "az": "3umri 3ishreen sana. winta?\n",
-  "ar": "عمري عشرين سنة. وإنت؟\n"
+  "az": "3umri 3ishreen sana. winta?",
+  "ar": "عمري عشرين سنة. وإنت؟"
  },
  {
-  "en": "I'm twenty-two. Which country are you from?\r",
+  "en": "I'm twenty-two. Which country are you from?",
   "addr": "m",
-  "az": "3umri 22. min ay balad inta?\n",
-  "ar": "عمري 22. من أي بلد إنت؟\n"
+  "az": "3umri 22. min ay balad inta?",
+  "ar": "عمري 22. من أي بلد إنت؟"
  },
  {
-  "en": "I'm from Egypt. Where are you from?\r",
+  "en": "I'm from Egypt. Where are you from?",
   "addr": "m",
-  "az": "ana min ma9ir. min wain inta?\n",
-  "ar": "أنا من مصر. من وين إنت؟\n"
+  "az": "ana min ma9ir. min wain inta?",
+  "ar": "أنا من مصر. من وين إنت؟"
  },
  {
-  "en": "I'm from Denmark. Do you live near here?\r",
+  "en": "I'm from Denmark. Do you live near here?",
   "addr": "m",
-  "az": "ana min Denmark. tiskin greeb min hni?\n",
-  "ar": "أنا من Denmark. تسكن قريب من هني؟\n"
+  "az": "ana min Denmark. tiskin greeb min hni?",
+  "ar": "أنا من Denmark. تسكن قريب من هني؟"
  },
  {
-  "en": "Yes, I live nearby.\r",
+  "en": "Yes, I live nearby.",
   "addr": "m",
-  "az": "ee, askin greeb.\n",
-  "ar": "إي، أسكن قريب.\n"
+  "az": "ee, askin greeb.",
+  "ar": "إي، أسكن قريب."
  },
  {
-  "en": "Do you speak English?\r",
+  "en": "Do you speak English?",
   "addr": "m",
-  "az": "titkallam ingleezi?\n",
-  "ar": "تتكلم انجليزي؟\n"
+  "az": "titkallam ingleezi?",
+  "ar": "تتكلم انجليزي؟"
  },
  {
-  "en": "Yes, but I'm still learning.\r",
+  "en": "Yes, but I'm still learning.",
   "addr": "m",
-  "az": "ee, bas ba3adni at3allam.\n",
-  "ar": "إي، بس بعدني أتعلم.\n"
+  "az": "ee, bas ba3adni at3allam.",
+  "ar": "إي، بس بعدني أتعلم."
  },
  {
-  "en": "Would you like to practise together?\r",
+  "en": "Would you like to practise together?",
   "addr": "m",
-  "az": "tabi nitmarran sawa?\n",
-  "ar": "تبي نتمرن سوا؟\n"
+  "az": "tabi nitmarran sawa?",
+  "ar": "تبي نتمرن سوا؟"
  },
  {
-  "en": "Yes, that would be great.\r",
+  "en": "Yes, that would be great.",
   "addr": "m",
-  "az": "ee, bykoon 7ilu wayed.\n",
-  "ar": "إي، بيكون حلو وايد.\n"
+  "az": "ee, bykoon 7ilu wayed.",
+  "ar": "إي، بيكون حلو وايد."
  },
  {
-  "en": "What do you do in your free time?\r",
+  "en": "What do you do in your free time?",
   "addr": "m",
-  "az": "shu tsawi fi wagt faraa3'ak?\n",
-  "ar": "شو تسوي في وقت فراغك؟\n"
+  "az": "shu tsawi fi wagt faraa3'ak?",
+  "ar": "شو تسوي في وقت فراغك؟"
  },
  {
-  "en": "I play games and watch movies.\r",
+  "en": "I play games and watch movies.",
   "addr": "m",
-  "az": "al3ab al3aab wa6aali3 aflaam.\n",
-  "ar": "ألعب ألعاب وأطالع أفلام.\n"
+  "az": "al3ab al3aab wa6aali3 aflaam.",
+  "ar": "ألعب ألعاب وأطالع أفلام."
  },
  {
-  "en": "What kind of games do you like?\r",
+  "en": "What kind of games do you like?",
   "addr": "m",
-  "az": "ay noo3 al3aab t7ibb?\n",
-  "ar": "أي نوع ألعاب تحب؟\n"
+  "az": "ay noo3 al3aab t7ibb?",
+  "ar": "أي نوع ألعاب تحب؟"
  },
  {
-  "en": "I like adventure games. What about you?\r",
+  "en": "I like adventure games. What about you?",
   "addr": "m",
-  "az": "a7ibb al3aab il-mu3'aamara. winta?\n",
-  "ar": "أحب ألعاب المغامرة. وإنت؟\n"
+  "az": "a7ibb al3aab il-mu3'aamara. winta?",
+  "ar": "أحب ألعاب المغامرة. وإنت؟"
  },
  {
-  "en": "I like those too. Do you play every day?\r",
+  "en": "I like those too. Do you play every day?",
   "addr": "m",
-  "az": "a7ibb hadhola ba3ad. til3ab kil yoom?\n",
-  "ar": "أحب هذولا بعد. تلعب كل يوم؟\n"
+  "az": "a7ibb hadhola ba3ad. til3ab kil yoom?",
+  "ar": "أحب هذولا بعد. تلعب كل يوم؟"
  },
  {
-  "en": "Only when I have time.\r",
+  "en": "Only when I have time.",
   "addr": "m",
-  "az": "bas lamma 3indi wagt.\n",
-  "ar": "بس لما عندي وقت.\n"
+  "az": "bas lamma 3indi wagt.",
+  "ar": "بس لما عندي وقت."
  },
  {
-  "en": "Are you busy right now?\r",
+  "en": "Are you busy right now?",
   "addr": "m",
-  "az": "inta mash3'ool il7een?\n",
-  "ar": "إنت مشغول الحين؟\n"
+  "az": "inta mash3'ool il7een?",
+  "ar": "إنت مشغول الحين؟"
  },
  {
-  "en": "No, why?\r",
+  "en": "No, why?",
   "addr": "m",
-  "az": "la, laish?\n",
-  "ar": "لا، ليش؟\n"
+  "az": "la, laish?",
+  "ar": "لا، ليش؟"
  },
  {
-  "en": "I need help.\r",
+  "en": "I need help.",
   "addr": "m",
-  "az": "a7taaj musaa3ada.\n",
-  "ar": "أحتاج مساعدة.\n"
+  "az": "a7taaj musaa3ada.",
+  "ar": "أحتاج مساعدة."
  },
  {
-  "en": "Of course. What do you need?\r",
+  "en": "Of course. What do you need?",
   "addr": "m",
-  "az": "akeed. shu ti7taaj?\n",
-  "ar": "أكيد. شو تحتاج؟\n"
+  "az": "akeed. shu ti7taaj?",
+  "ar": "أكيد. شو تحتاج؟"
  },
  {
-  "en": "I'm trying to find the train station.\r",
+  "en": "I'm trying to find the train station.",
   "addr": "m",
-  "az": "gaa3id adawwir 3ala ma7a66at il-gi6aar.\n",
-  "ar": "قاعد أدور على محطة القطار.\n"
+  "az": "gaa3id adawwir 3ala ma7a66at il-gi6aar.",
+  "ar": "قاعد أدور على محطة القطار."
  },
  {
-  "en": "It's near the supermarket.\r",
+  "en": "It's near the supermarket.",
   "addr": "m",
-  "az": "greeb min is-soobarmaarkit.\n",
-  "ar": "قريب من السوبرماركت.\n"
+  "az": "greeb min is-soobarmaarkit.",
+  "ar": "قريب من السوبرماركت."
  },
  {
-  "en": "Is it far from here?\r",
+  "en": "Is it far from here?",
   "addr": "m",
-  "az": "ba3eed 3an hni?\n",
-  "ar": "بعيد عن هني؟\n"
+  "az": "ba3eed 3an hni?",
+  "ar": "بعيد عن هني؟"
  },
  {
-  "en": "No, it's about a ten-minute walk.\r",
+  "en": "No, it's about a ten-minute walk.",
   "addr": "m",
-  "az": "la, tagreeban 10 dagaayig mashi.\n",
-  "ar": "لا، تقريباً 10 دقايق مشي.\n"
+  "az": "la, tagreeban 10 dagaayig mashi.",
+  "ar": "لا، تقريباً 10 دقايق مشي."
  },
  {
-  "en": "Can you show me the way?\r",
+  "en": "Can you show me the way?",
   "addr": "m",
-  "az": "tigdar twarreeni id-darb?\n",
-  "ar": "تقدر توريني الدرب؟\n"
+  "az": "tigdar twarreeni id-darb?",
+  "ar": "تقدر توريني الدرب؟"
  },
  {
-  "en": "Sure. I'm going in that direction.\r",
+  "en": "Sure. I'm going in that direction.",
   "addr": "m",
-  "az": "akeed. ana raayi7 dhaak i9-9oob.\n",
-  "ar": "أكيد. أنا رايح ذاك الصوب.\n"
+  "az": "akeed. ana raayi7 dhaak i9-9oob.",
+  "ar": "أكيد. أنا رايح ذاك الصوب."
  },
  {
-  "en": "Thank you. That's very kind of you.\r",
+  "en": "Thank you. That's very kind of you.",
   "addr": "m",
-  "az": "mashkoor. ma tga99ir.\n",
-  "ar": "مشكور. ما تقصر.\n"
+  "az": "mashkoor. ma tga99ir.",
+  "ar": "مشكور. ما تقصر."
  },
  {
-  "en": "You're welcome. When does your train leave?\r",
+  "en": "You're welcome. When does your train leave?",
   "addr": "m",
-  "az": "il-3afu. mita gi6aarak yi6la3?\n",
-  "ar": "العفو. متى قطارك يطلع؟\n"
+  "az": "il-3afu. mita gi6aarak yi6la3?",
+  "ar": "العفو. متى قطارك يطلع؟"
  },
  {
-  "en": "In thirty minutes.\r",
+  "en": "In thirty minutes.",
   "addr": "m",
-  "az": "ba3d 30 dageega.\n",
-  "ar": "بعد 30 دقيقة.\n"
+  "az": "ba3d 30 dageega.",
+  "ar": "بعد 30 دقيقة."
  },
  {
-  "en": "You have plenty of time. Let's go.\r",
+  "en": "You have plenty of time. Let's go.",
   "addr": "m",
-  "az": "3indak wayed wagt. yalla.\n",
-  "ar": "عندك وايد وقت. يلا.\n"
+  "az": "3indak wayed wagt. yalla.",
+  "ar": "عندك وايد وقت. يلا."
  },
  {
-  "en": "Thanks again. I'm glad I met you.\r",
+  "en": "Thanks again. I'm glad I met you.",
   "addr": "m",
-  "az": "mashkoor marra thaanya. mistaanis inni t3arraft 3alaik.\n",
-  "ar": "مشكور مرة ثانية. مستانس إني تعرفت عليك.\n"
+  "az": "mashkoor marra thaanya. mistaanis inni t3arraft 3alaik.",
+  "ar": "مشكور مرة ثانية. مستانس إني تعرفت عليك."
  },
  {
-  "en": "I'm glad I met you too.\r",
+  "en": "I'm glad I met you too.",
   "addr": "m",
-  "az": "wana ba3ad mistaanis inni t3arraft 3alaik.\n",
-  "ar": "وأنا بعد مستانس إني تعرفت عليك.\n"
+  "az": "wana ba3ad mistaanis inni t3arraft 3alaik.",
+  "ar": "وأنا بعد مستانس إني تعرفت عليك."
  },
  {
   "en": "he hit me and the boss hit him back",
@@ -7006,5 +7006,65 @@
   "addr": "m",
   "az": "fihamt 3alaik",
   "ar": "فهمت عليك"
+ },
+ {
+  "en": "the checkpoint is far",
+  "addr": "m",
+  "az": "nug6at it-tafteesh ba3eeda.",
+  "ar": "نقطة التفتيش بعيدة."
+ },
+ {
+  "en": "the zoo is closed today",
+  "addr": "m",
+  "az": "7adeegat il-7aywaanaat msakkra il-yoom.",
+  "ar": "حديقة الحيوانات مسكرة اليوم."
+ },
+ {
+  "en": "teamwork is important",
+  "addr": "m",
+  "az": "il-3amal il-jamaa3i muhimm.",
+  "ar": "العمل الجماعي مهم."
+ },
+ {
+  "en": "i need a refund",
+  "addr": "m",
+  "az": "a7taaj istirjaa3.",
+  "ar": "أحتاج استرجاع."
+ },
+ {
+  "en": "the upcoming event is big",
+  "addr": "m",
+  "az": "il-event il-yaay chibeer.",
+  "ar": "الايفنت الياي چبير."
+ },
+ {
+  "en": "the drop rate is very low",
+  "addr": "m",
+  "az": "id-drop rate wa6i wayed.",
+  "ar": "الدروب ريت واطي وايد."
+ },
+ {
+  "en": "the bully hit me",
+  "addr": "m",
+  "az": "il-mitnammir 6aggni.",
+  "ar": "المتنمر طقني."
+ },
+ {
+  "en": "fasten your seatbelt",
+  "addr": "m",
+  "az": "rabbi6 7izaamak.",
+  "ar": "ربط حزامك."
+ },
+ {
+  "en": "he provoked me",
+  "addr": "m",
+  "az": "istafazzni.",
+  "ar": "استفزني."
+ },
+ {
+  "en": "the wheelchair is new",
+  "addr": "m",
+  "az": "il-kursi il-mut7arrik yideed.",
+  "ar": "الكرسي المتحرك يديد."
  }
 ]
