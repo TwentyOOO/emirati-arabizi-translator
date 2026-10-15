@@ -698,8 +698,8 @@
  {
   "en": "I have been working on this game for a long time.",
   "addr": "pl",
-  "az": "gaa3id ashti3'il 3ala hal lu3ba min wagt 6aweel.",
-  "ar": "قاعد أشتغل على هاللعبة من وقت طويل."
+  "az": "gaa3id ashti3'il 3ala hal lu3ba min fatra 6aweela.",
+  "ar": "قاعد أشتغل على هاللعبة من فترة طويلة."
  },
  {
   "en": "The graphics are not good yet.",
@@ -879,7 +879,7 @@
   "en": "I like Minecraft.",
   "addr": "pl",
   "az": "a7ibb Minecraft.",
-  "ar": "أحب Minecraft."
+  "ar": "أحب ماينكرافت."
  },
  {
   "en": "Me too!",
@@ -1100,7 +1100,7 @@
  {
   "en": "this game looks fun",
   "addr": "f",
-  "az": "hal lu3ba shaklha wanasa.",
+  "az": "hal lu3ba shakilha wanasa.",
   "ar": "هاللعبة شكلها وناسة."
  },
  {
@@ -1143,7 +1143,7 @@
   "en": "my favorite game is minecraft",
   "addr": "m",
   "az": "lu3bati il-mufa9'ala minecraft.",
-  "ar": "لعبتي المفضلة minecraft."
+  "ar": "لعبتي المفضلة ماينكرافت."
  },
  {
   "en": "i play with my friends online every weekend",
@@ -1503,7 +1503,7 @@
   "en": "i'm working on a new project in python",
   "addr": "m",
   "az": "gaa3id ashti3'il 3ala mashroo3 yideed fi python.",
-  "ar": "قاعد أشتغل على مشروع يديد في python."
+  "ar": "قاعد أشتغل على مشروع يديد في بايثون."
  },
  {
   "en": "i wrote the code by myself",
@@ -2205,7 +2205,7 @@
   "en": "i'm learning javascript now",
   "addr": "m",
   "az": "gaa3id at3allam javascript il7een.",
-  "ar": "قاعد أتعلم javascript الحين."
+  "ar": "قاعد أتعلم جافاسكربت الحين."
  },
  {
   "en": "the code doesn't work",
@@ -3602,7 +3602,7 @@
  {
   "en": "you look happy today",
   "addr": "pl",
-  "az": "shaklkum mistaanseen il-yoom.",
+  "az": "shakilkum mistaanseen il-yoom.",
   "ar": "شكلكم مستانسين اليوم."
  },
  {
@@ -3741,7 +3741,7 @@
   "en": "you can download it from github",
   "addr": "m",
   "az": "tigdar tnazzila min github.",
-  "ar": "تقدر تنزله من github."
+  "ar": "تقدر تنزله من قيت هب."
  },
  {
   "en": "it works on windows only",
@@ -3824,8 +3824,8 @@
  {
   "en": "join my discord server for updates",
   "addr": "m",
-  "az": "dish id-discord server maali 7ag ta7deethaat.",
-  "ar": "دش السيرفر discord مالي حق تحديثات."
+  "az": "dish server id-discord maali 7ag ta7deethaat.",
+  "ar": "دش سيرفر الديسكورد مالي حق تحديثات."
  },
  {
   "en": "my friend helped me test the bot",
@@ -4636,5 +4636,251 @@
   "addr": "m",
   "az": "ir-ra2y ra2yak.",
   "ar": "الرأي رأيك."
+ },
+ {
+  "en": "Did u test regular conversations?",
+  "addr": "m",
+  "az": "jarrabt sawaalif 3aadiyya?",
+  "ar": "جربت سوالف عادية؟"
+ },
+ {
+  "en": "And how well would u rate it",
+  "addr": "m",
+  "az": "wshlon btgayyima?",
+  "ar": "وشلون بتقيمه؟"
+ },
+ {
+  "en": "I tried ai and it worked but",
+  "addr": "m",
+  "az": "jarrabt AI wshti3'al, bas.",
+  "ar": "جربت AI واشتغل، بس."
+ },
+ {
+  "en": "some languages still sounded ai",
+  "addr": "m",
+  "az": "ba3'9' il-lu3'aat ba3ad-ha shakilha AI.",
+  "ar": "بعض اللغات بعدها شكلها AI."
+ },
+ {
+  "en": "Cause the local model I could run from my pc weren't that strong smh",
+  "addr": "m",
+  "az": "3ashaan il-model il-ma7alli illi agdar asha3'ila min il-computer maali ma kaan gawi wayed, uffff.",
+  "ar": "عشان الموديل المحلي اللي أقدر أشغله من الكمبيوتر مالي ما كان قوي وايد، أفف."
+ },
+ {
+  "en": "yo did u see the new update? its kinda bad ngl",
+  "addr": "m",
+  "az": "hala, shift it-ta7deeth il-yideed? shain shway, bi9raa7a.",
+  "ar": "هلا، شفت التحديث اليديد؟ شين شوي، بصراحة."
+ },
+ {
+  "en": "idk man the game feels dead rn",
+  "addr": "m",
+  "az": "ma adri 5ooy, il-lu3ba shakilha mayyta il7een.",
+  "ar": "ما أدري خوي، اللعبة شكلها ميتة الحين."
+ },
+ {
+  "en": "nobody plays anymore cause the devs dont care",
+  "addr": "m",
+  "az": "ma7ad yil3ab 5alaa9 3ashaan il-mu6awwireen ma yihtammoon.",
+  "ar": "محد يلعب خلاص عشان المطورين ما يهتمون."
+ },
+ {
+  "en": "ikr, they keep adding stuff nobody asked for",
+  "addr": "m",
+  "az": "9idj, ya6'alloon y9'eefoon ashyaa2 ma7ad 6alabha.",
+  "ar": "صدج، يظلون يضيفون أشياء محد طلبها."
+ },
+ {
+  "en": "im so done with this game lol",
+  "addr": "m",
+  "az": "malleet min hal lu3ba, hhhh.",
+  "ar": "مليت من هاللعبة، هههه."
+ },
+ {
+  "en": "wyd rn? wanna farm?",
+  "addr": "m",
+  "az": "shu gaa3id tsawi il7een? tabi tfarrim?",
+  "ar": "شو قاعد تسوي الحين؟ تبي تفرم؟"
+ },
+ {
+  "en": "cant, gotta study for my exam tmrw smh",
+  "addr": "m",
+  "az": "ma agdar, laazim adris 7ag imti7aani bacher, uffff.",
+  "ar": "ما أقدر، لازم أدرس حق امتحاني باجر، أفف."
+ },
+ {
+  "en": "good luck bro u got this",
+  "addr": "m",
+  "az": "bit-tawfeeg 5ooy, tigdar 3alaiha.",
+  "ar": "بالتوفيق خوي، تقدر عليها."
+ },
+ {
+  "en": "thx man, ill be back after the exam",
+  "addr": "m",
+  "az": "mashkoor 5ooy, barja3 ba3d il-imti7aan.",
+  "ar": "مشكور خوي، برجع بعد الامتحان."
+ },
+ {
+  "en": "hey quick question, does the bot work on mac?",
+  "addr": "m",
+  "az": "hala, su2aal saree3, il-bot yishti3'il 3ala mac?",
+  "ar": "هلا، سؤال سريع، البوت يشتغل على ماك؟"
+ },
+ {
+  "en": "nope windows only, sorry",
+  "addr": "m",
+  "az": "la, windows bas, aasif.",
+  "ar": "لا، ويندوز بس، آسف."
+ },
+ {
+  "en": "ah ok no worries, ill try it on my laptop then",
+  "addr": "m",
+  "az": "aah tamaam ma fi mushkila, bajarriba 3ala il-laptop maali 3ayal.",
+  "ar": "آه تمام ما في مشكلة، بجربه على اللابتوب مالي عيل."
+ },
+ {
+  "en": "lmk if it works",
+  "addr": "m",
+  "az": "3allimni law yishti3'il.",
+  "ar": "علمني لو يشتغل."
+ },
+ {
+  "en": "will do",
+  "addr": "m",
+  "az": "basaweeh",
+  "ar": "بسويه"
+ },
+ {
+  "en": "btw ur bot is lit, saved me hours fr",
+  "addr": "m",
+  "az": "3ala fikra, il-bot maalak 5a6eer, waffar 3alay saa3aat, 9idj.",
+  "ar": "على فكرة، البوت مالك خطير، وفر علي ساعات، صدج."
+ },
+ {
+  "en": "glad u like it, took me a while to make it",
+  "addr": "m",
+  "az": "mistaanis innah 3ajabak, 5adh minni fatra 3ashaan asaweeh.",
+  "ar": "مستانس إنه عجبك، خذ مني فترة عشان أسويه."
+ },
+ {
+  "en": "how long did it take u?",
+  "addr": "m",
+  "az": "cham 5adh minnak?",
+  "ar": "چم خذ منك؟"
+ },
+ {
+  "en": "like 3 months on and off",
+  "addr": "m",
+  "az": "tagreeban 3 shuhoor mob kil yoom.",
+  "ar": "تقريباً 3 شهور مب كل يوم."
+ },
+ {
+  "en": "damn thats a lot",
+  "addr": "m",
+  "az": "wallah, hadha wayed.",
+  "ar": "والله، هذا وايد."
+ },
+ {
+  "en": "yeah but it was worth it",
+  "addr": "m",
+  "az": "ee, bas kaan yistaahil.",
+  "ar": "إي، بس كان يستاهل."
+ },
+ {
+  "en": "anyway gtg, ttyl",
+  "addr": "m",
+  "az": "ma 3alaina, laazim aroo7, nsawlif ba3dain.",
+  "ar": "ما علينا، لازم أروح، نسولف بعدين."
+ },
+ {
+  "en": "cya",
+  "addr": "m",
+  "az": "nshoofak",
+  "ar": "نشوفك"
+ },
+ {
+  "en": "my english isnt that good so sorry if i make mistakes",
+  "addr": "m",
+  "az": "il-ingleezi maali mob zain wayed, 3ashaan chidhi aasif law asawi 3'ala6aat.",
+  "ar": "الانجليزي مالي مب زين وايد، عشان چذي آسف لو أسوي غلطات."
+ },
+ {
+  "en": "no problem, i understand u",
+  "addr": "m",
+  "az": "ma fi mushkila, afhamak.",
+  "ar": "ما في مشكلة، أفهمك."
+ },
+ {
+  "en": "can u explain how the bot works?",
+  "addr": "m",
+  "az": "tigdar tishra7 shlon il-bot yishti3'il?",
+  "ar": "تقدر تشرح شلون البوت يشتغل؟"
+ },
+ {
+  "en": "sure, it reads the game and clicks for u",
+  "addr": "m",
+  "az": "akeed, yigra il-lu3ba wyi9'3'a6 lak.",
+  "ar": "أكيد، يقرا اللعبة ويضغط لك."
+ },
+ {
+  "en": "oh nice so i dont have to do anything?",
+  "addr": "m",
+  "az": "aah, 7ilu, ya3ni mob laazim asawi ay shay?",
+  "ar": "آه، حلو، يعني مب لازم أسوي أي شي؟"
+ },
+ {
+  "en": "yeah just pick the class and press start",
+  "addr": "m",
+  "az": "ee, bas 5taar il-class wi9'3'a6 3ala start.",
+  "ar": "إي، بس اختار الكلاس واضغط على start."
+ },
+ {
+  "en": "sounds easy, thanks",
+  "addr": "m",
+  "az": "shakla sahl, mashkoor.",
+  "ar": "شكله سهل، مشكور."
+ },
+ {
+  "en": "np bro, enjoy",
+  "addr": "m",
+  "az": "ma fi mushkila 5ooy, istamti3.",
+  "ar": "ما في مشكلة خوي، استمتع."
+ },
+ {
+  "en": "honestly the translation sounded weird to me",
+  "addr": "m",
+  "az": "bi9raa7a, it-tarjama kaanat shakilha 3'areeba li.",
+  "ar": "بصراحة، الترجمة كانت شكلها غريبة لي."
+ },
+ {
+  "en": "yeah some words dont make sense",
+  "addr": "m",
+  "az": "ee, ba3'9' il-kilmaat mob mafhooma.",
+  "ar": "إي، بعض الكلمات مب مفهومة."
+ },
+ {
+  "en": "which ones?",
+  "addr": "m",
+  "az": "ay minhum?",
+  "ar": "أي منهم؟"
+ },
+ {
+  "en": "the ones with numbers lol, i cant read them",
+  "addr": "m",
+  "az": "illi feeha argaam, hhhh, ma agdar agraahum.",
+  "ar": "اللي فيها أرقام، هههه، ما أقدر أقراهم."
+ },
+ {
+  "en": "thats how arabizi works, 7 is a letter",
+  "addr": "m",
+  "az": "chidhi il-arabizi yishti3'il, 7 7arf.",
+  "ar": "چذي العربيزي يشتغل، 7 حرف."
+ },
+ {
+  "en": "oh i see, makes sense now",
+  "addr": "m",
+  "az": "aah fihamt, mafhoom il7een.",
+  "ar": "آه فهمت، مفهوم الحين."
  }
 ]
